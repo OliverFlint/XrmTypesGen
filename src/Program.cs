@@ -1,7 +1,6 @@
 ﻿using System;
 using System.CommandLine;
 using System.CommandLine.Invocation;
-using Microsoft.PowerPlatform.Cds.Client;
 
 namespace xrm_types_gen
 {
@@ -12,6 +11,7 @@ namespace xrm_types_gen
             var rootCommand = new RootCommand("Xrm Typescript Type Definitions Generator");
 
             #region "LIVE"
+
             var liveCommand = new Command("live", "Generate direct from D365 instance (WIP)") {
                 new Option<string>(
                     aliases: new string[] {"--connection", "-c"},
@@ -43,39 +43,15 @@ namespace xrm_types_gen
 
             liveCommand.Handler = CommandHandler.Create<string, string, string>((connection, entities, output) =>
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Live generation is not yet supported!");
-                Console.ResetColor();
-                //throw new NotImplementedException("Live generation is not yet supported!");
-                //     var conn = new CdsServiceClient(connection);
-                //     if (conn != null && string.IsNullOrEmpty(conn.LastCdsError))
-                //     {
-                //         Console.ForegroundColor = ConsoleColor.Red;
-                //         Console.WriteLine($"Failed to establish a connection. {conn.LastCdsError}");
-                //         Console.ResetColor();
-                //     }
-                //     else if (conn != null && conn.LastCdsException != null)
-                //     {
-                //         Console.ForegroundColor = ConsoleColor.Red;
-                //         Console.WriteLine($"Failed to establish a connection. {conn.LastCdsException.Message}");
-                //         Console.ResetColor();
-                //     }
-                //     else if (conn.IsReady)
-                //     {
-                //         Console.WriteLine($"Connected to {conn.ConnectedOrgFriendlyName}");
-                //     }
-                //     else
-                //     {
-                //         Console.ForegroundColor = ConsoleColor.Red;
-                //         Console.WriteLine($"Failed to establish a connection.");
-                //         Console.ResetColor();
-                //     }
+                LiveHandler.Handle(connection, entities, output);
             });
 
             rootCommand.AddCommand(liveCommand);
+
             #endregion
 
             #region "ZIP"
+
             var zipCommand = new Command("zip", "Generate from a solution zip") {
                 new Option<string>(
                     aliases: new string[] {"--zipfile", "-z"},
@@ -90,10 +66,18 @@ namespace xrm_types_gen
                     IsRequired = true
                 }
             };
+
+            zipCommand.Handler = CommandHandler.Create<string, string>((zipfile, output) =>
+            {
+                ZipHandler.Handle(zipfile, output);
+            });
+
             rootCommand.AddCommand(zipCommand);
+
             #endregion
 
             #region "UNPACKED"
+
             var unpackedCommand = new Command("unpacked", "Generate from an unpacked solution") {
                 new Option<string>(
                     aliases: new string[] {"--folder", "-f"},
@@ -108,12 +92,18 @@ namespace xrm_types_gen
                     IsRequired = true
                 }
             };
+
+            unpackedCommand.Handler = CommandHandler.Create<string, string>((folder, output) =>
+            {
+                UnpackedHandler.Handle(folder, output);
+            });
+
             rootCommand.AddCommand(unpackedCommand);
 
-            rootCommand.Handler = CommandHandler.Create<string, string>((connection, entities) =>
-            {
+            // rootCommand.Handler = CommandHandler.Create<string, string>((connection, entities) =>
+            // {
 
-            });
+            // });
             #endregion
 
             var argResult = rootCommand.InvokeAsync(args).Result;

@@ -5,14 +5,27 @@
    "version": "0.2.0",
    "configurations": [
         {
+            "name": "ZIP Handler",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/src/bin/Debug/net5.0/xrm-types-gen.dll",
+            "args": ["zip", "--zipfile", "samples/XrmTypesGenSample_1_0_0_2.zip", "--output", "../demo/typings/"],
+            "cwd": "${workspaceFolder}/src",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
             "name": ".NET Core Launch (console)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/bin/Debug/net5.0/xrm-types-gen.dll",
-            "args": ["-c 'AuthType=OAuth;Username=oliver@9limited.co.uk;Password=Melanie0121#;Url=https://9inedev.crm4.dynamics.com;AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;RedirectUri=http://localhost;TokenCacheStorePath=.\\MyTokenCache;LoginPrompt=Never'"],
-            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/src/bin/Debug/net5.0/xrm-types-gen.dll",
+            "args": [""],
+            "cwd": "${workspaceFolder}/src",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
