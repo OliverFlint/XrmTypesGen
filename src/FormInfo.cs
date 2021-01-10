@@ -1,6 +1,6 @@
 using System.Linq;
 
-namespace xrm_types_gen
+namespace XrmTypesGen
 {
     public class FormInfo
     {

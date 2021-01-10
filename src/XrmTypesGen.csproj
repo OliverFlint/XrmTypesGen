@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
+    <RootNamespace>XrmTypesGen</RootNamespace>
+    <PackageId>XrmTypesGen</PackageId>
+    <Title>XRM Typescript Declaration Generator</Title>
+    <Version>0.1.3-alpha</Version>
+    <Authors>Oliver Flint</Authors>
+    <PackageTags>Xrm,Dynamics365,D365,Dataverse,PowerPlatform,Typescript,Microsoft,Dynamics,CRM</PackageTags>
+    <RepositoryUrl>https://github.com/OliverFlint/xrmtypesgen</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Dynamics.Sdk.Messages" Version="0.3.1-Alpha" />
+    <PackageReference Include="Microsoft.Powerplatform.Cds.Client" Version="0.3.1-Alpha" />
+    <PackageReference Include="Microsoft.Powerplatform.Cds.Client.Dynamics" Version="0.3.1-Alpha" />
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta1.20574.7" />
+  </ItemGroup>
+
+</Project>

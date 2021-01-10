@@ -2,7 +2,7 @@
 using System.CommandLine;
 using System.CommandLine.Invocation;
 
-namespace xrm_types_gen
+namespace XrmTypesGen
 {
     class Program
     {

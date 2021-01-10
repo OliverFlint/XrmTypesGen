@@ -10,8 +10,8 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/src/bin/Debug/net5.0/xrm-types-gen.dll",
-            "args": ["zip", "--zipfile", "samples/XrmTypesGenSample_1_0_0_2.zip", "--output", "../demo/typings/"],
+            "program": "${workspaceFolder}/src/bin/Debug/net5.0/XrmTypesGen.dll",
+            "args": ["zip", "--zipfile", "sample solution/XrmTypesGen_0_0_0_0.zip", "--output", "../demo/typings/"],
             "cwd": "${workspaceFolder}/src",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
@@ -23,7 +23,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/src/bin/Debug/net5.0/xrm-types-gen.dll",
+            "program": "${workspaceFolder}/src/bin/Debug/net5.0/XrmTypesGen.dll",
             "args": [""],
             "cwd": "${workspaceFolder}/src",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console

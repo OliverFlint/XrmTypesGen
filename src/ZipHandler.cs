@@ -5,7 +5,7 @@ using System.Xml;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace xrm_types_gen
+namespace XrmTypesGen
 {
     public class ZipHandler
     {

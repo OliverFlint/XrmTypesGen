@@ -1,6 +1,6 @@
 using System;
 
-namespace xrm_types_gen
+namespace XrmTypesGen
 {
     public class UnpackedHandler
     {

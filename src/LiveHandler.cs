@@ -1,7 +1,7 @@
 using System;
 using Microsoft.PowerPlatform.Cds.Client;
 
-namespace xrm_types_gen
+namespace XrmTypesGen
 {
     public class LiveHandler
     {
