@@ -11,17 +11,37 @@
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
+            "problemMatcher": "$msCompile",
+        },
+        {
+            "label": "build release",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/XrmTypesGen.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary",
+                "-p:Configuration=Release"
+            ],
             "problemMatcher": "$msCompile"
         },
         {
             "label": "publish",
             "command": "dotnet",
-            "type": "process",
+            "type": "shell",
+            "windows": {
+                "command": "dotnet"
+            },
             "args": [
                 "publish",
                 "${workspaceFolder}/src/XrmTypesGen.csproj",
                 "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "/consoleloggerparameters:NoSummary",
+                "-p:PublishSingleFile=true",
+                "-p:PublishTrimmed=true",
+                "--self-contained true",
+                "--runtime win-x64"
             ],
             "problemMatcher": "$msCompile"
         },

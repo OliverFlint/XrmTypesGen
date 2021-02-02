@@ -2,29 +2,7 @@ using System.Linq;
 
 namespace XrmTypesGen
 {
-    public class FormInfo
-    {
-        //public FieldInfo[] Fields { get; set; }
-        public TabInfo[] Tabs { get; set; }
-        public string FormName { get; set; }
-        public string FormId { get; set; }
-        public string FormType { get; set; }
-        public string EntityName { get; set; }
-    }
-
-    public class TabInfo
-    {
-        public string Name { get; set; }
-        public SectionInfo[] Sections { get; set; }
-    }
-
-    public class SectionInfo
-    {
-        public string Name { get; set; }
-        public FieldInfo[] Fields { get; set; }
-    }
-
-    public class FieldInfo
+    public class FieldInfo : IFieldInfo
     {
         public FieldInfo(string name, string classid)
         {
@@ -34,13 +12,57 @@ namespace XrmTypesGen
         public string Name { get; set; }
         public string ClassId { get; set; }
         public string FieldType { get { return GetFieldType(ClassId); } }
-        public enum ObjectType { Control, Attribute }
         public string GetXrmType(string fieldtype, ObjectType objecttype)
         {
             var xrmtypes = new[] {
-                //new { ControlType = null, AttributeType = null, FieldTypes = new string[] {"",""}}
-                new { ControlType = "", AttributeType = "", FieldTypes = new string[] {"CustomControl","ActivitiesContainerControl"}},
-                new { ControlType = "Xrm.Controls.StringControl", AttributeType = "Xrm.Attributes.StringAttribute", FieldTypes = new string[] {"TextBoxControl",""}}
+                new {
+                    ControlType = "Xrm.Controls.StringControl",
+                    AttributeType = "Xrm.Attributes.StringAttribute",
+                    FieldTypes = new string[] {
+                        "TextBoxControl",
+                        "EmailAddressControl",
+                        "EmailBodyControl",
+                        "TextAreaControl",
+                        "UrlControl",
+                        "PhoneNumberControl"
+                    }
+                },
+                new {
+                    ControlType = "Xrm.Controls.OptionSetControl",
+                    AttributeType = "Xrm.Attributes.OptionSetControl",
+                    FieldTypes = new string[] {
+                        "CheckBoxControl",
+                        "PicklistControl",
+                        "RadioControl"
+                    }
+                },
+                new {
+                    ControlType = "Xrm.Controls.DateControl",
+                    AttributeType = "Xrm.Attributes.DateAttribute",
+                    FieldTypes = new string[] {
+                        "DateTimeControl",
+                        "DurationControl"
+                    }
+                },
+                new {
+                    ControlType = "Xrm.Controls.LookupAttribute",
+                    AttributeType = "Xrm.Attributes.LookupControl",
+                    FieldTypes = new string[] {
+                        "LookupControl",
+                        "PartyListControl",
+                        "RegardingControl"
+                    }
+                },
+                new {
+                    ControlType = "Xrm.Controls.NumberAttribute",
+                    AttributeType = "Xrm.Attributes.NumberControl",
+                    FieldTypes = new string[] {
+                        "DecimalControl",
+                        "FloatControl",
+                        "IntegerControl",
+                        "MoneyControl"
+                    }
+                }
             };
 
             var xrmtype = xrmtypes.Where(t => t.FieldTypes.Contains(FieldType)).FirstOrDefault();

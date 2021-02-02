@@ -1,5 +1,5 @@
 /**
-This file was generated using 'xrm-types-gen'. https://github.com/OliverFlint/xrm-types-gen
+This file was generated using 'XrmTypesGen'. https://github.com/OliverFlint/XrmTypesGen
 **/
 declare namespace Xrm {
  namespace Ext {
@@ -10,66 +10,133 @@ declare namespace Xrm {
      getAttribute(attributeName: "name"): Xrm.Attributes.StringAttribute;
      getAttribute(attributeName: "telephone1"): Xrm.Attributes.StringAttribute;
      getAttribute(attributeName: "fax"): Xrm.Attributes.StringAttribute;
-     getAttribute(attributeName: "websiteurl"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "primarycontactid"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "parentaccountid"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "address1_composite"): Xrm.Attributes.Attribute;
+     getAttribute(attributeName: "websiteurl"): Xrm.Attributes.StringAttribute;
+     getAttribute(attributeName: "primarycontactid"): Xrm.Attributes.LookupControl;
+     getAttribute(attributeName: "parentaccountid"): Xrm.Attributes.LookupControl;
+     getAttribute(attributeName: "address1_composite"): Xrm.Attributes.StringAttribute;
      getAttribute(attributeName: "notescontrol"): Xrm.Attributes.Attribute;
      getAttribute(attributeName: "RelatedCases"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "industrycode"): Xrm.Attributes.Attribute;
+     getAttribute(attributeName: "industrycode"): Xrm.Attributes.OptionSetControl;
      getAttribute(attributeName: "sic"): Xrm.Attributes.StringAttribute;
-     getAttribute(attributeName: "ownershipcode"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "description"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "originatingleadid"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "lastusedincampaign"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "donotsendmm"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "preferredcontactmethodcode"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "donotemail"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "followemail"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "donotbulkemail"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "donotphone"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "donotfax"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "donotpostalmail"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "transactioncurrencyid"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "creditlimit"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "creditonhold"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "paymenttermscode"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "address1_shippingmethodcode"): Xrm.Attributes.Attribute;
-     getAttribute(attributeName: "address1_freighttermscode"): Xrm.Attributes.Attribute;
+     getAttribute(attributeName: "ownershipcode"): Xrm.Attributes.OptionSetControl;
+     getAttribute(attributeName: "description"): Xrm.Attributes.StringAttribute;
+     getAttribute(attributeName: "originatingleadid"): Xrm.Attributes.LookupControl;
+     getAttribute(attributeName: "lastusedincampaign"): Xrm.Attributes.DateAttribute;
+     getAttribute(attributeName: "donotsendmm"): Xrm.Attributes.OptionSetControl;
+     getAttribute(attributeName: "preferredcontactmethodcode"): Xrm.Attributes.OptionSetControl;
+     getAttribute(attributeName: "donotemail"): Xrm.Attributes.OptionSetControl;
+     getAttribute(attributeName: "followemail"): Xrm.Attributes.OptionSetControl;
+     getAttribute(attributeName: "donotbulkemail"): Xrm.Attributes.OptionSetControl;
+     getAttribute(attributeName: "donotphone"): Xrm.Attributes.OptionSetControl;
+     getAttribute(attributeName: "donotfax"): Xrm.Attributes.OptionSetControl;
+     getAttribute(attributeName: "donotpostalmail"): Xrm.Attributes.OptionSetControl;
+     getAttribute(attributeName: "transactioncurrencyid"): Xrm.Attributes.LookupControl;
+     getAttribute(attributeName: "creditlimit"): Xrm.Attributes.NumberControl;
+     getAttribute(attributeName: "creditonhold"): Xrm.Attributes.OptionSetControl;
+     getAttribute(attributeName: "paymenttermscode"): Xrm.Attributes.OptionSetControl;
+     getAttribute(attributeName: "address1_shippingmethodcode"): Xrm.Attributes.OptionSetControl;
+     getAttribute(attributeName: "address1_freighttermscode"): Xrm.Attributes.OptionSetControl;
      getControl(controlName: "contactquickform"): Xrm.Controls.Control;
      getControl(controlName: "name"): Xrm.Controls.StringControl;
      getControl(controlName: "telephone1"): Xrm.Controls.StringControl;
      getControl(controlName: "fax"): Xrm.Controls.StringControl;
-     getControl(controlName: "websiteurl"): Xrm.Controls.Control;
-     getControl(controlName: "primarycontactid"): Xrm.Controls.Control;
-     getControl(controlName: "parentaccountid"): Xrm.Controls.Control;
-     getControl(controlName: "address1_composite"): Xrm.Controls.Control;
+     getControl(controlName: "websiteurl"): Xrm.Controls.StringControl;
+     getControl(controlName: "primarycontactid"): Xrm.Controls.LookupAttribute;
+     getControl(controlName: "parentaccountid"): Xrm.Controls.LookupAttribute;
+     getControl(controlName: "address1_composite"): Xrm.Controls.StringControl;
      getControl(controlName: "notescontrol"): Xrm.Controls.Control;
      getControl(controlName: "RelatedCases"): Xrm.Controls.Control;
-     getControl(controlName: "industrycode"): Xrm.Controls.Control;
+     getControl(controlName: "industrycode"): Xrm.Controls.OptionSetControl;
      getControl(controlName: "sic"): Xrm.Controls.StringControl;
-     getControl(controlName: "ownershipcode"): Xrm.Controls.Control;
-     getControl(controlName: "description"): Xrm.Controls.Control;
-     getControl(controlName: "originatingleadid"): Xrm.Controls.Control;
-     getControl(controlName: "lastusedincampaign"): Xrm.Controls.Control;
-     getControl(controlName: "donotsendmm"): Xrm.Controls.Control;
-     getControl(controlName: "preferredcontactmethodcode"): Xrm.Controls.Control;
-     getControl(controlName: "donotemail"): Xrm.Controls.Control;
-     getControl(controlName: "followemail"): Xrm.Controls.Control;
-     getControl(controlName: "donotbulkemail"): Xrm.Controls.Control;
-     getControl(controlName: "donotphone"): Xrm.Controls.Control;
-     getControl(controlName: "donotfax"): Xrm.Controls.Control;
-     getControl(controlName: "donotpostalmail"): Xrm.Controls.Control;
-     getControl(controlName: "transactioncurrencyid"): Xrm.Controls.Control;
-     getControl(controlName: "creditlimit"): Xrm.Controls.Control;
-     getControl(controlName: "creditonhold"): Xrm.Controls.Control;
-     getControl(controlName: "paymenttermscode"): Xrm.Controls.Control;
-     getControl(controlName: "address1_shippingmethodcode"): Xrm.Controls.Control;
-     getControl(controlName: "address1_freighttermscode"): Xrm.Controls.Control;
+     getControl(controlName: "ownershipcode"): Xrm.Controls.OptionSetControl;
+     getControl(controlName: "description"): Xrm.Controls.StringControl;
+     getControl(controlName: "originatingleadid"): Xrm.Controls.LookupAttribute;
+     getControl(controlName: "lastusedincampaign"): Xrm.Controls.DateControl;
+     getControl(controlName: "donotsendmm"): Xrm.Controls.OptionSetControl;
+     getControl(controlName: "preferredcontactmethodcode"): Xrm.Controls.OptionSetControl;
+     getControl(controlName: "donotemail"): Xrm.Controls.OptionSetControl;
+     getControl(controlName: "followemail"): Xrm.Controls.OptionSetControl;
+     getControl(controlName: "donotbulkemail"): Xrm.Controls.OptionSetControl;
+     getControl(controlName: "donotphone"): Xrm.Controls.OptionSetControl;
+     getControl(controlName: "donotfax"): Xrm.Controls.OptionSetControl;
+     getControl(controlName: "donotpostalmail"): Xrm.Controls.OptionSetControl;
+     getControl(controlName: "transactioncurrencyid"): Xrm.Controls.LookupAttribute;
+     getControl(controlName: "creditlimit"): Xrm.Controls.NumberAttribute;
+     getControl(controlName: "creditonhold"): Xrm.Controls.OptionSetControl;
+     getControl(controlName: "paymenttermscode"): Xrm.Controls.OptionSetControl;
+     getControl(controlName: "address1_shippingmethodcode"): Xrm.Controls.OptionSetControl;
+     getControl(controlName: "address1_freighttermscode"): Xrm.Controls.OptionSetControl;
      ui: Ui;
+     data: Data;
+    };
+    type Data = Xrm.Data & {
+     attributes: Xrm.Collection.ItemCollection<Xrm.Attributes.Attribute> & {;
+      get(AttributeName: "contactquickform"): Xrm.Attributes.Attribute;
+      get(AttributeName: "name"): Xrm.Attributes.StringAttribute;
+      get(AttributeName: "telephone1"): Xrm.Attributes.StringAttribute;
+      get(AttributeName: "fax"): Xrm.Attributes.StringAttribute;
+      get(AttributeName: "websiteurl"): Xrm.Attributes.StringAttribute;
+      get(AttributeName: "primarycontactid"): Xrm.Attributes.LookupControl;
+      get(AttributeName: "parentaccountid"): Xrm.Attributes.LookupControl;
+      get(AttributeName: "address1_composite"): Xrm.Attributes.StringAttribute;
+      get(AttributeName: "notescontrol"): Xrm.Attributes.Attribute;
+      get(AttributeName: "RelatedCases"): Xrm.Attributes.Attribute;
+      get(AttributeName: "industrycode"): Xrm.Attributes.OptionSetControl;
+      get(AttributeName: "sic"): Xrm.Attributes.StringAttribute;
+      get(AttributeName: "ownershipcode"): Xrm.Attributes.OptionSetControl;
+      get(AttributeName: "description"): Xrm.Attributes.StringAttribute;
+      get(AttributeName: "originatingleadid"): Xrm.Attributes.LookupControl;
+      get(AttributeName: "lastusedincampaign"): Xrm.Attributes.DateAttribute;
+      get(AttributeName: "donotsendmm"): Xrm.Attributes.OptionSetControl;
+      get(AttributeName: "preferredcontactmethodcode"): Xrm.Attributes.OptionSetControl;
+      get(AttributeName: "donotemail"): Xrm.Attributes.OptionSetControl;
+      get(AttributeName: "followemail"): Xrm.Attributes.OptionSetControl;
+      get(AttributeName: "donotbulkemail"): Xrm.Attributes.OptionSetControl;
+      get(AttributeName: "donotphone"): Xrm.Attributes.OptionSetControl;
+      get(AttributeName: "donotfax"): Xrm.Attributes.OptionSetControl;
+      get(AttributeName: "donotpostalmail"): Xrm.Attributes.OptionSetControl;
+      get(AttributeName: "transactioncurrencyid"): Xrm.Attributes.LookupControl;
+      get(AttributeName: "creditlimit"): Xrm.Attributes.NumberControl;
+      get(AttributeName: "creditonhold"): Xrm.Attributes.OptionSetControl;
+      get(AttributeName: "paymenttermscode"): Xrm.Attributes.OptionSetControl;
+      get(AttributeName: "address1_shippingmethodcode"): Xrm.Attributes.OptionSetControl;
+      get(AttributeName: "address1_freighttermscode"): Xrm.Attributes.OptionSetControl;
+     };
     };
     type Ui = Xrm.Ui & {
      tabs: Tabs;
+     controls: Xrm.Collection.ItemCollection<Xrm.Attributes.Control> & {;
+      get(controlName: "contactquickform"): Xrm.Controls.Control;
+      get(controlName: "name"): Xrm.Controls.StringControl;
+      get(controlName: "telephone1"): Xrm.Controls.StringControl;
+      get(controlName: "fax"): Xrm.Controls.StringControl;
+      get(controlName: "websiteurl"): Xrm.Controls.StringControl;
+      get(controlName: "primarycontactid"): Xrm.Controls.LookupAttribute;
+      get(controlName: "parentaccountid"): Xrm.Controls.LookupAttribute;
+      get(controlName: "address1_composite"): Xrm.Controls.StringControl;
+      get(controlName: "notescontrol"): Xrm.Controls.Control;
+      get(controlName: "RelatedCases"): Xrm.Controls.Control;
+      get(controlName: "industrycode"): Xrm.Controls.OptionSetControl;
+      get(controlName: "sic"): Xrm.Controls.StringControl;
+      get(controlName: "ownershipcode"): Xrm.Controls.OptionSetControl;
+      get(controlName: "description"): Xrm.Controls.StringControl;
+      get(controlName: "originatingleadid"): Xrm.Controls.LookupAttribute;
+      get(controlName: "lastusedincampaign"): Xrm.Controls.DateControl;
+      get(controlName: "donotsendmm"): Xrm.Controls.OptionSetControl;
+      get(controlName: "preferredcontactmethodcode"): Xrm.Controls.OptionSetControl;
+      get(controlName: "donotemail"): Xrm.Controls.OptionSetControl;
+      get(controlName: "followemail"): Xrm.Controls.OptionSetControl;
+      get(controlName: "donotbulkemail"): Xrm.Controls.OptionSetControl;
+      get(controlName: "donotphone"): Xrm.Controls.OptionSetControl;
+      get(controlName: "donotfax"): Xrm.Controls.OptionSetControl;
+      get(controlName: "donotpostalmail"): Xrm.Controls.OptionSetControl;
+      get(controlName: "transactioncurrencyid"): Xrm.Controls.LookupAttribute;
+      get(controlName: "creditlimit"): Xrm.Controls.NumberAttribute;
+      get(controlName: "creditonhold"): Xrm.Controls.OptionSetControl;
+      get(controlName: "paymenttermscode"): Xrm.Controls.OptionSetControl;
+      get(controlName: "address1_shippingmethodcode"): Xrm.Controls.OptionSetControl;
+      get(controlName: "address1_freighttermscode"): Xrm.Controls.OptionSetControl;
+     };
     };
     type Tabs = Xrm.Collection.ItemCollection<Xrm.Controls.Tab> & {
      get(tabName: "SUMMARY_TAB"): Xrm.Controls.Tab & {
@@ -80,10 +147,10 @@ declare namespace Xrm {
          get(controlName: "name"): Xrm.Controls.StringControl;
          get(controlName: "telephone1"): Xrm.Controls.StringControl;
          get(controlName: "fax"): Xrm.Controls.StringControl;
-         get(controlName: "websiteurl"): Xrm.Controls.Control;
-         get(controlName: "primarycontactid"): Xrm.Controls.Control;
-         get(controlName: "parentaccountid"): Xrm.Controls.Control;
-         get(controlName: "address1_composite"): Xrm.Controls.Control;
+         get(controlName: "websiteurl"): Xrm.Controls.StringControl;
+         get(controlName: "primarycontactid"): Xrm.Controls.LookupAttribute;
+         get(controlName: "parentaccountid"): Xrm.Controls.LookupAttribute;
+         get(controlName: "address1_composite"): Xrm.Controls.StringControl;
         }
        }
        get(sectionName: "Timeline"): Xrm.Controls.Section & {
@@ -102,46 +169,46 @@ declare namespace Xrm {
       sections: Xrm.Collection.ItemCollection<Xrm.Controls.Section> & {
        get(sectionName: "COMPANY_PROFILE"): Xrm.Controls.Section & {
         controls: Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
-         get(controlName: "industrycode"): Xrm.Controls.Control;
+         get(controlName: "industrycode"): Xrm.Controls.OptionSetControl;
          get(controlName: "sic"): Xrm.Controls.StringControl;
-         get(controlName: "ownershipcode"): Xrm.Controls.Control;
+         get(controlName: "ownershipcode"): Xrm.Controls.OptionSetControl;
         }
        }
        get(sectionName: "DETAILS_TAB_section_6"): Xrm.Controls.Section & {
         controls: Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
-         get(controlName: "description"): Xrm.Controls.Control;
+         get(controlName: "description"): Xrm.Controls.StringControl;
         }
        }
        get(sectionName: "MARKETING"): Xrm.Controls.Section & {
         controls: Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
-         get(controlName: "originatingleadid"): Xrm.Controls.Control;
-         get(controlName: "lastusedincampaign"): Xrm.Controls.Control;
-         get(controlName: "donotsendmm"): Xrm.Controls.Control;
+         get(controlName: "originatingleadid"): Xrm.Controls.LookupAttribute;
+         get(controlName: "lastusedincampaign"): Xrm.Controls.DateControl;
+         get(controlName: "donotsendmm"): Xrm.Controls.OptionSetControl;
         }
        }
        get(sectionName: "CONTACT_PREFERENCES"): Xrm.Controls.Section & {
         controls: Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
-         get(controlName: "preferredcontactmethodcode"): Xrm.Controls.Control;
-         get(controlName: "donotemail"): Xrm.Controls.Control;
-         get(controlName: "followemail"): Xrm.Controls.Control;
-         get(controlName: "donotbulkemail"): Xrm.Controls.Control;
-         get(controlName: "donotphone"): Xrm.Controls.Control;
-         get(controlName: "donotfax"): Xrm.Controls.Control;
-         get(controlName: "donotpostalmail"): Xrm.Controls.Control;
+         get(controlName: "preferredcontactmethodcode"): Xrm.Controls.OptionSetControl;
+         get(controlName: "donotemail"): Xrm.Controls.OptionSetControl;
+         get(controlName: "followemail"): Xrm.Controls.OptionSetControl;
+         get(controlName: "donotbulkemail"): Xrm.Controls.OptionSetControl;
+         get(controlName: "donotphone"): Xrm.Controls.OptionSetControl;
+         get(controlName: "donotfax"): Xrm.Controls.OptionSetControl;
+         get(controlName: "donotpostalmail"): Xrm.Controls.OptionSetControl;
         }
        }
        get(sectionName: "BILLING"): Xrm.Controls.Section & {
         controls: Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
-         get(controlName: "transactioncurrencyid"): Xrm.Controls.Control;
-         get(controlName: "creditlimit"): Xrm.Controls.Control;
-         get(controlName: "creditonhold"): Xrm.Controls.Control;
-         get(controlName: "paymenttermscode"): Xrm.Controls.Control;
+         get(controlName: "transactioncurrencyid"): Xrm.Controls.LookupAttribute;
+         get(controlName: "creditlimit"): Xrm.Controls.NumberAttribute;
+         get(controlName: "creditonhold"): Xrm.Controls.OptionSetControl;
+         get(controlName: "paymenttermscode"): Xrm.Controls.OptionSetControl;
         }
        }
        get(sectionName: "SHIPPING"): Xrm.Controls.Section & {
         controls: Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
-         get(controlName: "address1_shippingmethodcode"): Xrm.Controls.Control;
-         get(controlName: "address1_freighttermscode"): Xrm.Controls.Control;
+         get(controlName: "address1_shippingmethodcode"): Xrm.Controls.OptionSetControl;
+         get(controlName: "address1_freighttermscode"): Xrm.Controls.OptionSetControl;
         }
        }
       };
