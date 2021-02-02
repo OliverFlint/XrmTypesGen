@@ -7,7 +7,7 @@ namespace XrmTypesGen
     public class Generator
     {
         const string HEADER = @"/**
-This file was generated using 'xrm-types-gen'. https://github.com/OliverFlint/xrm-types-gen
+This file was generated using 'XrmTypesGen'. https://github.com/OliverFlint/XrmTypesGen
 **/";
         public static void Generate(FormInfo[] formInfoArray, string outputPath)
         {
@@ -39,7 +39,7 @@ This file was generated using 'xrm-types-gen'. https://github.com/OliverFlint/xr
                 #region getAttribute
                 foreach (var field in allFields)
                 {
-                    var xrmtype = field.GetXrmType(field.FieldType, FieldInfo.ObjectType.Attribute);
+                    var xrmtype = field.GetXrmType(field.FieldType, ObjectType.Attribute);
                     if (!string.IsNullOrEmpty(xrmtype))
                     {
                         lines.Add($"     getAttribute(attributeName: \"{field.Name}\"): {xrmtype};");
@@ -49,7 +49,7 @@ This file was generated using 'xrm-types-gen'. https://github.com/OliverFlint/xr
                 #region getControl
                 foreach (var field in allFields)
                 {
-                    var xrmtype = field.GetXrmType(field.FieldType, FieldInfo.ObjectType.Control);
+                    var xrmtype = field.GetXrmType(field.FieldType, ObjectType.Control);
                     if (!string.IsNullOrEmpty(xrmtype))
                     {
                         lines.Add($"     getControl(controlName: \"{field.Name}\"): {xrmtype};");
@@ -58,12 +58,42 @@ This file was generated using 'xrm-types-gen'. https://github.com/OliverFlint/xr
                 #endregion
 
                 lines.Add("     ui: Ui;");
+                lines.Add("     data: Data;");
+                lines.Add("    };");
+                #endregion
+
+                #region Data
+                lines.Add("    type Data = Xrm.Data & {");
+                #region Attributes
+                lines.Add("     attributes: Xrm.Collection.ItemCollection<Xrm.Attributes.Attribute> & {;");
+                foreach (var field in allFields)
+                {
+                    var xrmtype = field.GetXrmType(field.FieldType, ObjectType.Attribute);
+                    if (!string.IsNullOrEmpty(xrmtype))
+                    {
+                        lines.Add($"      get(AttributeName: \"{field.Name}\"): {xrmtype};");
+                    }
+                }
+                lines.Add("     };");
+                #endregion
                 lines.Add("    };");
                 #endregion
 
                 #region UI
                 lines.Add("    type Ui = Xrm.Ui & {");
                 lines.Add("     tabs: Tabs;");
+                #region Controls
+                lines.Add("     controls: Xrm.Collection.ItemCollection<Xrm.Attributes.Control> & {;");
+                foreach (var field in allFields)
+                {
+                    var xrmtype = field.GetXrmType(field.FieldType, ObjectType.Control);
+                    if (!string.IsNullOrEmpty(xrmtype))
+                    {
+                        lines.Add($"      get(controlName: \"{field.Name}\"): {xrmtype};");
+                    }
+                }
+                lines.Add("     };");
+                #endregion
                 lines.Add("    };");
                 #endregion
 
@@ -79,7 +109,7 @@ This file was generated using 'xrm-types-gen'. https://github.com/OliverFlint/xr
                         lines.Add("        controls: Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {");
                         foreach (var field in section.Fields)
                         {
-                            var xrmtype = field.GetXrmType(field.FieldType, FieldInfo.ObjectType.Control);
+                            var xrmtype = field.GetXrmType(field.FieldType, ObjectType.Control);
                             if (!string.IsNullOrEmpty(xrmtype))
                             {
                                 lines.Add($"         get(controlName: \"{field.Name}\"): {xrmtype};");
