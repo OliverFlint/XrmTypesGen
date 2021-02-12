@@ -1,0 +1,32 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Launch Program",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}\\src\\index.ts",
+      "outFiles": ["${workspaceFolder}/**/*.js"],
+      "cwd": "${workspaceFolder}/dist/",
+      "preLaunchTask": "build",
+      "args": [
+        "--url",
+        "https://oliver01.crm11.dynamics.com/",
+        "--username",
+        "ollie@oliver012021.onmicrosoft.com",
+        "--password",
+        "r.9/jNbAk;MF4C=",
+        "--tenent",
+        "https://login.windows.net/oliver012021.onmicrosoft.com",
+        "--solution",
+        "xrmtypesgen",
+        "--output",
+        "../sample/types"
+      ]
+    }
+  ]
+}
