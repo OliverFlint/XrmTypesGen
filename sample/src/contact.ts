@@ -1,15 +1,14 @@
 function OnLoad(context: Xrm.Events.EventContext) {
-  const formContext = context.getFormContext();
-  formContext.getAttribute('firstname').setValue('John');
-}
+  const formContext = context.getFormContext() as Xrm.Ext.Forms.contact.main.Contact.Form;
 
-function OnloadWithXrmTypesGen(context: Xrm.Events.EventContext) {
-  const formContext = context.getFormContext() as Xrm.Ext.Forms.contact.main.Information.Form;
-  formContext.getAttribute('firstname').setValue('John');
+  formContext.getAttribute('birthdate').setValue(new Date(1990, 6, 20));
+
+  const grid = formContext.getControl('DocumentsSubGrid');
+  grid.refresh();
 
   formContext.ui.tabs
-    .get('general')
-    .sections.get('name')
-    .controls.get('firstname')
+    .get('DETAILS_TAB')
+    .sections.get('PERSONAL INFORMATION')
+    .controls.get('birthdate')
     .setDisabled(true);
 }

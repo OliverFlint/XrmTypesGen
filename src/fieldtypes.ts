@@ -1,6 +1,7 @@
 export const getAttributeType = (
   meta: any,
   name: string,
+  classid: string | undefined,
   fieldtype: 'attribute' | 'control',
 ): string | undefined => {
   const attributemeta = (meta.Attributes as []).find(
@@ -67,6 +68,25 @@ export const getAttributeType = (
         } else {
           returnvalue = 'Xrm.Attributes.Attribute';
         }
+        break;
+    }
+  } else if (fieldtype === 'control') {
+    switch (classid ? classid.toLowerCase() : '') {
+      case 'e7a81278-8635-4d9e-8d4d-59480b391c5b':
+        returnvalue = 'Xrm.Controls.GridControl';
+        break;
+      case '69af7dca-2e3b-4ee7-9201-0da731dd2413':
+        returnvalue = 'Xrm.Controls.QuickFormControl';
+        break;
+      case 'fd2a7985-3187-444e-908d-6624b21f69c0':
+        returnvalue = 'Xrm.Controls.FramedControl';
+        break;
+      case '9fdf5f91-88b1-47f4-ad53-c11efc01a01d':
+      case '587cdf98-c1d5-4bde-8473-14a0bc7644a7':
+        returnvalue = 'Xrm.Controls.IframeControl';
+        break;
+      default:
+        returnvalue = `Xrm.Controls.Control /*classid: ${classid}*/`;
         break;
     }
   }

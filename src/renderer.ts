@@ -40,7 +40,7 @@ const renderTabs = (formObj: any, meta: any): string => {
           });
           fields.forEach((field) => {
             if (field.name) {
-              const attributetype = getAttributeType(meta, field.name, 'control');
+              const attributetype = getAttributeType(meta, field.name, field.classid, 'control');
               if (attributetype) {
                 sectionControls += `
                 get(controlname: "${field.name}"): ${attributetype};`;
@@ -82,7 +82,7 @@ const renderGet = (formObj: any, meta: any, fieldtype: 'control' | 'attribute'):
   });
   fields.forEach((field) => {
     if (field.name) {
-      const attributetype = getAttributeType(meta, field.name, fieldtype);
+      const attributetype = getAttributeType(meta, field.name, field.classid, fieldtype);
       if (attributetype) {
         typed += `get(${fieldtype}name: "${field.name}"): ${attributetype};`;
       }
@@ -115,7 +115,7 @@ const renderGets = (formObj: any, meta: any): string => {
   `;
   fields.forEach((field) => {
     if (field.name) {
-      const attributetype = getAttributeType(meta, field.name, 'attribute');
+      const attributetype = getAttributeType(meta, field.name, field.classid, 'attribute');
       if (attributetype) {
         typed += `getAttribute(attributename: "${field.name}"): ${attributetype};`;
       }
@@ -125,7 +125,7 @@ const renderGets = (formObj: any, meta: any): string => {
   `;
   fields.forEach((field) => {
     if (field.name) {
-      const attributetype = getAttributeType(meta, field.name, 'attribute');
+      const attributetype = getAttributeType(meta, field.name, field.classid, 'control');
       if (attributetype) {
         typed += `getControl(controlname: "${field.name}"): ${attributetype};`;
       }

@@ -92,84 +92,105 @@ declare namespace Xrm {
               getAttribute(
                 attributename: "address1_freighttermscode"
               ): Xrm.Attributes.OptionSetAttribute;
-              getControl(controlname: "name"): Xrm.Attributes.StringAttribute;
-              getControl(
-                controlname: "telephone1"
-              ): Xrm.Attributes.StringAttribute;
-              getControl(controlname: "fax"): Xrm.Attributes.StringAttribute;
-              getControl(
-                controlname: "websiteurl"
-              ): Xrm.Attributes.StringAttribute;
+              getControl(controlname: "name"): Xrm.Controls.StringControl;
+              getControl(controlname: "telephone1"): Xrm.Controls.StringControl;
+              getControl(controlname: "fax"): Xrm.Controls.StringControl;
+              getControl(controlname: "websiteurl"): Xrm.Controls.StringControl;
               getControl(
                 controlname: "parentaccountid"
-              ): Xrm.Attributes.LookupAttribute;
+              ): Xrm.Controls.LookupControl;
               getControl(
                 controlname: "tickersymbol"
-              ): Xrm.Attributes.StringAttribute;
+              ): Xrm.Controls.StringControl;
               getControl(
                 controlname: "address1_composite"
-              ): Xrm.Attributes.StringAttribute;
+              ): Xrm.Controls.StringControl;
+              getControl(
+                controlname: "mapcontrol"
+              ): Xrm.Controls.Control /*classid: 62b0df79-0464-470f-8af7-4483cfea0c7d*/;
+              getControl(
+                controlname: "notescontrol"
+              ): Xrm.Controls.Control /*classid: 06375649-c143-495e-a496-c962e5b4488e*/;
+              getControl(
+                controlname: "ActionCards"
+              ): Xrm.Controls.Control /*classid: f9a8a302-114e-466a-b582-6771b2ae0d92*/;
               getControl(
                 controlname: "primarycontactid"
-              ): Xrm.Attributes.LookupAttribute;
+              ): Xrm.Controls.LookupControl;
+              getControl(controlname: "Contacts"): Xrm.Controls.GridControl;
+              getControl(
+                controlname: "accountopportunitiesgrid"
+              ): Xrm.Controls.GridControl;
+              getControl(
+                controlname: "accountcasessgrid"
+              ): Xrm.Controls.GridControl;
+              getControl(
+                controlname: "subgrid_Entitlement"
+              ): Xrm.Controls.GridControl;
               getControl(
                 controlname: "industrycode"
-              ): Xrm.Attributes.OptionSetAttribute;
-              getControl(controlname: "sic"): Xrm.Attributes.StringAttribute;
+              ): Xrm.Controls.OptionSetControl;
+              getControl(controlname: "sic"): Xrm.Controls.StringControl;
               getControl(
                 controlname: "ownershipcode"
-              ): Xrm.Attributes.OptionSetAttribute;
+              ): Xrm.Controls.OptionSetControl;
               getControl(
                 controlname: "description"
-              ): Xrm.Attributes.StringAttribute;
+              ): Xrm.Controls.StringControl;
               getControl(
                 controlname: "originatingleadid"
-              ): Xrm.Attributes.LookupAttribute;
+              ): Xrm.Controls.LookupControl;
               getControl(
                 controlname: "lastusedincampaign"
-              ): Xrm.Attributes.DateAttribute;
+              ): Xrm.Controls.DateControl;
               getControl(
                 controlname: "donotsendmm"
-              ): Xrm.Attributes.BooleanAttribute;
+              ): Xrm.Controls.OptionSetControl;
               getControl(
                 controlname: "preferredcontactmethodcode"
-              ): Xrm.Attributes.OptionSetAttribute;
+              ): Xrm.Controls.OptionSetControl;
               getControl(
                 controlname: "donotemail"
-              ): Xrm.Attributes.BooleanAttribute;
+              ): Xrm.Controls.OptionSetControl;
               getControl(
                 controlname: "followemail"
-              ): Xrm.Attributes.BooleanAttribute;
+              ): Xrm.Controls.OptionSetControl;
               getControl(
                 controlname: "donotbulkemail"
-              ): Xrm.Attributes.BooleanAttribute;
+              ): Xrm.Controls.OptionSetControl;
               getControl(
                 controlname: "donotphone"
-              ): Xrm.Attributes.BooleanAttribute;
+              ): Xrm.Controls.OptionSetControl;
               getControl(
                 controlname: "donotfax"
-              ): Xrm.Attributes.BooleanAttribute;
+              ): Xrm.Controls.OptionSetControl;
               getControl(
                 controlname: "donotpostalmail"
-              ): Xrm.Attributes.BooleanAttribute;
+              ): Xrm.Controls.OptionSetControl;
               getControl(
                 controlname: "transactioncurrencyid"
-              ): Xrm.Attributes.LookupAttribute;
+              ): Xrm.Controls.LookupControl;
               getControl(
                 controlname: "creditlimit"
-              ): Xrm.Attributes.NumberAttribute;
+              ): Xrm.Controls.NumberControl;
               getControl(
                 controlname: "creditonhold"
-              ): Xrm.Attributes.BooleanAttribute;
+              ): Xrm.Controls.OptionSetControl;
               getControl(
                 controlname: "paymenttermscode"
-              ): Xrm.Attributes.OptionSetAttribute;
+              ): Xrm.Controls.OptionSetControl;
               getControl(
                 controlname: "address1_shippingmethodcode"
-              ): Xrm.Attributes.OptionSetAttribute;
+              ): Xrm.Controls.OptionSetControl;
               getControl(
                 controlname: "address1_freighttermscode"
-              ): Xrm.Attributes.OptionSetAttribute;
+              ): Xrm.Controls.OptionSetControl;
+              getControl(
+                controlname: "ChildAccounts"
+              ): Xrm.Controls.GridControl;
+              getControl(
+                controlname: "DocumentsSubGrid"
+              ): Xrm.Controls.GridControl;
 
               ui: Xrm.Ui & {
                 tabs: Tabs;
@@ -300,12 +321,30 @@ declare namespace Xrm {
                 controlname: "address1_composite"
               ): Xrm.Controls.StringControl;
             };
-            type SUMMARY_TABMapSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {};
-            type SUMMARY_TABSOCIAL_PANE_TABControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {};
-            type SUMMARY_TABSummary_section_6Controls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {};
+            type SUMMARY_TABMapSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+              get(
+                controlname: "mapcontrol"
+              ): Xrm.Controls.Control /*classid: 62b0df79-0464-470f-8af7-4483cfea0c7d*/;
+            };
+            type SUMMARY_TABSOCIAL_PANE_TABControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+              get(
+                controlname: "notescontrol"
+              ): Xrm.Controls.Control /*classid: 06375649-c143-495e-a496-c962e5b4488e*/;
+            };
+            type SUMMARY_TABSummary_section_6Controls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+              get(
+                controlname: "ActionCards"
+              ): Xrm.Controls.Control /*classid: f9a8a302-114e-466a-b582-6771b2ae0d92*/;
+            };
             type SUMMARY_TABSUMMARY_TAB_section_6Controls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
               get(controlname: "primarycontactid"): Xrm.Controls.LookupControl;
               get(controlname: "primarycontactid"): Xrm.Controls.LookupControl;
+              get(controlname: "Contacts"): Xrm.Controls.GridControl;
+              get(
+                controlname: "accountopportunitiesgrid"
+              ): Xrm.Controls.GridControl;
+              get(controlname: "accountcasessgrid"): Xrm.Controls.GridControl;
+              get(controlname: "subgrid_Entitlement"): Xrm.Controls.GridControl;
             };
             type DETAILS_TABCOMPANY_PROFILEControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
               get(controlname: "industrycode"): Xrm.Controls.OptionSetControl;
@@ -351,8 +390,12 @@ declare namespace Xrm {
                 controlname: "address1_freighttermscode"
               ): Xrm.Controls.OptionSetControl;
             };
-            type DETAILS_TABChildAccountsControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {};
-            type documents_sharepointdocuments_sharepoint_sectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {};
+            type DETAILS_TABChildAccountsControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+              get(controlname: "ChildAccounts"): Xrm.Controls.GridControl;
+            };
+            type documents_sharepointdocuments_sharepoint_sectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+              get(controlname: "DocumentsSubGrid"): Xrm.Controls.GridControl;
+            };
             type AssetsAndLocationsTabAssetsAndLocationsSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
               get(controlname: "name"): Xrm.Controls.StringControl;
             };
@@ -366,7 +409,22 @@ declare namespace Xrm {
               get(
                 controlname: "address1_composite"
               ): Xrm.Controls.StringControl;
+              get(
+                controlname: "mapcontrol"
+              ): Xrm.Controls.Control /*classid: 62b0df79-0464-470f-8af7-4483cfea0c7d*/;
+              get(
+                controlname: "notescontrol"
+              ): Xrm.Controls.Control /*classid: 06375649-c143-495e-a496-c962e5b4488e*/;
+              get(
+                controlname: "ActionCards"
+              ): Xrm.Controls.Control /*classid: f9a8a302-114e-466a-b582-6771b2ae0d92*/;
               get(controlname: "primarycontactid"): Xrm.Controls.LookupControl;
+              get(controlname: "Contacts"): Xrm.Controls.GridControl;
+              get(
+                controlname: "accountopportunitiesgrid"
+              ): Xrm.Controls.GridControl;
+              get(controlname: "accountcasessgrid"): Xrm.Controls.GridControl;
+              get(controlname: "subgrid_Entitlement"): Xrm.Controls.GridControl;
               get(controlname: "industrycode"): Xrm.Controls.OptionSetControl;
               get(controlname: "sic"): Xrm.Controls.StringControl;
               get(controlname: "ownershipcode"): Xrm.Controls.OptionSetControl;
@@ -399,6 +457,8 @@ declare namespace Xrm {
               get(
                 controlname: "address1_freighttermscode"
               ): Xrm.Controls.OptionSetControl;
+              get(controlname: "ChildAccounts"): Xrm.Controls.GridControl;
+              get(controlname: "DocumentsSubGrid"): Xrm.Controls.GridControl;
             };
             type DataAttributes = Xrm.Collection.ItemCollection<Xrm.Attributes.Attribute> & {
               get(attributename: "name"): Xrm.Attributes.StringAttribute;

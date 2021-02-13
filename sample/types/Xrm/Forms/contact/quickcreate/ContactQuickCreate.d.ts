@@ -49,43 +49,35 @@ declare namespace Xrm {
               ): Xrm.Attributes.StringAttribute;
               getControl(
                 controlname: "businesscard"
-              ): Xrm.Attributes.StringAttribute;
-              getControl(
-                controlname: "firstname"
-              ): Xrm.Attributes.StringAttribute;
-              getControl(
-                controlname: "lastname"
-              ): Xrm.Attributes.StringAttribute;
-              getControl(
-                controlname: "jobtitle"
-              ): Xrm.Attributes.StringAttribute;
+              ): Xrm.Controls.StringControl;
+              getControl(controlname: "firstname"): Xrm.Controls.StringControl;
+              getControl(controlname: "lastname"): Xrm.Controls.StringControl;
+              getControl(controlname: "jobtitle"): Xrm.Controls.StringControl;
               getControl(
                 controlname: "parentcustomerid"
-              ): Xrm.Attributes.LookupAttribute;
+              ): Xrm.Controls.LookupControl;
               getControl(
                 controlname: "emailaddress1"
-              ): Xrm.Attributes.StringAttribute;
+              ): Xrm.Controls.StringControl;
               getControl(
                 controlname: "mobilephone"
-              ): Xrm.Attributes.StringAttribute;
-              getControl(
-                controlname: "telephone1"
-              ): Xrm.Attributes.StringAttribute;
+              ): Xrm.Controls.StringControl;
+              getControl(controlname: "telephone1"): Xrm.Controls.StringControl;
               getControl(
                 controlname: "description"
-              ): Xrm.Attributes.StringAttribute;
+              ): Xrm.Controls.StringControl;
               getControl(
                 controlname: "address1_line1"
-              ): Xrm.Attributes.StringAttribute;
+              ): Xrm.Controls.StringControl;
               getControl(
                 controlname: "address1_line2"
-              ): Xrm.Attributes.StringAttribute;
+              ): Xrm.Controls.StringControl;
               getControl(
                 controlname: "address1_city"
-              ): Xrm.Attributes.StringAttribute;
+              ): Xrm.Controls.StringControl;
               getControl(
                 controlname: "address1_postalcode"
-              ): Xrm.Attributes.StringAttribute;
+              ): Xrm.Controls.StringControl;
 
               ui: Xrm.Ui & {
                 tabs: Tabs;

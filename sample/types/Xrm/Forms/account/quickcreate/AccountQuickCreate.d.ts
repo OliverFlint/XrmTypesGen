@@ -38,34 +38,30 @@ declare namespace Xrm {
               getAttribute(
                 attributename: "address1_postalcode"
               ): Xrm.Attributes.StringAttribute;
-              getControl(controlname: "name"): Xrm.Attributes.StringAttribute;
-              getControl(
-                controlname: "telephone1"
-              ): Xrm.Attributes.StringAttribute;
+              getControl(controlname: "name"): Xrm.Controls.StringControl;
+              getControl(controlname: "telephone1"): Xrm.Controls.StringControl;
               getControl(
                 controlname: "primarycontactid"
-              ): Xrm.Attributes.LookupAttribute;
-              getControl(
-                controlname: "revenue"
-              ): Xrm.Attributes.NumberAttribute;
+              ): Xrm.Controls.LookupControl;
+              getControl(controlname: "revenue"): Xrm.Controls.NumberControl;
               getControl(
                 controlname: "numberofemployees"
-              ): Xrm.Attributes.NumberAttribute;
+              ): Xrm.Controls.NumberControl;
               getControl(
                 controlname: "description"
-              ): Xrm.Attributes.StringAttribute;
+              ): Xrm.Controls.StringControl;
               getControl(
                 controlname: "address1_line1"
-              ): Xrm.Attributes.StringAttribute;
+              ): Xrm.Controls.StringControl;
               getControl(
                 controlname: "address1_line2"
-              ): Xrm.Attributes.StringAttribute;
+              ): Xrm.Controls.StringControl;
               getControl(
                 controlname: "address1_city"
-              ): Xrm.Attributes.StringAttribute;
+              ): Xrm.Controls.StringControl;
               getControl(
                 controlname: "address1_postalcode"
-              ): Xrm.Attributes.StringAttribute;
+              ): Xrm.Controls.StringControl;
 
               ui: Xrm.Ui & {
                 tabs: Tabs;
