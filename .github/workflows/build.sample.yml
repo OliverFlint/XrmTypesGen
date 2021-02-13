@@ -21,10 +21,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build Sample ${{ matrix.node-version }}
-        working-directory: sample
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
+        working-directory: sample
       - run: npm run build --if-present
+        working-directory: sample
     # - run: npm test
