@@ -1,4 +1,4 @@
-![Node.js CI](https://github.com/OliverFlint/XrmTypesGen/workflows/Node.js%20CI/badge.svg)
+![Build](https://github.com/OliverFlint/XrmTypesGen/workflows/Build/badge.svg) ![Build Sample](https://github.com/OliverFlint/XrmTypesGen/workflows/Build%20Sample/badge.svg)
 
 # XrmTypesGen
 
