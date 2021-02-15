@@ -22,6 +22,13 @@ program
   .option('-s, --solution <solution>', `Unique ${terms.d365} Solution Name`)
   .option('-o, --output <output>', 'Output path', 'types');
 
+program.addHelpText(
+  'afterAll',
+  `
+e.g. XrmTypesGen --url https://myorg.crm11.dynamics.com/ --username username@org.onmicrosoft.com --password password123 --tenent https://login.windows.net/org.onmicrosoft.com --solution solutionname --output ./types
+`,
+);
+
 program.parse();
 const options = program.opts();
 
