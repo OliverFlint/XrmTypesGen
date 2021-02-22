@@ -3,6 +3,7 @@ import { program } from 'commander';
 import { mkdirSync, writeFile } from 'fs';
 import { LocalStorage } from 'node-localstorage';
 import { terms } from './terms';
+// eslint-disable-next-line object-curly-newline
 import { getAttributeMeta, getForms, getFormsBySolution, getFormsForEntities } from './queries';
 import { render } from './renderer';
 
