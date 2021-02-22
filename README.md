@@ -31,6 +31,7 @@ Options:
   -t, --tenent <tenent>      Azure Active Directory authority. e.g. https://login.windows.net/myorg.onmicrosoft.com
   -c, --clientid <clientid>  OAuth Client Id (default: "51f81489-12ee-4a9e-aaae-a2591f45987d")
   -s, --solution <solution>  Unique D365/Dataverse Solution Name
+  -e, --entities <entities>  Comma seperated list of entities
   -o, --output <output>      Output path (default: "types")
   -h, --help                 display help for command
 ```
