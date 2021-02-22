@@ -2,7 +2,7 @@
 // GitHub: https://github.com/OliverFlint/XrmTypesGen
 
 declare namespace Xrm {
-  namespace Ext.Forms.account.main.Account {
+  namespace Ext.Forms.account.main.SalesInsights {
     type Form = FormContext;
     interface FormContext extends Xrm.FormContext {
       //#region form context attributes
@@ -81,7 +81,6 @@ declare namespace Xrm {
       getAttribute(
         attributename: "address1_freighttermscode"
       ): Xrm.Attributes.OptionSetAttribute;
-      getAttribute(attributename: "name"): Xrm.Attributes.StringAttribute;
       //#endregion
       //#region form context contols
       getControl(controlname: "name"): Xrm.Controls.StringControl;
@@ -106,8 +105,6 @@ declare namespace Xrm {
       getControl(
         controlname: "accountopportunitiesgrid"
       ): Xrm.Controls.GridControl;
-      getControl(controlname: "accountcasessgrid"): Xrm.Controls.GridControl;
-      getControl(controlname: "subgrid_Entitlement"): Xrm.Controls.GridControl;
       getControl(controlname: "industrycode"): Xrm.Controls.OptionSetControl;
       getControl(controlname: "sic"): Xrm.Controls.StringControl;
       getControl(controlname: "ownershipcode"): Xrm.Controls.OptionSetControl;
@@ -139,8 +136,6 @@ declare namespace Xrm {
         controlname: "address1_freighttermscode"
       ): Xrm.Controls.OptionSetControl;
       getControl(controlname: "ChildAccounts"): Xrm.Controls.GridControl;
-      getControl(controlname: "DocumentsSubGrid"): Xrm.Controls.GridControl;
-      getControl(controlname: "name"): Xrm.Controls.StringControl;
       //#endregion
 
       data: Data;
@@ -169,8 +164,6 @@ declare namespace Xrm {
       get(controlname: "primarycontactid"): Xrm.Controls.LookupControl;
       get(controlname: "Contacts"): Xrm.Controls.GridControl;
       get(controlname: "accountopportunitiesgrid"): Xrm.Controls.GridControl;
-      get(controlname: "accountcasessgrid"): Xrm.Controls.GridControl;
-      get(controlname: "subgrid_Entitlement"): Xrm.Controls.GridControl;
       get(controlname: "industrycode"): Xrm.Controls.OptionSetControl;
       get(controlname: "sic"): Xrm.Controls.StringControl;
       get(controlname: "ownershipcode"): Xrm.Controls.OptionSetControl;
@@ -198,8 +191,6 @@ declare namespace Xrm {
         controlname: "address1_freighttermscode"
       ): Xrm.Controls.OptionSetControl;
       get(controlname: "ChildAccounts"): Xrm.Controls.GridControl;
-      get(controlname: "DocumentsSubGrid"): Xrm.Controls.GridControl;
-      get(controlname: "name"): Xrm.Controls.StringControl;
     }
 
     interface Attributes
@@ -241,7 +232,6 @@ declare namespace Xrm {
       get(
         attributename: "address1_freighttermscode"
       ): Xrm.Attributes.OptionSetAttribute;
-      get(attributename: "name"): Xrm.Attributes.StringAttribute;
     }
 
     interface Data extends Xrm.Data {
@@ -256,8 +246,6 @@ declare namespace Xrm {
     interface Tabs extends Xrm.Collection.ItemCollection<Xrm.Controls.Tab> {
       get(tabname: "SUMMARY_TAB"): SUMMARY_TABTabControl;
       get(tabname: "DETAILS_TAB"): DETAILS_TABTabControl;
-      get(tabname: "documents_sharepoint"): documents_sharepointTabControl;
-      get(tabname: "AssetsAndLocationsTab"): AssetsAndLocationsTabTabControl;
     }
 
     interface SUMMARY_TABTabControl extends Xrm.Controls.Tab {
@@ -265,12 +253,6 @@ declare namespace Xrm {
     }
     interface DETAILS_TABTabControl extends Xrm.Controls.Tab {
       sections: DETAILS_TABTabSections;
-    }
-    interface documents_sharepointTabControl extends Xrm.Controls.Tab {
-      sections: documents_sharepointTabSections;
-    }
-    interface AssetsAndLocationsTabTabControl extends Xrm.Controls.Tab {
-      sections: AssetsAndLocationsTabTabSections;
     }
 
     interface SUMMARY_TABTabSections
@@ -299,18 +281,6 @@ declare namespace Xrm {
       get(sectionname: "BILLING"): BILLINGSectionControl;
       get(sectionname: "SHIPPING"): SHIPPINGSectionControl;
       get(sectionname: "ChildAccounts"): ChildAccountsSectionControl;
-    }
-    interface documents_sharepointTabSections
-      extends Xrm.Collection.ItemCollection<Xrm.Controls.Section> {
-      get(
-        sectionname: "documents_sharepoint_section"
-      ): documents_sharepoint_sectionSectionControl;
-    }
-    interface AssetsAndLocationsTabTabSections
-      extends Xrm.Collection.ItemCollection<Xrm.Controls.Section> {
-      get(
-        sectionname: "AssetsAndLocationsSection"
-      ): AssetsAndLocationsSectionSectionControl;
     }
 
     interface ACCOUNT_INFORMATIONSectionControl extends Xrm.Controls.Section {
@@ -352,14 +322,6 @@ declare namespace Xrm {
     interface ChildAccountsSectionControl extends Xrm.Controls.Section {
       controls: ChildAccountsSectionControls;
     }
-    interface documents_sharepoint_sectionSectionControl
-      extends Xrm.Controls.Section {
-      controls: documents_sharepoint_sectionSectionControls;
-    }
-    interface AssetsAndLocationsSectionSectionControl
-      extends Xrm.Controls.Section {
-      controls: AssetsAndLocationsSectionSectionControls;
-    }
 
     interface ACCOUNT_INFORMATIONSectionControls
       extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
@@ -398,8 +360,6 @@ declare namespace Xrm {
       get(controlname: "primarycontactid"): Xrm.Controls.LookupControl;
       get(controlname: "Contacts"): Xrm.Controls.GridControl;
       get(controlname: "accountopportunitiesgrid"): Xrm.Controls.GridControl;
-      get(controlname: "accountcasessgrid"): Xrm.Controls.GridControl;
-      get(controlname: "subgrid_Entitlement"): Xrm.Controls.GridControl;
     }
     interface COMPANY_PROFILESectionControls
       extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
@@ -448,14 +408,6 @@ declare namespace Xrm {
     interface ChildAccountsSectionControls
       extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
       get(controlname: "ChildAccounts"): Xrm.Controls.GridControl;
-    }
-    interface documents_sharepoint_sectionSectionControls
-      extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
-      get(controlname: "DocumentsSubGrid"): Xrm.Controls.GridControl;
-    }
-    interface AssetsAndLocationsSectionSectionControls
-      extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
-      get(controlname: "name"): Xrm.Controls.StringControl;
     }
   }
 }

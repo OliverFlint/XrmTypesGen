@@ -2,36 +2,46 @@
 // GitHub: https://github.com/OliverFlint/XrmTypesGen
 
 declare namespace Xrm {
-  namespace Ext.Forms.account.main.Account {
+  namespace Ext.Forms.contact.main.AIforSales {
     type Form = FormContext;
     interface FormContext extends Xrm.FormContext {
       //#region form context attributes
-      getAttribute(attributename: "name"): Xrm.Attributes.StringAttribute;
-      getAttribute(attributename: "telephone1"): Xrm.Attributes.StringAttribute;
-      getAttribute(attributename: "fax"): Xrm.Attributes.StringAttribute;
-      getAttribute(attributename: "websiteurl"): Xrm.Attributes.StringAttribute;
+      getAttribute(attributename: "fullname"): Xrm.Attributes.StringAttribute;
+      getAttribute(attributename: "jobtitle"): Xrm.Attributes.StringAttribute;
       getAttribute(
-        attributename: "parentaccountid"
+        attributename: "parentcustomerid"
       ): Xrm.Attributes.LookupAttribute;
       getAttribute(
-        attributename: "tickersymbol"
+        attributename: "emailaddress1"
       ): Xrm.Attributes.StringAttribute;
+      getAttribute(attributename: "telephone1"): Xrm.Attributes.StringAttribute;
+      getAttribute(
+        attributename: "mobilephone"
+      ): Xrm.Attributes.StringAttribute;
+      getAttribute(attributename: "fax"): Xrm.Attributes.StringAttribute;
+      getAttribute(
+        attributename: "preferredcontactmethodcode"
+      ): Xrm.Attributes.OptionSetAttribute;
       getAttribute(
         attributename: "address1_composite"
       ): Xrm.Attributes.StringAttribute;
       getAttribute(
-        attributename: "primarycontactid"
+        attributename: "parentcustomerid"
       ): Xrm.Attributes.LookupAttribute;
       getAttribute(
-        attributename: "primarycontactid"
+        attributename: "parentcustomerid"
       ): Xrm.Attributes.LookupAttribute;
       getAttribute(
-        attributename: "industrycode"
+        attributename: "gendercode"
       ): Xrm.Attributes.OptionSetAttribute;
-      getAttribute(attributename: "sic"): Xrm.Attributes.StringAttribute;
       getAttribute(
-        attributename: "ownershipcode"
+        attributename: "familystatuscode"
       ): Xrm.Attributes.OptionSetAttribute;
+      getAttribute(
+        attributename: "spousesname"
+      ): Xrm.Attributes.StringAttribute;
+      getAttribute(attributename: "birthdate"): Xrm.Attributes.DateAttribute;
+      getAttribute(attributename: "anniversary"): Xrm.Attributes.DateAttribute;
       getAttribute(
         attributename: "description"
       ): Xrm.Attributes.StringAttribute;
@@ -81,15 +91,18 @@ declare namespace Xrm {
       getAttribute(
         attributename: "address1_freighttermscode"
       ): Xrm.Attributes.OptionSetAttribute;
-      getAttribute(attributename: "name"): Xrm.Attributes.StringAttribute;
       //#endregion
       //#region form context contols
-      getControl(controlname: "name"): Xrm.Controls.StringControl;
+      getControl(controlname: "fullname"): Xrm.Controls.StringControl;
+      getControl(controlname: "jobtitle"): Xrm.Controls.StringControl;
+      getControl(controlname: "parentcustomerid"): Xrm.Controls.LookupControl;
+      getControl(controlname: "emailaddress1"): Xrm.Controls.StringControl;
       getControl(controlname: "telephone1"): Xrm.Controls.StringControl;
+      getControl(controlname: "mobilephone"): Xrm.Controls.StringControl;
       getControl(controlname: "fax"): Xrm.Controls.StringControl;
-      getControl(controlname: "websiteurl"): Xrm.Controls.StringControl;
-      getControl(controlname: "parentaccountid"): Xrm.Controls.LookupControl;
-      getControl(controlname: "tickersymbol"): Xrm.Controls.StringControl;
+      getControl(
+        controlname: "preferredcontactmethodcode"
+      ): Xrm.Controls.OptionSetControl;
       getControl(controlname: "address1_composite"): Xrm.Controls.StringControl;
       getControl(
         controlname: "mapcontrol"
@@ -98,19 +111,23 @@ declare namespace Xrm {
         controlname: "notescontrol"
       ): Xrm.Controls.Control /*classid: 06375649-c143-495e-a496-c962e5b4488e*/;
       getControl(
+        controlname: "TalkingPoints"
+      ): Xrm.Controls.Control /*classid: f9a8a302-114e-466a-b582-6771b2ae0d92*/;
+      getControl(
         controlname: "ActionCards"
       ): Xrm.Controls.Control /*classid: f9a8a302-114e-466a-b582-6771b2ae0d92*/;
-      getControl(controlname: "primarycontactid"): Xrm.Controls.LookupControl;
-      getControl(controlname: "primarycontactid"): Xrm.Controls.LookupControl;
-      getControl(controlname: "Contacts"): Xrm.Controls.GridControl;
+      getControl(controlname: "parentcustomerid"): Xrm.Controls.LookupControl;
+      getControl(controlname: "parentcustomerid"): Xrm.Controls.LookupControl;
       getControl(
-        controlname: "accountopportunitiesgrid"
+        controlname: "contactopportunitiesgrid"
       ): Xrm.Controls.GridControl;
-      getControl(controlname: "accountcasessgrid"): Xrm.Controls.GridControl;
-      getControl(controlname: "subgrid_Entitlement"): Xrm.Controls.GridControl;
-      getControl(controlname: "industrycode"): Xrm.Controls.OptionSetControl;
-      getControl(controlname: "sic"): Xrm.Controls.StringControl;
-      getControl(controlname: "ownershipcode"): Xrm.Controls.OptionSetControl;
+      getControl(controlname: "gendercode"): Xrm.Controls.OptionSetControl;
+      getControl(
+        controlname: "familystatuscode"
+      ): Xrm.Controls.OptionSetControl;
+      getControl(controlname: "spousesname"): Xrm.Controls.StringControl;
+      getControl(controlname: "birthdate"): Xrm.Controls.DateControl;
+      getControl(controlname: "anniversary"): Xrm.Controls.DateControl;
       getControl(controlname: "description"): Xrm.Controls.StringControl;
       getControl(controlname: "originatingleadid"): Xrm.Controls.LookupControl;
       getControl(controlname: "lastusedincampaign"): Xrm.Controls.DateControl;
@@ -138,9 +155,6 @@ declare namespace Xrm {
       getControl(
         controlname: "address1_freighttermscode"
       ): Xrm.Controls.OptionSetControl;
-      getControl(controlname: "ChildAccounts"): Xrm.Controls.GridControl;
-      getControl(controlname: "DocumentsSubGrid"): Xrm.Controls.GridControl;
-      getControl(controlname: "name"): Xrm.Controls.StringControl;
       //#endregion
 
       data: Data;
@@ -149,12 +163,16 @@ declare namespace Xrm {
 
     interface Controls
       extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
-      get(controlname: "name"): Xrm.Controls.StringControl;
+      get(controlname: "fullname"): Xrm.Controls.StringControl;
+      get(controlname: "jobtitle"): Xrm.Controls.StringControl;
+      get(controlname: "parentcustomerid"): Xrm.Controls.LookupControl;
+      get(controlname: "emailaddress1"): Xrm.Controls.StringControl;
       get(controlname: "telephone1"): Xrm.Controls.StringControl;
+      get(controlname: "mobilephone"): Xrm.Controls.StringControl;
       get(controlname: "fax"): Xrm.Controls.StringControl;
-      get(controlname: "websiteurl"): Xrm.Controls.StringControl;
-      get(controlname: "parentaccountid"): Xrm.Controls.LookupControl;
-      get(controlname: "tickersymbol"): Xrm.Controls.StringControl;
+      get(
+        controlname: "preferredcontactmethodcode"
+      ): Xrm.Controls.OptionSetControl;
       get(controlname: "address1_composite"): Xrm.Controls.StringControl;
       get(
         controlname: "mapcontrol"
@@ -163,17 +181,19 @@ declare namespace Xrm {
         controlname: "notescontrol"
       ): Xrm.Controls.Control /*classid: 06375649-c143-495e-a496-c962e5b4488e*/;
       get(
+        controlname: "TalkingPoints"
+      ): Xrm.Controls.Control /*classid: f9a8a302-114e-466a-b582-6771b2ae0d92*/;
+      get(
         controlname: "ActionCards"
       ): Xrm.Controls.Control /*classid: f9a8a302-114e-466a-b582-6771b2ae0d92*/;
-      get(controlname: "primarycontactid"): Xrm.Controls.LookupControl;
-      get(controlname: "primarycontactid"): Xrm.Controls.LookupControl;
-      get(controlname: "Contacts"): Xrm.Controls.GridControl;
-      get(controlname: "accountopportunitiesgrid"): Xrm.Controls.GridControl;
-      get(controlname: "accountcasessgrid"): Xrm.Controls.GridControl;
-      get(controlname: "subgrid_Entitlement"): Xrm.Controls.GridControl;
-      get(controlname: "industrycode"): Xrm.Controls.OptionSetControl;
-      get(controlname: "sic"): Xrm.Controls.StringControl;
-      get(controlname: "ownershipcode"): Xrm.Controls.OptionSetControl;
+      get(controlname: "parentcustomerid"): Xrm.Controls.LookupControl;
+      get(controlname: "parentcustomerid"): Xrm.Controls.LookupControl;
+      get(controlname: "contactopportunitiesgrid"): Xrm.Controls.GridControl;
+      get(controlname: "gendercode"): Xrm.Controls.OptionSetControl;
+      get(controlname: "familystatuscode"): Xrm.Controls.OptionSetControl;
+      get(controlname: "spousesname"): Xrm.Controls.StringControl;
+      get(controlname: "birthdate"): Xrm.Controls.DateControl;
+      get(controlname: "anniversary"): Xrm.Controls.DateControl;
       get(controlname: "description"): Xrm.Controls.StringControl;
       get(controlname: "originatingleadid"): Xrm.Controls.LookupControl;
       get(controlname: "lastusedincampaign"): Xrm.Controls.DateControl;
@@ -197,25 +217,28 @@ declare namespace Xrm {
       get(
         controlname: "address1_freighttermscode"
       ): Xrm.Controls.OptionSetControl;
-      get(controlname: "ChildAccounts"): Xrm.Controls.GridControl;
-      get(controlname: "DocumentsSubGrid"): Xrm.Controls.GridControl;
-      get(controlname: "name"): Xrm.Controls.StringControl;
     }
 
     interface Attributes
       extends Xrm.Collection.ItemCollection<Xrm.Attributes.Attribute> {
-      get(attributename: "name"): Xrm.Attributes.StringAttribute;
+      get(attributename: "fullname"): Xrm.Attributes.StringAttribute;
+      get(attributename: "jobtitle"): Xrm.Attributes.StringAttribute;
+      get(attributename: "parentcustomerid"): Xrm.Attributes.LookupAttribute;
+      get(attributename: "emailaddress1"): Xrm.Attributes.StringAttribute;
       get(attributename: "telephone1"): Xrm.Attributes.StringAttribute;
+      get(attributename: "mobilephone"): Xrm.Attributes.StringAttribute;
       get(attributename: "fax"): Xrm.Attributes.StringAttribute;
-      get(attributename: "websiteurl"): Xrm.Attributes.StringAttribute;
-      get(attributename: "parentaccountid"): Xrm.Attributes.LookupAttribute;
-      get(attributename: "tickersymbol"): Xrm.Attributes.StringAttribute;
+      get(
+        attributename: "preferredcontactmethodcode"
+      ): Xrm.Attributes.OptionSetAttribute;
       get(attributename: "address1_composite"): Xrm.Attributes.StringAttribute;
-      get(attributename: "primarycontactid"): Xrm.Attributes.LookupAttribute;
-      get(attributename: "primarycontactid"): Xrm.Attributes.LookupAttribute;
-      get(attributename: "industrycode"): Xrm.Attributes.OptionSetAttribute;
-      get(attributename: "sic"): Xrm.Attributes.StringAttribute;
-      get(attributename: "ownershipcode"): Xrm.Attributes.OptionSetAttribute;
+      get(attributename: "parentcustomerid"): Xrm.Attributes.LookupAttribute;
+      get(attributename: "parentcustomerid"): Xrm.Attributes.LookupAttribute;
+      get(attributename: "gendercode"): Xrm.Attributes.OptionSetAttribute;
+      get(attributename: "familystatuscode"): Xrm.Attributes.OptionSetAttribute;
+      get(attributename: "spousesname"): Xrm.Attributes.StringAttribute;
+      get(attributename: "birthdate"): Xrm.Attributes.DateAttribute;
+      get(attributename: "anniversary"): Xrm.Attributes.DateAttribute;
       get(attributename: "description"): Xrm.Attributes.StringAttribute;
       get(attributename: "originatingleadid"): Xrm.Attributes.LookupAttribute;
       get(attributename: "lastusedincampaign"): Xrm.Attributes.DateAttribute;
@@ -241,7 +264,6 @@ declare namespace Xrm {
       get(
         attributename: "address1_freighttermscode"
       ): Xrm.Attributes.OptionSetAttribute;
-      get(attributename: "name"): Xrm.Attributes.StringAttribute;
     }
 
     interface Data extends Xrm.Data {
@@ -256,8 +278,6 @@ declare namespace Xrm {
     interface Tabs extends Xrm.Collection.ItemCollection<Xrm.Controls.Tab> {
       get(tabname: "SUMMARY_TAB"): SUMMARY_TABTabControl;
       get(tabname: "DETAILS_TAB"): DETAILS_TABTabControl;
-      get(tabname: "documents_sharepoint"): documents_sharepointTabControl;
-      get(tabname: "AssetsAndLocationsTab"): AssetsAndLocationsTabTabControl;
     }
 
     interface SUMMARY_TABTabControl extends Xrm.Controls.Tab {
@@ -266,58 +286,44 @@ declare namespace Xrm {
     interface DETAILS_TABTabControl extends Xrm.Controls.Tab {
       sections: DETAILS_TABTabSections;
     }
-    interface documents_sharepointTabControl extends Xrm.Controls.Tab {
-      sections: documents_sharepointTabSections;
-    }
-    interface AssetsAndLocationsTabTabControl extends Xrm.Controls.Tab {
-      sections: AssetsAndLocationsTabTabSections;
-    }
 
     interface SUMMARY_TABTabSections
       extends Xrm.Collection.ItemCollection<Xrm.Controls.Section> {
       get(
-        sectionname: "ACCOUNT_INFORMATION"
-      ): ACCOUNT_INFORMATIONSectionControl;
-      get(sectionname: "ADDRESS"): ADDRESSSectionControl;
+        sectionname: "CONTACT_INFORMATION"
+      ): CONTACT_INFORMATIONSectionControl;
       get(sectionname: "MapSection"): MapSectionSectionControl;
       get(sectionname: "SOCIAL_PANE_TAB"): SOCIAL_PANE_TABSectionControl;
+      get(
+        sectionname: "TalkingPoints_section"
+      ): TalkingPoints_sectionSectionControl;
       get(sectionname: "Summary_section_6"): Summary_section_6SectionControl;
       get(
-        sectionname: "SUMMARY_TAB_section_6"
-      ): SUMMARY_TAB_section_6SectionControl;
+        sectionname: "CUSTOMER_DETAILS_TAB"
+      ): CUSTOMER_DETAILS_TABSectionControl;
     }
     interface DETAILS_TABTabSections
       extends Xrm.Collection.ItemCollection<Xrm.Controls.Section> {
-      get(sectionname: "COMPANY_PROFILE"): COMPANY_PROFILESectionControl;
       get(
-        sectionname: "DETAILS_TAB_section_6"
-      ): DETAILS_TAB_section_6SectionControl;
-      get(sectionname: "MARKETING"): MARKETINGSectionControl;
+        sectionname: "PERSONAL INFORMATION"
+      ): PERSONALINFORMATIONSectionControl;
+      get(
+        sectionname: "PERSONAL_NOTES_SECTION"
+      ): PERSONAL_NOTES_SECTIONSectionControl;
+      get(
+        sectionname: "marketing information"
+      ): marketinginformationSectionControl;
       get(
         sectionname: "CONTACT_PREFERENCES"
       ): CONTACT_PREFERENCESSectionControl;
-      get(sectionname: "BILLING"): BILLINGSectionControl;
-      get(sectionname: "SHIPPING"): SHIPPINGSectionControl;
-      get(sectionname: "ChildAccounts"): ChildAccountsSectionControl;
-    }
-    interface documents_sharepointTabSections
-      extends Xrm.Collection.ItemCollection<Xrm.Controls.Section> {
+      get(sectionname: "billing information"): billinginformationSectionControl;
       get(
-        sectionname: "documents_sharepoint_section"
-      ): documents_sharepoint_sectionSectionControl;
-    }
-    interface AssetsAndLocationsTabTabSections
-      extends Xrm.Collection.ItemCollection<Xrm.Controls.Section> {
-      get(
-        sectionname: "AssetsAndLocationsSection"
-      ): AssetsAndLocationsSectionSectionControl;
+        sectionname: "shipping information"
+      ): shippinginformationSectionControl;
     }
 
-    interface ACCOUNT_INFORMATIONSectionControl extends Xrm.Controls.Section {
-      controls: ACCOUNT_INFORMATIONSectionControls;
-    }
-    interface ADDRESSSectionControl extends Xrm.Controls.Section {
-      controls: ADDRESSSectionControls;
+    interface CONTACT_INFORMATIONSectionControl extends Xrm.Controls.Section {
+      controls: CONTACT_INFORMATIONSectionControls;
     }
     interface MapSectionSectionControl extends Xrm.Controls.Section {
       controls: MapSectionSectionControls;
@@ -325,53 +331,47 @@ declare namespace Xrm {
     interface SOCIAL_PANE_TABSectionControl extends Xrm.Controls.Section {
       controls: SOCIAL_PANE_TABSectionControls;
     }
+    interface TalkingPoints_sectionSectionControl extends Xrm.Controls.Section {
+      controls: TalkingPoints_sectionSectionControls;
+    }
     interface Summary_section_6SectionControl extends Xrm.Controls.Section {
       controls: Summary_section_6SectionControls;
     }
-    interface SUMMARY_TAB_section_6SectionControl extends Xrm.Controls.Section {
-      controls: SUMMARY_TAB_section_6SectionControls;
+    interface CUSTOMER_DETAILS_TABSectionControl extends Xrm.Controls.Section {
+      controls: CUSTOMER_DETAILS_TABSectionControls;
     }
-    interface COMPANY_PROFILESectionControl extends Xrm.Controls.Section {
-      controls: COMPANY_PROFILESectionControls;
+    interface PERSONALINFORMATIONSectionControl extends Xrm.Controls.Section {
+      controls: PERSONALINFORMATIONSectionControls;
     }
-    interface DETAILS_TAB_section_6SectionControl extends Xrm.Controls.Section {
-      controls: DETAILS_TAB_section_6SectionControls;
+    interface PERSONAL_NOTES_SECTIONSectionControl
+      extends Xrm.Controls.Section {
+      controls: PERSONAL_NOTES_SECTIONSectionControls;
     }
-    interface MARKETINGSectionControl extends Xrm.Controls.Section {
-      controls: MARKETINGSectionControls;
+    interface marketinginformationSectionControl extends Xrm.Controls.Section {
+      controls: marketinginformationSectionControls;
     }
     interface CONTACT_PREFERENCESSectionControl extends Xrm.Controls.Section {
       controls: CONTACT_PREFERENCESSectionControls;
     }
-    interface BILLINGSectionControl extends Xrm.Controls.Section {
-      controls: BILLINGSectionControls;
+    interface billinginformationSectionControl extends Xrm.Controls.Section {
+      controls: billinginformationSectionControls;
     }
-    interface SHIPPINGSectionControl extends Xrm.Controls.Section {
-      controls: SHIPPINGSectionControls;
-    }
-    interface ChildAccountsSectionControl extends Xrm.Controls.Section {
-      controls: ChildAccountsSectionControls;
-    }
-    interface documents_sharepoint_sectionSectionControl
-      extends Xrm.Controls.Section {
-      controls: documents_sharepoint_sectionSectionControls;
-    }
-    interface AssetsAndLocationsSectionSectionControl
-      extends Xrm.Controls.Section {
-      controls: AssetsAndLocationsSectionSectionControls;
+    interface shippinginformationSectionControl extends Xrm.Controls.Section {
+      controls: shippinginformationSectionControls;
     }
 
-    interface ACCOUNT_INFORMATIONSectionControls
+    interface CONTACT_INFORMATIONSectionControls
       extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
-      get(controlname: "name"): Xrm.Controls.StringControl;
+      get(controlname: "fullname"): Xrm.Controls.StringControl;
+      get(controlname: "jobtitle"): Xrm.Controls.StringControl;
+      get(controlname: "parentcustomerid"): Xrm.Controls.LookupControl;
+      get(controlname: "emailaddress1"): Xrm.Controls.StringControl;
       get(controlname: "telephone1"): Xrm.Controls.StringControl;
+      get(controlname: "mobilephone"): Xrm.Controls.StringControl;
       get(controlname: "fax"): Xrm.Controls.StringControl;
-      get(controlname: "websiteurl"): Xrm.Controls.StringControl;
-      get(controlname: "parentaccountid"): Xrm.Controls.LookupControl;
-      get(controlname: "tickersymbol"): Xrm.Controls.StringControl;
-    }
-    interface ADDRESSSectionControls
-      extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
+      get(
+        controlname: "preferredcontactmethodcode"
+      ): Xrm.Controls.OptionSetControl;
       get(controlname: "address1_composite"): Xrm.Controls.StringControl;
     }
     interface MapSectionSectionControls
@@ -386,32 +386,37 @@ declare namespace Xrm {
         controlname: "notescontrol"
       ): Xrm.Controls.Control /*classid: 06375649-c143-495e-a496-c962e5b4488e*/;
     }
+    interface TalkingPoints_sectionSectionControls
+      extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
+      get(
+        controlname: "TalkingPoints"
+      ): Xrm.Controls.Control /*classid: f9a8a302-114e-466a-b582-6771b2ae0d92*/;
+    }
     interface Summary_section_6SectionControls
       extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
       get(
         controlname: "ActionCards"
       ): Xrm.Controls.Control /*classid: f9a8a302-114e-466a-b582-6771b2ae0d92*/;
     }
-    interface SUMMARY_TAB_section_6SectionControls
+    interface CUSTOMER_DETAILS_TABSectionControls
       extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
-      get(controlname: "primarycontactid"): Xrm.Controls.LookupControl;
-      get(controlname: "primarycontactid"): Xrm.Controls.LookupControl;
-      get(controlname: "Contacts"): Xrm.Controls.GridControl;
-      get(controlname: "accountopportunitiesgrid"): Xrm.Controls.GridControl;
-      get(controlname: "accountcasessgrid"): Xrm.Controls.GridControl;
-      get(controlname: "subgrid_Entitlement"): Xrm.Controls.GridControl;
+      get(controlname: "parentcustomerid"): Xrm.Controls.LookupControl;
+      get(controlname: "parentcustomerid"): Xrm.Controls.LookupControl;
+      get(controlname: "contactopportunitiesgrid"): Xrm.Controls.GridControl;
     }
-    interface COMPANY_PROFILESectionControls
+    interface PERSONALINFORMATIONSectionControls
       extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
-      get(controlname: "industrycode"): Xrm.Controls.OptionSetControl;
-      get(controlname: "sic"): Xrm.Controls.StringControl;
-      get(controlname: "ownershipcode"): Xrm.Controls.OptionSetControl;
+      get(controlname: "gendercode"): Xrm.Controls.OptionSetControl;
+      get(controlname: "familystatuscode"): Xrm.Controls.OptionSetControl;
+      get(controlname: "spousesname"): Xrm.Controls.StringControl;
+      get(controlname: "birthdate"): Xrm.Controls.DateControl;
+      get(controlname: "anniversary"): Xrm.Controls.DateControl;
     }
-    interface DETAILS_TAB_section_6SectionControls
+    interface PERSONAL_NOTES_SECTIONSectionControls
       extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
       get(controlname: "description"): Xrm.Controls.StringControl;
     }
-    interface MARKETINGSectionControls
+    interface marketinginformationSectionControls
       extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
       get(controlname: "originatingleadid"): Xrm.Controls.LookupControl;
       get(controlname: "lastusedincampaign"): Xrm.Controls.DateControl;
@@ -429,14 +434,14 @@ declare namespace Xrm {
       get(controlname: "donotfax"): Xrm.Controls.OptionSetControl;
       get(controlname: "donotpostalmail"): Xrm.Controls.OptionSetControl;
     }
-    interface BILLINGSectionControls
+    interface billinginformationSectionControls
       extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
       get(controlname: "transactioncurrencyid"): Xrm.Controls.LookupControl;
       get(controlname: "creditlimit"): Xrm.Controls.NumberControl;
       get(controlname: "creditonhold"): Xrm.Controls.OptionSetControl;
       get(controlname: "paymenttermscode"): Xrm.Controls.OptionSetControl;
     }
-    interface SHIPPINGSectionControls
+    interface shippinginformationSectionControls
       extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
       get(
         controlname: "address1_shippingmethodcode"
@@ -444,18 +449,6 @@ declare namespace Xrm {
       get(
         controlname: "address1_freighttermscode"
       ): Xrm.Controls.OptionSetControl;
-    }
-    interface ChildAccountsSectionControls
-      extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
-      get(controlname: "ChildAccounts"): Xrm.Controls.GridControl;
-    }
-    interface documents_sharepoint_sectionSectionControls
-      extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
-      get(controlname: "DocumentsSubGrid"): Xrm.Controls.GridControl;
-    }
-    interface AssetsAndLocationsSectionSectionControls
-      extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
-      get(controlname: "name"): Xrm.Controls.StringControl;
     }
   }
 }

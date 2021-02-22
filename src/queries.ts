@@ -28,7 +28,33 @@ export const getForms = async (authToken: TokenResponse, url: string): Promise<a
     const response = await fetch(
       `${url}/api/data/v9.2/systemforms?` +
         '$select=description,formjson,formid,name,formactivationstate,type,objecttypecode&' +
-        '$filter=(Microsoft.Dynamics.CRM.In(PropertyName="type",PropertyValues=["2","7"]))',
+        '$filter=(Microsoft.Dynamics.CRM.In(PropertyName=%27type%27,PropertyValues=[%272%27,%277%27]))',
+      {
+        headers: initHeader(authToken.accessToken),
+        method: 'GET',
+      },
+    );
+    const json = await response.json();
+    return json;
+  } catch (err) {
+    console.log(`Fetch Error: ${err}`);
+    return err;
+  }
+};
+
+export const getFormsForEntities = async (
+  authToken: TokenResponse,
+  url: string,
+  entities: string,
+): Promise<any> => {
+  try {
+    const entitynames = entities.split(',');
+    const entitiesparam = entitynames.map((value) => `"${value}"`).join(',');
+    const response = await fetch(
+      `${url}/api/data/v9.2/systemforms?` +
+        '$select=description,formjson,formid,name,formactivationstate,type,objecttypecode&' +
+        '$filter=(Microsoft.Dynamics.CRM.In(PropertyName=%27type%27,PropertyValues=[%272%27,%277%27])%20' +
+        `and%20Microsoft.Dynamics.CRM.In(PropertyName=%27objecttypecodename%27,PropertyValues=[${entitiesparam}]))`,
       {
         headers: initHeader(authToken.accessToken),
         method: 'GET',

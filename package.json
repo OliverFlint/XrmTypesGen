@@ -18,7 +18,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": ".\\node_modules\\.bin\\tsc",
+    "build": ".\\node_modules\\.bin\\tsc & .\\node_modules\\.bin\\copyfiles .\\src\\**\\*.hbs .\\dist\\ --up 1",
     "lint": ".\\node_modules\\.bin\\eslint src/**/*",
     "format": ".\\node_modules\\.bin\\prettier src/**/* --write"
   },
@@ -37,6 +37,7 @@
     "adal-node": "^0.2.1",
     "commander": "^7.0.0",
     "eslint-import-resolver-typescript": "^2.3.0",
+    "handlebars": "^4.7.7",
     "node-fetch": "^2.6.1",
     "node-localstorage": "^2.1.6",
     "prettier": "^2.2.1",
@@ -49,6 +50,7 @@
     "@types/prettier": "^2.2.0",
     "@typescript-eslint/eslint-plugin": "^4.14.2",
     "@typescript-eslint/parser": "^4.14.2",
+    "copyfiles": "^2.4.1",
     "eslint": "^7.19.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1"

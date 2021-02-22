@@ -3,7 +3,7 @@ import { program } from 'commander';
 import { mkdirSync, writeFile } from 'fs';
 import { LocalStorage } from 'node-localstorage';
 import { terms } from './terms';
-import { getAttributeMeta, getForms, getFormsBySolution } from './queries';
+import { getAttributeMeta, getForms, getFormsBySolution, getFormsForEntities } from './queries';
 import { render } from './renderer';
 
 global.localStorage = new LocalStorage('./scratch');
@@ -20,12 +20,15 @@ program
   )
   .option('-c, --clientid <clientid>', 'OAuth Client Id', '51f81489-12ee-4a9e-aaae-a2591f45987d')
   .option('-s, --solution <solution>', `Unique ${terms.d365} Solution Name`)
+  .option('-e, --entities <entities>', 'Comma seperated list of entities')
   .option('-o, --output <output>', 'Output path', 'types');
 
 program.addHelpText(
   'afterAll',
   `
-e.g. XrmTypesGen --url https://myorg.crm11.dynamics.com/ --username username@org.onmicrosoft.com --password password123 --tenent https://login.windows.net/org.onmicrosoft.com --solution solutionname --output ./types
+e.g. XrmTypesGen --url https://myorg.crm11.dynamics.com/ --username username@myorg.onmicrosoft.com --password password123 --tenent https://login.windows.net/myorg.onmicrosoft.com --solution solutionname --output ./types
+
+e.g. XrmTypesGen --url https://myorg.crm11.dynamics.com/ --username username@myorg.onmicrosoft.com --password password123 --tenent https://login.windows.net/myorg.onmicrosoft.com --entities account,contact,lead --output ./types
 `,
 );
 
@@ -39,6 +42,8 @@ const Main = async (authToken: TokenResponse) => {
   let formsResponse: any;
   if (options.solution) {
     formsResponse = await getFormsBySolution(authToken, options.url, options.solution);
+  } else if (options.entities) {
+    formsResponse = await getFormsForEntities(authToken, options.url, options.entities);
   } else {
     formsResponse = await getForms(authToken, options.url);
   }
