@@ -1,4 +1,4 @@
-![Build](https://github.com/OliverFlint/XrmTypesGen/workflows/Build/badge.svg)
+![Build](https://github.com/OliverFlint/XrmTypesGen/workflows/Build/badge.svg) [![Tests](https://github.com/OliverFlint/XrmTypesGen/actions/workflows/tests.yml/badge.svg)](https://github.com/OliverFlint/XrmTypesGen/actions/workflows/tests.yml)
 
 ![Build Sample](https://github.com/OliverFlint/XrmTypesGen/workflows/Build%20Sample/badge.svg)
 
