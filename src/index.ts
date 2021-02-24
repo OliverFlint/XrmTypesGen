@@ -7,9 +7,9 @@ import { terms } from './terms';
 import { getAttributeMeta, getForms, getFormsBySolution, getFormsForEntities } from './queries';
 import { render } from './renderer';
 
-global.localStorage = new LocalStorage('./scratch');
+const localStorage: LocalStorage = new LocalStorage('./scratch');
 
-program.version('0.0.0.1');
+program.version('1.0.0');
 
 program
   .requiredOption('-u, --url <url>', `${terms.d365} Url. e.g. https://myorg.crm11.dynamics.com/`)

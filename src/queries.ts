@@ -1,5 +1,8 @@
 import { TokenResponse } from 'adal-node';
 import fetch from 'node-fetch';
+import { LocalStorage } from 'node-localstorage';
+
+const localStorage: LocalStorage = new LocalStorage('./scratch');
 
 const initHeader = (accessToken: string): any => ({
   Authorization: `Bearer ${accessToken}`,
