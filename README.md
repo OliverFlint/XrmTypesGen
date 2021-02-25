@@ -1,6 +1,6 @@
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/oliverflint/xrmtypesgen/Build?logo=github&style=flat-square)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/oliverflint/xrmtypesgen/Tests?label=tests&logo=jest&style=flat-square)
-![Coveralls](https://img.shields.io/coveralls/github/OliverFlint/XrmTypesGen?logo=coveralls&style=flat-square)
+[![Coveralls](https://img.shields.io/coveralls/github/OliverFlint/XrmTypesGen?logo=coveralls&style=flat-square)](https://coveralls.io/github/OliverFlint/XrmTypesGen)
 [![GitHub issues](https://img.shields.io/github/issues/OliverFlint/XrmTypesGen?logo=github&style=flat-square)](https://github.com/OliverFlint/XrmTypesGen/issues)
 [![GitHub forks](https://img.shields.io/github/forks/OliverFlint/XrmTypesGen?logo=github&style=flat-square)](https://github.com/OliverFlint/XrmTypesGen/network)
 [![GitHub stars](https://img.shields.io/github/stars/OliverFlint/XrmTypesGen?logo=github&style=flat-square)](https://github.com/OliverFlint/XrmTypesGen/stargazers)
