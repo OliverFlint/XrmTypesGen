@@ -45,13 +45,13 @@ Options:
 
 ### Using your types
 
-The generated type definitions depend on `@types/xrm`, so lets install them
+The generated type declaration depend on `@types/xrm`, so lets install them
 
 ```
 npm install @types/xrm --save-dev
 ```
 
-You are now free to use the new type definitions... Here are some examples.
+You are now free to use the new type declaration... Here are some examples.
 
 Form Context:
 
@@ -81,3 +81,6 @@ formContext.ui.tabs
 Here's a little video demo...
 
 [![demo video](https://img.youtube.com/vi/zhLn1Ac21_4/0.jpg)](https://youtu.be/zhLn1Ac21_4)
+
+## Why?
+Well, I've been using @types/xrm for over 5 years now and XrmDefinitelyTyped for about 2 years. I love the added features XrmDefinitelyTyped provides but dislike the fact that it doesn't extend on @types/xrm given most D365/XRM projects use these types. So I set about creating my own tool to generate type declarations that extend @type/xrm 😁
