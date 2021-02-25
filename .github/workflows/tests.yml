@@ -30,7 +30,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run test --if-present
-      - run: make test-coverage-${{ matrix.node-version }}
+      # - run: make test-coverage-${{ matrix.node-version }}
       # - run: npm test
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@v1.1.2
