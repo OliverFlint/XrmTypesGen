@@ -1,6 +1,10 @@
-![Build](https://github.com/OliverFlint/XrmTypesGen/workflows/Build/badge.svg) [![Tests](https://github.com/OliverFlint/XrmTypesGen/actions/workflows/tests.yml/badge.svg)](https://github.com/OliverFlint/XrmTypesGen/actions/workflows/tests.yml)
-
-![Build Sample](https://github.com/OliverFlint/XrmTypesGen/workflows/Build%20Sample/badge.svg)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/oliverflint/xrmtypesgen/Build?logo=github&style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/oliverflint/xrmtypesgen/Tests?label=tests&logo=github&style=flat-square)
+[![GitHub issues](https://img.shields.io/github/issues/OliverFlint/XrmTypesGen?logo=github&style=flat-square)](https://github.com/OliverFlint/XrmTypesGen/issues)
+[![GitHub forks](https://img.shields.io/github/forks/OliverFlint/XrmTypesGen?logo=github&style=flat-square)](https://github.com/OliverFlint/XrmTypesGen/network)
+[![GitHub stars](https://img.shields.io/github/stars/OliverFlint/XrmTypesGen?logo=github&style=flat-square)](https://github.com/OliverFlint/XrmTypesGen/stargazers)
+[![GitHub license](https://img.shields.io/github/license/OliverFlint/XrmTypesGen?logo=github&style=flat-square)](https://github.com/OliverFlint/XrmTypesGen/blob/main/LICENSE)
+![GitHub top language](https://img.shields.io/github/languages/top/oliverflint/xrmtypesgen?logo=github&style=flat-square)
 
 # XrmTypesGen
 
@@ -8,10 +12,12 @@ A Typescript Type Declaration Generator for Dynamics 365. Inspired by the [@type
 
 ## Usage
 
+### Generate your types
+
 Install the npm package:
 
 ```
-npm install --save-dev XrmTypesGen
+npm install XrmTypesGen --save-dev
 ```
 
 Generate the Xrm types:
@@ -35,3 +41,42 @@ Options:
   -o, --output <output>      Output path (default: "types")
   -h, --help                 display help for command
 ```
+
+### Using your types
+
+The generated type definitions depend on `@types/xrm`, so lets install them
+
+```
+npm install @types/xrm --save-dev
+```
+
+You are now free to use the new type definitions... Here are some examples.
+
+Form Context:
+
+```typescript
+function myfunc(context: Xrm.Events.EventContext) {
+  const formContext = context.getFormContext() as Xrm.Ext.Forms.contact.main.Contact.Form;
+  ...
+}
+```
+
+Get an attribute, and set the value:
+
+```typescript
+formContext.getAttribute('birthdate').setValue(new Date(1990, 6, 20));
+```
+
+Disable the 'birth date' control within the section called 'PERSONAL INFORMATION', that is within the tab called 'DETAILS_TAB':
+
+```typescript
+formContext.ui.tabs
+  .get('DETAILS_TAB')
+  .sections.get('PERSONAL INFORMATION')
+  .controls.get('birthdate')
+  .setDisabled(true);
+```
+
+Here's a little video demo...
+
+[![demo video](https://img.youtube.com/vi/zhLn1Ac21_4/0.jpg)](https://youtu.be/zhLn1Ac21_4)

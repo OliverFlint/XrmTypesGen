@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { AuthenticationContext, TokenResponse } from 'adal-node';
 import { program } from 'commander';
 import { mkdirSync, writeFile } from 'fs';
@@ -9,7 +10,7 @@ import { render } from './renderer';
 
 const localStorage: LocalStorage = new LocalStorage('./scratch');
 
-program.version('1.0.0');
+program.version('1.0.4');
 
 program
   .requiredOption('-u, --url <url>', `${terms.d365} Url. e.g. https://myorg.crm11.dynamics.com/`)

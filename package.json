@@ -1,6 +1,6 @@
 {
   "name": "xrmtypesgen",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "A TypeScript Definition Generator for Dynamics 365 Forms",
   "keywords": [
     "TyepScript",
@@ -15,9 +15,9 @@
     "PowerApps",
     "WebResource"
   ],
-  "main": "index.js",
+  "bin": "./dist/index.js",
   "scripts": {
-    "test": "node_modules/.bin/jest --coverage --maxWorkers=4",
+    "test": "node_modules/.bin/jest --coverage --maxWorkers=4 && coveralls < coverage/lcov.info",
     "build": "node_modules/.bin/tsc && npm run template",
     "template": "node_modules/.bin/copyfiles ./src/**/*.hbs ./dist/ --up 1",
     "lint": "node_modules/.bin/eslint src/**/*",
@@ -38,7 +38,8 @@
     "commander": "^7.0.0",
     "handlebars": "^4.7.7",
     "node-fetch": "^2.6.1",
-    "node-localstorage": "^2.1.6"
+    "node-localstorage": "^2.1.6",
+    "prettier": "^2.2.1"
   },
   "devDependencies": {
     "@types/jest": "^26.0.20",
@@ -50,12 +51,12 @@
     "@typescript-eslint/eslint-plugin": "^4.14.2",
     "@typescript-eslint/parser": "^4.14.2",
     "copyfiles": "^2.4.1",
+    "coveralls": "^3.1.0",
     "eslint": "^7.19.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-import-resolver-typescript": "^2.3.0",
     "eslint-plugin-import": "^2.22.1",
     "jest": "^26.6.3",
-    "prettier": "^2.2.1",
     "ts-jest": "^26.5.1",
     "typescript": "^4.1.3"
   },
