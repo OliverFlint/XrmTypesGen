@@ -17,7 +17,7 @@
   ],
   "bin": "./dist/index.js",
   "scripts": {
-    "test": "node_modules/.bin/jest --coverage --maxWorkers=4 && coveralls < coverage/lcov.info",
+    "test": "node_modules/.bin/jest --coverage --maxWorkers=4",
     "build": "node_modules/.bin/tsc && npm run template",
     "template": "node_modules/.bin/copyfiles ./src/**/*.hbs ./dist/ --up 1",
     "lint": "node_modules/.bin/eslint src/**/*",
