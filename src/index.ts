@@ -10,12 +10,13 @@ import { render } from './renderer';
 
 const localStorage: LocalStorage = new LocalStorage('./scratch');
 
-program.version('1.0.4');
+program.version('1.0.5');
 
 program
   .requiredOption('-u, --url <url>', `${terms.d365} Url. e.g. https://myorg.crm11.dynamics.com/`)
-  .requiredOption('-n, --username <username>', `Username for ${terms.d365}`)
-  .requiredOption('-p, --password <password>', `Password for ${terms.d365}`)
+  .option('-n, --username <username>', `Username for ${terms.d365}`)
+  .option('-p, --password <password>', `Password for ${terms.d365}`)
+  .option('--secret <secret>', 'OAuth Client Secret')
   .requiredOption(
     '-t, --tenent <tenent>',
     `${terms.AAD} authority. e.g. https://login.windows.net/myorg.onmicrosoft.com`,
@@ -48,6 +49,10 @@ const Main = async (authToken: TokenResponse) => {
     formsResponse = await getFormsForEntities(authToken, options.url, options.entities);
   } else {
     formsResponse = await getForms(authToken, options.url);
+  }
+  if (formsResponse.error) {
+    console.error(formsResponse.error);
+    return;
   }
   const forms = formsResponse.value;
 
@@ -86,18 +91,35 @@ const Main = async (authToken: TokenResponse) => {
 // #region Login
 console.log('authenticating');
 const authContext = new AuthenticationContext(options.tenent);
-authContext.acquireTokenWithUsernamePassword(
-  options.url,
-  options.username,
-  options.password,
-  options.clientid,
-  (error, response) => {
-    if (error) {
-      console.error(`Error: ${error.message}`);
-    }
-    if ((response as TokenResponse).accessToken) {
-      Main(response as TokenResponse);
-    }
-  },
-);
+if (options.password) {
+  authContext.acquireTokenWithUsernamePassword(
+    options.url,
+    options.username,
+    options.password,
+    options.clientid,
+    (error, response) => {
+      if (error) {
+        console.error(`Error: ${error.message}`);
+      }
+      if ((response as TokenResponse).accessToken) {
+        Main(response as TokenResponse);
+      }
+    },
+  );
+} else if (options.secret) {
+  authContext.acquireTokenWithClientCredentials(
+    options.url,
+    options.clientid,
+    options.secret,
+    (error, response) => {
+      if (error) {
+        console.error(`Error: ${error.message}`);
+      }
+      if ((response as TokenResponse).accessToken) {
+        Main(response as TokenResponse);
+      }
+    },
+  );
+}
+
 // #endregion

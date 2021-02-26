@@ -4,7 +4,7 @@ import { compile, registerHelper } from 'handlebars';
 import { getAttributeType } from './fieldtypes';
 
 export const render = (data: any, meta: any): string => {
-  const templateBuffer = readFileSync('./template.hbs');
+  const templateBuffer = readFileSync(`${__dirname}/template.hbs`);
   const template = compile(templateBuffer.toString());
 
   registerHelper('formtype', (value) => (value === 2 ? 'main' : 'quickcreate'));

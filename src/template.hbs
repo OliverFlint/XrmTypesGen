@@ -3,138 +3,182 @@
 
 declare namespace Xrm {
     namespace Ext.Forms.{{data.objecttypecode}}.{{formtype data.type}}.{{removeSpaces data.name}} {
-        type Form = FormContext;
-        interface FormContext extends Xrm.FormContext {
-            //#region form context attributes
-            {{#each formObj.Tabs.$values}}
-                {{#each this.Columns.$values}}
-                    {{#each this.Sections.$values}}
-                        {{#each this.Rows.$values}}
-                            {{#each this.Cells.$values}}
-                                {{#if (getFieldName this.Control)}}
-                                    {{#if (getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'attribute')}}
-                                    getAttribute(attributename: "{{getFieldName this.Control}}"): {{getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'attribute'}}
+        /**
+        * Entity/Table Name: `{{data.objecttypecode}}`
+        *
+        * Form Type: `{{formtype data.type}}`
+        *
+        * Form Name: `{{removeSpaces data.name}}`
+        */
+        interface Form extends Extensions.FormContext {};
+        namespace Extensions {
+            type FormContext = Xrm.FormContext & {
+                //#region form context attributes
+                {{#each formObj.Tabs.$values}}
+                    {{#each this.Columns.$values}}
+                        {{#each this.Sections.$values}}
+                            {{#each this.Rows.$values}}
+                                {{#each this.Cells.$values}}
+                                    {{#if (getFieldName this.Control)}}
+                                        {{#if (getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'attribute')}}
+                                        /**
+                                        * Gets the `{{getFieldName this.Control}}` attribute.
+                                        *
+                                        * @returns `{{getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'attribute'}}`.
+                                        */
+                                        getAttribute(attributeName: "{{getFieldName this.Control}}"): {{getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'attribute'}}
+                                        {{/if}}
                                     {{/if}}
-                                {{/if}}
+                                {{/each}}
                             {{/each}}
                         {{/each}}
                     {{/each}}
                 {{/each}}
-            {{/each}}
-            //#endregion
-            //#region form context contols
-            {{#each formObj.Tabs.$values}}
-                {{#each this.Columns.$values}}
-                    {{#each this.Sections.$values}}
-                        {{#each this.Rows.$values}}
-                            {{#each this.Cells.$values}}
-                                {{#if (getFieldName this.Control)}}
-                                    {{#if (getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'control')}}
-                                    getControl(controlname: "{{getFieldName this.Control}}"): {{getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'control'}}
+                //#endregion
+                //#region form context contols
+                {{#each formObj.Tabs.$values}}
+                    {{#each this.Columns.$values}}
+                        {{#each this.Sections.$values}}
+                            {{#each this.Rows.$values}}
+                                {{#each this.Cells.$values}}
+                                    {{#if (getFieldName this.Control)}}
+                                        {{#if (getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'control')}}
+                                        /**
+                                        * Gets the `{{getFieldName this.Control}}` control.
+                                        *
+                                        * @returns `{{getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'control'}}`.
+                                        */
+                                        getControl(controlName: "{{getFieldName this.Control}}"): {{getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'control'}}
+                                        {{/if}}
                                     {{/if}}
-                                {{/if}}
+                                {{/each}}
                             {{/each}}
                         {{/each}}
                     {{/each}}
                 {{/each}}
-            {{/each}}
-            //#endregion    
+                //#endregion    
 
-            data: Data
-            ui: Ui
-        }
-        
-        interface Controls extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
-            {{#each formObj.Tabs.$values}}
-                {{#each this.Columns.$values}}
-                    {{#each this.Sections.$values}}
-                        {{#each this.Rows.$values}}
-                            {{#each this.Cells.$values}}
-                                {{#if (getFieldName this.Control)}}
-                                    {{#if (getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'control')}}
-                                    get(controlname: "{{getFieldName this.Control}}"): {{getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'control'}}
+                data: Data
+                ui: Ui
+            }
+            
+            type Controls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+                {{#each formObj.Tabs.$values}}
+                    {{#each this.Columns.$values}}
+                        {{#each this.Sections.$values}}
+                            {{#each this.Rows.$values}}
+                                {{#each this.Cells.$values}}
+                                    {{#if (getFieldName this.Control)}}
+                                        {{#if (getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'control')}}
+                                        /**
+                                        * Gets the `{{getFieldName this.Control}}` control.
+                                        *
+                                        * @returns `{{getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'control'}}`.
+                                        */
+                                        get(controlName: "{{getFieldName this.Control}}"): {{getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'control'}}
+                                        {{/if}}
                                     {{/if}}
-                                {{/if}}
+                                {{/each}}
                             {{/each}}
                         {{/each}}
                     {{/each}}
                 {{/each}}
-            {{/each}}
-        }
-        
-        interface Attributes extends Xrm.Collection.ItemCollection<Xrm.Attributes.Attribute> {
-            {{#each formObj.Tabs.$values}}
-                {{#each this.Columns.$values}}
-                    {{#each this.Sections.$values}}
-                        {{#each this.Rows.$values}}
-                            {{#each this.Cells.$values}}
-                                {{#if (getFieldName this.Control)}}
-                                    {{#if (getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'attribute')}}
-                                    get(attributename: "{{getFieldName this.Control}}"): {{getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'attribute'}}
+            }
+            
+            type Attributes = Xrm.Collection.ItemCollection<Xrm.Attributes.Attribute> & {
+                {{#each formObj.Tabs.$values}}
+                    {{#each this.Columns.$values}}
+                        {{#each this.Sections.$values}}
+                            {{#each this.Rows.$values}}
+                                {{#each this.Cells.$values}}
+                                    {{#if (getFieldName this.Control)}}
+                                        {{#if (getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'attribute')}}
+                                        /**
+                                        * Gets the `{{getFieldName this.Control}}` attribute.
+                                        *
+                                        * @returns `{{getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'attribute'}}`.
+                                        */
+                                        get(attributeName: "{{getFieldName this.Control}}"): {{getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'attribute'}}
+                                        {{/if}}
                                     {{/if}}
-                                {{/if}}
+                                {{/each}}
                             {{/each}}
                         {{/each}}
                     {{/each}}
                 {{/each}}
-            {{/each}}
-        }
-        
-        interface Data extends Xrm.Data {
-            attributes: Attributes
-        }
-        
-        interface Ui extends Xrm.Ui {
-            tabs: Tabs
-            controls: Controls
-        }
-        
-        interface Tabs extends Xrm.Collection.ItemCollection<Xrm.Controls.Tab> {
+            }
+            
+            type Data = Xrm.Data & {
+                attributes: Attributes
+            }
+            
+            type Ui = Xrm.Ui & {
+                tabs: Tabs
+                controls: Controls
+            }
+            
+            type Tabs = Xrm.Collection.ItemCollection<Xrm.Controls.Tab> & {
+                {{#each formObj.Tabs.$values}}
+                /**
+                * Gets the `{{Name}}` tab.
+                *
+                * @returns `Xrm.Controls.Tab`.
+                */
+                get(tabname: "{{Name}}"): {{removeSpaces Name}}TabControl
+                {{/each}}
+            }
+
             {{#each formObj.Tabs.$values}}
-            get(tabname: "{{Name}}"): {{removeSpaces Name}}TabControl
+            type {{removeSpaces Name}}TabControl = Xrm.Controls.Tab & {
+                sections: {{removeSpaces Name}}TabSections
+            }
             {{/each}}
-        }
 
-        {{#each formObj.Tabs.$values}}
-        interface {{removeSpaces Name}}TabControl extends Xrm.Controls.Tab {
-            sections: {{removeSpaces Name}}TabSections
-        }
-        {{/each}}
-
-        {{#each formObj.Tabs.$values}}
-        interface {{removeSpaces Name}}TabSections extends Xrm.Collection.ItemCollection<Xrm.Controls.Section> {
-            {{#each this.Columns.$values}}
-                {{#each this.Sections.$values}}
-                get(sectionname: "{{Name}}"): {{removeSpaces Name}}SectionControl
-                {{/each}}
-            {{/each}}
-        }
-        {{/each}}
-
-        {{#each formObj.Tabs.$values}}
-            {{#each this.Columns.$values}}
-                {{#each this.Sections.$values}}
-                interface {{removeSpaces Name}}SectionControl extends Xrm.Controls.Section {
-                    controls: {{removeSpaces Name}}SectionControls
-                }
-                {{/each}}
-            {{/each}}
-        {{/each}}
-
-        {{#each formObj.Tabs.$values}}
-            {{#each this.Columns.$values}}
-                {{#each this.Sections.$values}}
-                interface {{removeSpaces Name}}SectionControls extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
-                    {{#each this.Rows.$values}}
-                        {{#each this.Cells.$values}}
-                            {{#if (getFieldName this.Control)}}
-                            get(controlname: "{{getFieldName this.Control}}"): {{getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'control'}}
-                            {{/if}}
-                        {{/each}}
+            {{#each formObj.Tabs.$values}}
+            type {{removeSpaces Name}}TabSections = Xrm.Collection.ItemCollection<Xrm.Controls.Section> & {
+                {{#each this.Columns.$values}}
+                    {{#each this.Sections.$values}}
+                    /**
+                    * Gets the `{{Name}}` section.
+                    *
+                    * @returns `Xrm.Controls.Section`.
+                    */
+                    get(sectionname: "{{Name}}"): {{removeSpaces Name}}SectionControl
                     {{/each}}
-                }
+                {{/each}}
+            }
+            {{/each}}
+
+            {{#each formObj.Tabs.$values}}
+                {{#each this.Columns.$values}}
+                    {{#each this.Sections.$values}}
+                    type {{removeSpaces Name}}SectionControl = Xrm.Controls.Section & {
+                        controls: {{removeSpaces Name}}SectionControls
+                    }
+                    {{/each}}
                 {{/each}}
             {{/each}}
-        {{/each}}
+
+            {{#each formObj.Tabs.$values}}
+                {{#each this.Columns.$values}}
+                    {{#each this.Sections.$values}}
+                    type {{removeSpaces Name}}SectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+                        {{#each this.Rows.$values}}
+                            {{#each this.Cells.$values}}
+                                {{#if (getFieldName this.Control)}}
+                                /**
+                                * Gets the `{{getFieldName this.Control}}` control.
+                                *
+                                * @returns `{{getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'control'}}`.
+                                */
+                                get(controlname: "{{getFieldName this.Control}}"): {{getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'control'}}
+                                {{/if}}
+                            {{/each}}
+                        {{/each}}
+                    }
+                    {{/each}}
+                {{/each}}
+            {{/each}}
+        }
     }
 }

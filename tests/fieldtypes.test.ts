@@ -685,9 +685,7 @@ describe('filetype tests', () => {
         );
 
         expect(result).toBeTruthy();
-        expect(result).toBe(
-          'Xrm.Controls.Control /*classid: 0fdf772d-2e15-490c-93f4-e59b6aac15be*/',
-        );
+        expect(result).toBe('Xrm.Controls.Control');
       });
     });
 

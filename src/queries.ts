@@ -51,6 +51,7 @@ export const getFormsForEntities = async (
   entities: string,
 ): Promise<any> => {
   try {
+    console.log(`Entities: ${entities}`);
     const entitynames = entities.split(',');
     const entitiesparam = entitynames.map((value) => `"${value}"`).join(',');
     const response = await fetch(

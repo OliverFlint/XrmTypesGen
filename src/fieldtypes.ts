@@ -86,7 +86,7 @@ export const getAttributeType = (
         returnvalue = 'Xrm.Controls.IframeControl';
         break;
       default:
-        returnvalue = `Xrm.Controls.Control /*classid: ${classid}*/`;
+        returnvalue = 'Xrm.Controls.Control';
         break;
     }
   }
