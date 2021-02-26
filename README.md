@@ -15,32 +15,49 @@ A Typescript Type Declaration Generator for Dynamics 365. Inspired by the [@type
 
 ### Generate your types
 
-Install the npm package:
+#### Install the npm package:
 
 ```
 npm install XrmTypesGen --save-dev
 ```
 
-Generate the Xrm types:
+#### Generate the Xrm types:
+
+Username & Password Authentication
 
 ```
 XrmTypesGen --url https://myorg.crm11.dynamics.com/ --username username@org.onmicrosoft.com --password password123 --tenent https://login.windows.net/org.onmicrosoft.com --solution solutionname --output ./types
 ```
 
-Arguments:
+Client Credential Authentication
 
 ```
+XrmTypesGen --url https://myorg.crm11.dynamics.com/ --tenent https://login.windows.net/myorg.onmicrosoft.com --entities "account,contact,lead" --output types --clientid myclientid --secret mysecret
+```
+
+#### Arguments:
+
+```
+Usage: xrmtypesgen [options]
+
 Options:
   -V, --version              output the version number
   -u, --url <url>            D365/Dataverse Url. e.g. https://myorg.crm11.dynamics.com/
   -n, --username <username>  Username for D365/Dataverse
   -p, --password <password>  Password for D365/Dataverse
+  --secret <secret>          OAuth Client Secret
   -t, --tenent <tenent>      Azure Active Directory authority. e.g. https://login.windows.net/myorg.onmicrosoft.com
   -c, --clientid <clientid>  OAuth Client Id (default: "51f81489-12ee-4a9e-aaae-a2591f45987d")
   -s, --solution <solution>  Unique D365/Dataverse Solution Name
   -e, --entities <entities>  Comma seperated list of entities
   -o, --output <output>      Output path (default: "types")
   -h, --help                 display help for command
+
+e.g. XrmTypesGen --url https://myorg.crm11.dynamics.com/ --username username@myorg.onmicrosoft.com --password password123 --tenent https://login.windows.net/myorg.onmicrosoft.com --solution solutionname --output ./types
+
+e.g. XrmTypesGen --url https://myorg.crm11.dynamics.com/ --username username@myorg.onmicrosoft.com --password password123 --tenent https://login.windows.net/myorg.onmicrosoft.com --entities account,contact,lead --output ./types
+
+e.g. XrmTypesGen --url https://myorg.crm11.dynamics.com/ --tenent https://login.windows.net/myorg.onmicrosoft.com --entities "account,contact,lead" --output types --clientid myclientid --secret mysecret
 ```
 
 ### Using your types
@@ -83,4 +100,5 @@ Here's a little video demo...
 [![demo video](https://img.youtube.com/vi/zhLn1Ac21_4/0.jpg)](https://youtu.be/zhLn1Ac21_4)
 
 ## Why?
+
 Well, I've been using @types/xrm for over 5 years now and XrmDefinitelyTyped for about 2 years. I love the added features XrmDefinitelyTyped provides but dislike the fact that it doesn't extend on @types/xrm given most D365/XRM projects use these types. So I set about creating my own tool to generate type declarations that extend @type/xrm 😁
