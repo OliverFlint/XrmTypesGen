@@ -6,6 +6,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/OliverFlint/XrmTypesGen?logo=github&style=flat-square)](https://github.com/OliverFlint/XrmTypesGen/stargazers)
 [![GitHub license](https://img.shields.io/github/license/OliverFlint/XrmTypesGen?logo=github&style=flat-square)](https://github.com/OliverFlint/XrmTypesGen/blob/main/LICENSE)
 ![GitHub top language](https://img.shields.io/github/languages/top/oliverflint/xrmtypesgen?logo=github&style=flat-square)
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/oliverflint/xrmtypesgen?logo=snyk)
 
 # XrmTypesGen
 
