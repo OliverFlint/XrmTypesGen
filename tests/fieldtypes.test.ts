@@ -2,6 +2,9 @@ import getAttributeType from '../src/fieldtypes';
 
 /* eslint-disable no-undef */
 describe('filetype tests', () => {
+  beforeEach(() => {
+    expect.hasAssertions();
+  });
   describe('getAttributeType tests', () => {
     describe('Strings', () => {
       test('ControlForAttributeTypeString_ShouldReturnStringControl', () => {

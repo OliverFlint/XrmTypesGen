@@ -138,6 +138,7 @@ export const getAttributeMeta = async (entity: string, authToken: TokenResponse,
   try {
     const cache = attributeMetaDataCache.get(entity);
     if (cache) {
+      console.log(`getting attribute metadata for the ${entity} entity from cache`);
       return cache;
     }
     console.log(`getting attribute metadata for the ${entity} entity`);

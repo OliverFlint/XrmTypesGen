@@ -3,142 +3,418 @@
 
 declare namespace Xrm {
   namespace Ext.Forms.account.quickcreate.AccountQuickCreate {
-    type Form = FormContext;
-    interface FormContext extends Xrm.FormContext {
-      //#region form context attributes
-      getAttribute(attributename: "name"): Xrm.Attributes.StringAttribute;
-      getAttribute(attributename: "telephone1"): Xrm.Attributes.StringAttribute;
-      getAttribute(
-        attributename: "primarycontactid"
-      ): Xrm.Attributes.LookupAttribute;
-      getAttribute(attributename: "revenue"): Xrm.Attributes.NumberAttribute;
-      getAttribute(
-        attributename: "numberofemployees"
-      ): Xrm.Attributes.NumberAttribute;
-      getAttribute(
-        attributename: "description"
-      ): Xrm.Attributes.StringAttribute;
-      getAttribute(
-        attributename: "address1_line1"
-      ): Xrm.Attributes.StringAttribute;
-      getAttribute(
-        attributename: "address1_line2"
-      ): Xrm.Attributes.StringAttribute;
-      getAttribute(
-        attributename: "address1_city"
-      ): Xrm.Attributes.StringAttribute;
-      getAttribute(
-        attributename: "address1_postalcode"
-      ): Xrm.Attributes.StringAttribute;
-      //#endregion
-      //#region form context contols
-      getControl(controlname: "name"): Xrm.Controls.StringControl;
-      getControl(controlname: "telephone1"): Xrm.Controls.StringControl;
-      getControl(controlname: "primarycontactid"): Xrm.Controls.LookupControl;
-      getControl(controlname: "revenue"): Xrm.Controls.NumberControl;
-      getControl(controlname: "numberofemployees"): Xrm.Controls.NumberControl;
-      getControl(controlname: "description"): Xrm.Controls.StringControl;
-      getControl(controlname: "address1_line1"): Xrm.Controls.StringControl;
-      getControl(controlname: "address1_line2"): Xrm.Controls.StringControl;
-      getControl(controlname: "address1_city"): Xrm.Controls.StringControl;
-      getControl(
-        controlname: "address1_postalcode"
-      ): Xrm.Controls.StringControl;
-      //#endregion
+    /**
+     * Entity/Table Name: `account`
+     *
+     * Form Type: `quickcreate`
+     *
+     * Form Name: `AccountQuickCreate`
+     */
+    interface Form extends Extensions.FormContext {}
+    namespace Extensions {
+      type FormContext = Xrm.FormContext & {
+        //#region form context attributes
+        /**
+         * Gets the `name` attribute.
+         *
+         * @returns `Xrm.Attributes.StringAttribute`.
+         */
+        getAttribute(attributeName: "name"): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the `telephone1` attribute.
+         *
+         * @returns `Xrm.Attributes.StringAttribute`.
+         */
+        getAttribute(
+          attributeName: "telephone1"
+        ): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the `primarycontactid` attribute.
+         *
+         * @returns `Xrm.Attributes.LookupAttribute`.
+         */
+        getAttribute(
+          attributeName: "primarycontactid"
+        ): Xrm.Attributes.LookupAttribute;
+        /**
+         * Gets the `revenue` attribute.
+         *
+         * @returns `Xrm.Attributes.NumberAttribute`.
+         */
+        getAttribute(attributeName: "revenue"): Xrm.Attributes.NumberAttribute;
+        /**
+         * Gets the `numberofemployees` attribute.
+         *
+         * @returns `Xrm.Attributes.NumberAttribute`.
+         */
+        getAttribute(
+          attributeName: "numberofemployees"
+        ): Xrm.Attributes.NumberAttribute;
+        /**
+         * Gets the `description` attribute.
+         *
+         * @returns `Xrm.Attributes.StringAttribute`.
+         */
+        getAttribute(
+          attributeName: "description"
+        ): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the `address1_line1` attribute.
+         *
+         * @returns `Xrm.Attributes.StringAttribute`.
+         */
+        getAttribute(
+          attributeName: "address1_line1"
+        ): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the `address1_line2` attribute.
+         *
+         * @returns `Xrm.Attributes.StringAttribute`.
+         */
+        getAttribute(
+          attributeName: "address1_line2"
+        ): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the `address1_city` attribute.
+         *
+         * @returns `Xrm.Attributes.StringAttribute`.
+         */
+        getAttribute(
+          attributeName: "address1_city"
+        ): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the `address1_postalcode` attribute.
+         *
+         * @returns `Xrm.Attributes.StringAttribute`.
+         */
+        getAttribute(
+          attributeName: "address1_postalcode"
+        ): Xrm.Attributes.StringAttribute;
+        //#endregion
+        //#region form context contols
+        /**
+         * Gets the `name` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        getControl(controlName: "name"): Xrm.Controls.StringControl;
+        /**
+         * Gets the `telephone1` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        getControl(controlName: "telephone1"): Xrm.Controls.StringControl;
+        /**
+         * Gets the `primarycontactid` control.
+         *
+         * @returns `Xrm.Controls.LookupControl`.
+         */
+        getControl(controlName: "primarycontactid"): Xrm.Controls.LookupControl;
+        /**
+         * Gets the `revenue` control.
+         *
+         * @returns `Xrm.Controls.NumberControl`.
+         */
+        getControl(controlName: "revenue"): Xrm.Controls.NumberControl;
+        /**
+         * Gets the `numberofemployees` control.
+         *
+         * @returns `Xrm.Controls.NumberControl`.
+         */
+        getControl(
+          controlName: "numberofemployees"
+        ): Xrm.Controls.NumberControl;
+        /**
+         * Gets the `description` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        getControl(controlName: "description"): Xrm.Controls.StringControl;
+        /**
+         * Gets the `address1_line1` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        getControl(controlName: "address1_line1"): Xrm.Controls.StringControl;
+        /**
+         * Gets the `address1_line2` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        getControl(controlName: "address1_line2"): Xrm.Controls.StringControl;
+        /**
+         * Gets the `address1_city` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        getControl(controlName: "address1_city"): Xrm.Controls.StringControl;
+        /**
+         * Gets the `address1_postalcode` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        getControl(
+          controlName: "address1_postalcode"
+        ): Xrm.Controls.StringControl;
+        //#endregion
 
-      data: Data;
-      ui: Ui;
-    }
+        data: Data;
+        ui: Ui;
+      };
 
-    interface Controls
-      extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
-      get(controlname: "name"): Xrm.Controls.StringControl;
-      get(controlname: "telephone1"): Xrm.Controls.StringControl;
-      get(controlname: "primarycontactid"): Xrm.Controls.LookupControl;
-      get(controlname: "revenue"): Xrm.Controls.NumberControl;
-      get(controlname: "numberofemployees"): Xrm.Controls.NumberControl;
-      get(controlname: "description"): Xrm.Controls.StringControl;
-      get(controlname: "address1_line1"): Xrm.Controls.StringControl;
-      get(controlname: "address1_line2"): Xrm.Controls.StringControl;
-      get(controlname: "address1_city"): Xrm.Controls.StringControl;
-      get(controlname: "address1_postalcode"): Xrm.Controls.StringControl;
-    }
+      type Controls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+        /**
+         * Gets the `name` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        get(controlName: "name"): Xrm.Controls.StringControl;
+        /**
+         * Gets the `telephone1` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        get(controlName: "telephone1"): Xrm.Controls.StringControl;
+        /**
+         * Gets the `primarycontactid` control.
+         *
+         * @returns `Xrm.Controls.LookupControl`.
+         */
+        get(controlName: "primarycontactid"): Xrm.Controls.LookupControl;
+        /**
+         * Gets the `revenue` control.
+         *
+         * @returns `Xrm.Controls.NumberControl`.
+         */
+        get(controlName: "revenue"): Xrm.Controls.NumberControl;
+        /**
+         * Gets the `numberofemployees` control.
+         *
+         * @returns `Xrm.Controls.NumberControl`.
+         */
+        get(controlName: "numberofemployees"): Xrm.Controls.NumberControl;
+        /**
+         * Gets the `description` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        get(controlName: "description"): Xrm.Controls.StringControl;
+        /**
+         * Gets the `address1_line1` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        get(controlName: "address1_line1"): Xrm.Controls.StringControl;
+        /**
+         * Gets the `address1_line2` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        get(controlName: "address1_line2"): Xrm.Controls.StringControl;
+        /**
+         * Gets the `address1_city` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        get(controlName: "address1_city"): Xrm.Controls.StringControl;
+        /**
+         * Gets the `address1_postalcode` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        get(controlName: "address1_postalcode"): Xrm.Controls.StringControl;
+      };
 
-    interface Attributes
-      extends Xrm.Collection.ItemCollection<Xrm.Attributes.Attribute> {
-      get(attributename: "name"): Xrm.Attributes.StringAttribute;
-      get(attributename: "telephone1"): Xrm.Attributes.StringAttribute;
-      get(attributename: "primarycontactid"): Xrm.Attributes.LookupAttribute;
-      get(attributename: "revenue"): Xrm.Attributes.NumberAttribute;
-      get(attributename: "numberofemployees"): Xrm.Attributes.NumberAttribute;
-      get(attributename: "description"): Xrm.Attributes.StringAttribute;
-      get(attributename: "address1_line1"): Xrm.Attributes.StringAttribute;
-      get(attributename: "address1_line2"): Xrm.Attributes.StringAttribute;
-      get(attributename: "address1_city"): Xrm.Attributes.StringAttribute;
-      get(attributename: "address1_postalcode"): Xrm.Attributes.StringAttribute;
-    }
+      type Attributes = Xrm.Collection.ItemCollection<Xrm.Attributes.Attribute> & {
+        /**
+         * Gets the `name` attribute.
+         *
+         * @returns `Xrm.Attributes.StringAttribute`.
+         */
+        get(attributeName: "name"): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the `telephone1` attribute.
+         *
+         * @returns `Xrm.Attributes.StringAttribute`.
+         */
+        get(attributeName: "telephone1"): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the `primarycontactid` attribute.
+         *
+         * @returns `Xrm.Attributes.LookupAttribute`.
+         */
+        get(attributeName: "primarycontactid"): Xrm.Attributes.LookupAttribute;
+        /**
+         * Gets the `revenue` attribute.
+         *
+         * @returns `Xrm.Attributes.NumberAttribute`.
+         */
+        get(attributeName: "revenue"): Xrm.Attributes.NumberAttribute;
+        /**
+         * Gets the `numberofemployees` attribute.
+         *
+         * @returns `Xrm.Attributes.NumberAttribute`.
+         */
+        get(attributeName: "numberofemployees"): Xrm.Attributes.NumberAttribute;
+        /**
+         * Gets the `description` attribute.
+         *
+         * @returns `Xrm.Attributes.StringAttribute`.
+         */
+        get(attributeName: "description"): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the `address1_line1` attribute.
+         *
+         * @returns `Xrm.Attributes.StringAttribute`.
+         */
+        get(attributeName: "address1_line1"): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the `address1_line2` attribute.
+         *
+         * @returns `Xrm.Attributes.StringAttribute`.
+         */
+        get(attributeName: "address1_line2"): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the `address1_city` attribute.
+         *
+         * @returns `Xrm.Attributes.StringAttribute`.
+         */
+        get(attributeName: "address1_city"): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the `address1_postalcode` attribute.
+         *
+         * @returns `Xrm.Attributes.StringAttribute`.
+         */
+        get(
+          attributeName: "address1_postalcode"
+        ): Xrm.Attributes.StringAttribute;
+      };
 
-    interface Data extends Xrm.Data {
-      attributes: Attributes;
-    }
+      type Data = Xrm.Data & {
+        attributes: Attributes;
+      };
 
-    interface Ui extends Xrm.Ui {
-      tabs: Tabs;
-      controls: Controls;
-    }
+      type Ui = Xrm.Ui & {
+        tabs: Tabs;
+        controls: Controls;
+      };
 
-    interface Tabs extends Xrm.Collection.ItemCollection<Xrm.Controls.Tab> {
-      get(tabname: "tab_1"): tab_1TabControl;
-    }
+      type Tabs = Xrm.Collection.ItemCollection<Xrm.Controls.Tab> & {
+        /**
+         * Gets the `tab_1` tab.
+         *
+         * @returns `Xrm.Controls.Tab`.
+         */
+        get(tabname: "tab_1"): tab_1TabControl;
+      };
 
-    interface tab_1TabControl extends Xrm.Controls.Tab {
-      sections: tab_1TabSections;
-    }
+      type tab_1TabControl = Xrm.Controls.Tab & {
+        sections: tab_1TabSections;
+      };
 
-    interface tab_1TabSections
-      extends Xrm.Collection.ItemCollection<Xrm.Controls.Section> {
-      get(
-        sectionname: "tab_1_column_1_section_1"
-      ): tab_1_column_1_section_1SectionControl;
-      get(
-        sectionname: "tab_1_column_2_section_1"
-      ): tab_1_column_2_section_1SectionControl;
-      get(
-        sectionname: "tab_1_column_3_section_1"
-      ): tab_1_column_3_section_1SectionControl;
-    }
+      type tab_1TabSections = Xrm.Collection.ItemCollection<Xrm.Controls.Section> & {
+        /**
+         * Gets the `tab_1_column_1_section_1` section.
+         *
+         * @returns `Xrm.Controls.Section`.
+         */
+        get(
+          sectionname: "tab_1_column_1_section_1"
+        ): tab_1_column_1_section_1SectionControl;
+        /**
+         * Gets the `tab_1_column_2_section_1` section.
+         *
+         * @returns `Xrm.Controls.Section`.
+         */
+        get(
+          sectionname: "tab_1_column_2_section_1"
+        ): tab_1_column_2_section_1SectionControl;
+        /**
+         * Gets the `tab_1_column_3_section_1` section.
+         *
+         * @returns `Xrm.Controls.Section`.
+         */
+        get(
+          sectionname: "tab_1_column_3_section_1"
+        ): tab_1_column_3_section_1SectionControl;
+      };
 
-    interface tab_1_column_1_section_1SectionControl
-      extends Xrm.Controls.Section {
-      controls: tab_1_column_1_section_1SectionControls;
-    }
-    interface tab_1_column_2_section_1SectionControl
-      extends Xrm.Controls.Section {
-      controls: tab_1_column_2_section_1SectionControls;
-    }
-    interface tab_1_column_3_section_1SectionControl
-      extends Xrm.Controls.Section {
-      controls: tab_1_column_3_section_1SectionControls;
-    }
+      type tab_1_column_1_section_1SectionControl = Xrm.Controls.Section & {
+        controls: tab_1_column_1_section_1SectionControls;
+      };
+      type tab_1_column_2_section_1SectionControl = Xrm.Controls.Section & {
+        controls: tab_1_column_2_section_1SectionControls;
+      };
+      type tab_1_column_3_section_1SectionControl = Xrm.Controls.Section & {
+        controls: tab_1_column_3_section_1SectionControls;
+      };
 
-    interface tab_1_column_1_section_1SectionControls
-      extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
-      get(controlname: "name"): Xrm.Controls.StringControl;
-      get(controlname: "telephone1"): Xrm.Controls.StringControl;
-      get(controlname: "primarycontactid"): Xrm.Controls.LookupControl;
-    }
-    interface tab_1_column_2_section_1SectionControls
-      extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
-      get(controlname: "revenue"): Xrm.Controls.NumberControl;
-      get(controlname: "numberofemployees"): Xrm.Controls.NumberControl;
-      get(controlname: "description"): Xrm.Controls.StringControl;
-    }
-    interface tab_1_column_3_section_1SectionControls
-      extends Xrm.Collection.ItemCollection<Xrm.Controls.Control> {
-      get(controlname: "address1_line1"): Xrm.Controls.StringControl;
-      get(controlname: "address1_line2"): Xrm.Controls.StringControl;
-      get(controlname: "address1_city"): Xrm.Controls.StringControl;
-      get(controlname: "address1_postalcode"): Xrm.Controls.StringControl;
+      type tab_1_column_1_section_1SectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+        /**
+         * Gets the `name` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        get(controlname: "name"): Xrm.Controls.StringControl;
+        /**
+         * Gets the `telephone1` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        get(controlname: "telephone1"): Xrm.Controls.StringControl;
+        /**
+         * Gets the `primarycontactid` control.
+         *
+         * @returns `Xrm.Controls.LookupControl`.
+         */
+        get(controlname: "primarycontactid"): Xrm.Controls.LookupControl;
+      };
+      type tab_1_column_2_section_1SectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+        /**
+         * Gets the `revenue` control.
+         *
+         * @returns `Xrm.Controls.NumberControl`.
+         */
+        get(controlname: "revenue"): Xrm.Controls.NumberControl;
+        /**
+         * Gets the `numberofemployees` control.
+         *
+         * @returns `Xrm.Controls.NumberControl`.
+         */
+        get(controlname: "numberofemployees"): Xrm.Controls.NumberControl;
+        /**
+         * Gets the `description` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        get(controlname: "description"): Xrm.Controls.StringControl;
+      };
+      type tab_1_column_3_section_1SectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+        /**
+         * Gets the `address1_line1` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        get(controlname: "address1_line1"): Xrm.Controls.StringControl;
+        /**
+         * Gets the `address1_line2` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        get(controlname: "address1_line2"): Xrm.Controls.StringControl;
+        /**
+         * Gets the `address1_city` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        get(controlname: "address1_city"): Xrm.Controls.StringControl;
+        /**
+         * Gets the `address1_postalcode` control.
+         *
+         * @returns `Xrm.Controls.StringControl`.
+         */
+        get(controlname: "address1_postalcode"): Xrm.Controls.StringControl;
+      };
     }
   }
 }

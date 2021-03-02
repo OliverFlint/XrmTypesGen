@@ -8,7 +8,7 @@ export const render = (data: any, meta: any): string => {
   const template = compile(templateBuffer.toString());
 
   registerHelper('formtype', (value) => (value === 2 ? 'main' : 'quickcreate'));
-  registerHelper('removeSpaces', (value) => value.replace(/ */g, ''));
+  registerHelper('removeSpaces', (value) => (value ? value.replace(/ */g, '') : null));
   registerHelper('getFieldName', (value) => (value.DataFieldName ? value.DataFieldName : value.Id));
   registerHelper('jsonStringify', (value) => JSON.stringify(value));
   registerHelper('getAttributeType', (metadata, name, classid, fieldtye) => {
