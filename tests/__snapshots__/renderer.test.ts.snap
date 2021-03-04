@@ -5,13 +5,13 @@ exports[`renderer tests render tests should return valid type declaration for ma
 // GitHub: https://github.com/OliverFlint/XrmTypesGen
 
 declare namespace Xrm {
-  namespace Ext.Forms.contact.main.Information {
+  namespace Ext.Forms.contact.main.Informationcolonspace {
     /**
      * Entity/Table Name: \`contact\`
      *
      * Form Type: \`main\`
      *
-     * Form Name: \`Information\`
+     * Form Name: \`Informationcolonspace\`
      */
     interface Form extends Extensions.FormContext {}
     namespace Extensions {
