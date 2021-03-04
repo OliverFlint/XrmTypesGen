@@ -10,7 +10,7 @@ import { render } from './renderer';
 
 const localStorage: LocalStorage = new LocalStorage('./scratch');
 
-program.version('1.0.5');
+program.version('1.0.6').name('xrmtypesgen');
 
 program
   .requiredOption('-u, --url <url>', `${terms.d365} Url. e.g. https://myorg.crm11.dynamics.com/`)

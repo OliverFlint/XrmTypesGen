@@ -1,7 +1,7 @@
 {
   "name": "xrmtypesgen",
-  "version": "1.0.5",
-  "description": "A TypeScript Definition Generator for Dynamics 365 Forms",
+  "version": "1.0.6",
+  "description": "A TypeScript Declaration Generator for Dynamics 365 Forms",
   "keywords": [
     "TyepScript",
     "Declaration",
@@ -16,6 +16,9 @@
     "WebResource"
   ],
   "bin": "./dist/index.js",
+  "engines": {
+    "node": "^12.0.0"
+  },
   "scripts": {
     "test": "node_modules/.bin/jest --coverage --maxWorkers=4",
     "build": "node_modules/.bin/tsc && npm run template",
