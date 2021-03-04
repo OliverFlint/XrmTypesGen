@@ -15,7 +15,8 @@
     "PowerApps",
     "WebResource"
   ],
-  "bin": "./dist/index.js",
+  "main": "dist/index.js",
+  "bin": "dist/index.js",
   "engines": {
     "node": "^12.0.0"
   },

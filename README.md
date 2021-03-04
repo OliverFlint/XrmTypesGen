@@ -1,4 +1,3 @@
-
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/oliverflint/xrmtypesgen/Build?logo=github&style=flat-square)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/oliverflint/xrmtypesgen/Tests?label=tests&logo=jest&style=flat-square)
 [![npm](https://img.shields.io/npm/v/xrmtypesgen?logo=npm)](https://www.npmjs.com/package/xrmtypesgen)
@@ -18,13 +17,25 @@ A Typescript Type Declaration Generator for Dynamics 365. Inspired by the [@type
 
 ### Generate your types
 
-#### Install the npm package:
+#### **Install the npm package:**
+
+```
+npm install xrmtypesgen -g
+```
+
+#### **If you wish to install the package locally use the following:**
 
 ```
 npm install xrmtypesgen --save-dev
 ```
 
-#### Generate the Xrm types:
+and run via npx:
+
+```
+npx xrmtypesgen [options]
+```
+
+#### **Generate the Xrm types:**
 
 Username & Password Authentication
 
@@ -38,7 +49,7 @@ Client Credential Authentication
 xrmtypesgen --url https://myorg.crm11.dynamics.com/ --tenent https://login.windows.net/myorg.onmicrosoft.com --entities "account,contact,lead" --output types --clientid myclientid --secret mysecret
 ```
 
-#### Arguments:
+#### **Arguments:**
 
 ```
 Usage: xrmtypesgen [options]
