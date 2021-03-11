@@ -2,13 +2,13 @@
 // GitHub: https://github.com/OliverFlint/XrmTypesGen
 
 declare namespace Xrm {
-    namespace Ext.Forms.{{data.objecttypecode}}.{{formtype data.type}}.{{removeSpaces data.name}} {
+    namespace Ext.Forms.{{data.objecttypecode}}.{{formtype data.type}}.{{toTypeName data.name}} {
         /**
         * Entity/Table Name: `{{data.objecttypecode}}`
         *
         * Form Type: `{{formtype data.type}}`
         *
-        * Form Name: `{{removeSpaces data.name}}`
+        * Form Name: `{{toTypeName data.name}}`
         */
         interface Form extends Extensions.FormContext {};
         namespace Extensions {
@@ -124,18 +124,18 @@ declare namespace Xrm {
                 *
                 * @returns `Xrm.Controls.Tab`.
                 */
-                get(tabname: "{{Name}}"): {{removeSpaces Name}}TabControl
+                get(tabname: "{{Name}}"): {{toTypeName Name}}TabControl
                 {{/each}}
             }
 
             {{#each formObj.Tabs.$values}}
-            type {{removeSpaces Name}}TabControl = Xrm.Controls.Tab & {
-                sections: {{removeSpaces Name}}TabSections
+            type {{toTypeName Name}}TabControl = Xrm.Controls.Tab & {
+                sections: {{toTypeName Name}}TabSections
             }
             {{/each}}
 
             {{#each formObj.Tabs.$values}}
-            type {{removeSpaces Name}}TabSections = Xrm.Collection.ItemCollection<Xrm.Controls.Section> & {
+            type {{toTypeName Name}}TabSections = Xrm.Collection.ItemCollection<Xrm.Controls.Section> & {
                 {{#each this.Columns.$values}}
                     {{#each this.Sections.$values}}
                     /**
@@ -143,7 +143,7 @@ declare namespace Xrm {
                     *
                     * @returns `Xrm.Controls.Section`.
                     */
-                    get(sectionname: "{{Name}}"): {{removeSpaces Name}}SectionControl
+                    get(sectionname: "{{Name}}"): {{toTypeName Name}}SectionControl
                     {{/each}}
                 {{/each}}
             }
@@ -152,8 +152,8 @@ declare namespace Xrm {
             {{#each formObj.Tabs.$values}}
                 {{#each this.Columns.$values}}
                     {{#each this.Sections.$values}}
-                    type {{removeSpaces Name}}SectionControl = Xrm.Controls.Section & {
-                        controls: {{removeSpaces Name}}SectionControls
+                    type {{toTypeName Name}}SectionControl = Xrm.Controls.Section & {
+                        controls: {{toTypeName Name}}SectionControls
                     }
                     {{/each}}
                 {{/each}}
@@ -162,7 +162,7 @@ declare namespace Xrm {
             {{#each formObj.Tabs.$values}}
                 {{#each this.Columns.$values}}
                     {{#each this.Sections.$values}}
-                    type {{removeSpaces Name}}SectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+                    type {{toTypeName Name}}SectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
                         {{#each this.Rows.$values}}
                             {{#each this.Cells.$values}}
                                 {{#if (getFieldName this.Control)}}
