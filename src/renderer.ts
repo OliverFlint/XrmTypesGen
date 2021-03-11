@@ -14,7 +14,7 @@ export const render = (data: any, meta: any): string => {
     // eslint-disable-next-line no-confusing-arrow
     (value) =>
       // eslint-disable-next-line implicit-arrow-linebreak
-      value ? value.replace(/[^a-z^A-Z^0-9^_]+/g, '') : null,
+      value ? value.replace(/[^a-z^A-Z^0-9^_]+/g, '').replace(/\d+(?=.)/, '') : null,
     // eslint-disable-next-line function-paren-newline
   );
   registerHelper('getFieldName', (value) => (value.DataFieldName ? value.DataFieldName : value.Id));
