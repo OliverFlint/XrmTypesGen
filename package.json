@@ -39,7 +39,7 @@
   "homepage": "https://github.com/OliverFlint/xrm-types-gen#readme",
   "dependencies": {
     "adal-node": "^0.2.2",
-    "commander": "^7.0.0",
+    "commander": "^7.1.0",
     "handlebars": "^4.7.7",
     "node-fetch": "^2.6.1",
     "node-localstorage": "^2.1.6",
