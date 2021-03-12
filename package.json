@@ -1,6 +1,6 @@
 {
   "name": "xrmtypesgen",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A TypeScript Declaration Generator for Dynamics 365 Forms",
   "keywords": [
     "TyepScript",
