@@ -16,12 +16,12 @@ export const render = (data: any, meta: any): string => {
       const typeName = value ? value.replace(/[^a-z^A-Z^0-9^_]+/g, '') : null;
 
       if (/^\d/.test(typeName)) {
-        return `_${typeName}`; 
+        return `_${typeName}`;
       }
 
       return typeName;
-    }
-      // eslint-disable-next-line implicit-arrow-linebreak
+    },
+    // eslint-disable-next-line implicit-arrow-linebreak
     // eslint-disable-next-line function-paren-newline
   );
   registerHelper('getFieldName', (value) => (value.DataFieldName ? value.DataFieldName : value.Id));
