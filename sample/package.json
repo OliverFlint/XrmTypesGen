@@ -12,11 +12,11 @@
   "dependencies": {
     "@types/xrm": "^9.0.33",
     "@typescript-eslint/eslint-plugin": "^4.15.1",
-    "@typescript-eslint/parser": "^4.14.2",
-    "eslint": "^7.19.0",
+    "@typescript-eslint/parser": "^4.15.1",
+    "eslint": "^7.20.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
-    "typescript": "^4.1.4"
+    "typescript": "^4.1.5"
   },
   "devDependencies": {}
 }

@@ -10,11 +10,18 @@ export const render = (data: any, meta: any): string => {
   registerHelper('formtype', (value) => (value === 2 ? 'main' : 'quickcreate'));
   // eslint-disable-next-line no-confusing-arrow
   registerHelper(
-    'removeSpaces',
+    'toTypeName',
     // eslint-disable-next-line no-confusing-arrow
-    (value) =>
+    (value) => {
+      const typeName = value ? value.replace(/[^a-z^A-Z^0-9^_]+/g, '') : null;
+
+      if (/^\d/.test(typeName)) {
+        return `_${typeName}`; 
+      }
+
+      return typeName;
+    }
       // eslint-disable-next-line implicit-arrow-linebreak
-      value ? value.replace(/[^a-z^A-Z^0-9^_]+/g, '') : null,
     // eslint-disable-next-line function-paren-newline
   );
   registerHelper('getFieldName', (value) => (value.DataFieldName ? value.DataFieldName : value.Id));
