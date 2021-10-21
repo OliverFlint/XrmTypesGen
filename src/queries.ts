@@ -144,7 +144,7 @@ export const getAttributeMeta = async (entity: string, authToken: TokenResponse,
     console.log(`getting attribute metadata for the ${entity} entity`);
     const response = await fetch(
       `${url}/api/data/v9.2/EntityDefinitions(LogicalName='${entity}')?` +
-        '$select=LogicalName&$expand=Attributes($select=LogicalName,AttributeType)',
+        '$select=LogicalName,SchemaName&$expand=Attributes($select=LogicalName,SchemaName,AttributeType)',
       {
         headers: initHeader(authToken.accessToken),
         method: 'GET',

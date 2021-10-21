@@ -7,6 +7,7 @@ import { terms } from './terms';
 // eslint-disable-next-line object-curly-newline
 import { getAttributeMeta, getForms, getFormsBySolution, getFormsForEntities } from './queries';
 import { render } from './renderer';
+import { EntityMetadata, Form, ProgramOptions } from './types';
 
 const localStorage: LocalStorage = new LocalStorage('./scratch');
 
@@ -24,7 +25,8 @@ program
   .option('-c, --clientid <clientid>', 'OAuth Client Id', '51f81489-12ee-4a9e-aaae-a2591f45987d')
   .option('-s, --solution <solution>', `Unique ${terms.d365} Solution Name`)
   .option('-e, --entities <entities>', 'Comma seperated list of entities')
-  .option('-o, --output <output>', 'Output path', 'types');
+  .option('-o, --output <output>', 'Output path', 'types')
+  .option('-b, --earlybound', 'Generate Early-Bound format', false);
 
 program.addHelpText(
   'afterAll',
@@ -38,7 +40,7 @@ e.g. XrmTypesGen --url https://myorg.crm11.dynamics.com/ --tenent https://login.
 );
 
 program.parse();
-const options = program.opts();
+const options = program.opts() as ProgramOptions;
 
 const Main = async (authToken: TokenResponse) => {
   localStorage.clear();
@@ -56,35 +58,86 @@ const Main = async (authToken: TokenResponse) => {
     console.error(formsResponse.error);
     return;
   }
-  const forms = formsResponse.value;
+  const forms: Form[] = formsResponse.value;
 
-  const entities = [...new Set<string>(forms.map((data: any) => data.objecttypecode))];
+  const entities: { [entity: string]: EntityMetadata } = {};
+  forms.forEach((form) => {
+    entities[form.objecttypecode] = <EntityMetadata>{};
+  });
   console.log('pre-cache attribute metatdata');
-  await Promise.all(entities.map((value) => getAttributeMeta(value, authToken, options.url)));
+  await Promise.all(
+    Object.getOwnPropertyNames(entities).map(async (value) => {
+      entities[value] = await getAttributeMeta(value, authToken, options.url);
+    }),
+  );
 
-  const formstd = await Promise.all(
-    forms.map(async (data: any) => {
-      const meta = await getAttributeMeta(data.objecttypecode, authToken, options.url);
+  console.log(options);
+
+  if (options.earlybound) {
+    const entitiestd = Object.getOwnPropertyNames(entities).map((entityName) => {
+      const meta = entities[entityName];
+      return {
+        entity: entityName,
+        content: render(meta, meta, 'template-earlybound-entity'),
+      };
+    });
+
+    console.log('saving type definition files');
+    entitiestd.forEach((element) => {
+      mkdirSync(`${options.output}/${element.entity}/`, {
+        recursive: true,
+      });
+      writeFile(
+        `${options.output}/${element.entity}/${element.entity}.d.ts`,
+        element.content,
+        () => {},
+      );
+    });
+
+    const formstd = forms.map((data) => {
+      const meta = entities[data.objecttypecode];
       return {
         entity: data.objecttypecode,
         formtype: data.type === 2 ? 'main' : 'quickcreate',
         formname: data.name.replace(/ */g, ''),
-        content: render(data, meta),
+        content: render(data, meta, 'template-earlybound-form'),
       };
-    }),
-  );
-
-  console.log('saving type definition files');
-  formstd.forEach((element: any) => {
-    mkdirSync(`${options.output}/Xrm/Forms/${element.entity}/${element.formtype}`, {
-      recursive: true,
     });
-    writeFile(
-      `${options.output}/Xrm/Forms/${element.entity}/${element.formtype}/${element.formname}.d.ts`,
-      element.content,
-      () => {},
-    );
-  });
+
+    console.log('saving type definition files');
+    formstd.forEach((element) => {
+      mkdirSync(`${options.output}/${element.entity}/Forms/${element.formtype}`, {
+        recursive: true,
+      });
+      writeFile(
+        `${options.output}/${element.entity}/Forms/${element.formtype}/${element.formname}.d.ts`,
+        element.content,
+        () => {},
+      );
+    });
+  } else {
+    const formstd = forms.map((data) => {
+      const meta = entities[data.objecttypecode];
+      return {
+        entity: data.objecttypecode,
+        formtype: data.type === 2 ? 'main' : 'quickcreate',
+        formname: data.name.replace(/ */g, ''),
+        content: render(data, meta, 'template'),
+      };
+    });
+
+    console.log('saving type definition files');
+    formstd.forEach((element: any) => {
+      mkdirSync(`${options.output}/Xrm/Forms/${element.entity}/${element.formtype}`, {
+        recursive: true,
+      });
+      writeFile(
+        `${options.output}/Xrm/Forms/${element.entity}/${element.formtype}/${element.formname}.d.ts`,
+        element.content,
+        () => {},
+      );
+    });
+  }
 
   localStorage.clear();
   console.log('Finished!');

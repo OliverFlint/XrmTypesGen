@@ -1,17 +1,519 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renderer tests render tests should return valid type declaration for Early-Bound Entity 1`] = `
+"// This file was generated with XrmTypesGen
+// GitHub: https://github.com/OliverFlint/XrmTypesGen
+
+declare namespace Xrm.Ext.Entities {
+  /**
+   * Entity/Table Name: \`Contact\`
+   *
+   */
+  interface Contact extends Xrm.EarlyBound.Entity {
+    PreferredContactMethodCodeName: Xrm.Attributes.Attribute;
+    HasChildrenCodeName: Xrm.Attributes.Attribute;
+    EMailAddress2: Xrm.Attributes.StringAttribute;
+    EMailAddress1: Xrm.Attributes.StringAttribute;
+    Address3_AddressTypeCode: Xrm.Attributes.OptionSetAttribute;
+    Address1_City: Xrm.Attributes.StringAttribute;
+    msdyn_gdproptoutName: Xrm.Attributes.Attribute;
+    Address3_Line1: Xrm.Attributes.StringAttribute;
+    Address1_Line1: Xrm.Attributes.StringAttribute;
+    EducationCodeName: Xrm.Attributes.Attribute;
+    Address1_Longitude: Xrm.Attributes.NumberAttribute;
+    ManagerPhone: Xrm.Attributes.StringAttribute;
+    ModifiedOn: Xrm.Attributes.DateAttribute;
+    Aging90: Xrm.Attributes.NumberAttribute;
+    OverriddenCreatedOn: Xrm.Attributes.DateAttribute;
+    YomiLastName: Xrm.Attributes.StringAttribute;
+    YomiFirstName: Xrm.Attributes.StringAttribute;
+    StatusCodeName: Xrm.Attributes.Attribute;
+    DoNotPostalMail: Xrm.Attributes.BooleanAttribute;
+    YomiFullName: Xrm.Attributes.StringAttribute;
+    CreatedByExternalPartyName: Xrm.Attributes.StringAttribute;
+    Address1_AddressTypeCode: Xrm.Attributes.OptionSetAttribute;
+    Address3_Line2: Xrm.Attributes.StringAttribute;
+    ModifiedByYomiName: Xrm.Attributes.StringAttribute;
+    BusinessCard: Xrm.Attributes.StringAttribute;
+    Aging30: Xrm.Attributes.NumberAttribute;
+    Address1_FreightTermsCode: Xrm.Attributes.OptionSetAttribute;
+    Address3_Telephone1: Xrm.Attributes.StringAttribute;
+    StateCodeName: Xrm.Attributes.Attribute;
+    Address3_Line3: Xrm.Attributes.StringAttribute;
+    Address2_County: Xrm.Attributes.StringAttribute;
+    CreditOnHold: Xrm.Attributes.BooleanAttribute;
+    Address2_City: Xrm.Attributes.StringAttribute;
+    DoNotBulkPostalMail: Xrm.Attributes.BooleanAttribute;
+    Aging60_Base: Xrm.Attributes.NumberAttribute;
+    PreferredSystemUserIdYomiName: Xrm.Attributes.StringAttribute;
+    Address1_ShippingMethodCode: Xrm.Attributes.OptionSetAttribute;
+    PaymentTermsCode: Xrm.Attributes.OptionSetAttribute;
+    GenderCode: Xrm.Attributes.OptionSetAttribute;
+    Address3_UTCOffset: Xrm.Attributes.NumberAttribute;
+    Address3_PrimaryContactName: Xrm.Attributes.StringAttribute;
+    ModifiedByExternalPartyYomiName: Xrm.Attributes.StringAttribute;
+    CreatedByYomiName: Xrm.Attributes.StringAttribute;
+    EntityImage_URL: Xrm.Attributes.StringAttribute;
+    PreferredSystemUserIdName: Xrm.Attributes.StringAttribute;
+    OwningBusinessUnit: Xrm.Attributes.LookupAttribute;
+    PreferredAppointmentTimeCode: Xrm.Attributes.OptionSetAttribute;
+    PreferredAppointmentDayCodeName: Xrm.Attributes.Attribute;
+    Address2_StateOrProvince: Xrm.Attributes.StringAttribute;
+    ParticipatesInWorkflowName: Xrm.Attributes.Attribute;
+    msdyn_orgchangestatusName: Xrm.Attributes.Attribute;
+    MobilePhone: Xrm.Attributes.StringAttribute;
+    ParentCustomerIdYomiName: Xrm.Attributes.StringAttribute;
+    Address2_Country: Xrm.Attributes.StringAttribute;
+    TeamsFollowed: Xrm.Attributes.NumberAttribute;
+    Address2_Line2: Xrm.Attributes.StringAttribute;
+    Address3_StateOrProvince: Xrm.Attributes.StringAttribute;
+    ModifiedOnBehalfBy: Xrm.Attributes.LookupAttribute;
+    SLAId: Xrm.Attributes.LookupAttribute;
+    PreferredServiceId: Xrm.Attributes.LookupAttribute;
+    AssistantPhone: Xrm.Attributes.StringAttribute;
+    Address3_ShippingMethodCodeName: Xrm.Attributes.Attribute;
+    ParentContactId: Xrm.Attributes.LookupAttribute;
+    Address1_Line3: Xrm.Attributes.StringAttribute;
+    OnHoldTime: Xrm.Attributes.NumberAttribute;
+    ParentContactIdYomiName: Xrm.Attributes.StringAttribute;
+    Address3_Longitude: Xrm.Attributes.NumberAttribute;
+    Address3_Fax: Xrm.Attributes.StringAttribute;
+    CreditLimit: Xrm.Attributes.NumberAttribute;
+    OwningBusinessUnitName: Xrm.Attributes.StringAttribute;
+    BirthDate: Xrm.Attributes.DateAttribute;
+    BusinessCardAttributes: Xrm.Attributes.StringAttribute;
+    OriginatingLeadIdName: Xrm.Attributes.StringAttribute;
+    Address1_UTCOffset: Xrm.Attributes.NumberAttribute;
+    VersionNumber: Xrm.Attributes.NumberAttribute;
+    DoNotSendMarketingMaterialName: Xrm.Attributes.Attribute;
+    ModifiedByExternalPartyName: Xrm.Attributes.StringAttribute;
+    Address1_Telephone1: Xrm.Attributes.StringAttribute;
+    CustomerTypeCode: Xrm.Attributes.OptionSetAttribute;
+    DoNotBulkPostalMailName: Xrm.Attributes.Attribute;
+    ExchangeRate: Xrm.Attributes.NumberAttribute;
+    Address3_Composite: Xrm.Attributes.StringAttribute;
+    Telephone3: Xrm.Attributes.StringAttribute;
+    CustomerSizeCode: Xrm.Attributes.OptionSetAttribute;
+    PreferredContactMethodCode: Xrm.Attributes.OptionSetAttribute;
+    StatusCode: Xrm.Attributes.OptionSetAttribute;
+    Description: Xrm.Attributes.StringAttribute;
+    ChildrensNames: Xrm.Attributes.StringAttribute;
+    Address1_AddressTypeCodeName: Xrm.Attributes.Attribute;
+    Address2_Latitude: Xrm.Attributes.NumberAttribute;
+    CreatedOn: Xrm.Attributes.DateAttribute;
+    DoNotBulkEMail: Xrm.Attributes.BooleanAttribute;
+    SLAName: Xrm.Attributes.StringAttribute;
+    MarketingOnlyName: Xrm.Attributes.Attribute;
+    DoNotFax: Xrm.Attributes.BooleanAttribute;
+    PreferredEquipmentId: Xrm.Attributes.LookupAttribute;
+    FamilyStatusCodeName: Xrm.Attributes.Attribute;
+    AnnualIncome_Base: Xrm.Attributes.NumberAttribute;
+    Address2_FreightTermsCodeName: Xrm.Attributes.Attribute;
+    Aging90_Base: Xrm.Attributes.NumberAttribute;
+    Address1_Composite: Xrm.Attributes.StringAttribute;
+    FirstName: Xrm.Attributes.StringAttribute;
+    CreatedOnBehalfBy: Xrm.Attributes.LookupAttribute;
+    Address2_FreightTermsCode: Xrm.Attributes.OptionSetAttribute;
+    PreferredAppointmentTimeCodeName: Xrm.Attributes.Attribute;
+    Callback: Xrm.Attributes.StringAttribute;
+    EducationCode: Xrm.Attributes.OptionSetAttribute;
+    LastUsedInCampaign: Xrm.Attributes.DateAttribute;
+    PaymentTermsCodeName: Xrm.Attributes.Attribute;
+    EmployeeId: Xrm.Attributes.StringAttribute;
+    ProcessId: Xrm.Attributes.Attribute;
+    OwnerIdYomiName: Xrm.Attributes.StringAttribute;
+    GovernmentId: Xrm.Attributes.StringAttribute;
+    IsAutoCreate: Xrm.Attributes.BooleanAttribute;
+    IsBackofficeCustomerName: Xrm.Attributes.Attribute;
+    Address2_ShippingMethodCodeName: Xrm.Attributes.Attribute;
+    Address2_Line3: Xrm.Attributes.StringAttribute;
+    ParentCustomerIdName: Xrm.Attributes.StringAttribute;
+    ModifiedBy: Xrm.Attributes.LookupAttribute;
+    EntityImage: Xrm.Attributes.Attribute;
+    TimeZoneRuleVersionNumber: Xrm.Attributes.NumberAttribute;
+    SpousesName: Xrm.Attributes.StringAttribute;
+    Address1_County: Xrm.Attributes.StringAttribute;
+    msdyn_gdproptout: Xrm.Attributes.BooleanAttribute;
+    ShippingMethodCodeName: Xrm.Attributes.Attribute;
+    ParentCustomerId: Xrm.Attributes.LookupAttribute;
+    Address3_FreightTermsCode: Xrm.Attributes.OptionSetAttribute;
+    DoNotEMail: Xrm.Attributes.BooleanAttribute;
+    Address3_County: Xrm.Attributes.StringAttribute;
+    Address3_FreightTermsCodeName: Xrm.Attributes.Attribute;
+    DoNotPhoneName: Xrm.Attributes.Attribute;
+    Pager: Xrm.Attributes.StringAttribute;
+    Address2_PostOfficeBox: Xrm.Attributes.StringAttribute;
+    Address2_Telephone1: Xrm.Attributes.StringAttribute;
+    Address2_Telephone2: Xrm.Attributes.StringAttribute;
+    Address2_Telephone3: Xrm.Attributes.StringAttribute;
+    OriginatingLeadIdYomiName: Xrm.Attributes.StringAttribute;
+    Telephone1: Xrm.Attributes.StringAttribute;
+    DefaultPriceLevelId: Xrm.Attributes.LookupAttribute;
+    Address1_AddressId: Xrm.Attributes.Attribute;
+    TraversedPath: Xrm.Attributes.StringAttribute;
+    FollowEmailName: Xrm.Attributes.Attribute;
+    AnnualIncome: Xrm.Attributes.NumberAttribute;
+    OwningUser: Xrm.Attributes.LookupAttribute;
+    WebSiteUrl: Xrm.Attributes.StringAttribute;
+    Address2_Name: Xrm.Attributes.StringAttribute;
+    Address1_Country: Xrm.Attributes.StringAttribute;
+    MiddleName: Xrm.Attributes.StringAttribute;
+    Address3_Telephone2: Xrm.Attributes.StringAttribute;
+    EntityImageId: Xrm.Attributes.Attribute;
+    Aging60: Xrm.Attributes.NumberAttribute;
+    TimeSpentByMeOnEmailAndMeetings: Xrm.Attributes.StringAttribute;
+    Address3_UPSZone: Xrm.Attributes.StringAttribute;
+    EntityImage_Timestamp: Xrm.Attributes.NumberAttribute;
+    OwnerIdName: Xrm.Attributes.StringAttribute;
+    CreditOnHoldName: Xrm.Attributes.Attribute;
+    AccountRoleCode: Xrm.Attributes.OptionSetAttribute;
+    CreatedOnBehalfByYomiName: Xrm.Attributes.StringAttribute;
+    CreatedByExternalParty: Xrm.Attributes.LookupAttribute;
+    Address2_Composite: Xrm.Attributes.StringAttribute;
+    TerritoryCodeName: Xrm.Attributes.Attribute;
+    ParticipatesInWorkflow: Xrm.Attributes.BooleanAttribute;
+    OriginatingLeadId: Xrm.Attributes.LookupAttribute;
+    CustomerTypeCodeName: Xrm.Attributes.Attribute;
+    OwningTeam: Xrm.Attributes.LookupAttribute;
+    TransactionCurrencyIdName: Xrm.Attributes.StringAttribute;
+    Address1_StateOrProvince: Xrm.Attributes.StringAttribute;
+    ExternalUserIdentifier: Xrm.Attributes.StringAttribute;
+    IsPrivateName: Xrm.Attributes.Attribute;
+    PreferredServiceIdName: Xrm.Attributes.StringAttribute;
+    MarketingOnly: Xrm.Attributes.BooleanAttribute;
+    ModifiedOnBehalfByName: Xrm.Attributes.StringAttribute;
+    CreatedOnBehalfByName: Xrm.Attributes.StringAttribute;
+    CreatedByExternalPartyYomiName: Xrm.Attributes.StringAttribute;
+    Address1_FreightTermsCodeName: Xrm.Attributes.Attribute;
+    SLAInvokedId: Xrm.Attributes.LookupAttribute;
+    MasterContactIdName: Xrm.Attributes.StringAttribute;
+    JobTitle: Xrm.Attributes.StringAttribute;
+    NickName: Xrm.Attributes.StringAttribute;
+    TransactionCurrencyId: Xrm.Attributes.LookupAttribute;
+    ManagerName: Xrm.Attributes.StringAttribute;
+    IsPrivate: Xrm.Attributes.BooleanAttribute;
+    Address1_Telephone2: Xrm.Attributes.StringAttribute;
+    Address1_Telephone3: Xrm.Attributes.StringAttribute;
+    Address3_Latitude: Xrm.Attributes.NumberAttribute;
+    IsBackofficeCustomer: Xrm.Attributes.BooleanAttribute;
+    ContactId: Xrm.Attributes.Attribute;
+    Suffix: Xrm.Attributes.StringAttribute;
+    DoNotEMailName: Xrm.Attributes.Attribute;
+    SLAInvokedIdName: Xrm.Attributes.StringAttribute;
+    Address2_PostalCode: Xrm.Attributes.StringAttribute;
+    Fax: Xrm.Attributes.StringAttribute;
+    MasterId: Xrm.Attributes.LookupAttribute;
+    MasterContactIdYomiName: Xrm.Attributes.StringAttribute;
+    AssistantName: Xrm.Attributes.StringAttribute;
+    YomiMiddleName: Xrm.Attributes.StringAttribute;
+    OwnerId: Xrm.Attributes.LookupAttribute;
+    Address3_Country: Xrm.Attributes.StringAttribute;
+    Address2_UTCOffset: Xrm.Attributes.NumberAttribute;
+    Address2_ShippingMethodCode: Xrm.Attributes.OptionSetAttribute;
+    Address2_Fax: Xrm.Attributes.StringAttribute;
+    Merged: Xrm.Attributes.BooleanAttribute;
+    OwnerIdType: Xrm.Attributes.Attribute;
+    Address2_Longitude: Xrm.Attributes.NumberAttribute;
+    ModifiedByExternalParty: Xrm.Attributes.LookupAttribute;
+    DoNotPostalMailName: Xrm.Attributes.Attribute;
+    AccountId: Xrm.Attributes.LookupAttribute;
+    CreatedByName: Xrm.Attributes.StringAttribute;
+    DoNotPhone: Xrm.Attributes.BooleanAttribute;
+    Address1_ShippingMethodCodeName: Xrm.Attributes.Attribute;
+    AccountIdName: Xrm.Attributes.StringAttribute;
+    Address1_PrimaryContactName: Xrm.Attributes.StringAttribute;
+    StateCode: Xrm.Attributes.OptionSetAttribute;
+    LastOnHoldTime: Xrm.Attributes.DateAttribute;
+    Address1_Line2: Xrm.Attributes.StringAttribute;
+    DoNotSendMM: Xrm.Attributes.BooleanAttribute;
+    CreatedBy: Xrm.Attributes.LookupAttribute;
+    Address2_AddressTypeCode: Xrm.Attributes.OptionSetAttribute;
+    Address2_UPSZone: Xrm.Attributes.StringAttribute;
+    FollowEmail: Xrm.Attributes.BooleanAttribute;
+    AccountRoleCodeName: Xrm.Attributes.Attribute;
+    TerritoryCode: Xrm.Attributes.OptionSetAttribute;
+    Address3_Name: Xrm.Attributes.StringAttribute;
+    DoNotFaxName: Xrm.Attributes.Attribute;
+    GenderCodeName: Xrm.Attributes.Attribute;
+    Address2_AddressTypeCodeName: Xrm.Attributes.Attribute;
+    Salutation: Xrm.Attributes.StringAttribute;
+    LeadSourceCodeName: Xrm.Attributes.Attribute;
+    Address1_PostalCode: Xrm.Attributes.StringAttribute;
+    Company: Xrm.Attributes.StringAttribute;
+    StageId: Xrm.Attributes.Attribute;
+    UTCConversionTimeZoneCode: Xrm.Attributes.NumberAttribute;
+    Address3_PostalCode: Xrm.Attributes.StringAttribute;
+    DoNotBulkEMailName: Xrm.Attributes.Attribute;
+    DefaultPriceLevelIdName: Xrm.Attributes.StringAttribute;
+    PreferredAppointmentDayCode: Xrm.Attributes.OptionSetAttribute;
+    CustomerSizeCodeName: Xrm.Attributes.Attribute;
+    PreferredEquipmentIdName: Xrm.Attributes.StringAttribute;
+    Home2: Xrm.Attributes.StringAttribute;
+    Anniversary: Xrm.Attributes.DateAttribute;
+    ImportSequenceNumber: Xrm.Attributes.NumberAttribute;
+    HasChildrenCode: Xrm.Attributes.OptionSetAttribute;
+    Telephone2: Xrm.Attributes.StringAttribute;
+    MergedName: Xrm.Attributes.Attribute;
+    SubscriptionId: Xrm.Attributes.Attribute;
+    FamilyStatusCode: Xrm.Attributes.OptionSetAttribute;
+    Department: Xrm.Attributes.StringAttribute;
+    Address3_City: Xrm.Attributes.StringAttribute;
+    Business2: Xrm.Attributes.StringAttribute;
+    PreferredSystemUserId: Xrm.Attributes.LookupAttribute;
+    Aging30_Base: Xrm.Attributes.NumberAttribute;
+    Address1_Name: Xrm.Attributes.StringAttribute;
+    Address1_Fax: Xrm.Attributes.StringAttribute;
+    Address1_Latitude: Xrm.Attributes.NumberAttribute;
+    Address3_ShippingMethodCode: Xrm.Attributes.OptionSetAttribute;
+    Address3_Telephone3: Xrm.Attributes.StringAttribute;
+    EMailAddress3: Xrm.Attributes.StringAttribute;
+    Address3_PostOfficeBox: Xrm.Attributes.StringAttribute;
+    CreditLimit_Base: Xrm.Attributes.NumberAttribute;
+    ParentCustomerIdType: Xrm.Attributes.Attribute;
+    ParentContactIdName: Xrm.Attributes.StringAttribute;
+    ModifiedByName: Xrm.Attributes.StringAttribute;
+    LeadSourceCode: Xrm.Attributes.OptionSetAttribute;
+    Address2_Line1: Xrm.Attributes.StringAttribute;
+    Address1_UPSZone: Xrm.Attributes.StringAttribute;
+    LastName: Xrm.Attributes.StringAttribute;
+    Address3_AddressTypeCodeName: Xrm.Attributes.Attribute;
+    AccountIdYomiName: Xrm.Attributes.StringAttribute;
+    ShippingMethodCode: Xrm.Attributes.OptionSetAttribute;
+    Address2_AddressId: Xrm.Attributes.Attribute;
+    ModifiedOnBehalfByYomiName: Xrm.Attributes.StringAttribute;
+    FtpSiteUrl: Xrm.Attributes.StringAttribute;
+    msdyn_orgchangestatus: Xrm.Attributes.OptionSetAttribute;
+    NumberOfChildren: Xrm.Attributes.NumberAttribute;
+    Address1_PostOfficeBox: Xrm.Attributes.StringAttribute;
+    Address2_PrimaryContactName: Xrm.Attributes.StringAttribute;
+    FullName: Xrm.Attributes.StringAttribute;
+    Address3_AddressId: Xrm.Attributes.Attribute;
+  }
+}
+"
+`;
+
+exports[`renderer tests render tests should return valid type declaration for Early-Bound main form 1`] = `
+"// This file was generated with XrmTypesGen
+// GitHub: https://github.com/OliverFlint/XrmTypesGen
+
+declare namespace Xrm.Ext.Forms.Contact.main {
+  /**
+   * Entity/Table Name: \`Contact\`
+   *
+   * Form Type: \`main\`
+   *
+   * Form Name: \`Information\`
+   */
+  interface Information extends Xrm.EarlyBound.Form<Ext.Entities.Contact> {
+    WebResource_RecordWall: Xrm.Controls.IframeControl;
+    salutation: \\"Salutation\\";
+    telephone1: \\"Telephone1\\";
+    firstname: \\"FirstName\\";
+    telephone2: \\"Telephone2\\";
+    middlename: \\"MiddleName\\";
+    mobilephone: \\"MobilePhone\\";
+    lastname: \\"LastName\\";
+    fax: \\"Fax\\";
+    jobtitle: \\"JobTitle\\";
+    emailaddress1: \\"EMailAddress1\\";
+    parentcustomerid: \\"ParentCustomerId\\";
+    address1_addresstypecode: \\"Address1_AddressTypeCode\\";
+    address1_city: \\"Address1_City\\";
+    address1_name: \\"Address1_Name\\";
+    address1_stateorprovince: \\"Address1_StateOrProvince\\";
+    address1_line1: \\"Address1_Line1\\";
+    address1_postalcode: \\"Address1_PostalCode\\";
+    address1_line2: \\"Address1_Line2\\";
+    address1_country: \\"Address1_Country\\";
+    address1_line3: \\"Address1_Line3\\";
+    address1_telephone1: \\"Address1_Telephone1\\";
+    address1_freighttermscode: \\"Address1_FreightTermsCode\\";
+    address1_shippingmethodcode: \\"Address1_ShippingMethodCode\\";
+    description: \\"Description\\";
+    department: \\"Department\\";
+    accountrolecode: \\"AccountRoleCode\\";
+    managername: \\"ManagerName\\";
+    assistantname: \\"AssistantName\\";
+    managerphone: \\"ManagerPhone\\";
+    assistantphone: \\"AssistantPhone\\";
+    gendercode: \\"GenderCode\\";
+    birthdate: \\"BirthDate\\";
+    familystatuscode: \\"FamilyStatusCode\\";
+    anniversary: \\"Anniversary\\";
+    spousesname: \\"SpousesName\\";
+    contactactivitiesgrid: Xrm.Controls.GridControl;
+    notescontrol: Xrm.Controls.Control;
+    ownerid: \\"OwnerId\\";
+    transactioncurrencyid: \\"TransactionCurrencyId\\";
+    paymenttermscode: \\"PaymentTermsCode\\";
+    creditlimit: \\"CreditLimit\\";
+    creditonhold: \\"CreditOnHold\\";
+    preferredcontactmethodcode: \\"PreferredContactMethodCode\\";
+    donotbulkemail: \\"DoNotBulkEMail\\";
+    donotemail: \\"DoNotEMail\\";
+    donotfax: \\"DoNotFax\\";
+    donotphone: \\"DoNotPhone\\";
+    donotpostalmail: \\"DoNotPostalMail\\";
+    defaultpricelevelid: \\"DefaultPriceLevelId\\";
+    originatingleadid: \\"OriginatingLeadId\\";
+    lastusedincampaign: \\"LastUsedInCampaign\\";
+    donotsendmm: \\"DoNotSendMM\\";
+    preferredappointmentdaycode: \\"PreferredAppointmentDayCode\\";
+    preferredequipmentid: \\"PreferredEquipmentId\\";
+    preferredappointmenttimecode: \\"PreferredAppointmentTimeCode\\";
+    preferredsystemuserid: \\"PreferredSystemUserId\\";
+    preferredserviceid: \\"PreferredServiceId\\";
+    \\".Tabs\\": {
+      tab_recordwall: {
+        tab_recordwall_section_1: \\"WebResource_RecordWall\\";
+      };
+      general: {
+        name:
+          | \\"salutation\\"
+          | \\"telephone1\\"
+          | \\"firstname\\"
+          | \\"telephone2\\"
+          | \\"middlename\\"
+          | \\"mobilephone\\"
+          | \\"lastname\\"
+          | \\"fax\\"
+          | \\"jobtitle\\"
+          | \\"emailaddress1\\"
+          | \\"parentcustomerid\\";
+        address:
+          | \\"address1_addresstypecode\\"
+          | \\"address1_city\\"
+          | \\"address1_name\\"
+          | \\"address1_stateorprovince\\"
+          | \\"address1_line1\\"
+          | \\"address1_postalcode\\"
+          | \\"address1_line2\\"
+          | \\"address1_country\\"
+          | \\"address1_line3\\"
+          | \\"address1_telephone1\\";
+        \\"shipping information\\":
+          | \\"address1_freighttermscode\\"
+          | \\"address1_shippingmethodcode\\";
+        description: \\"description\\";
+      };
+      details: {
+        \\"professional information\\":
+          | \\"department\\"
+          | \\"accountrolecode\\"
+          | \\"managername\\"
+          | \\"assistantname\\"
+          | \\"managerphone\\"
+          | \\"assistantphone\\";
+        \\"personal information\\":
+          | \\"gendercode\\"
+          | \\"birthdate\\"
+          | \\"familystatuscode\\"
+          | \\"anniversary\\"
+          | \\"spousesname\\";
+      };
+      \\"notes and activities\\": {
+        activities: \\"contactactivitiesgrid\\";
+        notes: \\"notescontrol\\";
+      };
+      administration: {
+        \\"internal information\\": \\"ownerid\\";
+        \\"billing information\\":
+          | \\"transactioncurrencyid\\"
+          | \\"paymenttermscode\\"
+          | \\"creditlimit\\"
+          | \\"creditonhold\\";
+        \\"contact methods\\":
+          | \\"preferredcontactmethodcode\\"
+          | \\"donotbulkemail\\"
+          | \\"donotemail\\"
+          | \\"donotfax\\"
+          | \\"donotphone\\"
+          | \\"donotpostalmail\\";
+      };
+      conflictstab: {
+        conflictssection: \\"defaultpricelevelid\\";
+        \\"marketing information\\":
+          | \\"originatingleadid\\"
+          | \\"lastusedincampaign\\"
+          | \\"donotsendmm\\";
+        \\"service preferences\\":
+          | \\"preferredappointmentdaycode\\"
+          | \\"preferredequipmentid\\"
+          | \\"preferredappointmenttimecode\\"
+          | \\"preferredsystemuserid\\"
+          | \\"preferredserviceid\\";
+      };
+    };
+  }
+}
+"
+`;
+
+exports[`renderer tests render tests should return valid type declaration for Early-Bound quickcreate form 1`] = `
+"// This file was generated with XrmTypesGen
+// GitHub: https://github.com/OliverFlint/XrmTypesGen
+
+declare namespace Xrm.Ext.Forms.Contact.quickcreate {
+  /**
+   * Entity/Table Name: \`Contact\`
+   *
+   * Form Type: \`quickcreate\`
+   *
+   * Form Name: \`ContactQuickCreate\`
+   */
+  interface ContactQuickCreate
+    extends Xrm.EarlyBound.Form<Ext.Entities.Contact> {
+    businesscard: \\"BusinessCard\\";
+    firstname: \\"FirstName\\";
+    lastname: \\"LastName\\";
+    jobtitle: \\"JobTitle\\";
+    parentcustomerid: \\"ParentCustomerId\\";
+    emailaddress1: \\"EMailAddress1\\";
+    mobilephone: \\"MobilePhone\\";
+    telephone1: \\"Telephone1\\";
+    description: \\"Description\\";
+    address1_line1: \\"Address1_Line1\\";
+    address1_line2: \\"Address1_Line2\\";
+    address1_city: \\"Address1_City\\";
+    address1_postalcode: \\"Address1_PostalCode\\";
+    \\".Tabs\\": {
+      tab_1: {
+        tab_1_column_1_section_1:
+          | \\"businesscard\\"
+          | \\"firstname\\"
+          | \\"lastname\\"
+          | \\"jobtitle\\"
+          | \\"parentcustomerid\\";
+        tab_1_column_2_section_1:
+          | \\"emailaddress1\\"
+          | \\"mobilephone\\"
+          | \\"telephone1\\"
+          | \\"description\\";
+        tab_1_column_3_section_1:
+          | \\"address1_line1\\"
+          | \\"address1_line2\\"
+          | \\"address1_city\\"
+          | \\"address1_postalcode\\";
+      };
+    };
+  }
+}
+"
+`;
+
 exports[`renderer tests render tests should return valid type declaration for main form 1`] = `
 "// This file was generated with XrmTypesGen
 // GitHub: https://github.com/OliverFlint/XrmTypesGen
 
 declare namespace Xrm {
-  namespace Ext.Forms.contact.main.Informationcolonspace {
+  namespace Ext.Forms.contact.main.Information {
     /**
      * Entity/Table Name: \`contact\`
      *
      * Form Type: \`main\`
      *
-     * Form Name: \`Informationcolonspace\`
+     * Form Name: \`Information\`
      */
     interface Form extends Extensions.FormContext {}
     namespace Extensions {
