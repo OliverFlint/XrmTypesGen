@@ -43,8 +43,7 @@ export const render = (
     return Rows.some((row) => {
       const Cells = row.Cells.$values as any[];
       return Cells.some(
-        (cell) =>
-          cell.Control !== null &&
+        (cell) => cell.Control !== null &&
           getAttributeType(
             metadata,
             cell.Control.DataFieldName ? cell.Control.DataFieldName : cell.Control.Id,

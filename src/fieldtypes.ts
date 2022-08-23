@@ -9,7 +9,7 @@ export const getAttributeType = (
   const attributemeta = meta.Attributes.find((value) => value.LogicalName === name);
   let returnvalue: string | undefined;
   if (attributemeta) {
-    if (fieldtype == 'formControl' && attributemeta.SchemaName) {
+    if (fieldtype === 'formControl' && attributemeta.SchemaName) {
       return attributemeta.SchemaName && attributemeta.SchemaName !== ' ' ? `"${attributemeta.SchemaName}"` : undefined;
     }
     switch (attributemeta.AttributeType) {

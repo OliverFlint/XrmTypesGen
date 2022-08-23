@@ -22,6 +22,24 @@ export interface Form {
   type: number;
 }
 
+export interface OptionSet {
+  Name: string;
+  MetadataId: string;
+  Options: OptionSetOption[];
+}
+
+export interface OptionSetOption {
+  Value: number;
+  Label: {
+    UserLocalizedLabel: {
+      Label: string;
+    };
+  };
+}
+
+export interface OptionSetSolution {
+  objectid: string;
+}
 export interface AttributeMetadata {
   '@odata.type'?: string;
   AttributeType: string;

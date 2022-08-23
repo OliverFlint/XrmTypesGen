@@ -5,9 +5,17 @@ import { mkdirSync, writeFile } from 'fs';
 import { LocalStorage } from 'node-localstorage';
 import { terms } from './terms';
 // eslint-disable-next-line object-curly-newline
-import { getAttributeMeta, getForms, getFormsBySolution, getFormsForEntities } from './queries';
+import {
+  getAttributeMeta,
+  getChoicesBySolution,
+  getForms,
+  getFormsBySolution,
+  getFormsForEntities,
+} from './queries';
 import { render } from './renderer';
-import { EntityMetadata, Form, ProgramOptions } from './types';
+import {
+ EntityMetadata, Form, OptionSet, ProgramOptions,
+} from './types';
 
 const localStorage: LocalStorage = new LocalStorage('./scratch');
 
@@ -138,6 +146,11 @@ const Main = async (authToken: TokenResponse) => {
       );
     });
   }
+  let optionsetsResponse: any;
+  if (options.solution) {
+    optionsetsResponse = await getChoicesBySolution(authToken, options.url, options.solution);
+  }
+  const optionsets: OptionSet[] = optionsetsResponse.value;
 
   localStorage.clear();
   console.log('Finished!');

@@ -1,0 +1,18 @@
+// This file was generated with XrmTypesGen
+// GitHub: https://github.com/OliverFlint/XrmTypesGen
+
+declare namespace Xrm.Ext.OptionSets {
+{{#each meta}} 
+    /**
+    * OptionSet Name: `{{this.Name}}`
+    *    
+    */ 
+    interface {{this.Name}} extends Xrm.EarlyBound.OptionSet {
+ 
+    {{#each this.Options}}    
+        "{{this.Label.UserLocalizedLabel.Label}}": {{this.Value}}                       
+    {{/each}}
+{{/each}}
+
+    };
+}
