@@ -5,9 +5,18 @@ import { mkdirSync, writeFile } from 'fs';
 import { LocalStorage } from 'node-localstorage';
 import { terms } from './terms';
 // eslint-disable-next-line object-curly-newline
-import { getAttributeMeta, getForms, getFormsBySolution, getFormsForEntities } from './queries';
+import {
+  getAttributeMeta,
+  getChoicesBySolution,
+  getForms,
+  getFormsBySolution,
+  getFormsForEntities,
+} from './queries';
 import { render } from './renderer';
-import { EntityMetadata, Form, ProgramOptions } from './types';
+import { renderOptionSet } from './renderer-optionSet';
+import {
+ EntityMetadata, Form, OptionSet, ProgramOptions,
+} from './types';
 
 const localStorage: LocalStorage = new LocalStorage('./scratch');
 
@@ -26,7 +35,8 @@ program
   .option('-s, --solution <solution>', `Unique ${terms.d365} Solution Name`)
   .option('-e, --entities <entities>', 'Comma seperated list of entities')
   .option('-o, --output <output>', 'Output path', 'types')
-  .option('-b, --earlybound', 'Generate Early-Bound format', false);
+  .option('-b, --earlybound', 'Generate Early-Bound format', false)
+  .option('-ch, --choices', 'Generate Choices format', false);
 
 program.addHelpText(
   'afterAll',
@@ -72,7 +82,24 @@ const Main = async (authToken: TokenResponse) => {
   );
 
   console.log(options);
+  if (options.choices) {
+    let optionsets: OptionSet[];
 
+    if (options.solution) {
+      optionsets = await getChoicesBySolution(authToken, options.url, options.solution);
+    } else {
+      optionsets = [];
+    }
+    const choicestd = {
+      content: renderOptionSet(optionsets),
+    };
+
+    console.log('saving type definition files');
+    mkdirSync(`${options.output}/`, { recursive: true });
+    writeFile(`${options.output}/choices.d.ts`,
+    choicestd.content,
+    () => { });
+  }
   if (options.earlybound) {
     const entitiestd = Object.getOwnPropertyNames(entities).map((entityName) => {
       const meta = entities[entityName];
@@ -90,7 +117,7 @@ const Main = async (authToken: TokenResponse) => {
       writeFile(
         `${options.output}/${element.entity}/${element.entity}.d.ts`,
         element.content,
-        () => {},
+        () => { },
       );
     });
 
@@ -112,7 +139,7 @@ const Main = async (authToken: TokenResponse) => {
       writeFile(
         `${options.output}/${element.entity}/Forms/${element.formtype}/${element.formname}.d.ts`,
         element.content,
-        () => {},
+        () => { },
       );
     });
   } else {
@@ -134,11 +161,10 @@ const Main = async (authToken: TokenResponse) => {
       writeFile(
         `${options.output}/Xrm/Forms/${element.entity}/${element.formtype}/${element.formname}.d.ts`,
         element.content,
-        () => {},
+        () => { },
       );
     });
   }
-
   localStorage.clear();
   console.log('Finished!');
 };

@@ -1,6 +1,7 @@
 import { TokenResponse } from 'adal-node';
 import fetch from 'node-fetch';
 import { LocalStorage } from 'node-localstorage';
+import { OptionSet, OptionSetSolution } from 'types';
 
 const localStorage: LocalStorage = new LocalStorage('./scratch');
 
@@ -153,6 +154,40 @@ export const getAttributeMeta = async (entity: string, authToken: TokenResponse,
     const json = await response.json();
     attributeMetaDataCache.set(entity, json);
     return json;
+  } catch (err) {
+    console.log(`Fetch Error: ${err}`);
+    return err;
+  }
+};
+
+export const getChoicesBySolution = async (
+  authToken: TokenResponse,
+  url: string,
+  solution: string,
+): Promise<any> => {
+  try {
+    const response = await fetch(`${url}/api/data/v9.2/GlobalOptionSetDefinitions`, {
+      headers: initHeader(authToken.accessToken),
+      method: 'GET',
+    });
+    const responseAny = await response.json();
+    if (responseAny.error) {
+      console.error(responseAny.error);
+    }
+    const json = responseAny.value as OptionSet[];
+    const responseSolutions = await fetch(
+      `${url}/api/data/v9.2/solutioncomponents?$select=objectid&$filter=(componenttype eq 9) and (solutionid/uniquename eq '${solution}')`,
+      {
+        headers: initHeader(authToken.accessToken),
+        method: 'GET',
+      },
+    );
+    const responseSolutionsAny = await responseSolutions.json();
+    if (responseSolutionsAny.error) {
+      console.error(responseSolutionsAny.error);
+    }
+    const jsonSolutions = responseSolutionsAny.value as OptionSetSolution[];
+    return json.filter((O) => jsonSolutions.some((S) => O.MetadataId === S.objectid));
   } catch (err) {
     console.log(`Fetch Error: ${err}`);
     return err;

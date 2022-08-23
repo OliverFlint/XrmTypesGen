@@ -9,6 +9,7 @@ import {
   getForms,
   getFormsBySolution,
   getFormsForEntities,
+  getChoicesBySolution,
 } from '../src/queries';
 
 let localStorage: LocalStorage;
@@ -69,6 +70,22 @@ describe('queries tests', () => {
       expect(cacheString).toBeTruthy();
       const cacheObj = JSON.parse(cacheString);
       expect(cacheObj).toStrictEqual({});
+    });
+    test('getChoicesBySolution', async () => {
+      sinon
+        .stub(nodefetch, 'default')
+        .onFirstCall()
+        .resolves(new nodefetch.Response('{"value": []}', { statusText: 'OK' }))
+        .onSecondCall()
+        .resolves(new nodefetch.Response('{"value": []}', { statusText: 'OK' }));
+      const result = await getChoicesBySolution(
+        {} as TokenResponse,
+        'https://localhost',
+        'solution',
+      );
+      expect(result).toBeTruthy();
+      expect(result.name).not.toBe('FetchError');
+      expect(result).toStrictEqual([]);
     });
   });
 

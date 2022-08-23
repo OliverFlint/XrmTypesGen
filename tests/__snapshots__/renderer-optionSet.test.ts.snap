@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renderer-optionSet tests renderOptionSet test Should return valid type declaration for choices 1`] = `
+"// This file was generated with XrmTypesGen
+// GitHub: https://github.com/OliverFlint/XrmTypesGen
+
+declare namespace Xrm.Ext.OptionSets {
+  /**
+   * OptionSet Name: \`ani2001__choicestes\`
+   *
+   */
+  const enum ani2001__choicestes {
+    \\"Option A\\" = 830520000,
+    \\"Option B\\" = 830520001,
+    \\"Option C\\" = 830520002,
+  }
+}
+"
+`;
