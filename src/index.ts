@@ -80,7 +80,6 @@ const Main = async (authToken: TokenResponse) => {
   );
 
   console.log(options);
-
   if (options.earlybound) {
     const entitiestd = Object.getOwnPropertyNames(entities).map((entityName) => {
       const meta = entities[entityName];
@@ -98,7 +97,7 @@ const Main = async (authToken: TokenResponse) => {
       writeFile(
         `${options.output}/${element.entity}/${element.entity}.d.ts`,
         element.content,
-        () => {},
+        () => { },
       );
     });
 
@@ -120,7 +119,7 @@ const Main = async (authToken: TokenResponse) => {
       writeFile(
         `${options.output}/${element.entity}/Forms/${element.formtype}/${element.formname}.d.ts`,
         element.content,
-        () => {},
+        () => { },
       );
     });
   } else {
@@ -142,7 +141,7 @@ const Main = async (authToken: TokenResponse) => {
       writeFile(
         `${options.output}/Xrm/Forms/${element.entity}/${element.formtype}/${element.formname}.d.ts`,
         element.content,
-        () => {},
+        () => { },
       );
     });
   }
@@ -150,7 +149,7 @@ const Main = async (authToken: TokenResponse) => {
   if (options.solution) {
     optionsetsResponse = await getChoicesBySolution(authToken, options.url, options.solution);
   }
-  const optionsets: OptionSet[] = optionsetsResponse.value;
+  const optionsets: OptionSet[] = optionsetsResponse;
 
   localStorage.clear();
   console.log('Finished!');

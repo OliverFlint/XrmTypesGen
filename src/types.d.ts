@@ -10,6 +10,7 @@ export interface ProgramOptions extends OptionValues {
   url: string;
   username: string;
   earlybound: boolean;
+  choices :boolean;
 }
 
 export interface Form {
