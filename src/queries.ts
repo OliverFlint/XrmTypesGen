@@ -170,11 +170,11 @@ export const getChoicesBySolution = async (
       headers: initHeader(authToken.accessToken),
       method: 'GET',
     });
-    const responseError = await response.json();
-    if (responseError.error) {
-      console.error(responseError.error);
+    const responseAny = await response.json();
+    if (responseAny.error) {
+      console.error(responseAny.error);
     }
-    const json = (await response.json()).value as OptionSet[];
+    const json = responseAny.value as OptionSet[];
     const responseSolutions = await fetch(
       `${url}/api/data/v9.2/solutioncomponents?$select=objectid&$filter=(componenttype eq 9) and (solutionid/uniquename eq '${solution}')`,
       {
@@ -182,11 +182,11 @@ export const getChoicesBySolution = async (
         method: 'GET',
       },
     );
-    const responseSolutionsError = await responseSolutions.json();
-    if (responseSolutionsError.error) {
-      console.error(responseSolutionsError.error);
+    const responseSolutionsAny = await responseSolutions.json();
+    if (responseSolutionsAny.error) {
+      console.error(responseSolutionsAny.error);
     }
-    const jsonSolutions = (await responseSolutions.json()).value as OptionSetSolution[];
+    const jsonSolutions = responseSolutionsAny.value as OptionSetSolution[];
     return json.filter((O) => jsonSolutions.some((S) => O.MetadataId === S.objectid));
   } catch (err) {
     console.log(`Fetch Error: ${err}`);

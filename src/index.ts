@@ -35,7 +35,8 @@ program
   .option('-s, --solution <solution>', `Unique ${terms.d365} Solution Name`)
   .option('-e, --entities <entities>', 'Comma seperated list of entities')
   .option('-o, --output <output>', 'Output path', 'types')
-  .option('-b, --earlybound', 'Generate Early-Bound format', false);
+  .option('-b, --earlybound', 'Generate Early-Bound format', false)
+  .option('-ch, --choices', 'Generate Choices format', false);
 
 program.addHelpText(
   'afterAll',
@@ -94,7 +95,7 @@ const Main = async (authToken: TokenResponse) => {
     };
 
     console.log('saving type definition files');
-    mkdirSync(`${options.output}/`);
+    mkdirSync(`${options.output}/`, { recursive: true });
     writeFile(`${options.output}/choices.d.ts`,
     choicestd.content,
     () => { });

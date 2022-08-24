@@ -7,12 +7,12 @@ declare namespace Xrm.Ext.OptionSets {
     * OptionSet Name: `{{this.Name}}`
     *    
     */ 
-    interface {{this.Name}} extends Xrm.EarlyBound.OptionSet {
+    const enum {{this.Name}}  {
  
     {{#each this.Options}}    
-        "{{this.Label.UserLocalizedLabel.Label}}": {{this.Value}}                       
+        "{{this.Label.UserLocalizedLabel.Label}}"= {{this.Value}},                       
     {{/each}}
-{{/each}}
-
     };
+    
+    {{/each}}
 }
