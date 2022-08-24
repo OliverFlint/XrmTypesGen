@@ -13,6 +13,7 @@ import {
   getFormsForEntities,
 } from './queries';
 import { render } from './renderer';
+import { renderOptionSet } from './renderer-optionSet';
 import {
  EntityMetadata, Form, OptionSet, ProgramOptions,
 } from './types';
@@ -80,6 +81,24 @@ const Main = async (authToken: TokenResponse) => {
   );
 
   console.log(options);
+  if (options.choices) {
+    let optionsets: OptionSet[];
+
+    if (options.solution) {
+      optionsets = await getChoicesBySolution(authToken, options.url, options.solution);
+    } else {
+      optionsets = [];
+    }
+    const choicestd = {
+      content: renderOptionSet(optionsets),
+    };
+
+    console.log('saving type definition files');
+    mkdirSync(`${options.output}/`);
+    writeFile(`${options.output}/choices.d.ts`,
+    choicestd.content,
+    () => { });
+  }
   if (options.earlybound) {
     const entitiestd = Object.getOwnPropertyNames(entities).map((entityName) => {
       const meta = entities[entityName];
@@ -145,12 +164,6 @@ const Main = async (authToken: TokenResponse) => {
       );
     });
   }
-  let optionsetsResponse: any;
-  if (options.solution) {
-    optionsetsResponse = await getChoicesBySolution(authToken, options.url, options.solution);
-  }
-  const optionsets: OptionSet[] = optionsetsResponse;
-
   localStorage.clear();
   console.log('Finished!');
 };
