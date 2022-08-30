@@ -8,6 +8,7 @@ import { terms } from './terms';
 import {
   getAttributeMeta,
   getChoicesBySolution,
+  getChoicesByEnvironment,
   getForms,
   getFormsBySolution,
   getFormsForEntities,
@@ -36,8 +37,8 @@ program
   .option('-e, --entities <entities>', 'Comma seperated list of entities')
   .option('-o, --output <output>', 'Output path', 'types')
   .option('-b, --earlybound', 'Generate Early-Bound format', false)
-  .option('-ch, --choices', 'Generate Choices format', false);
-
+  .option('-ch, --choices', 'Generate Choices format', false)
+  .option('-gch, --globalChoices', 'Generate Global Choices', false);
 program.addHelpText(
   'afterAll',
   `
@@ -71,7 +72,7 @@ const Main = async (authToken: TokenResponse) => {
   const forms: Form[] = formsResponse.value;
 
   const entities: { [entity: string]: EntityMetadata } = {};
-  forms.forEach((form) => {
+  forms.filter((form) => form.objecttypecode !== null && form.objecttypecode !== '').forEach((form) => {
     entities[form.objecttypecode] = <EntityMetadata>{};
   });
   console.log('pre-cache attribute metatdata');
@@ -97,6 +98,20 @@ const Main = async (authToken: TokenResponse) => {
     console.log('saving type definition files');
     mkdirSync(`${options.output}/`, { recursive: true });
     writeFile(`${options.output}/choices.d.ts`,
+    choicestd.content,
+    () => { });
+  }
+  if (options.globalChoices) {
+    let optionsets: OptionSet[];
+    // eslint-disable-next-line prefer-const
+    optionsets = await getChoicesByEnvironment(authToken, options.url);
+    const choicestd = {
+      content: renderOptionSet(optionsets),
+    };
+
+    console.log('saving type definition files');
+    mkdirSync(`${options.output}/`, { recursive: true });
+    writeFile(`${options.output}/globalchoices.d.ts`,
     choicestd.content,
     () => { });
   }

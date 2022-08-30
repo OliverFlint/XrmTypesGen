@@ -11,6 +11,7 @@ export interface ProgramOptions extends OptionValues {
   username: string;
   earlybound: boolean;
   choices :boolean;
+  globalChoices: boolean;
 }
 
 export interface Form {

@@ -10,5 +10,6 @@ declare namespace Xrm.Ext.Entities {
     {{#each meta.Attributes}}
         {{this.SchemaName}}: {{getAttributeType ../meta this.LogicalName '' 'attribute'}}                       
     {{/each}}
+    
     };
 }

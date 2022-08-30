@@ -193,3 +193,24 @@ export const getChoicesBySolution = async (
     return err;
   }
 };
+
+export const getChoicesByEnvironment = async (
+  authToken: TokenResponse,
+  url: string,
+): Promise<any> => {
+  try {
+    const response = await fetch(`${url}/api/data/v9.2/GlobalOptionSetDefinitions`, {
+      headers: initHeader(authToken.accessToken),
+      method: 'GET',
+    });
+    const responseAny = await response.json();
+    if (responseAny.error) {
+      console.error(responseAny.error);
+    }
+    const json = responseAny.value as OptionSet[];
+    return json.filter((O) => O.Name !== null && O.Name !== '');
+  } catch (err) {
+    console.log(`Fetch Error: ${err}`);
+    return err;
+  }
+};
