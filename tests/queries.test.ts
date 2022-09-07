@@ -10,6 +10,7 @@ import {
   getFormsBySolution,
   getFormsForEntities,
   getChoicesBySolution,
+  getChoicesByEnvironment,
 } from '../src/queries';
 
 let localStorage: LocalStorage;
@@ -82,6 +83,16 @@ describe('queries tests', () => {
         {} as TokenResponse,
         'https://localhost',
         'solution',
+      );
+      expect(result).toBeTruthy();
+      expect(result.name).not.toBe('FetchError');
+      expect(result).toStrictEqual([]);
+    });
+    test('getChoicesByEnvironment', async () => {
+      sinon.stub(nodefetch, 'default').resolves(new nodefetch.Response('{"value": []}', { statusText: 'OK' }));
+      const result = await getChoicesByEnvironment(
+        {} as TokenResponse,
+        'https://localhost',
       );
       expect(result).toBeTruthy();
       expect(result.name).not.toBe('FetchError');

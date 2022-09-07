@@ -11,7 +11,7 @@ export const render = (
 ): string => {
   const templateBuffer = readFileSync(`${__dirname}/${templateName}.hbs`);
   const template = compile(templateBuffer.toString());
-
+  const getFieldName = (value:any) => (value.DataFieldName ? value.DataFieldName : value.Id);
   registerHelper('formtype', (value) => (value === 2 ? 'main' : 'quickcreate'));
   // eslint-disable-next-line no-confusing-arrow
   registerHelper(
@@ -20,7 +20,7 @@ export const render = (
     (value) => {
       const typeName = value ? value.replace(/[^a-z^A-Z^0-9^_]+/g, '') : null;
 
-      if (/^\d/.test(typeName)) {
+      if (/^\d/.test(typeName) || typeName === 'import') {
         return `_${typeName}`;
       }
 
@@ -29,7 +29,8 @@ export const render = (
     // eslint-disable-next-line implicit-arrow-linebreak
     // eslint-disable-next-line function-paren-newline
   );
-  registerHelper('getFieldName', (value) => (value.DataFieldName ? value.DataFieldName : value.Id));
+  // eslint-disable-next-line no-nested-ternary
+  registerHelper('getFieldName', getFieldName);
   registerHelper('jsonStringify', (value) => JSON.stringify(value));
   registerHelper(
     'getAttributeType',
@@ -49,7 +50,8 @@ export const render = (
             cell.Control.DataFieldName ? cell.Control.DataFieldName : cell.Control.Id,
             cell.Control.classid,
             'formControl',
-          ),
+          ) !== undefined &&
+          getFieldName(cell.Control),
       );
     });
   });

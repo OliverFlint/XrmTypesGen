@@ -6,7 +6,7 @@ declare namespace Xrm.Ext.Entities {
     * Entity/Table Name: `{{meta.SchemaName}}`
     *    
     */
-    interface {{meta.SchemaName}} extends Xrm.EarlyBound.Entity {
+    interface {{toTypeName meta.SchemaName}} extends Xrm.EarlyBound.Entity {
     {{#each meta.Attributes}}
         {{this.SchemaName}}: {{getAttributeType ../meta this.LogicalName '' 'attribute'}}                       
     {{/each}}

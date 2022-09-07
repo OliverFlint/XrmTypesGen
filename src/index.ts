@@ -19,7 +19,7 @@ import {
  EntityMetadata, Form, OptionSet, ProgramOptions,
 } from './types';
 
-const localStorage: LocalStorage = new LocalStorage('./scratch');
+const mylocalStorage: LocalStorage = new LocalStorage('./scratch');
 
 program.version(require('../package.json').version).name('xrmtypesgen');
 
@@ -38,7 +38,8 @@ program
   .option('-o, --output <output>', 'Output path', 'types')
   .option('-b, --earlybound', 'Generate Early-Bound format', false)
   .option('-ch, --choices', 'Generate Choices format', false)
-  .option('-gch, --globalChoices', 'Generate Global Choices', false);
+  .option('-gch, --globalChoices', 'Generate Global Choices', false)
+  .option('-ls, --localStorage', 'Do not clear Local Storage', false);
 program.addHelpText(
   'afterAll',
   `
@@ -54,7 +55,9 @@ program.parse();
 const options = program.opts() as ProgramOptions;
 
 const Main = async (authToken: TokenResponse) => {
-  localStorage.clear();
+  if (!options.localStorage) {
+    mylocalStorage.clear();
+  }
   console.log('getting form metadata');
 
   let formsResponse: any;
@@ -72,15 +75,19 @@ const Main = async (authToken: TokenResponse) => {
   const forms: Form[] = formsResponse.value;
 
   const entities: { [entity: string]: EntityMetadata } = {};
-  forms.filter((form) => form.objecttypecode !== null && form.objecttypecode !== '').forEach((form) => {
-    entities[form.objecttypecode] = <EntityMetadata>{};
-  });
+  forms
+    .filter((form) => form.objecttypecode !== null && form.objecttypecode !== '')
+    .forEach((form) => {
+      entities[form.objecttypecode] = <EntityMetadata>{};
+    });
   console.log('pre-cache attribute metatdata');
-  await Promise.all(
-    Object.getOwnPropertyNames(entities).map(async (value) => {
-      entities[value] = await getAttributeMeta(value, authToken, options.url);
-    }),
-  );
+  const entityNames = Object.getOwnPropertyNames(entities);
+  for (let i = 0; i < entityNames.length; i += 1) {
+    const value = entityNames[i];
+    // eslint-disable-next-line no-await-in-loop
+    entities[value] = await getAttributeMeta(value, authToken, options.url);
+    console.log(value);
+  }
 
   console.log(options);
   if (options.choices) {
@@ -97,9 +104,7 @@ const Main = async (authToken: TokenResponse) => {
 
     console.log('saving type definition files');
     mkdirSync(`${options.output}/`, { recursive: true });
-    writeFile(`${options.output}/choices.d.ts`,
-    choicestd.content,
-    () => { });
+    writeFile(`${options.output}/choices.d.ts`, choicestd.content, () => {});
   }
   if (options.globalChoices) {
     let optionsets: OptionSet[];
@@ -111,9 +116,7 @@ const Main = async (authToken: TokenResponse) => {
 
     console.log('saving type definition files');
     mkdirSync(`${options.output}/`, { recursive: true });
-    writeFile(`${options.output}/globalchoices.d.ts`,
-    choicestd.content,
-    () => { });
+    writeFile(`${options.output}/globalchoices.d.ts`, choicestd.content, () => {});
   }
   if (options.earlybound) {
     const entitiestd = Object.getOwnPropertyNames(entities).map((entityName) => {
@@ -132,7 +135,7 @@ const Main = async (authToken: TokenResponse) => {
       writeFile(
         `${options.output}/${element.entity}/${element.entity}.d.ts`,
         element.content,
-        () => { },
+        () => {},
       );
     });
 
@@ -154,7 +157,7 @@ const Main = async (authToken: TokenResponse) => {
       writeFile(
         `${options.output}/${element.entity}/Forms/${element.formtype}/${element.formname}.d.ts`,
         element.content,
-        () => { },
+        () => {},
       );
     });
   } else {
@@ -176,11 +179,13 @@ const Main = async (authToken: TokenResponse) => {
       writeFile(
         `${options.output}/Xrm/Forms/${element.entity}/${element.formtype}/${element.formname}.d.ts`,
         element.content,
-        () => { },
+        () => {},
       );
     });
   }
-  localStorage.clear();
+  if (!options.localStorage) {
+    mylocalStorage.clear();
+  }
   console.log('Finished!');
 };
 

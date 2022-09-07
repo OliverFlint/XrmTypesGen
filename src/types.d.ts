@@ -12,6 +12,7 @@ export interface ProgramOptions extends OptionValues {
   earlybound: boolean;
   choices :boolean;
   globalChoices: boolean;
+  localStorage: boolean;
 }
 
 export interface Form {

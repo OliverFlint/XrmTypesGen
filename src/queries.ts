@@ -1,9 +1,9 @@
 import { TokenResponse } from 'adal-node';
-import fetch from 'node-fetch';
+import fetch, { RequestInfo, RequestInit } from 'node-fetch';
 import { LocalStorage } from 'node-localstorage';
 import { OptionSet, OptionSetSolution } from 'types';
 
-const localStorage: LocalStorage = new LocalStorage('./scratch');
+const localStorage: LocalStorage = new LocalStorage('./scratch', 500 * 1024 * 1024);
 
 const initHeader = (accessToken: string): any => ({
   Authorization: `Bearer ${accessToken}`,
@@ -13,12 +13,26 @@ const initHeader = (accessToken: string): any => ({
   'OData-Version': '4.0',
 });
 
+const autoRetryFetch = async (url: RequestInfo, init?: RequestInit) => {
+  let response = await fetch(url, init);
+
+  const time = parseInt(response.headers.get('Retry-After') || '0', 10);
+  if (time > 0) {
+    console.log('retry-after {0} {1}', time, url);
+    await new Promise((resolve) => setTimeout(resolve, time));
+    response = await autoRetryFetch(url, init);
+  }
+
+  return response;
+};
+
 export const CallApi = async (authToken: TokenResponse, url: string): Promise<any> => {
   try {
-    const response = await fetch(`${url}/api/data/v9.2/contacts?$top=1`, {
+    const response = await autoRetryFetch(`${url}/api/data/v9.2/contacts?$top=1`, {
       headers: initHeader(authToken.accessToken),
       method: 'GET',
     });
+
     const json = await response.json();
     return json;
   } catch (err) {
@@ -29,7 +43,7 @@ export const CallApi = async (authToken: TokenResponse, url: string): Promise<an
 
 export const getForms = async (authToken: TokenResponse, url: string): Promise<any> => {
   try {
-    const response = await fetch(
+    const response = await autoRetryFetch(
       `${url}/api/data/v9.2/systemforms?` +
         '$select=description,formjson,formid,name,formactivationstate,type,objecttypecode&' +
         '$filter=(Microsoft.Dynamics.CRM.In(PropertyName=%27type%27,PropertyValues=[%272%27,%277%27]))',
@@ -55,7 +69,7 @@ export const getFormsForEntities = async (
     console.log(`Entities: ${entities}`);
     const entitynames = entities.split(',');
     const entitiesparam = entitynames.map((value) => `"${value}"`).join(',');
-    const response = await fetch(
+    const response = await autoRetryFetch(
       `${url}/api/data/v9.2/systemforms?` +
         '$select=description,formjson,formid,name,formactivationstate,type,objecttypecode&' +
         '$filter=(Microsoft.Dynamics.CRM.In(PropertyName=%27type%27,PropertyValues=[%272%27,%277%27])%20' +
@@ -107,7 +121,7 @@ export const getFormsBySolution = async (
       </entity>
     </fetch>`;
   try {
-    const response = await fetch(
+    const response = await autoRetryFetch(
       `${url}/api/data/v9.2/systemforms?fetchXml=${encodeURIComponent(fetchXml)}`,
       {
         headers: initHeader(authToken.accessToken),
@@ -143,7 +157,7 @@ export const getAttributeMeta = async (entity: string, authToken: TokenResponse,
       return cache;
     }
     console.log(`getting attribute metadata for the ${entity} entity`);
-    const response = await fetch(
+    const response = await autoRetryFetch(
       `${url}/api/data/v9.2/EntityDefinitions(LogicalName='${entity}')?` +
         '$select=LogicalName,SchemaName&$expand=Attributes($select=LogicalName,SchemaName,AttributeType)',
       {
@@ -155,6 +169,7 @@ export const getAttributeMeta = async (entity: string, authToken: TokenResponse,
     attributeMetaDataCache.set(entity, json);
     return json;
   } catch (err) {
+    console.log(err);
     console.log(`Fetch Error: ${err}`);
     return err;
   }
@@ -166,7 +181,7 @@ export const getChoicesBySolution = async (
   solution: string,
 ): Promise<any> => {
   try {
-    const response = await fetch(`${url}/api/data/v9.2/GlobalOptionSetDefinitions`, {
+    const response = await autoRetryFetch(`${url}/api/data/v9.2/GlobalOptionSetDefinitions`, {
       headers: initHeader(authToken.accessToken),
       method: 'GET',
     });
@@ -175,7 +190,7 @@ export const getChoicesBySolution = async (
       console.error(responseAny.error);
     }
     const json = responseAny.value as OptionSet[];
-    const responseSolutions = await fetch(
+    const responseSolutions = await autoRetryFetch(
       `${url}/api/data/v9.2/solutioncomponents?$select=objectid&$filter=(componenttype eq 9) and (solutionid/uniquename eq '${solution}')`,
       {
         headers: initHeader(authToken.accessToken),
@@ -199,7 +214,7 @@ export const getChoicesByEnvironment = async (
   url: string,
 ): Promise<any> => {
   try {
-    const response = await fetch(`${url}/api/data/v9.2/GlobalOptionSetDefinitions`, {
+    const response = await autoRetryFetch(`${url}/api/data/v9.2/GlobalOptionSetDefinitions`, {
       headers: initHeader(authToken.accessToken),
       method: 'GET',
     });
