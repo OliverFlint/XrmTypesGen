@@ -10,6 +10,10 @@ export interface ProgramOptions extends OptionValues {
   url: string;
   username: string;
   earlybound: boolean;
+  choices :boolean;
+  globalChoices: boolean;
+  localStorage: boolean;
+  localChoices: boolean;
 }
 
 export interface Form {
@@ -20,6 +24,35 @@ export interface Form {
   name: string;
   objecttypecode: string;
   type: number;
+}
+
+export interface OptionSet {
+  Name: string;
+  MetadataId: string;
+  Options: OptionSetOption[];
+}
+
+export interface OptionSetOption {
+  Value: number;
+  Label: {
+    UserLocalizedLabel: {
+      Label: string;
+    };
+  };
+}
+
+export interface OptionSetSolution {
+  objectid: string;
+  
+}
+
+export interface LocalOptionSet {
+  LogicalName: string;
+  MetadataId: string;
+  OptionSet: {
+    IsGlobal: boolean;
+    Options:OptionSetOption[];
+  };
 }
 
 export interface AttributeMetadata {

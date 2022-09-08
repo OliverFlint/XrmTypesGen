@@ -1,4 +1,5 @@
 import { render } from '../src/renderer';
+import { LocalOptionSet } from '../src/types';
 /* eslint-disable no-undef */
 describe('renderer tests', () => {
   beforeEach(() => {
@@ -30,6 +31,17 @@ describe('renderer tests', () => {
       expect(result).toBeTruthy();
       expect(result).toContain('interface Contact extends Xrm.EarlyBound.Entity {');
       expect(result).toContain('FullName: Xrm.Attributes.StringAttribute');
+      expect(result).toMatchSnapshot();
+    });
+
+    test('should return valid type declaration for Early-Bound Entity', async () => {
+      const meta = await import('./contact.metadata.json');
+      const localChoices = (await import('./contact.choices.metadata.json')).default as LocalOptionSet[];
+      const result = render(meta, meta, 'template-earlybound-entity', localChoices);
+      expect(result).toBeTruthy();
+      expect(result).toContain('interface Contact extends Xrm.EarlyBound.Entity {');
+      expect(result).toContain('FullName: Xrm.Attributes.StringAttribute');
+      expect(result).toContain('namespace Contact.OptionSets');
       expect(result).toMatchSnapshot();
     });
 

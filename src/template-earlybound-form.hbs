@@ -9,7 +9,7 @@ declare namespace Xrm.Ext.Forms.{{meta.SchemaName}}.{{formtype data.type}} {
     *
     * Form Name: `{{toTypeName data.name}}`
     */
-    interface {{toTypeName data.name}} extends Xrm.EarlyBound.Form<Ext.Entities.{{meta.SchemaName}}> {
+    interface {{toTypeName data.name}} extends Xrm.EarlyBound.Form<Ext.Entities.{{toTypeName meta.SchemaName}}> {
         {{#each formObj.Tabs.$values}}
             {{#each this.Columns.$values}} 
                 {{#each this.Sections.$values}}
@@ -35,10 +35,7 @@ declare namespace Xrm.Ext.Forms.{{meta.SchemaName}}.{{formtype data.type}} {
                         {{#each this.Rows.$values}}
                             {{#each this.Cells.$values}}
                                {{#if (getFieldName this.Control)}}
-                    | "{{getFieldName this.Control}}"
-                                {{/if}}
-                            {{/each}}
-                        {{/each}}
+                    | "{{getFieldName this.Control}}"{{/if}}{{/each}}{{/each}};
                     {{/if}}
                 {{/each}}
             {{/each}}
