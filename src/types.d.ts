@@ -13,6 +13,7 @@ export interface ProgramOptions extends OptionValues {
   choices :boolean;
   globalChoices: boolean;
   localStorage: boolean;
+  localChoices: boolean;
 }
 
 export interface Form {
@@ -42,7 +43,18 @@ export interface OptionSetOption {
 
 export interface OptionSetSolution {
   objectid: string;
+  
 }
+
+export interface LocalOptionSet {
+  LogicalName: string;
+  MetadataId: string;
+  OptionSet: {
+    IsGlobal: boolean;
+    Options:OptionSetOption[];
+  };
+}
+
 export interface AttributeMetadata {
   '@odata.type'?: string;
   AttributeType: string;

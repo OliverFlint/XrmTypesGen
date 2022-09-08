@@ -12,11 +12,12 @@ import {
   getForms,
   getFormsBySolution,
   getFormsForEntities,
+  getLocalChoices,
 } from './queries';
 import { render } from './renderer';
 import { renderOptionSet } from './renderer-optionSet';
 import {
- EntityMetadata, Form, OptionSet, ProgramOptions,
+ EntityMetadata, Form, LocalOptionSet, OptionSet, ProgramOptions,
 } from './types';
 
 const mylocalStorage: LocalStorage = new LocalStorage('./scratch');
@@ -39,7 +40,8 @@ program
   .option('-b, --earlybound', 'Generate Early-Bound format', false)
   .option('-ch, --choices', 'Generate Choices format', false)
   .option('-gch, --globalChoices', 'Generate Global Choices', false)
-  .option('-ls, --localStorage', 'Do not clear Local Storage', false);
+  .option('-ls, --localStorage', 'Do not clear Local Storage', false)
+  .option('_lch, --localChoices', 'Generate Local Choices of Entities', false);
 program.addHelpText(
   'afterAll',
   `
@@ -75,6 +77,7 @@ const Main = async (authToken: TokenResponse) => {
   const forms: Form[] = formsResponse.value;
 
   const entities: { [entity: string]: EntityMetadata } = {};
+  const localChoices: { [entity: string]: LocalOptionSet[]|undefined } = {};
   forms
     .filter((form) => form.objecttypecode !== null && form.objecttypecode !== '')
     .forEach((form) => {
@@ -86,6 +89,10 @@ const Main = async (authToken: TokenResponse) => {
     const value = entityNames[i];
     // eslint-disable-next-line no-await-in-loop
     entities[value] = await getAttributeMeta(value, authToken, options.url);
+    localChoices[value] = options.localChoices
+      ? // eslint-disable-next-line no-await-in-loop
+        await getLocalChoices(value, authToken, options.url)
+      : undefined;
     console.log(value);
   }
 
@@ -121,9 +128,10 @@ const Main = async (authToken: TokenResponse) => {
   if (options.earlybound) {
     const entitiestd = Object.getOwnPropertyNames(entities).map((entityName) => {
       const meta = entities[entityName];
+      const localChoice = localChoices[entityName];
       return {
         entity: entityName,
-        content: render(meta, meta, 'template-earlybound-entity'),
+        content: render(meta, meta, 'template-earlybound-entity', localChoice),
       };
     });
 

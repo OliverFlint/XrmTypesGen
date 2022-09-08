@@ -2,12 +2,13 @@ import { format } from 'prettier';
 import { readFileSync } from 'fs';
 import { compile, registerHelper } from 'handlebars';
 import { getAttributeType } from './fieldtypes';
-import { EntityMetadata } from './types';
+import { EntityMetadata, LocalOptionSet } from './types';
 
 export const render = (
   data: any,
   meta: EntityMetadata,
   templateName: 'template' | 'template-earlybound-entity' | 'template-earlybound-form',
+  localOptionSet ? : LocalOptionSet [],
 ): string => {
   const templateBuffer = readFileSync(`${__dirname}/${templateName}.hbs`);
   const template = compile(templateBuffer.toString());
@@ -58,7 +59,9 @@ export const render = (
 
   const formObj = data.formjson ? JSON.parse(data.formjson) : null;
 
-  const dts = template({ data, formObj, meta });
+  const dts = template({
+ data, formObj, meta, localOptionSet,
+});
   const formatted = format(dts, { parser: 'typescript' });
   return formatted;
 };

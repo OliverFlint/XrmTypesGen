@@ -1,7 +1,9 @@
 import { TokenResponse } from 'adal-node';
 import fetch, { RequestInfo, RequestInit } from 'node-fetch';
 import { LocalStorage } from 'node-localstorage';
-import { OptionSet, OptionSetSolution } from 'types';
+import {
+ EntityMetadata, OptionSet, OptionSetSolution, LocalOptionSet,
+} from 'types';
 
 const localStorage: LocalStorage = new LocalStorage('./scratch', 500 * 1024 * 1024);
 
@@ -154,7 +156,7 @@ export const getAttributeMeta = async (entity: string, authToken: TokenResponse,
     const cache = attributeMetaDataCache.get(entity);
     if (cache) {
       console.log(`getting attribute metadata for the ${entity} entity from cache`);
-      return cache;
+      return cache as EntityMetadata;
     }
     console.log(`getting attribute metadata for the ${entity} entity`);
     const response = await autoRetryFetch(
@@ -167,11 +169,11 @@ export const getAttributeMeta = async (entity: string, authToken: TokenResponse,
     );
     const json = await response.json();
     attributeMetaDataCache.set(entity, json);
-    return json;
+    return json as EntityMetadata;
   } catch (err) {
     console.log(err);
     console.log(`Fetch Error: ${err}`);
-    return err;
+    return err as EntityMetadata;
   }
 };
 
@@ -227,5 +229,31 @@ export const getChoicesByEnvironment = async (
   } catch (err) {
     console.log(`Fetch Error: ${err}`);
     return err;
+  }
+};
+
+export const getLocalChoices = async (
+  entity: string,
+  authToken: TokenResponse,
+  url: string,
+): Promise< LocalOptionSet[]> => {
+  try {
+    const response = await autoRetryFetch(
+      `${url}api/data/v9.0/EntityDefinitions(LogicalName='${entity}')/Attributes/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=LogicalName&$expand=OptionSet($select=Options,IsGlobal)`,
+      {
+        headers: initHeader(authToken.accessToken),
+        method: 'GET',
+      },
+    );
+    const responseAny = await response.json();
+    if (responseAny.error) {
+      console.error(responseAny.error);
+    }
+    const json = responseAny.value as LocalOptionSet[];
+
+    return json.filter((O) => O.OptionSet.IsGlobal === false);
+  } catch (err) {
+    console.log(`Fetch Error: ${err}`);
+    return err as LocalOptionSet[];
   }
 };

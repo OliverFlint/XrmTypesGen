@@ -1,0 +1,2143 @@
+[
+    {
+      "LogicalName": "address2_shippingmethodcode",
+      "MetadataId": "c335ab4e-5383-4bb6-b8b5-f33ac2348e9e",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "60d225d8-b4ab-4e5a-9d18-3dd946e1a413",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Default Value",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "5d9aba00-2341-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Default Value",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "5d9aba00-2341-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "msdyn_orgchangestatus",
+      "MetadataId": "f4bb7e16-aad5-46e7-b0cc-25da9eb63779",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "dfc01f09-34f4-ec11-bb3d-000d3a2e8987",
+        "Options": [
+          {
+            "Value": 0,
+            "Color": "#0000ff",
+            "IsManaged": true,
+            "ExternalValue": "",
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "No Feedback",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "14589c6c-9b65-4803-9915-f8eacfbda754",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "No Feedback",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "14589c6c-9b65-4803-9915-f8eacfbda754",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 1,
+            "Color": "#0000ff",
+            "IsManaged": true,
+            "ExternalValue": "",
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Not at Company",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "e77d12b6-0b88-45e0-9bc8-0ba2ce893557",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Not at Company",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "e77d12b6-0b88-45e0-9bc8-0ba2ce893557",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 2,
+            "Color": "#0000ff",
+            "IsManaged": true,
+            "ExternalValue": "",
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Ignore",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "a2255501-6e49-44fb-9ae6-12363c790ea7",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Ignore",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "a2255501-6e49-44fb-9ae6-12363c790ea7",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "familystatuscode",
+      "MetadataId": "18d22cd0-f923-4d46-97e2-9decc997d285",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "2da4a488-81c9-419d-ad1c-fb0d33a1e0ef",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Single",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "70abc7f4-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Single",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "70abc7f4-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 2,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Married",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "72abc7f4-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Married",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "72abc7f4-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 3,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Divorced",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "74abc7f4-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Divorced",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "74abc7f4-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 4,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Widowed",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "76abc7f4-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Widowed",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "76abc7f4-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "address1_freighttermscode",
+      "MetadataId": "24858aea-93fd-4dfd-a51d-d289b0135a39",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "919726a2-8436-44ef-8c66-6117c442b862",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "FOB",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "9acde1dc-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "FOB",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "9acde1dc-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 2,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "No Charge",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "9ccde1dc-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "No Charge",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "9ccde1dc-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "shippingmethodcode",
+      "MetadataId": "ff7d514a-d8ac-41b5-931c-c344aac35849",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "334b102e-4481-41a5-9b27-8e39ecd9e496",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Default Value",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "f2cee1dc-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Default Value",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "f2cee1dc-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "preferredcontactmethodcode",
+      "MetadataId": "3423a9b1-891b-44cb-a9b9-28d5a4ffb628",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "4b838079-0334-49b3-9f72-0434392dab2c",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Any",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "7b25e7d6-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Any",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "7b25e7d6-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 2,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Email",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "7d25e7d6-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Email",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "7d25e7d6-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 3,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Phone",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "7f25e7d6-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Phone",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "7f25e7d6-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 4,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Fax",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "8125e7d6-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Fax",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "8125e7d6-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 5,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Mail",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "8325e7d6-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Mail",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "8325e7d6-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "address3_freighttermscode",
+      "MetadataId": "0b045097-c546-41b5-9d01-1352fd3f6b85",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "2a18f883-f938-432f-b27f-e23e507bdf08",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Default Value",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "c971e07e-479f-4b0f-aee3-71a8170f9257",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Default Value",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "c971e07e-479f-4b0f-aee3-71a8170f9257",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "preferredappointmenttimecode",
+      "MetadataId": "89802cd9-fe13-4612-8cac-e3593d3da38b",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "5b1d1539-a020-4a16-8f31-c57fce454b53",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Morning",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "8e1c9b1e-2341-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Morning",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "8e1c9b1e-2341-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 2,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Afternoon",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "901c9b1e-2341-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Afternoon",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "901c9b1e-2341-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 3,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Evening",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "921c9b1e-2341-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Evening",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "921c9b1e-2341-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "adx_partner_applicationstatus",
+      "MetadataId": "3cd6e2fe-b103-4606-905b-7974937abf98",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "cb7a36e5-6ff8-ec11-bb3e-000d3abfa2a7",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": "#0000ff",
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Submitted",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "56ecf5da-bbfa-402b-b6c6-019a26076649",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Submitted",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "56ecf5da-bbfa-402b-b6c6-019a26076649",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 2,
+            "Color": "#0000ff",
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Under Review",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "d8bec10c-b6b5-4614-be7f-df070b1fca81",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Under Review",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "d8bec10c-b6b5-4614-be7f-df070b1fca81",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 3,
+            "Color": "#0000ff",
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Approved",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "f805dc15-369b-4182-a0fa-0034dd6afbb5",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Approved",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "f805dc15-369b-4182-a0fa-0034dd6afbb5",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 4,
+            "Color": "#0000ff",
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Rejected",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "1f7d9438-6311-47b3-a185-8e5664f273dd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Rejected",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "1f7d9438-6311-47b3-a185-8e5664f273dd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "territorycode",
+      "MetadataId": "aa3e1fe6-cd5c-424b-b54c-7b17474c47bf",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "e3d3f048-333e-4b83-9d87-609f4ee093f3",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Default Value",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "3864cfee-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Default Value",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "3864cfee-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "accountrolecode",
+      "MetadataId": "ef5e9b87-e4e4-4f7b-bbae-5115f968bbfb",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "a3b48905-7d78-47d1-bb56-da3cbd0975ca",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Decision Maker",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "cecde1dc-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Decision Maker",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "cecde1dc-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 2,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Employee",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "d0cde1dc-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Employee",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "d0cde1dc-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 3,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Influencer",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "d2cde1dc-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Influencer",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "d2cde1dc-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "address2_freighttermscode",
+      "MetadataId": "0eb29dd1-3dd2-49e5-b8ea-8b2485477207",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "dc2aabc1-4efa-4667-b474-1aad1b4cf244",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Default Value",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "17eaaf0c-2341-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Default Value",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "17eaaf0c-2341-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "leadsourcecode",
+      "MetadataId": "853b2009-216c-4c0e-9abc-dfd285210a82",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "e9e66ceb-7c14-4c03-a182-b2013d38797c",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Default Value",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "3b99ba00-2341-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Default Value",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "3b99ba00-2341-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "haschildrencode",
+      "MetadataId": "37861c8f-246f-4534-a91e-6f27aeee1243",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "ced703d8-357b-4e56-94ec-1a045156036f",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Default Value",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "5741b506-2341-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Default Value",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "5741b506-2341-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "address2_addresstypecode",
+      "MetadataId": "dbcf375a-eb4d-4891-9f04-3ea869779d57",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "c4714e0b-7573-4f51-8cb7-46fc321a5089",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Default Value",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "ee53c2fa-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Default Value",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "ee53c2fa-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "customertypecode",
+      "MetadataId": "cd0cefe1-b185-4795-a05c-3f27c205f21e",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "ee3ff3c1-739e-4dc6-a452-c85f3d52814e",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Default Value",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "f299ba00-2341-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Default Value",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "f299ba00-2341-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "educationcode",
+      "MetadataId": "1f1a7b51-b139-453a-a1cb-e2899494e1a3",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "96b15669-cfc3-42f9-aa6a-8f0595182c30",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Default Value",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "af41b506-2341-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Default Value",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "af41b506-2341-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "address3_shippingmethodcode",
+      "MetadataId": "5449c9d1-d7f7-42a8-8033-60dc1b239595",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "147717a9-2dff-4bc5-9f9e-de99ae7c1c86",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Default Value",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "691c1d4e-7677-4098-9e52-5581ad9c8cc3",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Default Value",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "691c1d4e-7677-4098-9e52-5581ad9c8cc3",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "customersizecode",
+      "MetadataId": "bffd7570-2899-492b-97d8-a45208eb2114",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "97a8f6fc-e23a-4279-99c0-df748136e38b",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Default Value",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "1c92aa12-2341-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Default Value",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "1c92aa12-2341-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "gendercode",
+      "MetadataId": "a81e86c9-e2e1-4c1e-81ab-8913eedaab47",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "cb7f9ccb-21b2-45b5-acf5-0a62344d0860",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Male",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "96a9c7f4-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Male",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "96a9c7f4-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 2,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Female",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "98a9c7f4-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Female",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "98a9c7f4-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "address3_addresstypecode",
+      "MetadataId": "0f366b5b-f2e9-4378-bc84-6d796b2c29f4",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "97534134-54f6-42fa-914b-2f1531cddfdc",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Default Value",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "756924de-472f-42a8-b417-9e2eaef620f0",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Default Value",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "756924de-472f-42a8-b417-9e2eaef620f0",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "paymenttermscode",
+      "MetadataId": "384614ff-b79c-4009-9bec-7dedf8c7b99c",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "7154ab7b-7c99-4712-9d8c-7eaaae4f6f78",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Net 30",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "a81ed7e8-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Net 30",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "a81ed7e8-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 2,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "2% 10, Net 30",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "aa1ed7e8-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "2% 10, Net 30",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "aa1ed7e8-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 3,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Net 45",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "ac1ed7e8-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Net 45",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "ac1ed7e8-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 4,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Net 60",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "ae1ed7e8-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Net 60",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "ae1ed7e8-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "preferredappointmentdaycode",
+      "MetadataId": "42741f7e-dc25-4857-84d6-b4ecab8d9e2e",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "51769958-f7a4-41b4-a3ea-0992249c6b17",
+        "Options": [
+          {
+            "Value": 0,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Sunday",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "40d6a218-2341-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Sunday",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "40d6a218-2341-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Monday",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "42d6a218-2341-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Monday",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "42d6a218-2341-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 2,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Tuesday",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "44d6a218-2341-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Tuesday",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "44d6a218-2341-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 3,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Wednesday",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "46d6a218-2341-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Wednesday",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "46d6a218-2341-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 4,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Thursday",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "48d6a218-2341-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Thursday",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "48d6a218-2341-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 5,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Friday",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "4ad6a218-2341-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Friday",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "4ad6a218-2341-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 6,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Saturday",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "4cd6a218-2341-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Saturday",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "4cd6a218-2341-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "address1_addresstypecode",
+      "MetadataId": "81c142ea-db05-48cd-9387-175b4246794d",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "8b6e9a56-6a18-4b17-9f5d-cfdbd46d9e0b",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Bill To",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "b699f6ca-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Bill To",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "b699f6ca-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 2,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Ship To",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "b899f6ca-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Ship To",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "b899f6ca-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 3,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Primary",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "ba99f6ca-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Primary",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "ba99f6ca-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 4,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Other",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "bc99f6ca-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Other",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "bc99f6ca-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "LogicalName": "address1_shippingmethodcode",
+      "MetadataId": "05e0cbb6-bb5b-4d8f-ace9-7cfc1f2a04ee",
+      "OptionSet": {
+        "IsGlobal": false,
+        "MetadataId": "b01576e7-514c-45d5-a264-e4fbfd53f615",
+        "Options": [
+          {
+            "Value": 1,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Airborne",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "5adfeed0-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Airborne",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "5adfeed0-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 2,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "DHL",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "5cdfeed0-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "DHL",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "5cdfeed0-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 3,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "FedEx",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "5edfeed0-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "FedEx",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "5edfeed0-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 4,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "UPS",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "60dfeed0-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "UPS",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "60dfeed0-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 5,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Postal Mail",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "62dfeed0-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Postal Mail",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "62dfeed0-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 6,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Full Load",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "64dfeed0-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Full Load",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "64dfeed0-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          },
+          {
+            "Value": 7,
+            "Color": null,
+            "IsManaged": true,
+            "ExternalValue": null,
+            "ParentValues": [],
+            "MetadataId": null,
+            "HasChanged": null,
+            "Label": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Will Call",
+                  "LanguageCode": 1033,
+                  "IsManaged": true,
+                  "MetadataId": "66dfeed0-2241-db11-898a-0007e9e17ebd",
+                  "HasChanged": null
+                }
+              ],
+              "UserLocalizedLabel": {
+                "Label": "Will Call",
+                "LanguageCode": 1033,
+                "IsManaged": true,
+                "MetadataId": "66dfeed0-2241-db11-898a-0007e9e17ebd",
+                "HasChanged": null
+              }
+            },
+            "Description": {
+              "LocalizedLabels": [],
+              "UserLocalizedLabel": null
+            }
+          }
+        ]
+      }
+    }
+  ]
