@@ -8,17 +8,19 @@ import { terms } from './terms';
 import {
   getAttributeMeta,
   getChoicesBySolution,
+  getChoicesByEnvironment,
   getForms,
   getFormsBySolution,
   getFormsForEntities,
+  getLocalChoices,
 } from './queries';
 import { render } from './renderer';
 import { renderOptionSet } from './renderer-optionSet';
 import {
- EntityMetadata, Form, OptionSet, ProgramOptions,
+ EntityMetadata, Form, LocalOptionSet, OptionSet, ProgramOptions,
 } from './types';
 
-const localStorage: LocalStorage = new LocalStorage('./scratch');
+const mylocalStorage: LocalStorage = new LocalStorage('./scratch');
 
 program.version(require('../package.json').version).name('xrmtypesgen');
 
@@ -36,8 +38,10 @@ program
   .option('-e, --entities <entities>', 'Comma seperated list of entities')
   .option('-o, --output <output>', 'Output path', 'types')
   .option('-b, --earlybound', 'Generate Early-Bound format', false)
-  .option('-ch, --choices', 'Generate Choices format', false);
-
+  .option('-ch, --choices', 'Generate Choices format', false)
+  .option('-gch, --globalChoices', 'Generate Global Choices', false)
+  .option('-ls, --localStorage', 'Do not clear Local Storage', false)
+  .option('_lch, --localChoices', 'Generate Local Choices of Entities', false);
 program.addHelpText(
   'afterAll',
   `
@@ -53,7 +57,9 @@ program.parse();
 const options = program.opts() as ProgramOptions;
 
 const Main = async (authToken: TokenResponse) => {
-  localStorage.clear();
+  if (!options.localStorage) {
+    mylocalStorage.clear();
+  }
   console.log('getting form metadata');
 
   let formsResponse: any;
@@ -71,15 +77,24 @@ const Main = async (authToken: TokenResponse) => {
   const forms: Form[] = formsResponse.value;
 
   const entities: { [entity: string]: EntityMetadata } = {};
-  forms.forEach((form) => {
-    entities[form.objecttypecode] = <EntityMetadata>{};
-  });
+  const localChoices: { [entity: string]: LocalOptionSet[]|undefined } = {};
+  forms
+    .filter((form) => form.objecttypecode !== null && form.objecttypecode !== '')
+    .forEach((form) => {
+      entities[form.objecttypecode] = <EntityMetadata>{};
+    });
   console.log('pre-cache attribute metatdata');
-  await Promise.all(
-    Object.getOwnPropertyNames(entities).map(async (value) => {
-      entities[value] = await getAttributeMeta(value, authToken, options.url);
-    }),
-  );
+  const entityNames = Object.getOwnPropertyNames(entities);
+  for (let i = 0; i < entityNames.length; i += 1) {
+    const value = entityNames[i];
+    // eslint-disable-next-line no-await-in-loop
+    entities[value] = await getAttributeMeta(value, authToken, options.url);
+    localChoices[value] = options.localChoices
+      ? // eslint-disable-next-line no-await-in-loop
+        await getLocalChoices(value, authToken, options.url)
+      : undefined;
+    console.log(value);
+  }
 
   console.log(options);
   if (options.choices) {
@@ -96,16 +111,27 @@ const Main = async (authToken: TokenResponse) => {
 
     console.log('saving type definition files');
     mkdirSync(`${options.output}/`, { recursive: true });
-    writeFile(`${options.output}/choices.d.ts`,
-    choicestd.content,
-    () => { });
+    writeFile(`${options.output}/choices.d.ts`, choicestd.content, () => {});
+  }
+  if (options.globalChoices) {
+    let optionsets: OptionSet[];
+    // eslint-disable-next-line prefer-const
+    optionsets = await getChoicesByEnvironment(authToken, options.url);
+    const choicestd = {
+      content: renderOptionSet(optionsets),
+    };
+
+    console.log('saving type definition files');
+    mkdirSync(`${options.output}/`, { recursive: true });
+    writeFile(`${options.output}/globalchoices.d.ts`, choicestd.content, () => {});
   }
   if (options.earlybound) {
     const entitiestd = Object.getOwnPropertyNames(entities).map((entityName) => {
       const meta = entities[entityName];
+      const localChoice = localChoices[entityName];
       return {
         entity: entityName,
-        content: render(meta, meta, 'template-earlybound-entity'),
+        content: render(meta, meta, 'template-earlybound-entity', localChoice),
       };
     });
 
@@ -165,7 +191,9 @@ const Main = async (authToken: TokenResponse) => {
       );
     });
   }
-  localStorage.clear();
+  if (!options.localStorage) {
+    mylocalStorage.clear();
+  }
   console.log('Finished!');
 };
 

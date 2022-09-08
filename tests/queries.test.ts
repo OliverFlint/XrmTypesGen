@@ -10,6 +10,8 @@ import {
   getFormsBySolution,
   getFormsForEntities,
   getChoicesBySolution,
+  getChoicesByEnvironment,
+  getLocalChoices,
 } from '../src/queries';
 
 let localStorage: LocalStorage;
@@ -64,7 +66,6 @@ describe('queries tests', () => {
       sinon.stub(nodefetch, 'default').resolves(new nodefetch.Response('{}', { statusText: 'OK' }));
       const result = await getAttributeMeta('new_entity', {} as TokenResponse, 'https://localhost');
       expect(result).toBeTruthy();
-      expect(result.name).not.toBe('FetchError');
       expect(result).toStrictEqual({});
       const cacheString = localStorage.getItem('attributeMetaData_new_entity') as string;
       expect(cacheString).toBeTruthy();
@@ -85,6 +86,26 @@ describe('queries tests', () => {
       );
       expect(result).toBeTruthy();
       expect(result.name).not.toBe('FetchError');
+      expect(result).toStrictEqual([]);
+    });
+    test('getChoicesByEnvironment', async () => {
+      sinon.stub(nodefetch, 'default').resolves(new nodefetch.Response('{"value": []}', { statusText: 'OK' }));
+      const result = await getChoicesByEnvironment(
+        {} as TokenResponse,
+        'https://localhost',
+      );
+      expect(result).toBeTruthy();
+      expect(result.name).not.toBe('FetchError');
+      expect(result).toStrictEqual([]);
+    });
+    test('getLocalChoices', async () => {
+      sinon.stub(nodefetch, 'default').resolves(new nodefetch.Response('{"value": []}', { statusText: 'OK' }));
+      const result = await getLocalChoices(
+        'contact,account',
+        {} as TokenResponse,
+        'https://localhost',
+      );
+      expect(result).toBeTruthy();
       expect(result).toStrictEqual([]);
     });
   });
