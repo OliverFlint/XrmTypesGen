@@ -69,3 +69,47 @@ export interface EntityMetadata {
   MetadataId: string;
   SchemaName: string;
 }
+
+namespace FormObject{ 
+  export interface Form{
+    Tabs : {
+     $values : Tab[];
+    }
+  }
+  
+  export interface Tab{
+    Name :string;
+    Columns : {
+      $values: Column[];
+    }
+  }
+
+  export interface Column{
+    Name : string;
+    Sections : {
+      $values : Section[];
+    }
+  }
+  export interface Section{
+    Name :string;
+    Rows : {
+      $values : Row[];
+    }
+  }
+  export interface Row{
+    Name :string;
+    Cells : {
+      $values : Cell[];
+    }
+  }
+  export interface Cell{
+    Control : FormObject.Control
+  }
+
+  export interface Control {
+    DataFieldName: string;
+    Id :string;
+    ClassId : string;
+  }
+}
+
