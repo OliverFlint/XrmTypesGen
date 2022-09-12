@@ -10,34 +10,23 @@ declare namespace Xrm.Ext.Forms.{{meta.SchemaName}}.{{formtype data.type}} {
     * Form Name: `{{toTypeName data.name}}`
     */
     interface {{toTypeName data.name}} extends Xrm.EarlyBound.Form<Ext.Entities.{{toTypeName meta.SchemaName}}> {
-        {{#each formObj.Tabs.$values}}
-            {{#each this.Columns.$values}} 
-                {{#each this.Sections.$values}}
-                    {{#each this.Rows.$values}}
-                        {{#each this.Cells.$values}}
-                            {{#if (getFieldName this.Control)}}
-                                {{#if (getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'formControl')}}
-        "{{getFieldName this.Control}}": {{{getAttributeType ../../../../../meta (getFieldName this.Control) this.Control.ClassId 'formControl'}}}
-                                {{/if}}
-                            {{/if}}
-                        {{/each}}
-                    {{/each}}
-                {{/each}}
-            {{/each}}
+       
+        {{#each (getFormControl formObj meta)}}
+             "{{getFieldName this}}": {{{getAttributeType ../meta (getFieldName this) this.ClassId 'formControl'}}}
         {{/each}}
+       
         ".Tabs": {
         {{#each formObj.Tabs.$values}}
             "{{Name}}": {
-            {{#each this.Columns.$values}} 
-                {{#each this.Sections.$values}}
-                    {{#if (hasControls this ../../../meta)}}
-                "{{Name}}": 
-                        {{#each this.Rows.$values}}
-                            {{#each this.Cells.$values}}
-                               {{#if (getFieldName this.Control)}}
-                    | "{{getFieldName this.Control}}"{{/if}}{{/each}}{{/each}};
-                    {{/if}}
-                {{/each}}
+           {{#each (sectionCollector this)}}
+           {{#if (hasControls this ../../meta)}}
+                "{{Name}}" :
+                       {{#each (cellsCollector this)}}
+                              {{#if (getFieldName this.Control)}}
+                                 | "{{getFieldName this.Control}}"
+                               {{/if}}
+                      {{/each}};
+              {{/if}}      
             {{/each}}
             }         
         {{/each}}
