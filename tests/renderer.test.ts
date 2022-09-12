@@ -9,7 +9,7 @@ describe('renderer tests', () => {
   describe('render tests', () => {
     test('should return valid type declaration for main form', async () => {
       const data = await import('./contact.information.form.json');
-      const meta = await import('./contact.metadata.json');
+      const meta = JSON.parse(JSON.stringify(await import('./contact.metadata.json')));
       const result = render(data, meta, 'template');
       expect(result).toBeTruthy();
       expect(result).toContain('namespace Ext.Forms.contact.main.Information');
@@ -18,7 +18,7 @@ describe('renderer tests', () => {
 
     test('should return valid type declaration for quickcreate form', async () => {
       const data = await import('./contact.quickcreate.form.json');
-      const meta = await import('./contact.metadata.json');
+      const meta = JSON.parse(JSON.stringify(await import('./contact.metadata.json')));
       const result = render(data, meta, 'template');
       expect(result).toBeTruthy();
       expect(result).toContain('namespace Ext.Forms.contact.quickcreate.ContactQuickCreate');
@@ -26,7 +26,7 @@ describe('renderer tests', () => {
     });
 
     test('should return valid type declaration for Early-Bound Entity', async () => {
-      const meta = await import('./contact.metadata.json');
+      const meta = JSON.parse(JSON.stringify(await import('./contact.metadata.json')));
       const result = render(meta, meta, 'template-earlybound-entity');
       expect(result).toBeTruthy();
       expect(result).toContain('interface Contact extends Xrm.EarlyBound.Entity {');
@@ -35,7 +35,7 @@ describe('renderer tests', () => {
     });
 
     test('should return valid type declaration for Early-Bound Entity', async () => {
-      const meta = await import('./contact.metadata.json');
+      const meta = JSON.parse(JSON.stringify(await import('./contact.metadata.json')));
       const localChoices = (await import('./contact.choices.metadata.json')).default as LocalOptionSet[];
       const result = render(meta, meta, 'template-earlybound-entity', localChoices);
       expect(result).toBeTruthy();
@@ -47,7 +47,7 @@ describe('renderer tests', () => {
 
     test('should return valid type declaration for Early-Bound main form', async () => {
       const data = await import('./contact.information.form.json');
-      const meta = await import('./contact.metadata.json');
+      const meta = JSON.parse(JSON.stringify(await import('./contact.metadata.json')));
       const result = render(data, meta, 'template-earlybound-form');
       expect(result).toBeTruthy();
       expect(result).toContain('namespace Xrm.Ext.Forms.Contact.main {');
@@ -57,7 +57,7 @@ describe('renderer tests', () => {
 
     test('should return valid type declaration for Early-Bound quickcreate form', async () => {
       const data = await import('./contact.quickcreate.form.json');
-      const meta = await import('./contact.metadata.json');
+      const meta = JSON.parse(JSON.stringify(await import('./contact.metadata.json')));
       const result = render(data, meta, 'template-earlybound-form');
       expect(result).toBeTruthy();
       expect(result).toContain('namespace Xrm.Ext.Forms.Contact.quickcreate {');
