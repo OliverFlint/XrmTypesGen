@@ -67,7 +67,6 @@ export const render = (
             row.Cells.$values.forEach((cell) => {
               if (
                 cell.Control !== null &&
-                cell.Control.DataFieldName !== null &&
                 getAttributeType(
                   formmeta,
                   cell.Control.DataFieldName ? cell.Control.DataFieldName : cell.Control.Id,
@@ -84,7 +83,7 @@ export const render = (
         });
       });
     });
-    controls.sort((a, b) => a.DataFieldName.localeCompare(b.DataFieldName));
+    controls.sort((a, b) => getFieldName(a).localeCompare(getFieldName(b)));
     return controls;
   });
   registerHelper('sectionCollector', (formdata: FormObject.Tab) => {
@@ -95,7 +94,7 @@ export const render = (
         sections.push(sec);
       });
     });
-    sections.sort((a, b) => a.Name.localeCompare(b.Name));
+    sections.sort((a, b) => a.Name?.localeCompare(b.Name));
     console.log(formdata.Name);
     console.log(formdata.Columns);
     return sections;
