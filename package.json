@@ -1,6 +1,6 @@
 {
   "name": "xrmtypesgen",
-  "version": "1.0.9",
+  "version": "1.1.0-beta",
   "description": "A TypeScript Declaration Generator for Dynamics 365 Forms",
   "keywords": [
     "TyepScript",
@@ -25,7 +25,8 @@
     "build": "node_modules/.bin/tsc && npm run template",
     "template": "node_modules/.bin/copyfiles ./src/**/*.hbs ./dist/ --up 1",
     "lint": "node_modules/.bin/eslint src/**/*",
-    "format": "node_modules/.bin/prettier src/**/*.ts --write"
+    "format": "node_modules/.bin/prettier src/**/*.ts --write",
+    "format:tests": "node_modules/.bin/prettier tests/**/*.ts --write"
   },
   "repository": {
     "type": "git",

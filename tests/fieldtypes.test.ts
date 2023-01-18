@@ -9,7 +9,7 @@ describe('filetype tests', () => {
   describe('getAttributeType tests', () => {
     describe('Strings', () => {
       test('ControlForAttributeTypeString_ShouldReturnStringControl', () => {
-        const meta : EntityMetadata = {
+        const meta: EntityMetadata = {
           Attributes: [
             {
               AttributeType: 'String',
@@ -30,7 +30,7 @@ describe('filetype tests', () => {
       });
 
       test('AttributeForAttributeTypeString_ShouldReturnStringAttribute', () => {
-        const meta : EntityMetadata = {
+        const meta: EntityMetadata = {
           Attributes: [
             {
               AttributeType: 'String',
@@ -815,7 +815,7 @@ describe('filetype tests', () => {
       });
 
       test('ClassidShouldReturnIframeControl', () => {
-        const meta:EntityMetadata = {
+        const meta: EntityMetadata = {
           Attributes: [
             {
               AttributeType: 'UnknownType',

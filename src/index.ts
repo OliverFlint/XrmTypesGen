@@ -16,9 +16,7 @@ import {
 } from './queries';
 import { render } from './renderer';
 import { renderOptionSet } from './renderer-optionSet';
-import {
- EntityMetadata, Form, LocalOptionSet, OptionSet, ProgramOptions,
-} from './types';
+import { EntityMetadata, Form, LocalOptionSet, OptionSet, ProgramOptions } from './types';
 
 const mylocalStorage: LocalStorage = new LocalStorage('./scratch');
 
@@ -77,7 +75,7 @@ const Main = async (authToken: TokenResponse) => {
   const forms: Form[] = formsResponse.value;
 
   const entities: { [entity: string]: EntityMetadata } = {};
-  const localChoices: { [entity: string]: LocalOptionSet[]|undefined } = {};
+  const localChoices: { [entity: string]: LocalOptionSet[] | undefined } = {};
   forms
     .filter((form) => form.objecttypecode !== null && form.objecttypecode !== '')
     .forEach((form) => {
@@ -143,7 +141,7 @@ const Main = async (authToken: TokenResponse) => {
       writeFile(
         `${options.output}/${element.entity}/${element.entity}.d.ts`,
         element.content,
-        () => { },
+        () => {},
       );
     });
 
@@ -165,7 +163,7 @@ const Main = async (authToken: TokenResponse) => {
       writeFile(
         `${options.output}/${element.entity}/Forms/${element.formtype}/${element.formname}.d.ts`,
         element.content,
-        () => { },
+        () => {},
       );
     });
   } else {
@@ -187,7 +185,7 @@ const Main = async (authToken: TokenResponse) => {
       writeFile(
         `${options.output}/Xrm/Forms/${element.entity}/${element.formtype}/${element.formname}.d.ts`,
         element.content,
-        () => { },
+        () => {},
       );
     });
   }

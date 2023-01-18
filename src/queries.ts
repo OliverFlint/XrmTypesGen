@@ -1,9 +1,7 @@
 import { TokenResponse } from 'adal-node';
 import fetch, { RequestInfo, RequestInit } from 'node-fetch';
 import { LocalStorage } from 'node-localstorage';
-import {
- EntityMetadata, OptionSet, OptionSetSolution, LocalOptionSet,
-} from 'types';
+import { EntityMetadata, OptionSet, OptionSetSolution, LocalOptionSet } from 'types';
 
 const localStorage: LocalStorage = new LocalStorage('./scratch', 500 * 1024 * 1024);
 
@@ -236,7 +234,7 @@ export const getLocalChoices = async (
   entity: string,
   authToken: TokenResponse,
   url: string,
-): Promise< LocalOptionSet[]> => {
+): Promise<LocalOptionSet[]> => {
   try {
     const response = await autoRetryFetch(
       `${url}api/data/v9.0/EntityDefinitions(LogicalName='${entity}')/Attributes/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=LogicalName&$expand=OptionSet($select=Options,IsGlobal)`,

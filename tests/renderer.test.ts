@@ -36,7 +36,8 @@ describe('renderer tests', () => {
 
     test('should return valid type declaration for Early-Bound Entity', async () => {
       const meta = JSON.parse(JSON.stringify(await import('./contact.metadata.json')));
-      const localChoices = (await import('./contact.choices.metadata.json')).default as LocalOptionSet[];
+      const localChoices = (await import('./contact.choices.metadata.json'))
+        .default as LocalOptionSet[];
       const result = render(meta, meta, 'template-earlybound-entity', localChoices);
       expect(result).toBeTruthy();
       expect(result).toContain('interface Contact extends Xrm.EarlyBound.Entity {');
@@ -51,7 +52,9 @@ describe('renderer tests', () => {
       const result = render(data, meta, 'template-earlybound-form');
       expect(result).toBeTruthy();
       expect(result).toContain('namespace Xrm.Ext.Forms.Contact.main {');
-      expect(result).toContain('interface Information extends Xrm.EarlyBound.Form<Ext.Entities.Contact> {');
+      expect(result).toContain(
+        'interface Information extends Xrm.EarlyBound.Form<Ext.Entities.Contact> {',
+      );
       expect(result).toMatchSnapshot();
     });
 

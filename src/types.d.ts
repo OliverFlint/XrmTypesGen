@@ -10,7 +10,7 @@ export interface ProgramOptions extends OptionValues {
   url: string;
   username: string;
   earlybound: boolean;
-  choices :boolean;
+  choices: boolean;
   globalChoices: boolean;
   localStorage: boolean;
   localChoices: boolean;
@@ -43,7 +43,6 @@ export interface OptionSetOption {
 
 export interface OptionSetSolution {
   objectid: string;
-  
 }
 
 export interface LocalOptionSet {
@@ -51,7 +50,7 @@ export interface LocalOptionSet {
   MetadataId: string;
   OptionSet: {
     IsGlobal: boolean;
-    Options:OptionSetOption[];
+    Options: OptionSetOption[];
   };
 }
 
@@ -70,46 +69,45 @@ export interface EntityMetadata {
   SchemaName: string;
 }
 
-namespace FormObject{ 
-  export interface Form{
-    Tabs : {
-     $values : Tab[];
-    }
-  }
-  
-  export interface Tab{
-    Name :string;
-    Columns : {
-      $values: Column[];
-    }
+namespace FormObject {
+  export interface Form {
+    Tabs: {
+      $values: Tab[];
+    };
   }
 
-  export interface Column{
-    Name : string;
-    Sections : {
-      $values : Section[];
-    }
+  export interface Tab {
+    Name: string;
+    Columns: {
+      $values: Column[];
+    };
   }
-  export interface Section{
-    Name :string;
-    Rows : {
-      $values : Row[];
-    }
+
+  export interface Column {
+    Name: string;
+    Sections: {
+      $values: Section[];
+    };
   }
-  export interface Row{
-    Name :string;
-    Cells : {
-      $values : Cell[];
-    }
+  export interface Section {
+    Name: string;
+    Rows: {
+      $values: Row[];
+    };
   }
-  export interface Cell{
-    Control : FormObject.Control
+  export interface Row {
+    Name: string;
+    Cells: {
+      $values: Cell[];
+    };
+  }
+  export interface Cell {
+    Control: FormObject.Control;
   }
 
   export interface Control {
     DataFieldName: string;
-    Id :string;
-    ClassId : string;
+    Id: string;
+    ClassId: string;
   }
 }
-

@@ -45,7 +45,8 @@ export const render = (
     return Rows.some((row) => {
       const Cells = row.Cells.$values as any[];
       return Cells.some(
-        (cell) => cell.Control !== null &&
+        (cell) =>
+          cell.Control !== null &&
           getAttributeType(
             metadata,
             cell.Control.DataFieldName ? cell.Control.DataFieldName : cell.Control.Id,
@@ -100,12 +101,12 @@ export const render = (
     return sections;
   });
   registerHelper('cellsCollector', (formdata: FormObject.Section) => {
-     const cells: FormObject.Cell[] = [];
+    const cells: FormObject.Cell[] = [];
     formdata.Rows.$values.forEach((row) => {
       row.Cells.$values.forEach((cell) => {
         if (getFieldName(cell.Control)) {
-        cells.push(cell);
-}
+          cells.push(cell);
+        }
       });
     });
     cells.sort((a, b) => getFieldName(a.Control).localeCompare(getFieldName(b.Control)));
@@ -117,10 +118,10 @@ export const render = (
     formObj.Tabs.$values[0].Columns.$values[0].Sections.$values[0].Name !== null
   ) {
     formObj.Tabs.$values.sort((a, b) => a.Name.localeCompare(b.Name));
-    formObj.Tabs.$values[0].Columns.$values[0].Sections.$values
-    .sort((a, b) => a.Name.localeCompare(b.Name));
-    formObj.Tabs.$values[0].Columns.$values[0].Sections.$values[0]
-    .Rows.$values[0].Cells.$values.sort(
+    formObj.Tabs.$values[0].Columns.$values[0].Sections.$values.sort((a, b) =>
+      a.Name.localeCompare(b.Name),
+    );
+    formObj.Tabs.$values[0].Columns.$values[0].Sections.$values[0].Rows.$values[0].Cells.$values.sort(
       (a, b) => a.Control.DataFieldName?.localeCompare(b.Control.DataFieldName),
     );
   }

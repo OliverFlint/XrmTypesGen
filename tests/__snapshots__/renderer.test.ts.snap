@@ -28,7 +28,6 @@ declare namespace Xrm.Ext.Entities {
 
     Address1_City: Xrm.Attributes.StringAttribute;
 
-
     Address1_Composite: Xrm.Attributes.StringAttribute;
 
     Address1_Country: Xrm.Attributes.StringAttribute;
@@ -41,17 +40,13 @@ declare namespace Xrm.Ext.Entities {
 
     Address1_FreightTermsCodeName: Xrm.Attributes.Attribute;
 
-
     Address1_Latitude: Xrm.Attributes.NumberAttribute;
 
-
     Address1_Line1: Xrm.Attributes.StringAttribute;
-
 
     Address1_Line2: Xrm.Attributes.StringAttribute;
 
     Address1_Line3: Xrm.Attributes.StringAttribute;
-
 
     Address1_Longitude: Xrm.Attributes.NumberAttribute;
 
@@ -91,7 +86,6 @@ declare namespace Xrm.Ext.Entities {
 
     Address2_Country: Xrm.Attributes.StringAttribute;
 
-
     Address2_County: Xrm.Attributes.StringAttribute;
 
     Address2_Fax: Xrm.Attributes.StringAttribute;
@@ -102,11 +96,9 @@ declare namespace Xrm.Ext.Entities {
 
     Address2_Latitude: Xrm.Attributes.NumberAttribute;
 
-
     Address2_Line1: Xrm.Attributes.StringAttribute;
 
     Address2_Line2: Xrm.Attributes.StringAttribute;
-
 
     Address2_Line3: Xrm.Attributes.StringAttribute;
 
@@ -214,7 +206,6 @@ declare namespace Xrm.Ext.Entities {
 
     BirthDate: Xrm.Attributes.DateAttribute;
 
-
     Business2: Xrm.Attributes.StringAttribute;
 
     BusinessCard: Xrm.Attributes.StringAttribute;
@@ -224,7 +215,6 @@ declare namespace Xrm.Ext.Entities {
     Callback: Xrm.Attributes.StringAttribute;
 
     ChildrensNames: Xrm.Attributes.StringAttribute;
-
 
     Company: Xrm.Attributes.StringAttribute;
 
@@ -236,16 +226,13 @@ declare namespace Xrm.Ext.Entities {
 
     CreatedByExternalPartyName: Xrm.Attributes.StringAttribute;
 
-
     CreatedByExternalPartyYomiName: Xrm.Attributes.StringAttribute;
 
     CreatedByName: Xrm.Attributes.StringAttribute;
 
     CreatedByYomiName: Xrm.Attributes.StringAttribute;
 
-
     CreatedOn: Xrm.Attributes.DateAttribute;
-
 
     CreatedOnBehalfBy: Xrm.Attributes.LookupAttribute;
 
@@ -279,18 +266,15 @@ declare namespace Xrm.Ext.Entities {
 
     DoNotBulkEMail: Xrm.Attributes.BooleanAttribute;
 
-
     DoNotBulkEMailName: Xrm.Attributes.Attribute;
 
     DoNotBulkPostalMail: Xrm.Attributes.BooleanAttribute;
-
 
     DoNotBulkPostalMailName: Xrm.Attributes.Attribute;
 
     DoNotEMail: Xrm.Attributes.BooleanAttribute;
 
     DoNotEMailName: Xrm.Attributes.Attribute;
-
 
     DoNotFax: Xrm.Attributes.BooleanAttribute;
 
@@ -310,16 +294,13 @@ declare namespace Xrm.Ext.Entities {
 
     EducationCode: Xrm.Attributes.OptionSetAttribute;
 
-
     EducationCodeName: Xrm.Attributes.Attribute;
 
     EMailAddress1: Xrm.Attributes.StringAttribute;
 
-
     EMailAddress2: Xrm.Attributes.StringAttribute;
 
     EMailAddress3: Xrm.Attributes.StringAttribute;
-
 
     EmployeeId: Xrm.Attributes.StringAttribute;
 
@@ -357,7 +338,6 @@ declare namespace Xrm.Ext.Entities {
 
     GovernmentId: Xrm.Attributes.StringAttribute;
 
-
     HasChildrenCode: Xrm.Attributes.OptionSetAttribute;
 
     HasChildrenCodeName: Xrm.Attributes.Attribute;
@@ -367,7 +347,6 @@ declare namespace Xrm.Ext.Entities {
     ImportSequenceNumber: Xrm.Attributes.NumberAttribute;
 
     IsAutoCreate: Xrm.Attributes.BooleanAttribute;
-
 
     IsBackofficeCustomer: Xrm.Attributes.BooleanAttribute;
 
@@ -413,9 +392,7 @@ declare namespace Xrm.Ext.Entities {
 
     ModifiedBy: Xrm.Attributes.LookupAttribute;
 
-
     ModifiedByExternalParty: Xrm.Attributes.LookupAttribute;
-
 
     ModifiedByExternalPartyName: Xrm.Attributes.StringAttribute;
 
@@ -423,9 +400,7 @@ declare namespace Xrm.Ext.Entities {
 
     ModifiedByName: Xrm.Attributes.StringAttribute;
 
-
     ModifiedByYomiName: Xrm.Attributes.StringAttribute;
-
 
     ModifiedOn: Xrm.Attributes.DateAttribute;
 
@@ -434,7 +409,6 @@ declare namespace Xrm.Ext.Entities {
     ModifiedOnBehalfByName: Xrm.Attributes.StringAttribute;
 
     ModifiedOnBehalfByYomiName: Xrm.Attributes.StringAttribute;
-
 
     msdyn_gdproptout: Xrm.Attributes.BooleanAttribute;
 
@@ -518,25 +492,19 @@ declare namespace Xrm.Ext.Entities {
 
     PreferredServiceIdName: Xrm.Attributes.StringAttribute;
 
-
     PreferredSystemUserId: Xrm.Attributes.LookupAttribute;
-
 
     PreferredSystemUserIdName: Xrm.Attributes.StringAttribute;
 
-
     PreferredSystemUserIdYomiName: Xrm.Attributes.StringAttribute;
-
 
     ProcessId: Xrm.Attributes.Attribute;
 
     Salutation: Xrm.Attributes.StringAttribute;
 
-
     ShippingMethodCode: Xrm.Attributes.OptionSetAttribute;
 
     ShippingMethodCodeName: Xrm.Attributes.Attribute;
-
 
     SLAId: Xrm.Attributes.LookupAttribute;
 
@@ -672,7 +640,6 @@ declare namespace Xrm.Ext.Entities {
 
     Address1_Telephone3: Xrm.Attributes.StringAttribute;
 
-
     Address1_UPSZone: Xrm.Attributes.StringAttribute;
 
     Address1_UTCOffset: Xrm.Attributes.NumberAttribute;
@@ -753,7 +720,6 @@ declare namespace Xrm.Ext.Entities {
 
     Address3_Latitude: Xrm.Attributes.NumberAttribute;
 
-
     Address3_Line1: Xrm.Attributes.StringAttribute;
 
     Address3_Line2: Xrm.Attributes.StringAttribute;
@@ -822,9 +788,7 @@ declare namespace Xrm.Ext.Entities {
 
     Company: Xrm.Attributes.StringAttribute;
 
-
     ContactId: Xrm.Attributes.Attribute;
-
 
     CreatedBy: Xrm.Attributes.LookupAttribute;
 
@@ -880,7 +844,6 @@ declare namespace Xrm.Ext.Entities {
 
     DoNotEMail: Xrm.Attributes.BooleanAttribute;
 
-
     DoNotEMailName: Xrm.Attributes.Attribute;
 
     DoNotFax: Xrm.Attributes.BooleanAttribute;
@@ -933,18 +896,13 @@ declare namespace Xrm.Ext.Entities {
 
     FollowEmail: Xrm.Attributes.BooleanAttribute;
 
-
     FollowEmailName: Xrm.Attributes.Attribute;
-
 
     FtpSiteUrl: Xrm.Attributes.StringAttribute;
 
-
     FullName: Xrm.Attributes.StringAttribute;
 
-
     GenderCode: Xrm.Attributes.OptionSetAttribute;
-
 
     GenderCodeName: Xrm.Attributes.Attribute;
 
@@ -955,8 +913,6 @@ declare namespace Xrm.Ext.Entities {
     HasChildrenCodeName: Xrm.Attributes.Attribute;
 
     Home2: Xrm.Attributes.StringAttribute;
-
-
 
     ImportSequenceNumber: Xrm.Attributes.NumberAttribute;
 
@@ -1024,14 +980,11 @@ declare namespace Xrm.Ext.Entities {
 
     ModifiedOnBehalfByYomiName: Xrm.Attributes.StringAttribute;
 
-
     msdyn_gdproptout: Xrm.Attributes.BooleanAttribute;
 
     msdyn_gdproptoutName: Xrm.Attributes.Attribute;
 
-
     msdyn_orgchangestatus: Xrm.Attributes.OptionSetAttribute;
-
 
     msdyn_orgchangestatusName: Xrm.Attributes.Attribute;
 
@@ -1421,244 +1374,6 @@ declare namespace Xrm.Ext.Entities {
       \\"Default Value\\" = 1,
     }
   }
-
-  namespace Contact.OptionSets {
-    /**
-     * OptionSet Name: \`address2_shippingmethodcode\`
-     *
-     */
-    const enum address2_shippingmethodcode {
-      \\"Default Value\\" = 1,
-    }
-
-    /**
-     * OptionSet Name: \`msdyn_orgchangestatus\`
-     *
-     */
-    const enum msdyn_orgchangestatus {
-      \\"No Feedback\\" = 0,
-      \\"Not at Company\\" = 1,
-      \\"Ignore\\" = 2,
-    }
-
-    /**
-     * OptionSet Name: \`familystatuscode\`
-     *
-     */
-    const enum familystatuscode {
-      \\"Single\\" = 1,
-      \\"Married\\" = 2,
-      \\"Divorced\\" = 3,
-      \\"Widowed\\" = 4,
-    }
-
-    /**
-     * OptionSet Name: \`address1_freighttermscode\`
-     *
-     */
-    const enum address1_freighttermscode {
-      \\"FOB\\" = 1,
-      \\"No Charge\\" = 2,
-    }
-
-    /**
-     * OptionSet Name: \`shippingmethodcode\`
-     *
-     */
-    const enum shippingmethodcode {
-      \\"Default Value\\" = 1,
-    }
-
-    /**
-     * OptionSet Name: \`preferredcontactmethodcode\`
-     *
-     */
-    const enum preferredcontactmethodcode {
-      \\"Any\\" = 1,
-      \\"Email\\" = 2,
-      \\"Phone\\" = 3,
-      \\"Fax\\" = 4,
-      \\"Mail\\" = 5,
-    }
-
-    /**
-     * OptionSet Name: \`address3_freighttermscode\`
-     *
-     */
-    const enum address3_freighttermscode {
-      \\"Default Value\\" = 1,
-    }
-
-    /**
-     * OptionSet Name: \`preferredappointmenttimecode\`
-     *
-     */
-    const enum preferredappointmenttimecode {
-      \\"Morning\\" = 1,
-      \\"Afternoon\\" = 2,
-      \\"Evening\\" = 3,
-    }
-
-    /**
-     * OptionSet Name: \`adx_partner_applicationstatus\`
-     *
-     */
-    const enum adx_partner_applicationstatus {
-      \\"Submitted\\" = 1,
-      \\"Under Review\\" = 2,
-      \\"Approved\\" = 3,
-      \\"Rejected\\" = 4,
-    }
-
-    /**
-     * OptionSet Name: \`territorycode\`
-     *
-     */
-    const enum territorycode {
-      \\"Default Value\\" = 1,
-    }
-
-    /**
-     * OptionSet Name: \`accountrolecode\`
-     *
-     */
-    const enum accountrolecode {
-      \\"Decision Maker\\" = 1,
-      \\"Employee\\" = 2,
-      \\"Influencer\\" = 3,
-    }
-
-    /**
-     * OptionSet Name: \`address2_freighttermscode\`
-     *
-     */
-    const enum address2_freighttermscode {
-      \\"Default Value\\" = 1,
-    }
-
-    /**
-     * OptionSet Name: \`leadsourcecode\`
-     *
-     */
-    const enum leadsourcecode {
-      \\"Default Value\\" = 1,
-    }
-
-    /**
-     * OptionSet Name: \`haschildrencode\`
-     *
-     */
-    const enum haschildrencode {
-      \\"Default Value\\" = 1,
-    }
-
-    /**
-     * OptionSet Name: \`address2_addresstypecode\`
-     *
-     */
-    const enum address2_addresstypecode {
-      \\"Default Value\\" = 1,
-    }
-
-    /**
-     * OptionSet Name: \`customertypecode\`
-     *
-     */
-    const enum customertypecode {
-      \\"Default Value\\" = 1,
-    }
-
-    /**
-     * OptionSet Name: \`educationcode\`
-     *
-     */
-    const enum educationcode {
-      \\"Default Value\\" = 1,
-    }
-
-    /**
-     * OptionSet Name: \`address3_shippingmethodcode\`
-     *
-     */
-    const enum address3_shippingmethodcode {
-      \\"Default Value\\" = 1,
-    }
-
-    /**
-     * OptionSet Name: \`customersizecode\`
-     *
-     */
-    const enum customersizecode {
-      \\"Default Value\\" = 1,
-    }
-
-    /**
-     * OptionSet Name: \`gendercode\`
-     *
-     */
-    const enum gendercode {
-      \\"Male\\" = 1,
-      \\"Female\\" = 2,
-    }
-
-    /**
-     * OptionSet Name: \`address3_addresstypecode\`
-     *
-     */
-    const enum address3_addresstypecode {
-      \\"Default Value\\" = 1,
-    }
-
-    /**
-     * OptionSet Name: \`paymenttermscode\`
-     *
-     */
-    const enum paymenttermscode {
-      \\"Net 30\\" = 1,
-      \\"2% 10, Net 30\\" = 2,
-      \\"Net 45\\" = 3,
-      \\"Net 60\\" = 4,
-    }
-
-    /**
-     * OptionSet Name: \`preferredappointmentdaycode\`
-     *
-     */
-    const enum preferredappointmentdaycode {
-      \\"Sunday\\" = 0,
-      \\"Monday\\" = 1,
-      \\"Tuesday\\" = 2,
-      \\"Wednesday\\" = 3,
-      \\"Thursday\\" = 4,
-      \\"Friday\\" = 5,
-      \\"Saturday\\" = 6,
-    }
-
-    /**
-     * OptionSet Name: \`address1_addresstypecode\`
-     *
-     */
-    const enum address1_addresstypecode {
-      \\"Bill To\\" = 1,
-      \\"Ship To\\" = 2,
-      \\"Primary\\" = 3,
-      \\"Other\\" = 4,
-    }
-
-    /**
-     * OptionSet Name: \`address1_shippingmethodcode\`
-     *
-     */
-    const enum address1_shippingmethodcode {
-      \\"Airborne\\" = 1,
-      \\"DHL\\" = 2,
-      \\"FedEx\\" = 3,
-      \\"UPS\\" = 4,
-      \\"Postal Mail\\" = 5,
-      \\"Full Load\\" = 6,
-      \\"Will Call\\" = 7,
-    }
-  }
 }
 "
 `;
@@ -1693,6 +1408,7 @@ declare namespace Xrm.Ext.Forms.Contact.main {
     assistantname: \\"AssistantName\\";
     assistantphone: \\"AssistantPhone\\";
     birthdate: \\"BirthDate\\";
+    contactactivitiesgrid: Xrm.Controls.GridControl;
     creditlimit: \\"CreditLimit\\";
     creditonhold: \\"CreditOnHold\\";
     defaultpricelevelid: \\"DefaultPriceLevelId\\";
@@ -1716,6 +1432,7 @@ declare namespace Xrm.Ext.Forms.Contact.main {
     managerphone: \\"ManagerPhone\\";
     middlename: \\"MiddleName\\";
     mobilephone: \\"MobilePhone\\";
+    notescontrol: Xrm.Controls.Control;
     originatingleadid: \\"OriginatingLeadId\\";
     ownerid: \\"OwnerId\\";
     parentcustomerid: \\"ParentCustomerId\\";
@@ -1731,6 +1448,7 @@ declare namespace Xrm.Ext.Forms.Contact.main {
     telephone1: \\"Telephone1\\";
     telephone2: \\"Telephone2\\";
     transactioncurrencyid: \\"TransactionCurrencyId\\";
+    WebResource_RecordWall: Xrm.Controls.IframeControl;
 
     \\".Tabs\\": {
       administration: {

@@ -89,17 +89,18 @@ describe('queries tests', () => {
       expect(result).toStrictEqual([]);
     });
     test('getChoicesByEnvironment', async () => {
-      sinon.stub(nodefetch, 'default').resolves(new nodefetch.Response('{"value": []}', { statusText: 'OK' }));
-      const result = await getChoicesByEnvironment(
-        {} as TokenResponse,
-        'https://localhost',
-      );
+      sinon
+        .stub(nodefetch, 'default')
+        .resolves(new nodefetch.Response('{"value": []}', { statusText: 'OK' }));
+      const result = await getChoicesByEnvironment({} as TokenResponse, 'https://localhost');
       expect(result).toBeTruthy();
       expect(result.name).not.toBe('FetchError');
       expect(result).toStrictEqual([]);
     });
     test('getLocalChoices', async () => {
-      sinon.stub(nodefetch, 'default').resolves(new nodefetch.Response('{"value": []}', { statusText: 'OK' }));
+      sinon
+        .stub(nodefetch, 'default')
+        .resolves(new nodefetch.Response('{"value": []}', { statusText: 'OK' }));
       const result = await getLocalChoices(
         'contact,account',
         {} as TokenResponse,
