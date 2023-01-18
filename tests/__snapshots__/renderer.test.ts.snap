@@ -1,22 +1,2137 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renderer tests render tests should return valid type declaration for Early-Bound Entity 1`] = `
+"// This file was generated with XrmTypesGen
+// GitHub: https://github.com/OliverFlint/XrmTypesGen
+
+declare namespace Xrm.Ext.Entities {
+  /**
+   * Entity/Table Name: \`Contact\`
+   *
+   */
+  interface Contact extends Xrm.EarlyBound.Entity {
+    AccountId: Xrm.Attributes.LookupAttribute;
+
+    AccountIdName: Xrm.Attributes.StringAttribute;
+
+    AccountIdYomiName: Xrm.Attributes.StringAttribute;
+
+    AccountRoleCode: Xrm.Attributes.OptionSetAttribute;
+
+    AccountRoleCodeName: Xrm.Attributes.Attribute;
+
+    Address1_AddressId: Xrm.Attributes.Attribute;
+
+    Address1_AddressTypeCode: Xrm.Attributes.OptionSetAttribute;
+
+    Address1_AddressTypeCodeName: Xrm.Attributes.Attribute;
+
+    Address1_City: Xrm.Attributes.StringAttribute;
+
+
+    Address1_Composite: Xrm.Attributes.StringAttribute;
+
+    Address1_Country: Xrm.Attributes.StringAttribute;
+
+    Address1_County: Xrm.Attributes.StringAttribute;
+
+    Address1_Fax: Xrm.Attributes.StringAttribute;
+
+    Address1_FreightTermsCode: Xrm.Attributes.OptionSetAttribute;
+
+    Address1_FreightTermsCodeName: Xrm.Attributes.Attribute;
+
+
+    Address1_Latitude: Xrm.Attributes.NumberAttribute;
+
+
+    Address1_Line1: Xrm.Attributes.StringAttribute;
+
+
+    Address1_Line2: Xrm.Attributes.StringAttribute;
+
+    Address1_Line3: Xrm.Attributes.StringAttribute;
+
+
+    Address1_Longitude: Xrm.Attributes.NumberAttribute;
+
+    Address1_Name: Xrm.Attributes.StringAttribute;
+
+    Address1_PostalCode: Xrm.Attributes.StringAttribute;
+
+    Address1_PostOfficeBox: Xrm.Attributes.StringAttribute;
+
+    Address1_PrimaryContactName: Xrm.Attributes.StringAttribute;
+
+    Address1_ShippingMethodCode: Xrm.Attributes.OptionSetAttribute;
+
+    Address1_ShippingMethodCodeName: Xrm.Attributes.Attribute;
+
+    Address1_StateOrProvince: Xrm.Attributes.StringAttribute;
+
+    Address1_Telephone1: Xrm.Attributes.StringAttribute;
+
+    Address1_Telephone2: Xrm.Attributes.StringAttribute;
+
+    Address1_Telephone3: Xrm.Attributes.StringAttribute;
+
+    Address1_UPSZone: Xrm.Attributes.StringAttribute;
+
+    Address1_UTCOffset: Xrm.Attributes.NumberAttribute;
+
+    Address2_AddressId: Xrm.Attributes.Attribute;
+
+    Address2_AddressTypeCode: Xrm.Attributes.OptionSetAttribute;
+
+    Address2_AddressTypeCodeName: Xrm.Attributes.Attribute;
+
+    Address2_City: Xrm.Attributes.StringAttribute;
+
+    Address2_Composite: Xrm.Attributes.StringAttribute;
+
+    Address2_Country: Xrm.Attributes.StringAttribute;
+
+
+    Address2_County: Xrm.Attributes.StringAttribute;
+
+    Address2_Fax: Xrm.Attributes.StringAttribute;
+
+    Address2_FreightTermsCode: Xrm.Attributes.OptionSetAttribute;
+
+    Address2_FreightTermsCodeName: Xrm.Attributes.Attribute;
+
+    Address2_Latitude: Xrm.Attributes.NumberAttribute;
+
+
+    Address2_Line1: Xrm.Attributes.StringAttribute;
+
+    Address2_Line2: Xrm.Attributes.StringAttribute;
+
+
+    Address2_Line3: Xrm.Attributes.StringAttribute;
+
+    Address2_Longitude: Xrm.Attributes.NumberAttribute;
+
+    Address2_Name: Xrm.Attributes.StringAttribute;
+
+    Address2_PostalCode: Xrm.Attributes.StringAttribute;
+
+    Address2_PostOfficeBox: Xrm.Attributes.StringAttribute;
+
+    Address2_PrimaryContactName: Xrm.Attributes.StringAttribute;
+
+    Address2_ShippingMethodCode: Xrm.Attributes.OptionSetAttribute;
+
+    Address2_ShippingMethodCodeName: Xrm.Attributes.Attribute;
+
+    Address2_StateOrProvince: Xrm.Attributes.StringAttribute;
+
+    Address2_Telephone1: Xrm.Attributes.StringAttribute;
+
+    Address2_Telephone2: Xrm.Attributes.StringAttribute;
+
+    Address2_Telephone3: Xrm.Attributes.StringAttribute;
+
+    Address2_UPSZone: Xrm.Attributes.StringAttribute;
+
+    Address2_UTCOffset: Xrm.Attributes.NumberAttribute;
+
+    Address3_AddressId: Xrm.Attributes.Attribute;
+
+    Address3_AddressTypeCode: Xrm.Attributes.OptionSetAttribute;
+
+    Address3_AddressTypeCodeName: Xrm.Attributes.Attribute;
+
+    Address3_City: Xrm.Attributes.StringAttribute;
+
+    Address3_Composite: Xrm.Attributes.StringAttribute;
+
+    Address3_Country: Xrm.Attributes.StringAttribute;
+
+    Address3_County: Xrm.Attributes.StringAttribute;
+
+    Address3_Fax: Xrm.Attributes.StringAttribute;
+
+    Address3_FreightTermsCode: Xrm.Attributes.OptionSetAttribute;
+
+    Address3_FreightTermsCodeName: Xrm.Attributes.Attribute;
+
+    Address3_Latitude: Xrm.Attributes.NumberAttribute;
+
+    Address3_Line1: Xrm.Attributes.StringAttribute;
+
+    Address3_Line2: Xrm.Attributes.StringAttribute;
+
+    Address3_Line3: Xrm.Attributes.StringAttribute;
+
+    Address3_Longitude: Xrm.Attributes.NumberAttribute;
+
+    Address3_Name: Xrm.Attributes.StringAttribute;
+
+    Address3_PostalCode: Xrm.Attributes.StringAttribute;
+
+    Address3_PostOfficeBox: Xrm.Attributes.StringAttribute;
+
+    Address3_PrimaryContactName: Xrm.Attributes.StringAttribute;
+
+    Address3_ShippingMethodCode: Xrm.Attributes.OptionSetAttribute;
+
+    Address3_ShippingMethodCodeName: Xrm.Attributes.Attribute;
+
+    Address3_StateOrProvince: Xrm.Attributes.StringAttribute;
+
+    Address3_Telephone1: Xrm.Attributes.StringAttribute;
+
+    Address3_Telephone2: Xrm.Attributes.StringAttribute;
+
+    Address3_Telephone3: Xrm.Attributes.StringAttribute;
+
+    Address3_UPSZone: Xrm.Attributes.StringAttribute;
+
+    Address3_UTCOffset: Xrm.Attributes.NumberAttribute;
+
+    Aging30: Xrm.Attributes.NumberAttribute;
+
+    Aging30_Base: Xrm.Attributes.NumberAttribute;
+
+    Aging60: Xrm.Attributes.NumberAttribute;
+
+    Aging60_Base: Xrm.Attributes.NumberAttribute;
+
+    Aging90: Xrm.Attributes.NumberAttribute;
+
+    Aging90_Base: Xrm.Attributes.NumberAttribute;
+
+    Anniversary: Xrm.Attributes.DateAttribute;
+
+    AnnualIncome: Xrm.Attributes.NumberAttribute;
+
+    AnnualIncome_Base: Xrm.Attributes.NumberAttribute;
+
+    AssistantName: Xrm.Attributes.StringAttribute;
+
+    AssistantPhone: Xrm.Attributes.StringAttribute;
+
+    BirthDate: Xrm.Attributes.DateAttribute;
+
+
+    Business2: Xrm.Attributes.StringAttribute;
+
+    BusinessCard: Xrm.Attributes.StringAttribute;
+
+    BusinessCardAttributes: Xrm.Attributes.StringAttribute;
+
+    Callback: Xrm.Attributes.StringAttribute;
+
+    ChildrensNames: Xrm.Attributes.StringAttribute;
+
+
+    Company: Xrm.Attributes.StringAttribute;
+
+    ContactId: Xrm.Attributes.Attribute;
+
+    CreatedBy: Xrm.Attributes.LookupAttribute;
+
+    CreatedByExternalParty: Xrm.Attributes.LookupAttribute;
+
+    CreatedByExternalPartyName: Xrm.Attributes.StringAttribute;
+
+
+    CreatedByExternalPartyYomiName: Xrm.Attributes.StringAttribute;
+
+    CreatedByName: Xrm.Attributes.StringAttribute;
+
+    CreatedByYomiName: Xrm.Attributes.StringAttribute;
+
+
+    CreatedOn: Xrm.Attributes.DateAttribute;
+
+
+    CreatedOnBehalfBy: Xrm.Attributes.LookupAttribute;
+
+    CreatedOnBehalfByName: Xrm.Attributes.StringAttribute;
+
+    CreatedOnBehalfByYomiName: Xrm.Attributes.StringAttribute;
+
+    CreditLimit: Xrm.Attributes.NumberAttribute;
+
+    CreditLimit_Base: Xrm.Attributes.NumberAttribute;
+
+    CreditOnHold: Xrm.Attributes.BooleanAttribute;
+
+    CreditOnHoldName: Xrm.Attributes.Attribute;
+
+    CustomerSizeCode: Xrm.Attributes.OptionSetAttribute;
+
+    CustomerSizeCodeName: Xrm.Attributes.Attribute;
+
+    CustomerTypeCode: Xrm.Attributes.OptionSetAttribute;
+
+    CustomerTypeCodeName: Xrm.Attributes.Attribute;
+
+    DefaultPriceLevelId: Xrm.Attributes.LookupAttribute;
+
+    DefaultPriceLevelIdName: Xrm.Attributes.StringAttribute;
+
+    Department: Xrm.Attributes.StringAttribute;
+
+    Description: Xrm.Attributes.StringAttribute;
+
+    DoNotBulkEMail: Xrm.Attributes.BooleanAttribute;
+
+
+    DoNotBulkEMailName: Xrm.Attributes.Attribute;
+
+    DoNotBulkPostalMail: Xrm.Attributes.BooleanAttribute;
+
+
+    DoNotBulkPostalMailName: Xrm.Attributes.Attribute;
+
+    DoNotEMail: Xrm.Attributes.BooleanAttribute;
+
+    DoNotEMailName: Xrm.Attributes.Attribute;
+
+
+    DoNotFax: Xrm.Attributes.BooleanAttribute;
+
+    DoNotFaxName: Xrm.Attributes.Attribute;
+
+    DoNotPhone: Xrm.Attributes.BooleanAttribute;
+
+    DoNotPhoneName: Xrm.Attributes.Attribute;
+
+    DoNotPostalMail: Xrm.Attributes.BooleanAttribute;
+
+    DoNotPostalMailName: Xrm.Attributes.Attribute;
+
+    DoNotSendMarketingMaterialName: Xrm.Attributes.Attribute;
+
+    DoNotSendMM: Xrm.Attributes.BooleanAttribute;
+
+    EducationCode: Xrm.Attributes.OptionSetAttribute;
+
+
+    EducationCodeName: Xrm.Attributes.Attribute;
+
+    EMailAddress1: Xrm.Attributes.StringAttribute;
+
+
+    EMailAddress2: Xrm.Attributes.StringAttribute;
+
+    EMailAddress3: Xrm.Attributes.StringAttribute;
+
+
+    EmployeeId: Xrm.Attributes.StringAttribute;
+
+    EntityImage: Xrm.Attributes.Attribute;
+
+    EntityImage_Timestamp: Xrm.Attributes.NumberAttribute;
+
+    EntityImage_URL: Xrm.Attributes.StringAttribute;
+
+    EntityImageId: Xrm.Attributes.Attribute;
+
+    ExchangeRate: Xrm.Attributes.NumberAttribute;
+
+    ExternalUserIdentifier: Xrm.Attributes.StringAttribute;
+
+    FamilyStatusCode: Xrm.Attributes.OptionSetAttribute;
+
+    FamilyStatusCodeName: Xrm.Attributes.Attribute;
+
+    Fax: Xrm.Attributes.StringAttribute;
+
+    FirstName: Xrm.Attributes.StringAttribute;
+
+    FollowEmail: Xrm.Attributes.BooleanAttribute;
+
+    FollowEmailName: Xrm.Attributes.Attribute;
+
+    FtpSiteUrl: Xrm.Attributes.StringAttribute;
+
+    FullName: Xrm.Attributes.StringAttribute;
+
+    GenderCode: Xrm.Attributes.OptionSetAttribute;
+
+    GenderCodeName: Xrm.Attributes.Attribute;
+
+    GovernmentId: Xrm.Attributes.StringAttribute;
+
+
+    HasChildrenCode: Xrm.Attributes.OptionSetAttribute;
+
+    HasChildrenCodeName: Xrm.Attributes.Attribute;
+
+    Home2: Xrm.Attributes.StringAttribute;
+
+    ImportSequenceNumber: Xrm.Attributes.NumberAttribute;
+
+    IsAutoCreate: Xrm.Attributes.BooleanAttribute;
+
+
+    IsBackofficeCustomer: Xrm.Attributes.BooleanAttribute;
+
+    IsBackofficeCustomerName: Xrm.Attributes.Attribute;
+
+    IsPrivate: Xrm.Attributes.BooleanAttribute;
+
+    IsPrivateName: Xrm.Attributes.Attribute;
+
+    JobTitle: Xrm.Attributes.StringAttribute;
+
+    LastName: Xrm.Attributes.StringAttribute;
+
+    LastOnHoldTime: Xrm.Attributes.DateAttribute;
+
+    LastUsedInCampaign: Xrm.Attributes.DateAttribute;
+
+    LeadSourceCode: Xrm.Attributes.OptionSetAttribute;
+
+    LeadSourceCodeName: Xrm.Attributes.Attribute;
+
+    ManagerName: Xrm.Attributes.StringAttribute;
+
+    ManagerPhone: Xrm.Attributes.StringAttribute;
+
+    MarketingOnly: Xrm.Attributes.BooleanAttribute;
+
+    MarketingOnlyName: Xrm.Attributes.Attribute;
+
+    MasterContactIdName: Xrm.Attributes.StringAttribute;
+
+    MasterContactIdYomiName: Xrm.Attributes.StringAttribute;
+
+    MasterId: Xrm.Attributes.LookupAttribute;
+
+    Merged: Xrm.Attributes.BooleanAttribute;
+
+    MergedName: Xrm.Attributes.Attribute;
+
+    MiddleName: Xrm.Attributes.StringAttribute;
+
+    MobilePhone: Xrm.Attributes.StringAttribute;
+
+    ModifiedBy: Xrm.Attributes.LookupAttribute;
+
+
+    ModifiedByExternalParty: Xrm.Attributes.LookupAttribute;
+
+
+    ModifiedByExternalPartyName: Xrm.Attributes.StringAttribute;
+
+    ModifiedByExternalPartyYomiName: Xrm.Attributes.StringAttribute;
+
+    ModifiedByName: Xrm.Attributes.StringAttribute;
+
+
+    ModifiedByYomiName: Xrm.Attributes.StringAttribute;
+
+
+    ModifiedOn: Xrm.Attributes.DateAttribute;
+
+    ModifiedOnBehalfBy: Xrm.Attributes.LookupAttribute;
+
+    ModifiedOnBehalfByName: Xrm.Attributes.StringAttribute;
+
+    ModifiedOnBehalfByYomiName: Xrm.Attributes.StringAttribute;
+
+
+    msdyn_gdproptout: Xrm.Attributes.BooleanAttribute;
+
+    msdyn_gdproptoutName: Xrm.Attributes.Attribute;
+
+    msdyn_orgchangestatus: Xrm.Attributes.OptionSetAttribute;
+
+    msdyn_orgchangestatusName: Xrm.Attributes.Attribute;
+
+    NickName: Xrm.Attributes.StringAttribute;
+
+    NumberOfChildren: Xrm.Attributes.NumberAttribute;
+
+    OnHoldTime: Xrm.Attributes.NumberAttribute;
+
+    OriginatingLeadId: Xrm.Attributes.LookupAttribute;
+
+    OriginatingLeadIdName: Xrm.Attributes.StringAttribute;
+
+    OriginatingLeadIdYomiName: Xrm.Attributes.StringAttribute;
+
+    OverriddenCreatedOn: Xrm.Attributes.DateAttribute;
+
+    OwnerId: Xrm.Attributes.LookupAttribute;
+
+    OwnerIdName: Xrm.Attributes.StringAttribute;
+
+    OwnerIdType: Xrm.Attributes.Attribute;
+
+    OwnerIdYomiName: Xrm.Attributes.StringAttribute;
+
+    OwningBusinessUnit: Xrm.Attributes.LookupAttribute;
+
+    OwningBusinessUnitName: Xrm.Attributes.StringAttribute;
+
+    OwningTeam: Xrm.Attributes.LookupAttribute;
+
+    OwningUser: Xrm.Attributes.LookupAttribute;
+
+    Pager: Xrm.Attributes.StringAttribute;
+
+    ParentContactId: Xrm.Attributes.LookupAttribute;
+
+    ParentContactIdName: Xrm.Attributes.StringAttribute;
+
+    ParentContactIdYomiName: Xrm.Attributes.StringAttribute;
+
+    ParentCustomerId: Xrm.Attributes.LookupAttribute;
+
+    ParentCustomerIdName: Xrm.Attributes.StringAttribute;
+
+    ParentCustomerIdType: Xrm.Attributes.Attribute;
+
+    ParentCustomerIdYomiName: Xrm.Attributes.StringAttribute;
+
+    ParticipatesInWorkflow: Xrm.Attributes.BooleanAttribute;
+
+    ParticipatesInWorkflowName: Xrm.Attributes.Attribute;
+
+    PaymentTermsCode: Xrm.Attributes.OptionSetAttribute;
+
+    PaymentTermsCodeName: Xrm.Attributes.Attribute;
+
+    PreferredAppointmentDayCode: Xrm.Attributes.OptionSetAttribute;
+
+    PreferredAppointmentDayCodeName: Xrm.Attributes.Attribute;
+
+    PreferredAppointmentTimeCode: Xrm.Attributes.OptionSetAttribute;
+
+    PreferredAppointmentTimeCodeName: Xrm.Attributes.Attribute;
+
+    PreferredContactMethodCode: Xrm.Attributes.OptionSetAttribute;
+
+    PreferredContactMethodCodeName: Xrm.Attributes.Attribute;
+
+    PreferredEquipmentId: Xrm.Attributes.LookupAttribute;
+
+    PreferredEquipmentIdName: Xrm.Attributes.StringAttribute;
+
+    PreferredServiceId: Xrm.Attributes.LookupAttribute;
+
+    PreferredServiceIdName: Xrm.Attributes.StringAttribute;
+
+
+    PreferredSystemUserId: Xrm.Attributes.LookupAttribute;
+
+
+    PreferredSystemUserIdName: Xrm.Attributes.StringAttribute;
+
+
+    PreferredSystemUserIdYomiName: Xrm.Attributes.StringAttribute;
+
+
+    ProcessId: Xrm.Attributes.Attribute;
+
+    Salutation: Xrm.Attributes.StringAttribute;
+
+
+    ShippingMethodCode: Xrm.Attributes.OptionSetAttribute;
+
+    ShippingMethodCodeName: Xrm.Attributes.Attribute;
+
+
+    SLAId: Xrm.Attributes.LookupAttribute;
+
+    SLAInvokedId: Xrm.Attributes.LookupAttribute;
+
+    SLAInvokedIdName: Xrm.Attributes.StringAttribute;
+
+    SLAName: Xrm.Attributes.StringAttribute;
+
+    SpousesName: Xrm.Attributes.StringAttribute;
+
+    StageId: Xrm.Attributes.Attribute;
+
+    StateCode: Xrm.Attributes.OptionSetAttribute;
+
+    StateCodeName: Xrm.Attributes.Attribute;
+
+    StatusCode: Xrm.Attributes.OptionSetAttribute;
+
+    StatusCodeName: Xrm.Attributes.Attribute;
+
+    SubscriptionId: Xrm.Attributes.Attribute;
+
+    Suffix: Xrm.Attributes.StringAttribute;
+
+    TeamsFollowed: Xrm.Attributes.NumberAttribute;
+
+    Telephone1: Xrm.Attributes.StringAttribute;
+
+    Telephone2: Xrm.Attributes.StringAttribute;
+
+    Telephone3: Xrm.Attributes.StringAttribute;
+
+    TerritoryCode: Xrm.Attributes.OptionSetAttribute;
+
+    TerritoryCodeName: Xrm.Attributes.Attribute;
+
+    TimeSpentByMeOnEmailAndMeetings: Xrm.Attributes.StringAttribute;
+
+    TimeZoneRuleVersionNumber: Xrm.Attributes.NumberAttribute;
+
+    TransactionCurrencyId: Xrm.Attributes.LookupAttribute;
+
+    TransactionCurrencyIdName: Xrm.Attributes.StringAttribute;
+
+    TraversedPath: Xrm.Attributes.StringAttribute;
+
+    UTCConversionTimeZoneCode: Xrm.Attributes.NumberAttribute;
+
+    VersionNumber: Xrm.Attributes.NumberAttribute;
+
+    WebSiteUrl: Xrm.Attributes.StringAttribute;
+
+    YomiFirstName: Xrm.Attributes.StringAttribute;
+
+    YomiFullName: Xrm.Attributes.StringAttribute;
+
+    YomiLastName: Xrm.Attributes.StringAttribute;
+
+    YomiMiddleName: Xrm.Attributes.StringAttribute;
+  }
+}
+"
+`;
+
+exports[`renderer tests render tests should return valid type declaration for Early-Bound Entity 2`] = `
+"// This file was generated with XrmTypesGen
+// GitHub: https://github.com/OliverFlint/XrmTypesGen
+
+declare namespace Xrm.Ext.Entities {
+  /**
+   * Entity/Table Name: \`Contact\`
+   *
+   */
+  interface Contact extends Xrm.EarlyBound.Entity {
+    AccountId: Xrm.Attributes.LookupAttribute;
+
+    AccountIdName: Xrm.Attributes.StringAttribute;
+
+    AccountIdYomiName: Xrm.Attributes.StringAttribute;
+
+    AccountRoleCode: Xrm.Attributes.OptionSetAttribute;
+
+    AccountRoleCodeName: Xrm.Attributes.Attribute;
+
+    Address1_AddressId: Xrm.Attributes.Attribute;
+
+    Address1_AddressTypeCode: Xrm.Attributes.OptionSetAttribute;
+
+    Address1_AddressTypeCodeName: Xrm.Attributes.Attribute;
+
+    Address1_City: Xrm.Attributes.StringAttribute;
+
+    Address1_Composite: Xrm.Attributes.StringAttribute;
+
+    Address1_Country: Xrm.Attributes.StringAttribute;
+
+    Address1_County: Xrm.Attributes.StringAttribute;
+
+    Address1_Fax: Xrm.Attributes.StringAttribute;
+
+    Address1_FreightTermsCode: Xrm.Attributes.OptionSetAttribute;
+
+    Address1_FreightTermsCodeName: Xrm.Attributes.Attribute;
+
+    Address1_Latitude: Xrm.Attributes.NumberAttribute;
+
+    Address1_Line1: Xrm.Attributes.StringAttribute;
+
+    Address1_Line2: Xrm.Attributes.StringAttribute;
+
+    Address1_Line3: Xrm.Attributes.StringAttribute;
+
+    Address1_Longitude: Xrm.Attributes.NumberAttribute;
+
+    Address1_Name: Xrm.Attributes.StringAttribute;
+
+    Address1_PostalCode: Xrm.Attributes.StringAttribute;
+
+    Address1_PostOfficeBox: Xrm.Attributes.StringAttribute;
+
+    Address1_PrimaryContactName: Xrm.Attributes.StringAttribute;
+
+    Address1_ShippingMethodCode: Xrm.Attributes.OptionSetAttribute;
+
+    Address1_ShippingMethodCodeName: Xrm.Attributes.Attribute;
+
+    Address1_StateOrProvince: Xrm.Attributes.StringAttribute;
+
+    Address1_Telephone1: Xrm.Attributes.StringAttribute;
+
+    Address1_Telephone2: Xrm.Attributes.StringAttribute;
+
+    Address1_Telephone3: Xrm.Attributes.StringAttribute;
+
+
+    Address1_UPSZone: Xrm.Attributes.StringAttribute;
+
+    Address1_UTCOffset: Xrm.Attributes.NumberAttribute;
+
+    Address2_AddressId: Xrm.Attributes.Attribute;
+
+    Address2_AddressTypeCode: Xrm.Attributes.OptionSetAttribute;
+
+    Address2_AddressTypeCodeName: Xrm.Attributes.Attribute;
+
+    Address2_City: Xrm.Attributes.StringAttribute;
+
+    Address2_Composite: Xrm.Attributes.StringAttribute;
+
+    Address2_Country: Xrm.Attributes.StringAttribute;
+
+    Address2_County: Xrm.Attributes.StringAttribute;
+
+    Address2_Fax: Xrm.Attributes.StringAttribute;
+
+    Address2_FreightTermsCode: Xrm.Attributes.OptionSetAttribute;
+
+    Address2_FreightTermsCodeName: Xrm.Attributes.Attribute;
+
+    Address2_Latitude: Xrm.Attributes.NumberAttribute;
+
+    Address2_Line1: Xrm.Attributes.StringAttribute;
+
+    Address2_Line2: Xrm.Attributes.StringAttribute;
+
+    Address2_Line3: Xrm.Attributes.StringAttribute;
+
+    Address2_Longitude: Xrm.Attributes.NumberAttribute;
+
+    Address2_Name: Xrm.Attributes.StringAttribute;
+
+    Address2_PostalCode: Xrm.Attributes.StringAttribute;
+
+    Address2_PostOfficeBox: Xrm.Attributes.StringAttribute;
+
+    Address2_PrimaryContactName: Xrm.Attributes.StringAttribute;
+
+    Address2_ShippingMethodCode: Xrm.Attributes.OptionSetAttribute;
+
+    Address2_ShippingMethodCodeName: Xrm.Attributes.Attribute;
+
+    Address2_StateOrProvince: Xrm.Attributes.StringAttribute;
+
+    Address2_Telephone1: Xrm.Attributes.StringAttribute;
+
+    Address2_Telephone2: Xrm.Attributes.StringAttribute;
+
+    Address2_Telephone3: Xrm.Attributes.StringAttribute;
+
+    Address2_UPSZone: Xrm.Attributes.StringAttribute;
+
+    Address2_UTCOffset: Xrm.Attributes.NumberAttribute;
+
+    Address3_AddressId: Xrm.Attributes.Attribute;
+
+    Address3_AddressTypeCode: Xrm.Attributes.OptionSetAttribute;
+
+    Address3_AddressTypeCodeName: Xrm.Attributes.Attribute;
+
+    Address3_City: Xrm.Attributes.StringAttribute;
+
+    Address3_Composite: Xrm.Attributes.StringAttribute;
+
+    Address3_Country: Xrm.Attributes.StringAttribute;
+
+    Address3_County: Xrm.Attributes.StringAttribute;
+
+    Address3_Fax: Xrm.Attributes.StringAttribute;
+
+    Address3_FreightTermsCode: Xrm.Attributes.OptionSetAttribute;
+
+    Address3_FreightTermsCodeName: Xrm.Attributes.Attribute;
+
+    Address3_Latitude: Xrm.Attributes.NumberAttribute;
+
+
+    Address3_Line1: Xrm.Attributes.StringAttribute;
+
+    Address3_Line2: Xrm.Attributes.StringAttribute;
+
+    Address3_Line3: Xrm.Attributes.StringAttribute;
+
+    Address3_Longitude: Xrm.Attributes.NumberAttribute;
+
+    Address3_Name: Xrm.Attributes.StringAttribute;
+
+    Address3_PostalCode: Xrm.Attributes.StringAttribute;
+
+    Address3_PostOfficeBox: Xrm.Attributes.StringAttribute;
+
+    Address3_PrimaryContactName: Xrm.Attributes.StringAttribute;
+
+    Address3_ShippingMethodCode: Xrm.Attributes.OptionSetAttribute;
+
+    Address3_ShippingMethodCodeName: Xrm.Attributes.Attribute;
+
+    Address3_StateOrProvince: Xrm.Attributes.StringAttribute;
+
+    Address3_Telephone1: Xrm.Attributes.StringAttribute;
+
+    Address3_Telephone2: Xrm.Attributes.StringAttribute;
+
+    Address3_Telephone3: Xrm.Attributes.StringAttribute;
+
+    Address3_UPSZone: Xrm.Attributes.StringAttribute;
+
+    Address3_UTCOffset: Xrm.Attributes.NumberAttribute;
+
+    Aging30: Xrm.Attributes.NumberAttribute;
+
+    Aging30_Base: Xrm.Attributes.NumberAttribute;
+
+    Aging60: Xrm.Attributes.NumberAttribute;
+
+    Aging60_Base: Xrm.Attributes.NumberAttribute;
+
+    Aging90: Xrm.Attributes.NumberAttribute;
+
+    Aging90_Base: Xrm.Attributes.NumberAttribute;
+
+    Anniversary: Xrm.Attributes.DateAttribute;
+
+    AnnualIncome: Xrm.Attributes.NumberAttribute;
+
+    AnnualIncome_Base: Xrm.Attributes.NumberAttribute;
+
+    AssistantName: Xrm.Attributes.StringAttribute;
+
+    AssistantPhone: Xrm.Attributes.StringAttribute;
+
+    BirthDate: Xrm.Attributes.DateAttribute;
+
+    Business2: Xrm.Attributes.StringAttribute;
+
+    BusinessCard: Xrm.Attributes.StringAttribute;
+
+    BusinessCardAttributes: Xrm.Attributes.StringAttribute;
+
+    Callback: Xrm.Attributes.StringAttribute;
+
+    ChildrensNames: Xrm.Attributes.StringAttribute;
+
+    Company: Xrm.Attributes.StringAttribute;
+
+
+    ContactId: Xrm.Attributes.Attribute;
+
+
+    CreatedBy: Xrm.Attributes.LookupAttribute;
+
+    CreatedByExternalParty: Xrm.Attributes.LookupAttribute;
+
+    CreatedByExternalPartyName: Xrm.Attributes.StringAttribute;
+
+    CreatedByExternalPartyYomiName: Xrm.Attributes.StringAttribute;
+
+    CreatedByName: Xrm.Attributes.StringAttribute;
+
+    CreatedByYomiName: Xrm.Attributes.StringAttribute;
+
+    CreatedOn: Xrm.Attributes.DateAttribute;
+
+    CreatedOnBehalfBy: Xrm.Attributes.LookupAttribute;
+
+    CreatedOnBehalfByName: Xrm.Attributes.StringAttribute;
+
+    CreatedOnBehalfByYomiName: Xrm.Attributes.StringAttribute;
+
+    CreditLimit: Xrm.Attributes.NumberAttribute;
+
+    CreditLimit_Base: Xrm.Attributes.NumberAttribute;
+
+    CreditOnHold: Xrm.Attributes.BooleanAttribute;
+
+    CreditOnHoldName: Xrm.Attributes.Attribute;
+
+    CustomerSizeCode: Xrm.Attributes.OptionSetAttribute;
+
+    CustomerSizeCodeName: Xrm.Attributes.Attribute;
+
+    CustomerTypeCode: Xrm.Attributes.OptionSetAttribute;
+
+    CustomerTypeCodeName: Xrm.Attributes.Attribute;
+
+    DefaultPriceLevelId: Xrm.Attributes.LookupAttribute;
+
+    DefaultPriceLevelIdName: Xrm.Attributes.StringAttribute;
+
+    Department: Xrm.Attributes.StringAttribute;
+
+    Description: Xrm.Attributes.StringAttribute;
+
+    DoNotBulkEMail: Xrm.Attributes.BooleanAttribute;
+
+    DoNotBulkEMailName: Xrm.Attributes.Attribute;
+
+    DoNotBulkPostalMail: Xrm.Attributes.BooleanAttribute;
+
+    DoNotBulkPostalMailName: Xrm.Attributes.Attribute;
+
+    DoNotEMail: Xrm.Attributes.BooleanAttribute;
+
+
+    DoNotEMailName: Xrm.Attributes.Attribute;
+
+    DoNotFax: Xrm.Attributes.BooleanAttribute;
+
+    DoNotFaxName: Xrm.Attributes.Attribute;
+
+    DoNotPhone: Xrm.Attributes.BooleanAttribute;
+
+    DoNotPhoneName: Xrm.Attributes.Attribute;
+
+    DoNotPostalMail: Xrm.Attributes.BooleanAttribute;
+
+    DoNotPostalMailName: Xrm.Attributes.Attribute;
+
+    DoNotSendMarketingMaterialName: Xrm.Attributes.Attribute;
+
+    DoNotSendMM: Xrm.Attributes.BooleanAttribute;
+
+    EducationCode: Xrm.Attributes.OptionSetAttribute;
+
+    EducationCodeName: Xrm.Attributes.Attribute;
+
+    EMailAddress1: Xrm.Attributes.StringAttribute;
+
+    EMailAddress2: Xrm.Attributes.StringAttribute;
+
+    EMailAddress3: Xrm.Attributes.StringAttribute;
+
+    EmployeeId: Xrm.Attributes.StringAttribute;
+
+    EntityImage: Xrm.Attributes.Attribute;
+
+    EntityImage_Timestamp: Xrm.Attributes.NumberAttribute;
+
+    EntityImage_URL: Xrm.Attributes.StringAttribute;
+
+    EntityImageId: Xrm.Attributes.Attribute;
+
+    ExchangeRate: Xrm.Attributes.NumberAttribute;
+
+    ExternalUserIdentifier: Xrm.Attributes.StringAttribute;
+
+    FamilyStatusCode: Xrm.Attributes.OptionSetAttribute;
+
+    FamilyStatusCodeName: Xrm.Attributes.Attribute;
+
+    Fax: Xrm.Attributes.StringAttribute;
+
+    FirstName: Xrm.Attributes.StringAttribute;
+
+    FollowEmail: Xrm.Attributes.BooleanAttribute;
+
+
+    FollowEmailName: Xrm.Attributes.Attribute;
+
+
+    FtpSiteUrl: Xrm.Attributes.StringAttribute;
+
+
+    FullName: Xrm.Attributes.StringAttribute;
+
+
+    GenderCode: Xrm.Attributes.OptionSetAttribute;
+
+
+    GenderCodeName: Xrm.Attributes.Attribute;
+
+    GovernmentId: Xrm.Attributes.StringAttribute;
+
+    HasChildrenCode: Xrm.Attributes.OptionSetAttribute;
+
+    HasChildrenCodeName: Xrm.Attributes.Attribute;
+
+    Home2: Xrm.Attributes.StringAttribute;
+
+
+
+    ImportSequenceNumber: Xrm.Attributes.NumberAttribute;
+
+    IsAutoCreate: Xrm.Attributes.BooleanAttribute;
+
+    IsBackofficeCustomer: Xrm.Attributes.BooleanAttribute;
+
+    IsBackofficeCustomerName: Xrm.Attributes.Attribute;
+
+    IsPrivate: Xrm.Attributes.BooleanAttribute;
+
+    IsPrivateName: Xrm.Attributes.Attribute;
+
+    JobTitle: Xrm.Attributes.StringAttribute;
+
+    LastName: Xrm.Attributes.StringAttribute;
+
+    LastOnHoldTime: Xrm.Attributes.DateAttribute;
+
+    LastUsedInCampaign: Xrm.Attributes.DateAttribute;
+
+    LeadSourceCode: Xrm.Attributes.OptionSetAttribute;
+
+    LeadSourceCodeName: Xrm.Attributes.Attribute;
+
+    ManagerName: Xrm.Attributes.StringAttribute;
+
+    ManagerPhone: Xrm.Attributes.StringAttribute;
+
+    MarketingOnly: Xrm.Attributes.BooleanAttribute;
+
+    MarketingOnlyName: Xrm.Attributes.Attribute;
+
+    MasterContactIdName: Xrm.Attributes.StringAttribute;
+
+    MasterContactIdYomiName: Xrm.Attributes.StringAttribute;
+
+    MasterId: Xrm.Attributes.LookupAttribute;
+
+    Merged: Xrm.Attributes.BooleanAttribute;
+
+    MergedName: Xrm.Attributes.Attribute;
+
+    MiddleName: Xrm.Attributes.StringAttribute;
+
+    MobilePhone: Xrm.Attributes.StringAttribute;
+
+    ModifiedBy: Xrm.Attributes.LookupAttribute;
+
+    ModifiedByExternalParty: Xrm.Attributes.LookupAttribute;
+
+    ModifiedByExternalPartyName: Xrm.Attributes.StringAttribute;
+
+    ModifiedByExternalPartyYomiName: Xrm.Attributes.StringAttribute;
+
+    ModifiedByName: Xrm.Attributes.StringAttribute;
+
+    ModifiedByYomiName: Xrm.Attributes.StringAttribute;
+
+    ModifiedOn: Xrm.Attributes.DateAttribute;
+
+    ModifiedOnBehalfBy: Xrm.Attributes.LookupAttribute;
+
+    ModifiedOnBehalfByName: Xrm.Attributes.StringAttribute;
+
+    ModifiedOnBehalfByYomiName: Xrm.Attributes.StringAttribute;
+
+
+    msdyn_gdproptout: Xrm.Attributes.BooleanAttribute;
+
+    msdyn_gdproptoutName: Xrm.Attributes.Attribute;
+
+
+    msdyn_orgchangestatus: Xrm.Attributes.OptionSetAttribute;
+
+
+    msdyn_orgchangestatusName: Xrm.Attributes.Attribute;
+
+    NickName: Xrm.Attributes.StringAttribute;
+
+    NumberOfChildren: Xrm.Attributes.NumberAttribute;
+
+    OnHoldTime: Xrm.Attributes.NumberAttribute;
+
+    OriginatingLeadId: Xrm.Attributes.LookupAttribute;
+
+    OriginatingLeadIdName: Xrm.Attributes.StringAttribute;
+
+    OriginatingLeadIdYomiName: Xrm.Attributes.StringAttribute;
+
+    OverriddenCreatedOn: Xrm.Attributes.DateAttribute;
+
+    OwnerId: Xrm.Attributes.LookupAttribute;
+
+    OwnerIdName: Xrm.Attributes.StringAttribute;
+
+    OwnerIdType: Xrm.Attributes.Attribute;
+
+    OwnerIdYomiName: Xrm.Attributes.StringAttribute;
+
+    OwningBusinessUnit: Xrm.Attributes.LookupAttribute;
+
+    OwningBusinessUnitName: Xrm.Attributes.StringAttribute;
+
+    OwningTeam: Xrm.Attributes.LookupAttribute;
+
+    OwningUser: Xrm.Attributes.LookupAttribute;
+
+    Pager: Xrm.Attributes.StringAttribute;
+
+    ParentContactId: Xrm.Attributes.LookupAttribute;
+
+    ParentContactIdName: Xrm.Attributes.StringAttribute;
+
+    ParentContactIdYomiName: Xrm.Attributes.StringAttribute;
+
+    ParentCustomerId: Xrm.Attributes.LookupAttribute;
+
+    ParentCustomerIdName: Xrm.Attributes.StringAttribute;
+
+    ParentCustomerIdType: Xrm.Attributes.Attribute;
+
+    ParentCustomerIdYomiName: Xrm.Attributes.StringAttribute;
+
+    ParticipatesInWorkflow: Xrm.Attributes.BooleanAttribute;
+
+    ParticipatesInWorkflowName: Xrm.Attributes.Attribute;
+
+    PaymentTermsCode: Xrm.Attributes.OptionSetAttribute;
+
+    PaymentTermsCodeName: Xrm.Attributes.Attribute;
+
+    PreferredAppointmentDayCode: Xrm.Attributes.OptionSetAttribute;
+
+    PreferredAppointmentDayCodeName: Xrm.Attributes.Attribute;
+
+    PreferredAppointmentTimeCode: Xrm.Attributes.OptionSetAttribute;
+
+    PreferredAppointmentTimeCodeName: Xrm.Attributes.Attribute;
+
+    PreferredContactMethodCode: Xrm.Attributes.OptionSetAttribute;
+
+    PreferredContactMethodCodeName: Xrm.Attributes.Attribute;
+
+    PreferredEquipmentId: Xrm.Attributes.LookupAttribute;
+
+    PreferredEquipmentIdName: Xrm.Attributes.StringAttribute;
+
+    PreferredServiceId: Xrm.Attributes.LookupAttribute;
+
+    PreferredServiceIdName: Xrm.Attributes.StringAttribute;
+
+    PreferredSystemUserId: Xrm.Attributes.LookupAttribute;
+
+    PreferredSystemUserIdName: Xrm.Attributes.StringAttribute;
+
+    PreferredSystemUserIdYomiName: Xrm.Attributes.StringAttribute;
+
+    ProcessId: Xrm.Attributes.Attribute;
+
+    Salutation: Xrm.Attributes.StringAttribute;
+
+    ShippingMethodCode: Xrm.Attributes.OptionSetAttribute;
+
+    ShippingMethodCodeName: Xrm.Attributes.Attribute;
+
+    SLAId: Xrm.Attributes.LookupAttribute;
+
+    SLAInvokedId: Xrm.Attributes.LookupAttribute;
+
+    SLAInvokedIdName: Xrm.Attributes.StringAttribute;
+
+    SLAName: Xrm.Attributes.StringAttribute;
+
+    SpousesName: Xrm.Attributes.StringAttribute;
+
+    StageId: Xrm.Attributes.Attribute;
+
+    StateCode: Xrm.Attributes.OptionSetAttribute;
+
+    StateCodeName: Xrm.Attributes.Attribute;
+
+    StatusCode: Xrm.Attributes.OptionSetAttribute;
+
+    StatusCodeName: Xrm.Attributes.Attribute;
+
+    SubscriptionId: Xrm.Attributes.Attribute;
+
+    Suffix: Xrm.Attributes.StringAttribute;
+
+    TeamsFollowed: Xrm.Attributes.NumberAttribute;
+
+    Telephone1: Xrm.Attributes.StringAttribute;
+
+    Telephone2: Xrm.Attributes.StringAttribute;
+
+    Telephone3: Xrm.Attributes.StringAttribute;
+
+    TerritoryCode: Xrm.Attributes.OptionSetAttribute;
+
+    TerritoryCodeName: Xrm.Attributes.Attribute;
+
+    TimeSpentByMeOnEmailAndMeetings: Xrm.Attributes.StringAttribute;
+
+    TimeZoneRuleVersionNumber: Xrm.Attributes.NumberAttribute;
+
+    TransactionCurrencyId: Xrm.Attributes.LookupAttribute;
+
+    TransactionCurrencyIdName: Xrm.Attributes.StringAttribute;
+
+    TraversedPath: Xrm.Attributes.StringAttribute;
+
+    UTCConversionTimeZoneCode: Xrm.Attributes.NumberAttribute;
+
+    VersionNumber: Xrm.Attributes.NumberAttribute;
+
+    WebSiteUrl: Xrm.Attributes.StringAttribute;
+
+    YomiFirstName: Xrm.Attributes.StringAttribute;
+
+    YomiFullName: Xrm.Attributes.StringAttribute;
+
+    YomiLastName: Xrm.Attributes.StringAttribute;
+
+    YomiMiddleName: Xrm.Attributes.StringAttribute;
+  }
+
+  namespace Contact.OptionSets {
+    /**
+     * OptionSet Name: \`accountrolecode\`
+     *
+     */
+    const enum accountrolecode {
+      \\"Decision Maker\\" = 1,
+      \\"Employee\\" = 2,
+      \\"Influencer\\" = 3,
+    }
+
+    /**
+     * OptionSet Name: \`address1_addresstypecode\`
+     *
+     */
+    const enum address1_addresstypecode {
+      \\"Bill To\\" = 1,
+      \\"Ship To\\" = 2,
+      \\"Primary\\" = 3,
+      \\"Other\\" = 4,
+    }
+
+    /**
+     * OptionSet Name: \`address1_freighttermscode\`
+     *
+     */
+    const enum address1_freighttermscode {
+      \\"FOB\\" = 1,
+      \\"No Charge\\" = 2,
+    }
+
+    /**
+     * OptionSet Name: \`address1_shippingmethodcode\`
+     *
+     */
+    const enum address1_shippingmethodcode {
+      \\"Airborne\\" = 1,
+      \\"DHL\\" = 2,
+      \\"FedEx\\" = 3,
+      \\"UPS\\" = 4,
+      \\"Postal Mail\\" = 5,
+      \\"Full Load\\" = 6,
+      \\"Will Call\\" = 7,
+    }
+
+    /**
+     * OptionSet Name: \`address2_addresstypecode\`
+     *
+     */
+    const enum address2_addresstypecode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`address2_freighttermscode\`
+     *
+     */
+    const enum address2_freighttermscode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`address2_shippingmethodcode\`
+     *
+     */
+    const enum address2_shippingmethodcode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`address3_addresstypecode\`
+     *
+     */
+    const enum address3_addresstypecode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`address3_freighttermscode\`
+     *
+     */
+    const enum address3_freighttermscode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`address3_shippingmethodcode\`
+     *
+     */
+    const enum address3_shippingmethodcode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`adx_partner_applicationstatus\`
+     *
+     */
+    const enum adx_partner_applicationstatus {
+      \\"Submitted\\" = 1,
+      \\"Under Review\\" = 2,
+      \\"Approved\\" = 3,
+      \\"Rejected\\" = 4,
+    }
+
+    /**
+     * OptionSet Name: \`customersizecode\`
+     *
+     */
+    const enum customersizecode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`customertypecode\`
+     *
+     */
+    const enum customertypecode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`educationcode\`
+     *
+     */
+    const enum educationcode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`familystatuscode\`
+     *
+     */
+    const enum familystatuscode {
+      \\"Single\\" = 1,
+      \\"Married\\" = 2,
+      \\"Divorced\\" = 3,
+      \\"Widowed\\" = 4,
+    }
+
+    /**
+     * OptionSet Name: \`gendercode\`
+     *
+     */
+    const enum gendercode {
+      \\"Male\\" = 1,
+      \\"Female\\" = 2,
+    }
+
+    /**
+     * OptionSet Name: \`haschildrencode\`
+     *
+     */
+    const enum haschildrencode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`leadsourcecode\`
+     *
+     */
+    const enum leadsourcecode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`msdyn_orgchangestatus\`
+     *
+     */
+    const enum msdyn_orgchangestatus {
+      \\"No Feedback\\" = 0,
+      \\"Not at Company\\" = 1,
+      \\"Ignore\\" = 2,
+    }
+
+    /**
+     * OptionSet Name: \`paymenttermscode\`
+     *
+     */
+    const enum paymenttermscode {
+      \\"Net 30\\" = 1,
+      \\"2% 10, Net 30\\" = 2,
+      \\"Net 45\\" = 3,
+      \\"Net 60\\" = 4,
+    }
+
+    /**
+     * OptionSet Name: \`preferredappointmentdaycode\`
+     *
+     */
+    const enum preferredappointmentdaycode {
+      \\"Sunday\\" = 0,
+      \\"Monday\\" = 1,
+      \\"Tuesday\\" = 2,
+      \\"Wednesday\\" = 3,
+      \\"Thursday\\" = 4,
+      \\"Friday\\" = 5,
+      \\"Saturday\\" = 6,
+    }
+
+    /**
+     * OptionSet Name: \`preferredappointmenttimecode\`
+     *
+     */
+    const enum preferredappointmenttimecode {
+      \\"Morning\\" = 1,
+      \\"Afternoon\\" = 2,
+      \\"Evening\\" = 3,
+    }
+
+    /**
+     * OptionSet Name: \`preferredcontactmethodcode\`
+     *
+     */
+    const enum preferredcontactmethodcode {
+      \\"Any\\" = 1,
+      \\"Email\\" = 2,
+      \\"Phone\\" = 3,
+      \\"Fax\\" = 4,
+      \\"Mail\\" = 5,
+    }
+
+    /**
+     * OptionSet Name: \`shippingmethodcode\`
+     *
+     */
+    const enum shippingmethodcode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`territorycode\`
+     *
+     */
+    const enum territorycode {
+      \\"Default Value\\" = 1,
+    }
+  }
+
+  namespace Contact.OptionSets {
+    /**
+     * OptionSet Name: \`address2_shippingmethodcode\`
+     *
+     */
+    const enum address2_shippingmethodcode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`msdyn_orgchangestatus\`
+     *
+     */
+    const enum msdyn_orgchangestatus {
+      \\"No Feedback\\" = 0,
+      \\"Not at Company\\" = 1,
+      \\"Ignore\\" = 2,
+    }
+
+    /**
+     * OptionSet Name: \`familystatuscode\`
+     *
+     */
+    const enum familystatuscode {
+      \\"Single\\" = 1,
+      \\"Married\\" = 2,
+      \\"Divorced\\" = 3,
+      \\"Widowed\\" = 4,
+    }
+
+    /**
+     * OptionSet Name: \`address1_freighttermscode\`
+     *
+     */
+    const enum address1_freighttermscode {
+      \\"FOB\\" = 1,
+      \\"No Charge\\" = 2,
+    }
+
+    /**
+     * OptionSet Name: \`shippingmethodcode\`
+     *
+     */
+    const enum shippingmethodcode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`preferredcontactmethodcode\`
+     *
+     */
+    const enum preferredcontactmethodcode {
+      \\"Any\\" = 1,
+      \\"Email\\" = 2,
+      \\"Phone\\" = 3,
+      \\"Fax\\" = 4,
+      \\"Mail\\" = 5,
+    }
+
+    /**
+     * OptionSet Name: \`address3_freighttermscode\`
+     *
+     */
+    const enum address3_freighttermscode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`preferredappointmenttimecode\`
+     *
+     */
+    const enum preferredappointmenttimecode {
+      \\"Morning\\" = 1,
+      \\"Afternoon\\" = 2,
+      \\"Evening\\" = 3,
+    }
+
+    /**
+     * OptionSet Name: \`adx_partner_applicationstatus\`
+     *
+     */
+    const enum adx_partner_applicationstatus {
+      \\"Submitted\\" = 1,
+      \\"Under Review\\" = 2,
+      \\"Approved\\" = 3,
+      \\"Rejected\\" = 4,
+    }
+
+    /**
+     * OptionSet Name: \`territorycode\`
+     *
+     */
+    const enum territorycode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`accountrolecode\`
+     *
+     */
+    const enum accountrolecode {
+      \\"Decision Maker\\" = 1,
+      \\"Employee\\" = 2,
+      \\"Influencer\\" = 3,
+    }
+
+    /**
+     * OptionSet Name: \`address2_freighttermscode\`
+     *
+     */
+    const enum address2_freighttermscode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`leadsourcecode\`
+     *
+     */
+    const enum leadsourcecode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`haschildrencode\`
+     *
+     */
+    const enum haschildrencode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`address2_addresstypecode\`
+     *
+     */
+    const enum address2_addresstypecode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`customertypecode\`
+     *
+     */
+    const enum customertypecode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`educationcode\`
+     *
+     */
+    const enum educationcode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`address3_shippingmethodcode\`
+     *
+     */
+    const enum address3_shippingmethodcode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`customersizecode\`
+     *
+     */
+    const enum customersizecode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`gendercode\`
+     *
+     */
+    const enum gendercode {
+      \\"Male\\" = 1,
+      \\"Female\\" = 2,
+    }
+
+    /**
+     * OptionSet Name: \`address3_addresstypecode\`
+     *
+     */
+    const enum address3_addresstypecode {
+      \\"Default Value\\" = 1,
+    }
+
+    /**
+     * OptionSet Name: \`paymenttermscode\`
+     *
+     */
+    const enum paymenttermscode {
+      \\"Net 30\\" = 1,
+      \\"2% 10, Net 30\\" = 2,
+      \\"Net 45\\" = 3,
+      \\"Net 60\\" = 4,
+    }
+
+    /**
+     * OptionSet Name: \`preferredappointmentdaycode\`
+     *
+     */
+    const enum preferredappointmentdaycode {
+      \\"Sunday\\" = 0,
+      \\"Monday\\" = 1,
+      \\"Tuesday\\" = 2,
+      \\"Wednesday\\" = 3,
+      \\"Thursday\\" = 4,
+      \\"Friday\\" = 5,
+      \\"Saturday\\" = 6,
+    }
+
+    /**
+     * OptionSet Name: \`address1_addresstypecode\`
+     *
+     */
+    const enum address1_addresstypecode {
+      \\"Bill To\\" = 1,
+      \\"Ship To\\" = 2,
+      \\"Primary\\" = 3,
+      \\"Other\\" = 4,
+    }
+
+    /**
+     * OptionSet Name: \`address1_shippingmethodcode\`
+     *
+     */
+    const enum address1_shippingmethodcode {
+      \\"Airborne\\" = 1,
+      \\"DHL\\" = 2,
+      \\"FedEx\\" = 3,
+      \\"UPS\\" = 4,
+      \\"Postal Mail\\" = 5,
+      \\"Full Load\\" = 6,
+      \\"Will Call\\" = 7,
+    }
+  }
+}
+"
+`;
+
+exports[`renderer tests render tests should return valid type declaration for Early-Bound main form 1`] = `
+"// This file was generated with XrmTypesGen
+// GitHub: https://github.com/OliverFlint/XrmTypesGen
+
+declare namespace Xrm.Ext.Forms.Contact.main {
+  /**
+   * Entity/Table Name: \`Contact\`
+   *
+   * Form Type: \`main\`
+   *
+   * Form Name: \`Information\`
+   */
+  interface Information extends Xrm.EarlyBound.Form<Ext.Entities.Contact> {
+    accountrolecode: \\"AccountRoleCode\\";
+    address1_addresstypecode: \\"Address1_AddressTypeCode\\";
+    address1_city: \\"Address1_City\\";
+    address1_country: \\"Address1_Country\\";
+    address1_freighttermscode: \\"Address1_FreightTermsCode\\";
+    address1_line1: \\"Address1_Line1\\";
+    address1_line2: \\"Address1_Line2\\";
+    address1_line3: \\"Address1_Line3\\";
+    address1_name: \\"Address1_Name\\";
+    address1_postalcode: \\"Address1_PostalCode\\";
+    address1_shippingmethodcode: \\"Address1_ShippingMethodCode\\";
+    address1_stateorprovince: \\"Address1_StateOrProvince\\";
+    address1_telephone1: \\"Address1_Telephone1\\";
+    anniversary: \\"Anniversary\\";
+    assistantname: \\"AssistantName\\";
+    assistantphone: \\"AssistantPhone\\";
+    birthdate: \\"BirthDate\\";
+    creditlimit: \\"CreditLimit\\";
+    creditonhold: \\"CreditOnHold\\";
+    defaultpricelevelid: \\"DefaultPriceLevelId\\";
+    department: \\"Department\\";
+    description: \\"Description\\";
+    donotbulkemail: \\"DoNotBulkEMail\\";
+    donotemail: \\"DoNotEMail\\";
+    donotfax: \\"DoNotFax\\";
+    donotphone: \\"DoNotPhone\\";
+    donotpostalmail: \\"DoNotPostalMail\\";
+    donotsendmm: \\"DoNotSendMM\\";
+    emailaddress1: \\"EMailAddress1\\";
+    familystatuscode: \\"FamilyStatusCode\\";
+    fax: \\"Fax\\";
+    firstname: \\"FirstName\\";
+    gendercode: \\"GenderCode\\";
+    jobtitle: \\"JobTitle\\";
+    lastname: \\"LastName\\";
+    lastusedincampaign: \\"LastUsedInCampaign\\";
+    managername: \\"ManagerName\\";
+    managerphone: \\"ManagerPhone\\";
+    middlename: \\"MiddleName\\";
+    mobilephone: \\"MobilePhone\\";
+    originatingleadid: \\"OriginatingLeadId\\";
+    ownerid: \\"OwnerId\\";
+    parentcustomerid: \\"ParentCustomerId\\";
+    paymenttermscode: \\"PaymentTermsCode\\";
+    preferredappointmentdaycode: \\"PreferredAppointmentDayCode\\";
+    preferredappointmenttimecode: \\"PreferredAppointmentTimeCode\\";
+    preferredcontactmethodcode: \\"PreferredContactMethodCode\\";
+    preferredequipmentid: \\"PreferredEquipmentId\\";
+    preferredserviceid: \\"PreferredServiceId\\";
+    preferredsystemuserid: \\"PreferredSystemUserId\\";
+    salutation: \\"Salutation\\";
+    spousesname: \\"SpousesName\\";
+    telephone1: \\"Telephone1\\";
+    telephone2: \\"Telephone2\\";
+    transactioncurrencyid: \\"TransactionCurrencyId\\";
+
+    \\".Tabs\\": {
+      administration: {
+        \\"billing information\\":
+          | \\"creditlimit\\"
+          | \\"creditonhold\\"
+          | \\"paymenttermscode\\"
+          | \\"transactioncurrencyid\\";
+        \\"contact methods\\":
+          | \\"donotbulkemail\\"
+          | \\"donotemail\\"
+          | \\"donotfax\\"
+          | \\"donotphone\\"
+          | \\"donotpostalmail\\"
+          | \\"preferredcontactmethodcode\\";
+        \\"internal information\\": \\"ownerid\\";
+      };
+      conflictstab: {
+        conflictssection: \\"defaultpricelevelid\\";
+        \\"marketing information\\":
+          | \\"donotsendmm\\"
+          | \\"lastusedincampaign\\"
+          | \\"originatingleadid\\";
+        \\"service preferences\\":
+          | \\"preferredappointmentdaycode\\"
+          | \\"preferredappointmenttimecode\\"
+          | \\"preferredequipmentid\\"
+          | \\"preferredserviceid\\"
+          | \\"preferredsystemuserid\\";
+      };
+      details: {
+        \\"personal information\\":
+          | \\"anniversary\\"
+          | \\"birthdate\\"
+          | \\"familystatuscode\\"
+          | \\"gendercode\\"
+          | \\"spousesname\\";
+        \\"professional information\\":
+          | \\"accountrolecode\\"
+          | \\"assistantname\\"
+          | \\"assistantphone\\"
+          | \\"department\\"
+          | \\"managername\\"
+          | \\"managerphone\\";
+      };
+      general: {
+        address:
+          | \\"address1_addresstypecode\\"
+          | \\"address1_city\\"
+          | \\"address1_country\\"
+          | \\"address1_line1\\"
+          | \\"address1_line2\\"
+          | \\"address1_line3\\"
+          | \\"address1_name\\"
+          | \\"address1_postalcode\\"
+          | \\"address1_stateorprovince\\"
+          | \\"address1_telephone1\\";
+        description: \\"description\\";
+        name:
+          | \\"emailaddress1\\"
+          | \\"fax\\"
+          | \\"firstname\\"
+          | \\"jobtitle\\"
+          | \\"lastname\\"
+          | \\"middlename\\"
+          | \\"mobilephone\\"
+          | \\"parentcustomerid\\"
+          | \\"salutation\\"
+          | \\"telephone1\\"
+          | \\"telephone2\\";
+        \\"shipping information\\":
+          | \\"address1_freighttermscode\\"
+          | \\"address1_shippingmethodcode\\";
+      };
+      \\"notes and activities\\": {
+        activities: \\"contactactivitiesgrid\\";
+        notes: \\"notescontrol\\";
+      };
+      tab_recordwall: {
+        tab_recordwall_section_1: \\"WebResource_RecordWall\\";
+      };
+    };
+  }
+}
+"
+`;
+
+exports[`renderer tests render tests should return valid type declaration for Early-Bound quickcreate form 1`] = `
+"// This file was generated with XrmTypesGen
+// GitHub: https://github.com/OliverFlint/XrmTypesGen
+
+declare namespace Xrm.Ext.Forms.Contact.quickcreate {
+  /**
+   * Entity/Table Name: \`Contact\`
+   *
+   * Form Type: \`quickcreate\`
+   *
+   * Form Name: \`ContactQuickCreate\`
+   */
+  interface ContactQuickCreate
+    extends Xrm.EarlyBound.Form<Ext.Entities.Contact> {
+    address1_city: \\"Address1_City\\";
+    address1_line1: \\"Address1_Line1\\";
+    address1_line2: \\"Address1_Line2\\";
+    address1_postalcode: \\"Address1_PostalCode\\";
+    businesscard: \\"BusinessCard\\";
+    description: \\"Description\\";
+    emailaddress1: \\"EMailAddress1\\";
+    firstname: \\"FirstName\\";
+    jobtitle: \\"JobTitle\\";
+    lastname: \\"LastName\\";
+    mobilephone: \\"MobilePhone\\";
+    parentcustomerid: \\"ParentCustomerId\\";
+    telephone1: \\"Telephone1\\";
+
+    \\".Tabs\\": {
+      tab_1: {
+        tab_1_column_1_section_1:
+          | \\"businesscard\\"
+          | \\"firstname\\"
+          | \\"jobtitle\\"
+          | \\"lastname\\"
+          | \\"parentcustomerid\\";
+        tab_1_column_2_section_1:
+          | \\"description\\"
+          | \\"emailaddress1\\"
+          | \\"mobilephone\\"
+          | \\"telephone1\\";
+        tab_1_column_3_section_1:
+          | \\"address1_city\\"
+          | \\"address1_line1\\"
+          | \\"address1_line2\\"
+          | \\"address1_postalcode\\";
+      };
+    };
+  }
+}
+"
+`;
+
 exports[`renderer tests render tests should return valid type declaration for main form 1`] = `
 "// This file was generated with XrmTypesGen
 // GitHub: https://github.com/OliverFlint/XrmTypesGen
 
 declare namespace Xrm {
-  namespace Ext.Forms.contact.main.Informationcolonspace {
+  namespace Ext.Forms.contact.main.Information {
     /**
      * Entity/Table Name: \`contact\`
      *
      * Form Type: \`main\`
      *
-     * Form Name: \`Informationcolonspace\`
+     * Form Name: \`Information\`
      */
     interface Form extends Extensions.FormContext {}
     namespace Extensions {
       type FormContext = Xrm.FormContext & {
         //#region form context attributes
+        /**
+         * Gets the \`paymenttermscode\` attribute.
+         *
+         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"paymenttermscode\\"
+        ): Xrm.Attributes.OptionSetAttribute;
+        /**
+         * Gets the \`transactioncurrencyid\` attribute.
+         *
+         * @returns \`Xrm.Attributes.LookupAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"transactioncurrencyid\\"
+        ): Xrm.Attributes.LookupAttribute;
+        /**
+         * Gets the \`creditlimit\` attribute.
+         *
+         * @returns \`Xrm.Attributes.NumberAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"creditlimit\\"
+        ): Xrm.Attributes.NumberAttribute;
+        /**
+         * Gets the \`creditonhold\` attribute.
+         *
+         * @returns \`Xrm.Attributes.BooleanAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"creditonhold\\"
+        ): Xrm.Attributes.BooleanAttribute;
+        /**
+         * Gets the \`preferredcontactmethodcode\` attribute.
+         *
+         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"preferredcontactmethodcode\\"
+        ): Xrm.Attributes.OptionSetAttribute;
+        /**
+         * Gets the \`donotbulkemail\` attribute.
+         *
+         * @returns \`Xrm.Attributes.BooleanAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"donotbulkemail\\"
+        ): Xrm.Attributes.BooleanAttribute;
+        /**
+         * Gets the \`donotemail\` attribute.
+         *
+         * @returns \`Xrm.Attributes.BooleanAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"donotemail\\"
+        ): Xrm.Attributes.BooleanAttribute;
+        /**
+         * Gets the \`donotfax\` attribute.
+         *
+         * @returns \`Xrm.Attributes.BooleanAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"donotfax\\"
+        ): Xrm.Attributes.BooleanAttribute;
+        /**
+         * Gets the \`donotphone\` attribute.
+         *
+         * @returns \`Xrm.Attributes.BooleanAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"donotphone\\"
+        ): Xrm.Attributes.BooleanAttribute;
+        /**
+         * Gets the \`donotpostalmail\` attribute.
+         *
+         * @returns \`Xrm.Attributes.BooleanAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"donotpostalmail\\"
+        ): Xrm.Attributes.BooleanAttribute;
+        /**
+         * Gets the \`ownerid\` attribute.
+         *
+         * @returns \`Xrm.Attributes.LookupAttribute\`.
+         */
+        getAttribute(attributeName: \\"ownerid\\"): Xrm.Attributes.LookupAttribute;
+        /**
+         * Gets the \`defaultpricelevelid\` attribute.
+         *
+         * @returns \`Xrm.Attributes.LookupAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"defaultpricelevelid\\"
+        ): Xrm.Attributes.LookupAttribute;
+        /**
+         * Gets the \`originatingleadid\` attribute.
+         *
+         * @returns \`Xrm.Attributes.LookupAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"originatingleadid\\"
+        ): Xrm.Attributes.LookupAttribute;
+        /**
+         * Gets the \`lastusedincampaign\` attribute.
+         *
+         * @returns \`Xrm.Attributes.DateAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"lastusedincampaign\\"
+        ): Xrm.Attributes.DateAttribute;
+        /**
+         * Gets the \`donotsendmm\` attribute.
+         *
+         * @returns \`Xrm.Attributes.BooleanAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"donotsendmm\\"
+        ): Xrm.Attributes.BooleanAttribute;
+        /**
+         * Gets the \`preferredappointmentdaycode\` attribute.
+         *
+         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"preferredappointmentdaycode\\"
+        ): Xrm.Attributes.OptionSetAttribute;
+        /**
+         * Gets the \`preferredequipmentid\` attribute.
+         *
+         * @returns \`Xrm.Attributes.LookupAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"preferredequipmentid\\"
+        ): Xrm.Attributes.LookupAttribute;
+        /**
+         * Gets the \`preferredappointmenttimecode\` attribute.
+         *
+         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"preferredappointmenttimecode\\"
+        ): Xrm.Attributes.OptionSetAttribute;
+        /**
+         * Gets the \`preferredsystemuserid\` attribute.
+         *
+         * @returns \`Xrm.Attributes.LookupAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"preferredsystemuserid\\"
+        ): Xrm.Attributes.LookupAttribute;
+        /**
+         * Gets the \`preferredserviceid\` attribute.
+         *
+         * @returns \`Xrm.Attributes.LookupAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"preferredserviceid\\"
+        ): Xrm.Attributes.LookupAttribute;
+        /**
+         * Gets the \`department\` attribute.
+         *
+         * @returns \`Xrm.Attributes.StringAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"department\\"
+        ): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the \`accountrolecode\` attribute.
+         *
+         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"accountrolecode\\"
+        ): Xrm.Attributes.OptionSetAttribute;
+        /**
+         * Gets the \`managername\` attribute.
+         *
+         * @returns \`Xrm.Attributes.StringAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"managername\\"
+        ): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the \`assistantname\` attribute.
+         *
+         * @returns \`Xrm.Attributes.StringAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"assistantname\\"
+        ): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the \`managerphone\` attribute.
+         *
+         * @returns \`Xrm.Attributes.StringAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"managerphone\\"
+        ): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the \`assistantphone\` attribute.
+         *
+         * @returns \`Xrm.Attributes.StringAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"assistantphone\\"
+        ): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the \`gendercode\` attribute.
+         *
+         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"gendercode\\"
+        ): Xrm.Attributes.OptionSetAttribute;
+        /**
+         * Gets the \`birthdate\` attribute.
+         *
+         * @returns \`Xrm.Attributes.DateAttribute\`.
+         */
+        getAttribute(attributeName: \\"birthdate\\"): Xrm.Attributes.DateAttribute;
+        /**
+         * Gets the \`familystatuscode\` attribute.
+         *
+         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"familystatuscode\\"
+        ): Xrm.Attributes.OptionSetAttribute;
+        /**
+         * Gets the \`anniversary\` attribute.
+         *
+         * @returns \`Xrm.Attributes.DateAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"anniversary\\"
+        ): Xrm.Attributes.DateAttribute;
+        /**
+         * Gets the \`spousesname\` attribute.
+         *
+         * @returns \`Xrm.Attributes.StringAttribute\`.
+         */
+        getAttribute(
+          attributeName: \\"spousesname\\"
+        ): Xrm.Attributes.StringAttribute;
         /**
          * Gets the \`salutation\` attribute.
          *
@@ -203,260 +2318,222 @@ declare namespace Xrm {
         getAttribute(
           attributeName: \\"description\\"
         ): Xrm.Attributes.StringAttribute;
-        /**
-         * Gets the \`department\` attribute.
-         *
-         * @returns \`Xrm.Attributes.StringAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"department\\"
-        ): Xrm.Attributes.StringAttribute;
-        /**
-         * Gets the \`accountrolecode\` attribute.
-         *
-         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"accountrolecode\\"
-        ): Xrm.Attributes.OptionSetAttribute;
-        /**
-         * Gets the \`managername\` attribute.
-         *
-         * @returns \`Xrm.Attributes.StringAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"managername\\"
-        ): Xrm.Attributes.StringAttribute;
-        /**
-         * Gets the \`assistantname\` attribute.
-         *
-         * @returns \`Xrm.Attributes.StringAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"assistantname\\"
-        ): Xrm.Attributes.StringAttribute;
-        /**
-         * Gets the \`managerphone\` attribute.
-         *
-         * @returns \`Xrm.Attributes.StringAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"managerphone\\"
-        ): Xrm.Attributes.StringAttribute;
-        /**
-         * Gets the \`assistantphone\` attribute.
-         *
-         * @returns \`Xrm.Attributes.StringAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"assistantphone\\"
-        ): Xrm.Attributes.StringAttribute;
-        /**
-         * Gets the \`gendercode\` attribute.
-         *
-         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"gendercode\\"
-        ): Xrm.Attributes.OptionSetAttribute;
-        /**
-         * Gets the \`birthdate\` attribute.
-         *
-         * @returns \`Xrm.Attributes.DateAttribute\`.
-         */
-        getAttribute(attributeName: \\"birthdate\\"): Xrm.Attributes.DateAttribute;
-        /**
-         * Gets the \`familystatuscode\` attribute.
-         *
-         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"familystatuscode\\"
-        ): Xrm.Attributes.OptionSetAttribute;
-        /**
-         * Gets the \`anniversary\` attribute.
-         *
-         * @returns \`Xrm.Attributes.DateAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"anniversary\\"
-        ): Xrm.Attributes.DateAttribute;
-        /**
-         * Gets the \`spousesname\` attribute.
-         *
-         * @returns \`Xrm.Attributes.StringAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"spousesname\\"
-        ): Xrm.Attributes.StringAttribute;
-        /**
-         * Gets the \`ownerid\` attribute.
-         *
-         * @returns \`Xrm.Attributes.LookupAttribute\`.
-         */
-        getAttribute(attributeName: \\"ownerid\\"): Xrm.Attributes.LookupAttribute;
-        /**
-         * Gets the \`transactioncurrencyid\` attribute.
-         *
-         * @returns \`Xrm.Attributes.LookupAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"transactioncurrencyid\\"
-        ): Xrm.Attributes.LookupAttribute;
-        /**
-         * Gets the \`paymenttermscode\` attribute.
-         *
-         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"paymenttermscode\\"
-        ): Xrm.Attributes.OptionSetAttribute;
-        /**
-         * Gets the \`creditlimit\` attribute.
-         *
-         * @returns \`Xrm.Attributes.NumberAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"creditlimit\\"
-        ): Xrm.Attributes.NumberAttribute;
-        /**
-         * Gets the \`creditonhold\` attribute.
-         *
-         * @returns \`Xrm.Attributes.BooleanAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"creditonhold\\"
-        ): Xrm.Attributes.BooleanAttribute;
-        /**
-         * Gets the \`preferredcontactmethodcode\` attribute.
-         *
-         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"preferredcontactmethodcode\\"
-        ): Xrm.Attributes.OptionSetAttribute;
-        /**
-         * Gets the \`donotbulkemail\` attribute.
-         *
-         * @returns \`Xrm.Attributes.BooleanAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"donotbulkemail\\"
-        ): Xrm.Attributes.BooleanAttribute;
-        /**
-         * Gets the \`donotemail\` attribute.
-         *
-         * @returns \`Xrm.Attributes.BooleanAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"donotemail\\"
-        ): Xrm.Attributes.BooleanAttribute;
-        /**
-         * Gets the \`donotfax\` attribute.
-         *
-         * @returns \`Xrm.Attributes.BooleanAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"donotfax\\"
-        ): Xrm.Attributes.BooleanAttribute;
-        /**
-         * Gets the \`donotphone\` attribute.
-         *
-         * @returns \`Xrm.Attributes.BooleanAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"donotphone\\"
-        ): Xrm.Attributes.BooleanAttribute;
-        /**
-         * Gets the \`donotpostalmail\` attribute.
-         *
-         * @returns \`Xrm.Attributes.BooleanAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"donotpostalmail\\"
-        ): Xrm.Attributes.BooleanAttribute;
-        /**
-         * Gets the \`defaultpricelevelid\` attribute.
-         *
-         * @returns \`Xrm.Attributes.LookupAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"defaultpricelevelid\\"
-        ): Xrm.Attributes.LookupAttribute;
-        /**
-         * Gets the \`originatingleadid\` attribute.
-         *
-         * @returns \`Xrm.Attributes.LookupAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"originatingleadid\\"
-        ): Xrm.Attributes.LookupAttribute;
-        /**
-         * Gets the \`lastusedincampaign\` attribute.
-         *
-         * @returns \`Xrm.Attributes.DateAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"lastusedincampaign\\"
-        ): Xrm.Attributes.DateAttribute;
-        /**
-         * Gets the \`donotsendmm\` attribute.
-         *
-         * @returns \`Xrm.Attributes.BooleanAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"donotsendmm\\"
-        ): Xrm.Attributes.BooleanAttribute;
-        /**
-         * Gets the \`preferredappointmentdaycode\` attribute.
-         *
-         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"preferredappointmentdaycode\\"
-        ): Xrm.Attributes.OptionSetAttribute;
-        /**
-         * Gets the \`preferredequipmentid\` attribute.
-         *
-         * @returns \`Xrm.Attributes.LookupAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"preferredequipmentid\\"
-        ): Xrm.Attributes.LookupAttribute;
-        /**
-         * Gets the \`preferredappointmenttimecode\` attribute.
-         *
-         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"preferredappointmenttimecode\\"
-        ): Xrm.Attributes.OptionSetAttribute;
-        /**
-         * Gets the \`preferredsystemuserid\` attribute.
-         *
-         * @returns \`Xrm.Attributes.LookupAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"preferredsystemuserid\\"
-        ): Xrm.Attributes.LookupAttribute;
-        /**
-         * Gets the \`preferredserviceid\` attribute.
-         *
-         * @returns \`Xrm.Attributes.LookupAttribute\`.
-         */
-        getAttribute(
-          attributeName: \\"preferredserviceid\\"
-        ): Xrm.Attributes.LookupAttribute;
         //#endregion
         //#region form context contols
         /**
-         * Gets the \`WebResource_RecordWall\` control.
+         * Gets the \`paymenttermscode\` control.
          *
-         * @returns \`Xrm.Controls.IframeControl\`.
+         * @returns \`Xrm.Controls.OptionSetControl\`.
          */
         getControl(
-          controlName: \\"WebResource_RecordWall\\"
-        ): Xrm.Controls.IframeControl;
+          controlName: \\"paymenttermscode\\"
+        ): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`transactioncurrencyid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        getControl(
+          controlName: \\"transactioncurrencyid\\"
+        ): Xrm.Controls.LookupControl;
+        /**
+         * Gets the \`creditlimit\` control.
+         *
+         * @returns \`Xrm.Controls.NumberControl\`.
+         */
+        getControl(controlName: \\"creditlimit\\"): Xrm.Controls.NumberControl;
+        /**
+         * Gets the \`creditonhold\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        getControl(controlName: \\"creditonhold\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`preferredcontactmethodcode\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        getControl(
+          controlName: \\"preferredcontactmethodcode\\"
+        ): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`donotbulkemail\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        getControl(
+          controlName: \\"donotbulkemail\\"
+        ): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`donotemail\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        getControl(controlName: \\"donotemail\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`donotfax\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        getControl(controlName: \\"donotfax\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`donotphone\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        getControl(controlName: \\"donotphone\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`donotpostalmail\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        getControl(
+          controlName: \\"donotpostalmail\\"
+        ): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`ownerid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        getControl(controlName: \\"ownerid\\"): Xrm.Controls.LookupControl;
+        /**
+         * Gets the \`defaultpricelevelid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        getControl(
+          controlName: \\"defaultpricelevelid\\"
+        ): Xrm.Controls.LookupControl;
+        /**
+         * Gets the \`originatingleadid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        getControl(
+          controlName: \\"originatingleadid\\"
+        ): Xrm.Controls.LookupControl;
+        /**
+         * Gets the \`lastusedincampaign\` control.
+         *
+         * @returns \`Xrm.Controls.DateControl\`.
+         */
+        getControl(controlName: \\"lastusedincampaign\\"): Xrm.Controls.DateControl;
+        /**
+         * Gets the \`donotsendmm\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        getControl(controlName: \\"donotsendmm\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`preferredappointmentdaycode\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        getControl(
+          controlName: \\"preferredappointmentdaycode\\"
+        ): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`preferredequipmentid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        getControl(
+          controlName: \\"preferredequipmentid\\"
+        ): Xrm.Controls.LookupControl;
+        /**
+         * Gets the \`preferredappointmenttimecode\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        getControl(
+          controlName: \\"preferredappointmenttimecode\\"
+        ): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`preferredsystemuserid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        getControl(
+          controlName: \\"preferredsystemuserid\\"
+        ): Xrm.Controls.LookupControl;
+        /**
+         * Gets the \`preferredserviceid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        getControl(
+          controlName: \\"preferredserviceid\\"
+        ): Xrm.Controls.LookupControl;
+        /**
+         * Gets the \`department\` control.
+         *
+         * @returns \`Xrm.Controls.StringControl\`.
+         */
+        getControl(controlName: \\"department\\"): Xrm.Controls.StringControl;
+        /**
+         * Gets the \`accountrolecode\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        getControl(
+          controlName: \\"accountrolecode\\"
+        ): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`managername\` control.
+         *
+         * @returns \`Xrm.Controls.StringControl\`.
+         */
+        getControl(controlName: \\"managername\\"): Xrm.Controls.StringControl;
+        /**
+         * Gets the \`assistantname\` control.
+         *
+         * @returns \`Xrm.Controls.StringControl\`.
+         */
+        getControl(controlName: \\"assistantname\\"): Xrm.Controls.StringControl;
+        /**
+         * Gets the \`managerphone\` control.
+         *
+         * @returns \`Xrm.Controls.StringControl\`.
+         */
+        getControl(controlName: \\"managerphone\\"): Xrm.Controls.StringControl;
+        /**
+         * Gets the \`assistantphone\` control.
+         *
+         * @returns \`Xrm.Controls.StringControl\`.
+         */
+        getControl(controlName: \\"assistantphone\\"): Xrm.Controls.StringControl;
+        /**
+         * Gets the \`gendercode\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        getControl(controlName: \\"gendercode\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`birthdate\` control.
+         *
+         * @returns \`Xrm.Controls.DateControl\`.
+         */
+        getControl(controlName: \\"birthdate\\"): Xrm.Controls.DateControl;
+        /**
+         * Gets the \`familystatuscode\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        getControl(
+          controlName: \\"familystatuscode\\"
+        ): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`anniversary\` control.
+         *
+         * @returns \`Xrm.Controls.DateControl\`.
+         */
+        getControl(controlName: \\"anniversary\\"): Xrm.Controls.DateControl;
+        /**
+         * Gets the \`spousesname\` control.
+         *
+         * @returns \`Xrm.Controls.StringControl\`.
+         */
+        getControl(controlName: \\"spousesname\\"): Xrm.Controls.StringControl;
         /**
          * Gets the \`salutation\` control.
          *
@@ -614,76 +2691,6 @@ declare namespace Xrm {
          */
         getControl(controlName: \\"description\\"): Xrm.Controls.StringControl;
         /**
-         * Gets the \`department\` control.
-         *
-         * @returns \`Xrm.Controls.StringControl\`.
-         */
-        getControl(controlName: \\"department\\"): Xrm.Controls.StringControl;
-        /**
-         * Gets the \`accountrolecode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        getControl(
-          controlName: \\"accountrolecode\\"
-        ): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`managername\` control.
-         *
-         * @returns \`Xrm.Controls.StringControl\`.
-         */
-        getControl(controlName: \\"managername\\"): Xrm.Controls.StringControl;
-        /**
-         * Gets the \`assistantname\` control.
-         *
-         * @returns \`Xrm.Controls.StringControl\`.
-         */
-        getControl(controlName: \\"assistantname\\"): Xrm.Controls.StringControl;
-        /**
-         * Gets the \`managerphone\` control.
-         *
-         * @returns \`Xrm.Controls.StringControl\`.
-         */
-        getControl(controlName: \\"managerphone\\"): Xrm.Controls.StringControl;
-        /**
-         * Gets the \`assistantphone\` control.
-         *
-         * @returns \`Xrm.Controls.StringControl\`.
-         */
-        getControl(controlName: \\"assistantphone\\"): Xrm.Controls.StringControl;
-        /**
-         * Gets the \`gendercode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        getControl(controlName: \\"gendercode\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`birthdate\` control.
-         *
-         * @returns \`Xrm.Controls.DateControl\`.
-         */
-        getControl(controlName: \\"birthdate\\"): Xrm.Controls.DateControl;
-        /**
-         * Gets the \`familystatuscode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        getControl(
-          controlName: \\"familystatuscode\\"
-        ): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`anniversary\` control.
-         *
-         * @returns \`Xrm.Controls.DateControl\`.
-         */
-        getControl(controlName: \\"anniversary\\"): Xrm.Controls.DateControl;
-        /**
-         * Gets the \`spousesname\` control.
-         *
-         * @returns \`Xrm.Controls.StringControl\`.
-         */
-        getControl(controlName: \\"spousesname\\"): Xrm.Controls.StringControl;
-        /**
          * Gets the \`contactactivitiesgrid\` control.
          *
          * @returns \`Xrm.Controls.GridControl\`.
@@ -698,149 +2705,13 @@ declare namespace Xrm {
          */
         getControl(controlName: \\"notescontrol\\"): Xrm.Controls.Control;
         /**
-         * Gets the \`ownerid\` control.
+         * Gets the \`WebResource_RecordWall\` control.
          *
-         * @returns \`Xrm.Controls.LookupControl\`.
-         */
-        getControl(controlName: \\"ownerid\\"): Xrm.Controls.LookupControl;
-        /**
-         * Gets the \`transactioncurrencyid\` control.
-         *
-         * @returns \`Xrm.Controls.LookupControl\`.
+         * @returns \`Xrm.Controls.IframeControl\`.
          */
         getControl(
-          controlName: \\"transactioncurrencyid\\"
-        ): Xrm.Controls.LookupControl;
-        /**
-         * Gets the \`paymenttermscode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        getControl(
-          controlName: \\"paymenttermscode\\"
-        ): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`creditlimit\` control.
-         *
-         * @returns \`Xrm.Controls.NumberControl\`.
-         */
-        getControl(controlName: \\"creditlimit\\"): Xrm.Controls.NumberControl;
-        /**
-         * Gets the \`creditonhold\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        getControl(controlName: \\"creditonhold\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`preferredcontactmethodcode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        getControl(
-          controlName: \\"preferredcontactmethodcode\\"
-        ): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`donotbulkemail\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        getControl(
-          controlName: \\"donotbulkemail\\"
-        ): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`donotemail\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        getControl(controlName: \\"donotemail\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`donotfax\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        getControl(controlName: \\"donotfax\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`donotphone\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        getControl(controlName: \\"donotphone\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`donotpostalmail\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        getControl(
-          controlName: \\"donotpostalmail\\"
-        ): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`defaultpricelevelid\` control.
-         *
-         * @returns \`Xrm.Controls.LookupControl\`.
-         */
-        getControl(
-          controlName: \\"defaultpricelevelid\\"
-        ): Xrm.Controls.LookupControl;
-        /**
-         * Gets the \`originatingleadid\` control.
-         *
-         * @returns \`Xrm.Controls.LookupControl\`.
-         */
-        getControl(
-          controlName: \\"originatingleadid\\"
-        ): Xrm.Controls.LookupControl;
-        /**
-         * Gets the \`lastusedincampaign\` control.
-         *
-         * @returns \`Xrm.Controls.DateControl\`.
-         */
-        getControl(controlName: \\"lastusedincampaign\\"): Xrm.Controls.DateControl;
-        /**
-         * Gets the \`donotsendmm\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        getControl(controlName: \\"donotsendmm\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`preferredappointmentdaycode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        getControl(
-          controlName: \\"preferredappointmentdaycode\\"
-        ): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`preferredequipmentid\` control.
-         *
-         * @returns \`Xrm.Controls.LookupControl\`.
-         */
-        getControl(
-          controlName: \\"preferredequipmentid\\"
-        ): Xrm.Controls.LookupControl;
-        /**
-         * Gets the \`preferredappointmenttimecode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        getControl(
-          controlName: \\"preferredappointmenttimecode\\"
-        ): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`preferredsystemuserid\` control.
-         *
-         * @returns \`Xrm.Controls.LookupControl\`.
-         */
-        getControl(
-          controlName: \\"preferredsystemuserid\\"
-        ): Xrm.Controls.LookupControl;
-        /**
-         * Gets the \`preferredserviceid\` control.
-         *
-         * @returns \`Xrm.Controls.LookupControl\`.
-         */
-        getControl(
-          controlName: \\"preferredserviceid\\"
-        ): Xrm.Controls.LookupControl;
+          controlName: \\"WebResource_RecordWall\\"
+        ): Xrm.Controls.IframeControl;
         //#endregion
 
         data: Data;
@@ -849,11 +2720,197 @@ declare namespace Xrm {
 
       type Controls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
         /**
-         * Gets the \`WebResource_RecordWall\` control.
+         * Gets the \`paymenttermscode\` control.
          *
-         * @returns \`Xrm.Controls.IframeControl\`.
+         * @returns \`Xrm.Controls.OptionSetControl\`.
          */
-        get(controlName: \\"WebResource_RecordWall\\"): Xrm.Controls.IframeControl;
+        get(controlName: \\"paymenttermscode\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`transactioncurrencyid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        get(controlName: \\"transactioncurrencyid\\"): Xrm.Controls.LookupControl;
+        /**
+         * Gets the \`creditlimit\` control.
+         *
+         * @returns \`Xrm.Controls.NumberControl\`.
+         */
+        get(controlName: \\"creditlimit\\"): Xrm.Controls.NumberControl;
+        /**
+         * Gets the \`creditonhold\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(controlName: \\"creditonhold\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`preferredcontactmethodcode\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(
+          controlName: \\"preferredcontactmethodcode\\"
+        ): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`donotbulkemail\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(controlName: \\"donotbulkemail\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`donotemail\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(controlName: \\"donotemail\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`donotfax\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(controlName: \\"donotfax\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`donotphone\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(controlName: \\"donotphone\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`donotpostalmail\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(controlName: \\"donotpostalmail\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`ownerid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        get(controlName: \\"ownerid\\"): Xrm.Controls.LookupControl;
+        /**
+         * Gets the \`defaultpricelevelid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        get(controlName: \\"defaultpricelevelid\\"): Xrm.Controls.LookupControl;
+        /**
+         * Gets the \`originatingleadid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        get(controlName: \\"originatingleadid\\"): Xrm.Controls.LookupControl;
+        /**
+         * Gets the \`lastusedincampaign\` control.
+         *
+         * @returns \`Xrm.Controls.DateControl\`.
+         */
+        get(controlName: \\"lastusedincampaign\\"): Xrm.Controls.DateControl;
+        /**
+         * Gets the \`donotsendmm\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(controlName: \\"donotsendmm\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`preferredappointmentdaycode\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(
+          controlName: \\"preferredappointmentdaycode\\"
+        ): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`preferredequipmentid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        get(controlName: \\"preferredequipmentid\\"): Xrm.Controls.LookupControl;
+        /**
+         * Gets the \`preferredappointmenttimecode\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(
+          controlName: \\"preferredappointmenttimecode\\"
+        ): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`preferredsystemuserid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        get(controlName: \\"preferredsystemuserid\\"): Xrm.Controls.LookupControl;
+        /**
+         * Gets the \`preferredserviceid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        get(controlName: \\"preferredserviceid\\"): Xrm.Controls.LookupControl;
+        /**
+         * Gets the \`department\` control.
+         *
+         * @returns \`Xrm.Controls.StringControl\`.
+         */
+        get(controlName: \\"department\\"): Xrm.Controls.StringControl;
+        /**
+         * Gets the \`accountrolecode\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(controlName: \\"accountrolecode\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`managername\` control.
+         *
+         * @returns \`Xrm.Controls.StringControl\`.
+         */
+        get(controlName: \\"managername\\"): Xrm.Controls.StringControl;
+        /**
+         * Gets the \`assistantname\` control.
+         *
+         * @returns \`Xrm.Controls.StringControl\`.
+         */
+        get(controlName: \\"assistantname\\"): Xrm.Controls.StringControl;
+        /**
+         * Gets the \`managerphone\` control.
+         *
+         * @returns \`Xrm.Controls.StringControl\`.
+         */
+        get(controlName: \\"managerphone\\"): Xrm.Controls.StringControl;
+        /**
+         * Gets the \`assistantphone\` control.
+         *
+         * @returns \`Xrm.Controls.StringControl\`.
+         */
+        get(controlName: \\"assistantphone\\"): Xrm.Controls.StringControl;
+        /**
+         * Gets the \`gendercode\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(controlName: \\"gendercode\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`birthdate\` control.
+         *
+         * @returns \`Xrm.Controls.DateControl\`.
+         */
+        get(controlName: \\"birthdate\\"): Xrm.Controls.DateControl;
+        /**
+         * Gets the \`familystatuscode\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(controlName: \\"familystatuscode\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`anniversary\` control.
+         *
+         * @returns \`Xrm.Controls.DateControl\`.
+         */
+        get(controlName: \\"anniversary\\"): Xrm.Controls.DateControl;
+        /**
+         * Gets the \`spousesname\` control.
+         *
+         * @returns \`Xrm.Controls.StringControl\`.
+         */
+        get(controlName: \\"spousesname\\"): Xrm.Controls.StringControl;
         /**
          * Gets the \`salutation\` control.
          *
@@ -1007,72 +3064,6 @@ declare namespace Xrm {
          */
         get(controlName: \\"description\\"): Xrm.Controls.StringControl;
         /**
-         * Gets the \`department\` control.
-         *
-         * @returns \`Xrm.Controls.StringControl\`.
-         */
-        get(controlName: \\"department\\"): Xrm.Controls.StringControl;
-        /**
-         * Gets the \`accountrolecode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlName: \\"accountrolecode\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`managername\` control.
-         *
-         * @returns \`Xrm.Controls.StringControl\`.
-         */
-        get(controlName: \\"managername\\"): Xrm.Controls.StringControl;
-        /**
-         * Gets the \`assistantname\` control.
-         *
-         * @returns \`Xrm.Controls.StringControl\`.
-         */
-        get(controlName: \\"assistantname\\"): Xrm.Controls.StringControl;
-        /**
-         * Gets the \`managerphone\` control.
-         *
-         * @returns \`Xrm.Controls.StringControl\`.
-         */
-        get(controlName: \\"managerphone\\"): Xrm.Controls.StringControl;
-        /**
-         * Gets the \`assistantphone\` control.
-         *
-         * @returns \`Xrm.Controls.StringControl\`.
-         */
-        get(controlName: \\"assistantphone\\"): Xrm.Controls.StringControl;
-        /**
-         * Gets the \`gendercode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlName: \\"gendercode\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`birthdate\` control.
-         *
-         * @returns \`Xrm.Controls.DateControl\`.
-         */
-        get(controlName: \\"birthdate\\"): Xrm.Controls.DateControl;
-        /**
-         * Gets the \`familystatuscode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlName: \\"familystatuscode\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`anniversary\` control.
-         *
-         * @returns \`Xrm.Controls.DateControl\`.
-         */
-        get(controlName: \\"anniversary\\"): Xrm.Controls.DateControl;
-        /**
-         * Gets the \`spousesname\` control.
-         *
-         * @returns \`Xrm.Controls.StringControl\`.
-         */
-        get(controlName: \\"spousesname\\"): Xrm.Controls.StringControl;
-        /**
          * Gets the \`contactactivitiesgrid\` control.
          *
          * @returns \`Xrm.Controls.GridControl\`.
@@ -1085,134 +3076,222 @@ declare namespace Xrm {
          */
         get(controlName: \\"notescontrol\\"): Xrm.Controls.Control;
         /**
-         * Gets the \`ownerid\` control.
+         * Gets the \`WebResource_RecordWall\` control.
          *
-         * @returns \`Xrm.Controls.LookupControl\`.
+         * @returns \`Xrm.Controls.IframeControl\`.
          */
-        get(controlName: \\"ownerid\\"): Xrm.Controls.LookupControl;
-        /**
-         * Gets the \`transactioncurrencyid\` control.
-         *
-         * @returns \`Xrm.Controls.LookupControl\`.
-         */
-        get(controlName: \\"transactioncurrencyid\\"): Xrm.Controls.LookupControl;
-        /**
-         * Gets the \`paymenttermscode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlName: \\"paymenttermscode\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`creditlimit\` control.
-         *
-         * @returns \`Xrm.Controls.NumberControl\`.
-         */
-        get(controlName: \\"creditlimit\\"): Xrm.Controls.NumberControl;
-        /**
-         * Gets the \`creditonhold\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlName: \\"creditonhold\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`preferredcontactmethodcode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(
-          controlName: \\"preferredcontactmethodcode\\"
-        ): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`donotbulkemail\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlName: \\"donotbulkemail\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`donotemail\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlName: \\"donotemail\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`donotfax\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlName: \\"donotfax\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`donotphone\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlName: \\"donotphone\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`donotpostalmail\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlName: \\"donotpostalmail\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`defaultpricelevelid\` control.
-         *
-         * @returns \`Xrm.Controls.LookupControl\`.
-         */
-        get(controlName: \\"defaultpricelevelid\\"): Xrm.Controls.LookupControl;
-        /**
-         * Gets the \`originatingleadid\` control.
-         *
-         * @returns \`Xrm.Controls.LookupControl\`.
-         */
-        get(controlName: \\"originatingleadid\\"): Xrm.Controls.LookupControl;
-        /**
-         * Gets the \`lastusedincampaign\` control.
-         *
-         * @returns \`Xrm.Controls.DateControl\`.
-         */
-        get(controlName: \\"lastusedincampaign\\"): Xrm.Controls.DateControl;
-        /**
-         * Gets the \`donotsendmm\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlName: \\"donotsendmm\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`preferredappointmentdaycode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(
-          controlName: \\"preferredappointmentdaycode\\"
-        ): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`preferredequipmentid\` control.
-         *
-         * @returns \`Xrm.Controls.LookupControl\`.
-         */
-        get(controlName: \\"preferredequipmentid\\"): Xrm.Controls.LookupControl;
-        /**
-         * Gets the \`preferredappointmenttimecode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(
-          controlName: \\"preferredappointmenttimecode\\"
-        ): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`preferredsystemuserid\` control.
-         *
-         * @returns \`Xrm.Controls.LookupControl\`.
-         */
-        get(controlName: \\"preferredsystemuserid\\"): Xrm.Controls.LookupControl;
-        /**
-         * Gets the \`preferredserviceid\` control.
-         *
-         * @returns \`Xrm.Controls.LookupControl\`.
-         */
-        get(controlName: \\"preferredserviceid\\"): Xrm.Controls.LookupControl;
+        get(controlName: \\"WebResource_RecordWall\\"): Xrm.Controls.IframeControl;
       };
 
       type Attributes = Xrm.Collection.ItemCollection<Xrm.Attributes.Attribute> & {
+        /**
+         * Gets the \`paymenttermscode\` attribute.
+         *
+         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
+         */
+        get(
+          attributeName: \\"paymenttermscode\\"
+        ): Xrm.Attributes.OptionSetAttribute;
+        /**
+         * Gets the \`transactioncurrencyid\` attribute.
+         *
+         * @returns \`Xrm.Attributes.LookupAttribute\`.
+         */
+        get(
+          attributeName: \\"transactioncurrencyid\\"
+        ): Xrm.Attributes.LookupAttribute;
+        /**
+         * Gets the \`creditlimit\` attribute.
+         *
+         * @returns \`Xrm.Attributes.NumberAttribute\`.
+         */
+        get(attributeName: \\"creditlimit\\"): Xrm.Attributes.NumberAttribute;
+        /**
+         * Gets the \`creditonhold\` attribute.
+         *
+         * @returns \`Xrm.Attributes.BooleanAttribute\`.
+         */
+        get(attributeName: \\"creditonhold\\"): Xrm.Attributes.BooleanAttribute;
+        /**
+         * Gets the \`preferredcontactmethodcode\` attribute.
+         *
+         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
+         */
+        get(
+          attributeName: \\"preferredcontactmethodcode\\"
+        ): Xrm.Attributes.OptionSetAttribute;
+        /**
+         * Gets the \`donotbulkemail\` attribute.
+         *
+         * @returns \`Xrm.Attributes.BooleanAttribute\`.
+         */
+        get(attributeName: \\"donotbulkemail\\"): Xrm.Attributes.BooleanAttribute;
+        /**
+         * Gets the \`donotemail\` attribute.
+         *
+         * @returns \`Xrm.Attributes.BooleanAttribute\`.
+         */
+        get(attributeName: \\"donotemail\\"): Xrm.Attributes.BooleanAttribute;
+        /**
+         * Gets the \`donotfax\` attribute.
+         *
+         * @returns \`Xrm.Attributes.BooleanAttribute\`.
+         */
+        get(attributeName: \\"donotfax\\"): Xrm.Attributes.BooleanAttribute;
+        /**
+         * Gets the \`donotphone\` attribute.
+         *
+         * @returns \`Xrm.Attributes.BooleanAttribute\`.
+         */
+        get(attributeName: \\"donotphone\\"): Xrm.Attributes.BooleanAttribute;
+        /**
+         * Gets the \`donotpostalmail\` attribute.
+         *
+         * @returns \`Xrm.Attributes.BooleanAttribute\`.
+         */
+        get(attributeName: \\"donotpostalmail\\"): Xrm.Attributes.BooleanAttribute;
+        /**
+         * Gets the \`ownerid\` attribute.
+         *
+         * @returns \`Xrm.Attributes.LookupAttribute\`.
+         */
+        get(attributeName: \\"ownerid\\"): Xrm.Attributes.LookupAttribute;
+        /**
+         * Gets the \`defaultpricelevelid\` attribute.
+         *
+         * @returns \`Xrm.Attributes.LookupAttribute\`.
+         */
+        get(
+          attributeName: \\"defaultpricelevelid\\"
+        ): Xrm.Attributes.LookupAttribute;
+        /**
+         * Gets the \`originatingleadid\` attribute.
+         *
+         * @returns \`Xrm.Attributes.LookupAttribute\`.
+         */
+        get(attributeName: \\"originatingleadid\\"): Xrm.Attributes.LookupAttribute;
+        /**
+         * Gets the \`lastusedincampaign\` attribute.
+         *
+         * @returns \`Xrm.Attributes.DateAttribute\`.
+         */
+        get(attributeName: \\"lastusedincampaign\\"): Xrm.Attributes.DateAttribute;
+        /**
+         * Gets the \`donotsendmm\` attribute.
+         *
+         * @returns \`Xrm.Attributes.BooleanAttribute\`.
+         */
+        get(attributeName: \\"donotsendmm\\"): Xrm.Attributes.BooleanAttribute;
+        /**
+         * Gets the \`preferredappointmentdaycode\` attribute.
+         *
+         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
+         */
+        get(
+          attributeName: \\"preferredappointmentdaycode\\"
+        ): Xrm.Attributes.OptionSetAttribute;
+        /**
+         * Gets the \`preferredequipmentid\` attribute.
+         *
+         * @returns \`Xrm.Attributes.LookupAttribute\`.
+         */
+        get(
+          attributeName: \\"preferredequipmentid\\"
+        ): Xrm.Attributes.LookupAttribute;
+        /**
+         * Gets the \`preferredappointmenttimecode\` attribute.
+         *
+         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
+         */
+        get(
+          attributeName: \\"preferredappointmenttimecode\\"
+        ): Xrm.Attributes.OptionSetAttribute;
+        /**
+         * Gets the \`preferredsystemuserid\` attribute.
+         *
+         * @returns \`Xrm.Attributes.LookupAttribute\`.
+         */
+        get(
+          attributeName: \\"preferredsystemuserid\\"
+        ): Xrm.Attributes.LookupAttribute;
+        /**
+         * Gets the \`preferredserviceid\` attribute.
+         *
+         * @returns \`Xrm.Attributes.LookupAttribute\`.
+         */
+        get(
+          attributeName: \\"preferredserviceid\\"
+        ): Xrm.Attributes.LookupAttribute;
+        /**
+         * Gets the \`department\` attribute.
+         *
+         * @returns \`Xrm.Attributes.StringAttribute\`.
+         */
+        get(attributeName: \\"department\\"): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the \`accountrolecode\` attribute.
+         *
+         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
+         */
+        get(
+          attributeName: \\"accountrolecode\\"
+        ): Xrm.Attributes.OptionSetAttribute;
+        /**
+         * Gets the \`managername\` attribute.
+         *
+         * @returns \`Xrm.Attributes.StringAttribute\`.
+         */
+        get(attributeName: \\"managername\\"): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the \`assistantname\` attribute.
+         *
+         * @returns \`Xrm.Attributes.StringAttribute\`.
+         */
+        get(attributeName: \\"assistantname\\"): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the \`managerphone\` attribute.
+         *
+         * @returns \`Xrm.Attributes.StringAttribute\`.
+         */
+        get(attributeName: \\"managerphone\\"): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the \`assistantphone\` attribute.
+         *
+         * @returns \`Xrm.Attributes.StringAttribute\`.
+         */
+        get(attributeName: \\"assistantphone\\"): Xrm.Attributes.StringAttribute;
+        /**
+         * Gets the \`gendercode\` attribute.
+         *
+         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
+         */
+        get(attributeName: \\"gendercode\\"): Xrm.Attributes.OptionSetAttribute;
+        /**
+         * Gets the \`birthdate\` attribute.
+         *
+         * @returns \`Xrm.Attributes.DateAttribute\`.
+         */
+        get(attributeName: \\"birthdate\\"): Xrm.Attributes.DateAttribute;
+        /**
+         * Gets the \`familystatuscode\` attribute.
+         *
+         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
+         */
+        get(
+          attributeName: \\"familystatuscode\\"
+        ): Xrm.Attributes.OptionSetAttribute;
+        /**
+         * Gets the \`anniversary\` attribute.
+         *
+         * @returns \`Xrm.Attributes.DateAttribute\`.
+         */
+        get(attributeName: \\"anniversary\\"): Xrm.Attributes.DateAttribute;
+        /**
+         * Gets the \`spousesname\` attribute.
+         *
+         * @returns \`Xrm.Attributes.StringAttribute\`.
+         */
+        get(attributeName: \\"spousesname\\"): Xrm.Attributes.StringAttribute;
         /**
          * Gets the \`salutation\` attribute.
          *
@@ -1369,214 +3448,6 @@ declare namespace Xrm {
          * @returns \`Xrm.Attributes.StringAttribute\`.
          */
         get(attributeName: \\"description\\"): Xrm.Attributes.StringAttribute;
-        /**
-         * Gets the \`department\` attribute.
-         *
-         * @returns \`Xrm.Attributes.StringAttribute\`.
-         */
-        get(attributeName: \\"department\\"): Xrm.Attributes.StringAttribute;
-        /**
-         * Gets the \`accountrolecode\` attribute.
-         *
-         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
-         */
-        get(
-          attributeName: \\"accountrolecode\\"
-        ): Xrm.Attributes.OptionSetAttribute;
-        /**
-         * Gets the \`managername\` attribute.
-         *
-         * @returns \`Xrm.Attributes.StringAttribute\`.
-         */
-        get(attributeName: \\"managername\\"): Xrm.Attributes.StringAttribute;
-        /**
-         * Gets the \`assistantname\` attribute.
-         *
-         * @returns \`Xrm.Attributes.StringAttribute\`.
-         */
-        get(attributeName: \\"assistantname\\"): Xrm.Attributes.StringAttribute;
-        /**
-         * Gets the \`managerphone\` attribute.
-         *
-         * @returns \`Xrm.Attributes.StringAttribute\`.
-         */
-        get(attributeName: \\"managerphone\\"): Xrm.Attributes.StringAttribute;
-        /**
-         * Gets the \`assistantphone\` attribute.
-         *
-         * @returns \`Xrm.Attributes.StringAttribute\`.
-         */
-        get(attributeName: \\"assistantphone\\"): Xrm.Attributes.StringAttribute;
-        /**
-         * Gets the \`gendercode\` attribute.
-         *
-         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
-         */
-        get(attributeName: \\"gendercode\\"): Xrm.Attributes.OptionSetAttribute;
-        /**
-         * Gets the \`birthdate\` attribute.
-         *
-         * @returns \`Xrm.Attributes.DateAttribute\`.
-         */
-        get(attributeName: \\"birthdate\\"): Xrm.Attributes.DateAttribute;
-        /**
-         * Gets the \`familystatuscode\` attribute.
-         *
-         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
-         */
-        get(
-          attributeName: \\"familystatuscode\\"
-        ): Xrm.Attributes.OptionSetAttribute;
-        /**
-         * Gets the \`anniversary\` attribute.
-         *
-         * @returns \`Xrm.Attributes.DateAttribute\`.
-         */
-        get(attributeName: \\"anniversary\\"): Xrm.Attributes.DateAttribute;
-        /**
-         * Gets the \`spousesname\` attribute.
-         *
-         * @returns \`Xrm.Attributes.StringAttribute\`.
-         */
-        get(attributeName: \\"spousesname\\"): Xrm.Attributes.StringAttribute;
-        /**
-         * Gets the \`ownerid\` attribute.
-         *
-         * @returns \`Xrm.Attributes.LookupAttribute\`.
-         */
-        get(attributeName: \\"ownerid\\"): Xrm.Attributes.LookupAttribute;
-        /**
-         * Gets the \`transactioncurrencyid\` attribute.
-         *
-         * @returns \`Xrm.Attributes.LookupAttribute\`.
-         */
-        get(
-          attributeName: \\"transactioncurrencyid\\"
-        ): Xrm.Attributes.LookupAttribute;
-        /**
-         * Gets the \`paymenttermscode\` attribute.
-         *
-         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
-         */
-        get(
-          attributeName: \\"paymenttermscode\\"
-        ): Xrm.Attributes.OptionSetAttribute;
-        /**
-         * Gets the \`creditlimit\` attribute.
-         *
-         * @returns \`Xrm.Attributes.NumberAttribute\`.
-         */
-        get(attributeName: \\"creditlimit\\"): Xrm.Attributes.NumberAttribute;
-        /**
-         * Gets the \`creditonhold\` attribute.
-         *
-         * @returns \`Xrm.Attributes.BooleanAttribute\`.
-         */
-        get(attributeName: \\"creditonhold\\"): Xrm.Attributes.BooleanAttribute;
-        /**
-         * Gets the \`preferredcontactmethodcode\` attribute.
-         *
-         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
-         */
-        get(
-          attributeName: \\"preferredcontactmethodcode\\"
-        ): Xrm.Attributes.OptionSetAttribute;
-        /**
-         * Gets the \`donotbulkemail\` attribute.
-         *
-         * @returns \`Xrm.Attributes.BooleanAttribute\`.
-         */
-        get(attributeName: \\"donotbulkemail\\"): Xrm.Attributes.BooleanAttribute;
-        /**
-         * Gets the \`donotemail\` attribute.
-         *
-         * @returns \`Xrm.Attributes.BooleanAttribute\`.
-         */
-        get(attributeName: \\"donotemail\\"): Xrm.Attributes.BooleanAttribute;
-        /**
-         * Gets the \`donotfax\` attribute.
-         *
-         * @returns \`Xrm.Attributes.BooleanAttribute\`.
-         */
-        get(attributeName: \\"donotfax\\"): Xrm.Attributes.BooleanAttribute;
-        /**
-         * Gets the \`donotphone\` attribute.
-         *
-         * @returns \`Xrm.Attributes.BooleanAttribute\`.
-         */
-        get(attributeName: \\"donotphone\\"): Xrm.Attributes.BooleanAttribute;
-        /**
-         * Gets the \`donotpostalmail\` attribute.
-         *
-         * @returns \`Xrm.Attributes.BooleanAttribute\`.
-         */
-        get(attributeName: \\"donotpostalmail\\"): Xrm.Attributes.BooleanAttribute;
-        /**
-         * Gets the \`defaultpricelevelid\` attribute.
-         *
-         * @returns \`Xrm.Attributes.LookupAttribute\`.
-         */
-        get(
-          attributeName: \\"defaultpricelevelid\\"
-        ): Xrm.Attributes.LookupAttribute;
-        /**
-         * Gets the \`originatingleadid\` attribute.
-         *
-         * @returns \`Xrm.Attributes.LookupAttribute\`.
-         */
-        get(attributeName: \\"originatingleadid\\"): Xrm.Attributes.LookupAttribute;
-        /**
-         * Gets the \`lastusedincampaign\` attribute.
-         *
-         * @returns \`Xrm.Attributes.DateAttribute\`.
-         */
-        get(attributeName: \\"lastusedincampaign\\"): Xrm.Attributes.DateAttribute;
-        /**
-         * Gets the \`donotsendmm\` attribute.
-         *
-         * @returns \`Xrm.Attributes.BooleanAttribute\`.
-         */
-        get(attributeName: \\"donotsendmm\\"): Xrm.Attributes.BooleanAttribute;
-        /**
-         * Gets the \`preferredappointmentdaycode\` attribute.
-         *
-         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
-         */
-        get(
-          attributeName: \\"preferredappointmentdaycode\\"
-        ): Xrm.Attributes.OptionSetAttribute;
-        /**
-         * Gets the \`preferredequipmentid\` attribute.
-         *
-         * @returns \`Xrm.Attributes.LookupAttribute\`.
-         */
-        get(
-          attributeName: \\"preferredequipmentid\\"
-        ): Xrm.Attributes.LookupAttribute;
-        /**
-         * Gets the \`preferredappointmenttimecode\` attribute.
-         *
-         * @returns \`Xrm.Attributes.OptionSetAttribute\`.
-         */
-        get(
-          attributeName: \\"preferredappointmenttimecode\\"
-        ): Xrm.Attributes.OptionSetAttribute;
-        /**
-         * Gets the \`preferredsystemuserid\` attribute.
-         *
-         * @returns \`Xrm.Attributes.LookupAttribute\`.
-         */
-        get(
-          attributeName: \\"preferredsystemuserid\\"
-        ): Xrm.Attributes.LookupAttribute;
-        /**
-         * Gets the \`preferredserviceid\` attribute.
-         *
-         * @returns \`Xrm.Attributes.LookupAttribute\`.
-         */
-        get(
-          attributeName: \\"preferredserviceid\\"
-        ): Xrm.Attributes.LookupAttribute;
       };
 
       type Data = Xrm.Data & {
@@ -1590,30 +3461,6 @@ declare namespace Xrm {
 
       type Tabs = Xrm.Collection.ItemCollection<Xrm.Controls.Tab> & {
         /**
-         * Gets the \`tab_recordwall\` tab.
-         *
-         * @returns \`Xrm.Controls.Tab\`.
-         */
-        get(tabname: \\"tab_recordwall\\"): tab_recordwallTabControl;
-        /**
-         * Gets the \`general\` tab.
-         *
-         * @returns \`Xrm.Controls.Tab\`.
-         */
-        get(tabname: \\"general\\"): generalTabControl;
-        /**
-         * Gets the \`details\` tab.
-         *
-         * @returns \`Xrm.Controls.Tab\`.
-         */
-        get(tabname: \\"details\\"): detailsTabControl;
-        /**
-         * Gets the \`notes and activities\` tab.
-         *
-         * @returns \`Xrm.Controls.Tab\`.
-         */
-        get(tabname: \\"notes and activities\\"): notesandactivitiesTabControl;
-        /**
          * Gets the \`administration\` tab.
          *
          * @returns \`Xrm.Controls.Tab\`.
@@ -1625,36 +3472,116 @@ declare namespace Xrm {
          * @returns \`Xrm.Controls.Tab\`.
          */
         get(tabname: \\"conflictstab\\"): conflictstabTabControl;
+        /**
+         * Gets the \`details\` tab.
+         *
+         * @returns \`Xrm.Controls.Tab\`.
+         */
+        get(tabname: \\"details\\"): detailsTabControl;
+        /**
+         * Gets the \`general\` tab.
+         *
+         * @returns \`Xrm.Controls.Tab\`.
+         */
+        get(tabname: \\"general\\"): generalTabControl;
+        /**
+         * Gets the \`notes and activities\` tab.
+         *
+         * @returns \`Xrm.Controls.Tab\`.
+         */
+        get(tabname: \\"notes and activities\\"): notesandactivitiesTabControl;
+        /**
+         * Gets the \`tab_recordwall\` tab.
+         *
+         * @returns \`Xrm.Controls.Tab\`.
+         */
+        get(tabname: \\"tab_recordwall\\"): tab_recordwallTabControl;
       };
 
-      type tab_recordwallTabControl = Xrm.Controls.Tab & {
-        sections: tab_recordwallTabSections;
-      };
-      type generalTabControl = Xrm.Controls.Tab & {
-        sections: generalTabSections;
-      };
-      type detailsTabControl = Xrm.Controls.Tab & {
-        sections: detailsTabSections;
-      };
-      type notesandactivitiesTabControl = Xrm.Controls.Tab & {
-        sections: notesandactivitiesTabSections;
-      };
       type administrationTabControl = Xrm.Controls.Tab & {
         sections: administrationTabSections;
       };
       type conflictstabTabControl = Xrm.Controls.Tab & {
         sections: conflictstabTabSections;
       };
+      type detailsTabControl = Xrm.Controls.Tab & {
+        sections: detailsTabSections;
+      };
+      type generalTabControl = Xrm.Controls.Tab & {
+        sections: generalTabSections;
+      };
+      type notesandactivitiesTabControl = Xrm.Controls.Tab & {
+        sections: notesandactivitiesTabSections;
+      };
+      type tab_recordwallTabControl = Xrm.Controls.Tab & {
+        sections: tab_recordwallTabSections;
+      };
 
-      type tab_recordwallTabSections = Xrm.Collection.ItemCollection<Xrm.Controls.Section> & {
+      type administrationTabSections = Xrm.Collection.ItemCollection<Xrm.Controls.Section> & {
         /**
-         * Gets the \`tab_recordwall_section_1\` section.
+         * Gets the \`billing information\` section.
          *
          * @returns \`Xrm.Controls.Section\`.
          */
         get(
-          sectionname: \\"tab_recordwall_section_1\\"
-        ): tab_recordwall_section_1SectionControl;
+          sectionname: \\"billing information\\"
+        ): billinginformationSectionControl;
+        /**
+         * Gets the \`contact methods\` section.
+         *
+         * @returns \`Xrm.Controls.Section\`.
+         */
+        get(sectionname: \\"contact methods\\"): contactmethodsSectionControl;
+        /**
+         * Gets the \`internal information\` section.
+         *
+         * @returns \`Xrm.Controls.Section\`.
+         */
+        get(
+          sectionname: \\"internal information\\"
+        ): internalinformationSectionControl;
+      };
+      type conflictstabTabSections = Xrm.Collection.ItemCollection<Xrm.Controls.Section> & {
+        /**
+         * Gets the \`conflictssection\` section.
+         *
+         * @returns \`Xrm.Controls.Section\`.
+         */
+        get(sectionname: \\"conflictssection\\"): conflictssectionSectionControl;
+        /**
+         * Gets the \`marketing information\` section.
+         *
+         * @returns \`Xrm.Controls.Section\`.
+         */
+        get(
+          sectionname: \\"marketing information\\"
+        ): marketinginformationSectionControl;
+        /**
+         * Gets the \`service preferences\` section.
+         *
+         * @returns \`Xrm.Controls.Section\`.
+         */
+        get(
+          sectionname: \\"service preferences\\"
+        ): servicepreferencesSectionControl;
+      };
+      type detailsTabSections = Xrm.Collection.ItemCollection<Xrm.Controls.Section> & {
+        /**
+         * Gets the \`professional information\` section.
+         *
+         * @returns \`Xrm.Controls.Section\`.
+         */
+        get(
+          sectionname: \\"professional information\\"
+        ): professionalinformationSectionControl;
+        /**
+         * Gets the \`personal information\` section.
+         *
+         * @returns \`Xrm.Controls.Section\`.
+         */
+        get(
+          sectionname: \\"personal information\\"
+        ): personalinformationSectionControl;
       };
       type generalTabSections = Xrm.Collection.ItemCollection<Xrm.Controls.Section> & {
         /**
@@ -1684,24 +3611,6 @@ declare namespace Xrm {
          */
         get(sectionname: \\"description\\"): descriptionSectionControl;
       };
-      type detailsTabSections = Xrm.Collection.ItemCollection<Xrm.Controls.Section> & {
-        /**
-         * Gets the \`professional information\` section.
-         *
-         * @returns \`Xrm.Controls.Section\`.
-         */
-        get(
-          sectionname: \\"professional information\\"
-        ): professionalinformationSectionControl;
-        /**
-         * Gets the \`personal information\` section.
-         *
-         * @returns \`Xrm.Controls.Section\`.
-         */
-        get(
-          sectionname: \\"personal information\\"
-        ): personalinformationSectionControl;
-      };
       type notesandactivitiesTabSections = Xrm.Collection.ItemCollection<Xrm.Controls.Section> & {
         /**
          * Gets the \`activities\` section.
@@ -1716,57 +3625,40 @@ declare namespace Xrm {
          */
         get(sectionname: \\"notes\\"): notesSectionControl;
       };
-      type administrationTabSections = Xrm.Collection.ItemCollection<Xrm.Controls.Section> & {
+      type tab_recordwallTabSections = Xrm.Collection.ItemCollection<Xrm.Controls.Section> & {
         /**
-         * Gets the \`internal information\` section.
+         * Gets the \`tab_recordwall_section_1\` section.
          *
          * @returns \`Xrm.Controls.Section\`.
          */
         get(
-          sectionname: \\"internal information\\"
-        ): internalinformationSectionControl;
-        /**
-         * Gets the \`billing information\` section.
-         *
-         * @returns \`Xrm.Controls.Section\`.
-         */
-        get(
-          sectionname: \\"billing information\\"
-        ): billinginformationSectionControl;
-        /**
-         * Gets the \`contact methods\` section.
-         *
-         * @returns \`Xrm.Controls.Section\`.
-         */
-        get(sectionname: \\"contact methods\\"): contactmethodsSectionControl;
-      };
-      type conflictstabTabSections = Xrm.Collection.ItemCollection<Xrm.Controls.Section> & {
-        /**
-         * Gets the \`conflictssection\` section.
-         *
-         * @returns \`Xrm.Controls.Section\`.
-         */
-        get(sectionname: \\"conflictssection\\"): conflictssectionSectionControl;
-        /**
-         * Gets the \`marketing information\` section.
-         *
-         * @returns \`Xrm.Controls.Section\`.
-         */
-        get(
-          sectionname: \\"marketing information\\"
-        ): marketinginformationSectionControl;
-        /**
-         * Gets the \`service preferences\` section.
-         *
-         * @returns \`Xrm.Controls.Section\`.
-         */
-        get(
-          sectionname: \\"service preferences\\"
-        ): servicepreferencesSectionControl;
+          sectionname: \\"tab_recordwall_section_1\\"
+        ): tab_recordwall_section_1SectionControl;
       };
 
-      type tab_recordwall_section_1SectionControl = Xrm.Controls.Section & {
-        controls: tab_recordwall_section_1SectionControls;
+      type billinginformationSectionControl = Xrm.Controls.Section & {
+        controls: billinginformationSectionControls;
+      };
+      type contactmethodsSectionControl = Xrm.Controls.Section & {
+        controls: contactmethodsSectionControls;
+      };
+      type internalinformationSectionControl = Xrm.Controls.Section & {
+        controls: internalinformationSectionControls;
+      };
+      type conflictssectionSectionControl = Xrm.Controls.Section & {
+        controls: conflictssectionSectionControls;
+      };
+      type marketinginformationSectionControl = Xrm.Controls.Section & {
+        controls: marketinginformationSectionControls;
+      };
+      type servicepreferencesSectionControl = Xrm.Controls.Section & {
+        controls: servicepreferencesSectionControls;
+      };
+      type professionalinformationSectionControl = Xrm.Controls.Section & {
+        controls: professionalinformationSectionControls;
+      };
+      type personalinformationSectionControl = Xrm.Controls.Section & {
+        controls: personalinformationSectionControls;
       };
       type nameSectionControl = Xrm.Controls.Section & {
         controls: nameSectionControls;
@@ -1780,44 +3672,223 @@ declare namespace Xrm {
       type descriptionSectionControl = Xrm.Controls.Section & {
         controls: descriptionSectionControls;
       };
-      type professionalinformationSectionControl = Xrm.Controls.Section & {
-        controls: professionalinformationSectionControls;
-      };
-      type personalinformationSectionControl = Xrm.Controls.Section & {
-        controls: personalinformationSectionControls;
-      };
       type activitiesSectionControl = Xrm.Controls.Section & {
         controls: activitiesSectionControls;
       };
       type notesSectionControl = Xrm.Controls.Section & {
         controls: notesSectionControls;
       };
-      type internalinformationSectionControl = Xrm.Controls.Section & {
-        controls: internalinformationSectionControls;
-      };
-      type billinginformationSectionControl = Xrm.Controls.Section & {
-        controls: billinginformationSectionControls;
-      };
-      type contactmethodsSectionControl = Xrm.Controls.Section & {
-        controls: contactmethodsSectionControls;
-      };
-      type conflictssectionSectionControl = Xrm.Controls.Section & {
-        controls: conflictssectionSectionControls;
-      };
-      type marketinginformationSectionControl = Xrm.Controls.Section & {
-        controls: marketinginformationSectionControls;
-      };
-      type servicepreferencesSectionControl = Xrm.Controls.Section & {
-        controls: servicepreferencesSectionControls;
+      type tab_recordwall_section_1SectionControl = Xrm.Controls.Section & {
+        controls: tab_recordwall_section_1SectionControls;
       };
 
-      type tab_recordwall_section_1SectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+      type billinginformationSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
         /**
-         * Gets the \`WebResource_RecordWall\` control.
+         * Gets the \`paymenttermscode\` control.
          *
-         * @returns \`Xrm.Controls.IframeControl\`.
+         * @returns \`Xrm.Controls.OptionSetControl\`.
          */
-        get(controlname: \\"WebResource_RecordWall\\"): Xrm.Controls.IframeControl;
+        get(controlname: \\"paymenttermscode\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`transactioncurrencyid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        get(controlname: \\"transactioncurrencyid\\"): Xrm.Controls.LookupControl;
+        /**
+         * Gets the \`creditlimit\` control.
+         *
+         * @returns \`Xrm.Controls.NumberControl\`.
+         */
+        get(controlname: \\"creditlimit\\"): Xrm.Controls.NumberControl;
+        /**
+         * Gets the \`creditonhold\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(controlname: \\"creditonhold\\"): Xrm.Controls.OptionSetControl;
+      };
+      type contactmethodsSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+        /**
+         * Gets the \`preferredcontactmethodcode\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(
+          controlname: \\"preferredcontactmethodcode\\"
+        ): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`donotbulkemail\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(controlname: \\"donotbulkemail\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`donotemail\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(controlname: \\"donotemail\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`donotfax\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(controlname: \\"donotfax\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`donotphone\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(controlname: \\"donotphone\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`donotpostalmail\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(controlname: \\"donotpostalmail\\"): Xrm.Controls.OptionSetControl;
+      };
+      type internalinformationSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+        /**
+         * Gets the \`ownerid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        get(controlname: \\"ownerid\\"): Xrm.Controls.LookupControl;
+      };
+      type conflictssectionSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+        /**
+         * Gets the \`defaultpricelevelid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        get(controlname: \\"defaultpricelevelid\\"): Xrm.Controls.LookupControl;
+      };
+      type marketinginformationSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+        /**
+         * Gets the \`originatingleadid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        get(controlname: \\"originatingleadid\\"): Xrm.Controls.LookupControl;
+        /**
+         * Gets the \`lastusedincampaign\` control.
+         *
+         * @returns \`Xrm.Controls.DateControl\`.
+         */
+        get(controlname: \\"lastusedincampaign\\"): Xrm.Controls.DateControl;
+        /**
+         * Gets the \`donotsendmm\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(controlname: \\"donotsendmm\\"): Xrm.Controls.OptionSetControl;
+      };
+      type servicepreferencesSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+        /**
+         * Gets the \`preferredappointmentdaycode\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(
+          controlname: \\"preferredappointmentdaycode\\"
+        ): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`preferredequipmentid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        get(controlname: \\"preferredequipmentid\\"): Xrm.Controls.LookupControl;
+        /**
+         * Gets the \`preferredappointmenttimecode\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(
+          controlname: \\"preferredappointmenttimecode\\"
+        ): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`preferredsystemuserid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        get(controlname: \\"preferredsystemuserid\\"): Xrm.Controls.LookupControl;
+        /**
+         * Gets the \`preferredserviceid\` control.
+         *
+         * @returns \`Xrm.Controls.LookupControl\`.
+         */
+        get(controlname: \\"preferredserviceid\\"): Xrm.Controls.LookupControl;
+      };
+      type professionalinformationSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+        /**
+         * Gets the \`department\` control.
+         *
+         * @returns \`Xrm.Controls.StringControl\`.
+         */
+        get(controlname: \\"department\\"): Xrm.Controls.StringControl;
+        /**
+         * Gets the \`accountrolecode\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(controlname: \\"accountrolecode\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`managername\` control.
+         *
+         * @returns \`Xrm.Controls.StringControl\`.
+         */
+        get(controlname: \\"managername\\"): Xrm.Controls.StringControl;
+        /**
+         * Gets the \`assistantname\` control.
+         *
+         * @returns \`Xrm.Controls.StringControl\`.
+         */
+        get(controlname: \\"assistantname\\"): Xrm.Controls.StringControl;
+        /**
+         * Gets the \`managerphone\` control.
+         *
+         * @returns \`Xrm.Controls.StringControl\`.
+         */
+        get(controlname: \\"managerphone\\"): Xrm.Controls.StringControl;
+        /**
+         * Gets the \`assistantphone\` control.
+         *
+         * @returns \`Xrm.Controls.StringControl\`.
+         */
+        get(controlname: \\"assistantphone\\"): Xrm.Controls.StringControl;
+      };
+      type personalinformationSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+        /**
+         * Gets the \`gendercode\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(controlname: \\"gendercode\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`birthdate\` control.
+         *
+         * @returns \`Xrm.Controls.DateControl\`.
+         */
+        get(controlname: \\"birthdate\\"): Xrm.Controls.DateControl;
+        /**
+         * Gets the \`familystatuscode\` control.
+         *
+         * @returns \`Xrm.Controls.OptionSetControl\`.
+         */
+        get(controlname: \\"familystatuscode\\"): Xrm.Controls.OptionSetControl;
+        /**
+         * Gets the \`anniversary\` control.
+         *
+         * @returns \`Xrm.Controls.DateControl\`.
+         */
+        get(controlname: \\"anniversary\\"): Xrm.Controls.DateControl;
+        /**
+         * Gets the \`spousesname\` control.
+         *
+         * @returns \`Xrm.Controls.StringControl\`.
+         */
+        get(controlname: \\"spousesname\\"): Xrm.Controls.StringControl;
       };
       type nameSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
         /**
@@ -1979,76 +4050,6 @@ declare namespace Xrm {
          */
         get(controlname: \\"description\\"): Xrm.Controls.StringControl;
       };
-      type professionalinformationSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
-        /**
-         * Gets the \`department\` control.
-         *
-         * @returns \`Xrm.Controls.StringControl\`.
-         */
-        get(controlname: \\"department\\"): Xrm.Controls.StringControl;
-        /**
-         * Gets the \`accountrolecode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlname: \\"accountrolecode\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`managername\` control.
-         *
-         * @returns \`Xrm.Controls.StringControl\`.
-         */
-        get(controlname: \\"managername\\"): Xrm.Controls.StringControl;
-        /**
-         * Gets the \`assistantname\` control.
-         *
-         * @returns \`Xrm.Controls.StringControl\`.
-         */
-        get(controlname: \\"assistantname\\"): Xrm.Controls.StringControl;
-        /**
-         * Gets the \`managerphone\` control.
-         *
-         * @returns \`Xrm.Controls.StringControl\`.
-         */
-        get(controlname: \\"managerphone\\"): Xrm.Controls.StringControl;
-        /**
-         * Gets the \`assistantphone\` control.
-         *
-         * @returns \`Xrm.Controls.StringControl\`.
-         */
-        get(controlname: \\"assistantphone\\"): Xrm.Controls.StringControl;
-      };
-      type personalinformationSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
-        /**
-         * Gets the \`gendercode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlname: \\"gendercode\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`birthdate\` control.
-         *
-         * @returns \`Xrm.Controls.DateControl\`.
-         */
-        get(controlname: \\"birthdate\\"): Xrm.Controls.DateControl;
-        /**
-         * Gets the \`familystatuscode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlname: \\"familystatuscode\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`anniversary\` control.
-         *
-         * @returns \`Xrm.Controls.DateControl\`.
-         */
-        get(controlname: \\"anniversary\\"): Xrm.Controls.DateControl;
-        /**
-         * Gets the \`spousesname\` control.
-         *
-         * @returns \`Xrm.Controls.StringControl\`.
-         */
-        get(controlname: \\"spousesname\\"): Xrm.Controls.StringControl;
-      };
       type activitiesSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
         /**
          * Gets the \`contactactivitiesgrid\` control.
@@ -2065,143 +4066,13 @@ declare namespace Xrm {
          */
         get(controlname: \\"notescontrol\\"): Xrm.Controls.Control;
       };
-      type internalinformationSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
+      type tab_recordwall_section_1SectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
         /**
-         * Gets the \`ownerid\` control.
+         * Gets the \`WebResource_RecordWall\` control.
          *
-         * @returns \`Xrm.Controls.LookupControl\`.
+         * @returns \`Xrm.Controls.IframeControl\`.
          */
-        get(controlname: \\"ownerid\\"): Xrm.Controls.LookupControl;
-      };
-      type billinginformationSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
-        /**
-         * Gets the \`transactioncurrencyid\` control.
-         *
-         * @returns \`Xrm.Controls.LookupControl\`.
-         */
-        get(controlname: \\"transactioncurrencyid\\"): Xrm.Controls.LookupControl;
-        /**
-         * Gets the \`paymenttermscode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlname: \\"paymenttermscode\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`creditlimit\` control.
-         *
-         * @returns \`Xrm.Controls.NumberControl\`.
-         */
-        get(controlname: \\"creditlimit\\"): Xrm.Controls.NumberControl;
-        /**
-         * Gets the \`creditonhold\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlname: \\"creditonhold\\"): Xrm.Controls.OptionSetControl;
-      };
-      type contactmethodsSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
-        /**
-         * Gets the \`preferredcontactmethodcode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(
-          controlname: \\"preferredcontactmethodcode\\"
-        ): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`donotbulkemail\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlname: \\"donotbulkemail\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`donotemail\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlname: \\"donotemail\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`donotfax\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlname: \\"donotfax\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`donotphone\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlname: \\"donotphone\\"): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`donotpostalmail\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlname: \\"donotpostalmail\\"): Xrm.Controls.OptionSetControl;
-      };
-      type conflictssectionSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
-        /**
-         * Gets the \`defaultpricelevelid\` control.
-         *
-         * @returns \`Xrm.Controls.LookupControl\`.
-         */
-        get(controlname: \\"defaultpricelevelid\\"): Xrm.Controls.LookupControl;
-      };
-      type marketinginformationSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
-        /**
-         * Gets the \`originatingleadid\` control.
-         *
-         * @returns \`Xrm.Controls.LookupControl\`.
-         */
-        get(controlname: \\"originatingleadid\\"): Xrm.Controls.LookupControl;
-        /**
-         * Gets the \`lastusedincampaign\` control.
-         *
-         * @returns \`Xrm.Controls.DateControl\`.
-         */
-        get(controlname: \\"lastusedincampaign\\"): Xrm.Controls.DateControl;
-        /**
-         * Gets the \`donotsendmm\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(controlname: \\"donotsendmm\\"): Xrm.Controls.OptionSetControl;
-      };
-      type servicepreferencesSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
-        /**
-         * Gets the \`preferredappointmentdaycode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(
-          controlname: \\"preferredappointmentdaycode\\"
-        ): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`preferredequipmentid\` control.
-         *
-         * @returns \`Xrm.Controls.LookupControl\`.
-         */
-        get(controlname: \\"preferredequipmentid\\"): Xrm.Controls.LookupControl;
-        /**
-         * Gets the \`preferredappointmenttimecode\` control.
-         *
-         * @returns \`Xrm.Controls.OptionSetControl\`.
-         */
-        get(
-          controlname: \\"preferredappointmenttimecode\\"
-        ): Xrm.Controls.OptionSetControl;
-        /**
-         * Gets the \`preferredsystemuserid\` control.
-         *
-         * @returns \`Xrm.Controls.LookupControl\`.
-         */
-        get(controlname: \\"preferredsystemuserid\\"): Xrm.Controls.LookupControl;
-        /**
-         * Gets the \`preferredserviceid\` control.
-         *
-         * @returns \`Xrm.Controls.LookupControl\`.
-         */
-        get(controlname: \\"preferredserviceid\\"): Xrm.Controls.LookupControl;
+        get(controlname: \\"WebResource_RecordWall\\"): Xrm.Controls.IframeControl;
       };
     }
   }

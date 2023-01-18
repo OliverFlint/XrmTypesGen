@@ -1,14 +1,24 @@
+import { EntityMetadata } from 'types';
+
 export const getAttributeType = (
-  meta: any,
+  meta: EntityMetadata,
   name: string,
   classid: string | undefined,
-  fieldtype: 'attribute' | 'control',
+  fieldtype: 'attribute' | 'control' | 'formControl',
 ): string | undefined => {
-  const attributemeta = (meta.Attributes as []).find(
-    (value: any) => value.LogicalName === name,
-  ) as any;
+  if (meta.Attributes == null || meta.Attributes.find === undefined) {
+    console.log(meta);
+    throw new Error('Error');
+    // return undefined;
+  }
+  const attributemeta = meta.Attributes.find((value) => value.LogicalName === name);
   let returnvalue: string | undefined;
   if (attributemeta) {
+    if (fieldtype === 'formControl' && attributemeta.SchemaName) {
+      return attributemeta.SchemaName && attributemeta.SchemaName !== ' '
+        ? `"${attributemeta.SchemaName}"`
+        : undefined;
+    }
     switch (attributemeta.AttributeType) {
       case 'String':
       case 'Memo':
@@ -70,7 +80,7 @@ export const getAttributeType = (
         }
         break;
     }
-  } else if (fieldtype === 'control') {
+  } else if (fieldtype === 'control' || fieldtype === 'formControl') {
     switch (classid ? classid.toLowerCase() : '') {
       case 'e7a81278-8635-4d9e-8d4d-59480b391c5b':
         returnvalue = 'Xrm.Controls.GridControl';

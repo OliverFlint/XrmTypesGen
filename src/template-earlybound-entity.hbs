@@ -1,0 +1,33 @@
+// This file was generated with XrmTypesGen
+// GitHub: https://github.com/OliverFlint/XrmTypesGen
+
+declare namespace Xrm.Ext.Entities {
+    /**
+    * Entity/Table Name: `{{meta.SchemaName}}`
+    *    
+    */
+    interface {{toTypeName meta.SchemaName}} extends Xrm.EarlyBound.Entity {
+    {{#each meta.Attributes}}
+        {{this.SchemaName}}: {{getAttributeType ../meta this.LogicalName '' 'attribute'}}
+                          
+    {{/each}}
+    
+    };
+
+     {{#if localOptionSet}} 
+        namespace {{toTypeName meta.SchemaName}}.OptionSets {
+            {{#each localOptionSet}}
+
+                /**
+                * OptionSet Name: `{{this.LogicalName}}`
+                *    
+                */ 
+                const enum {{this.LogicalName}}  {
+                    {{#each this.OptionSet.Options}}    
+                        "{{this.Label.UserLocalizedLabel.Label}}"= {{this.Value}},                       
+                    {{/each}}
+                }
+            {{/each}}
+        }
+           {{/if}}    
+}

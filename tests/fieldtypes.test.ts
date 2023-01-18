@@ -1,4 +1,5 @@
 import getAttributeType from '../src/fieldtypes';
+import { AttributeMetadata, EntityMetadata } from '../src/types';
 
 /* eslint-disable no-undef */
 describe('filetype tests', () => {
@@ -8,13 +9,18 @@ describe('filetype tests', () => {
   describe('getAttributeType tests', () => {
     describe('Strings', () => {
       test('ControlForAttributeTypeString_ShouldReturnStringControl', () => {
-        const meta = {
+        const meta : EntityMetadata = {
           Attributes: [
             {
               AttributeType: 'String',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'control');
@@ -24,13 +30,18 @@ describe('filetype tests', () => {
       });
 
       test('AttributeForAttributeTypeString_ShouldReturnStringAttribute', () => {
-        const meta = {
+        const meta : EntityMetadata = {
           Attributes: [
             {
               AttributeType: 'String',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'attribute');
@@ -40,13 +51,18 @@ describe('filetype tests', () => {
       });
 
       test('ControlForAttributeTypeMemo_ShouldReturnStringControl', () => {
-        const meta = {
+        const meta: EntityMetadata = {
           Attributes: [
             {
               AttributeType: 'Memo',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'control');
@@ -61,8 +77,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Memo',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'attribute');
@@ -79,8 +100,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Lookup',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'control');
@@ -95,8 +121,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Lookup',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'attribute');
@@ -111,8 +142,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Customer',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'control');
@@ -127,8 +163,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Customer',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'attribute');
@@ -143,8 +184,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Owner',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'control');
@@ -159,8 +205,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Owner',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'attribute');
@@ -175,8 +226,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'PartyList',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'control');
@@ -191,8 +247,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'PartyList',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'attribute');
@@ -209,8 +270,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'DateTime',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'control');
@@ -225,8 +291,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'DateTime',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'attribute');
@@ -243,8 +314,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Money',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'control');
@@ -259,8 +335,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Money',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'attribute');
@@ -275,8 +356,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'BigInt',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'control');
@@ -291,8 +377,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'BigInt',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'attribute');
@@ -307,8 +398,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Decimal',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'control');
@@ -323,8 +419,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Decimal',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'attribute');
@@ -339,8 +440,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Double',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'control');
@@ -355,8 +461,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Double',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'attribute');
@@ -371,8 +482,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Integer',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'control');
@@ -387,8 +503,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Integer',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'attribute');
@@ -405,8 +526,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Boolean',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'control');
@@ -421,8 +547,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Boolean',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'attribute');
@@ -439,8 +570,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Picklist',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'control');
@@ -455,8 +591,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Picklist',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'attribute');
@@ -471,8 +612,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'State',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'control');
@@ -487,8 +633,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'State',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'attribute');
@@ -503,8 +654,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Status',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'control');
@@ -519,8 +675,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'Status',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'attribute');
@@ -537,8 +698,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'UnknownType',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'control');
@@ -553,8 +719,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'UnknownType',
               LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'attribute');
@@ -571,8 +742,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'UnknownType',
               LogicalName: 'unknownfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(
@@ -592,8 +768,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'UnknownType',
               LogicalName: 'unknownfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(
@@ -613,8 +794,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'UnknownType',
               LogicalName: 'unknownfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(
@@ -629,13 +815,18 @@ describe('filetype tests', () => {
       });
 
       test('ClassidShouldReturnIframeControl', () => {
-        const meta = {
+        const meta:EntityMetadata = {
           Attributes: [
             {
               AttributeType: 'UnknownType',
               LogicalName: 'unknownfield',
+              MetadataId: '',
+              SchemaName: 'UnknownField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(
@@ -655,8 +846,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'UnknownType',
               LogicalName: 'unknownfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(
@@ -676,8 +872,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'UnknownType',
               LogicalName: 'unknownfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(
@@ -699,8 +900,13 @@ describe('filetype tests', () => {
             {
               AttributeType: 'UnknownType',
               LogicalName: 'unknownfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
             },
           ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
         };
 
         const result = getAttributeType(meta, 'testfield', undefined, 'attribute');

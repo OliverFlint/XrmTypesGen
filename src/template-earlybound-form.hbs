@@ -1,0 +1,35 @@
+// This file was generated with XrmTypesGen
+// GitHub: https://github.com/OliverFlint/XrmTypesGen
+
+declare namespace Xrm.Ext.Forms.{{meta.SchemaName}}.{{formtype data.type}} {
+    /**
+    * Entity/Table Name: `{{meta.SchemaName}}`
+    *
+    * Form Type: `{{formtype data.type}}`
+    *
+    * Form Name: `{{toTypeName data.name}}`
+    */
+    interface {{toTypeName data.name}} extends Xrm.EarlyBound.Form<Ext.Entities.{{toTypeName meta.SchemaName}}> {
+       
+        {{#each (getFormControl formObj meta)}}
+             "{{getFieldName this}}": {{{getAttributeType ../meta (getFieldName this) this.ClassId 'formControl'}}}
+        {{/each}}
+       
+        ".Tabs": {
+        {{#each formObj.Tabs.$values}}
+            "{{Name}}": {
+           {{#each (sectionCollector this)}}
+           {{#if (hasControls this ../../meta)}}
+                "{{Name}}" :
+                       {{#each (cellsCollector this)}}
+                              {{#if (getFieldName this.Control)}}
+                                 | "{{getFieldName this.Control}}"
+                               {{/if}}
+                      {{/each}};
+              {{/if}}      
+            {{/each}}
+            }         
+        {{/each}}
+        }
+    };
+}

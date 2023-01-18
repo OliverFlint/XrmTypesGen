@@ -1,0 +1,179 @@
+[
+    {
+        "@odata.type": "#Microsoft.Dynamics.CRM.OptionSetMetadata",
+        "ParentOptionSetName": null,
+        "IsCustomOptionSet": true,
+        "IsGlobal": true,
+        "IsManaged": false,
+        "Name": "ani2001__choicestes",
+        "ExternalTypeName": "",
+        "OptionSetType": "Picklist",
+        "IntroducedVersion": "1.0.0.0",
+        "MetadataId": "8d12dddc-8523-ed11-b83d-000d3a2920ca",
+        "HasChanged": null,
+        "Options": [
+            {
+                "Value": 830520000,
+                "Color": null,
+                "IsManaged": false,
+                "ExternalValue": "",
+                "ParentValues": [],
+                "MetadataId": null,
+                "HasChanged": null,
+                "Label": {
+                    "LocalizedLabels": [
+                        {
+                            "Label": "Option A",
+                            "LanguageCode": 1033,
+                            "IsManaged": false,
+                            "MetadataId": "09923dfb-1a9f-4242-a1f1-777f8339f170",
+                            "HasChanged": null
+                        }
+                    ],
+                    "UserLocalizedLabel": {
+                        "Label": "Option A",
+                        "LanguageCode": 1033,
+                        "IsManaged": false,
+                        "MetadataId": "09923dfb-1a9f-4242-a1f1-777f8339f170",
+                        "HasChanged": null
+                    }
+                },
+                "Description": {
+                    "LocalizedLabels": [
+                        {
+                            "Label": "",
+                            "LanguageCode": 1033,
+                            "IsManaged": false,
+                            "MetadataId": "7579e628-90ea-4d1d-96a8-4c4ebab6f9ac",
+                            "HasChanged": null
+                        }
+                    ],
+                    "UserLocalizedLabel": {
+                        "Label": "",
+                        "LanguageCode": 1033,
+                        "IsManaged": false,
+                        "MetadataId": "7579e628-90ea-4d1d-96a8-4c4ebab6f9ac",
+                        "HasChanged": null
+                    }
+                }
+            },
+            {
+                "Value": 830520001,
+                "Color": null,
+                "IsManaged": false,
+                "ExternalValue": "",
+                "ParentValues": [],
+                "MetadataId": null,
+                "HasChanged": null,
+                "Label": {
+                    "LocalizedLabels": [
+                        {
+                            "Label": "Option B",
+                            "LanguageCode": 1033,
+                            "IsManaged": false,
+                            "MetadataId": "dfde7a5e-83bb-444b-b08f-d1e09e3bf422",
+                            "HasChanged": null
+                        }
+                    ],
+                    "UserLocalizedLabel": {
+                        "Label": "Option B",
+                        "LanguageCode": 1033,
+                        "IsManaged": false,
+                        "MetadataId": "dfde7a5e-83bb-444b-b08f-d1e09e3bf422",
+                        "HasChanged": null
+                    }
+                },
+                "Description": {
+                    "LocalizedLabels": [
+                        {
+                            "Label": "",
+                            "LanguageCode": 1033,
+                            "IsManaged": false,
+                            "MetadataId": "9ddce550-9bff-4c26-80b4-ee03ddf1d9d9",
+                            "HasChanged": null
+                        }
+                    ],
+                    "UserLocalizedLabel": {
+                        "Label": "",
+                        "LanguageCode": 1033,
+                        "IsManaged": false,
+                        "MetadataId": "9ddce550-9bff-4c26-80b4-ee03ddf1d9d9",
+                        "HasChanged": null
+                    }
+                }
+            },
+            {
+                "Value": 830520002,
+                "Color": null,
+                "IsManaged": false,
+                "ExternalValue": "",
+                "ParentValues": [],
+                "MetadataId": null,
+                "HasChanged": null,
+                "Label": {
+                    "LocalizedLabels": [
+                        {
+                            "Label": "Option C",
+                            "LanguageCode": 1033,
+                            "IsManaged": false,
+                            "MetadataId": "82563baa-8d55-4d33-a68a-aec1980a1894",
+                            "HasChanged": null
+                        }
+                    ],
+                    "UserLocalizedLabel": {
+                        "Label": "Option C",
+                        "LanguageCode": 1033,
+                        "IsManaged": false,
+                        "MetadataId": "82563baa-8d55-4d33-a68a-aec1980a1894",
+                        "HasChanged": null
+                    }
+                },
+                "Description": {
+                    "LocalizedLabels": [
+                        {
+                            "Label": "",
+                            "LanguageCode": 1033,
+                            "IsManaged": false,
+                            "MetadataId": "e99a803b-bbe7-4e39-b487-14f1a0e70325",
+                            "HasChanged": null
+                        }
+                    ],
+                    "UserLocalizedLabel": {
+                        "Label": "",
+                        "LanguageCode": 1033,
+                        "IsManaged": false,
+                        "MetadataId": "e99a803b-bbe7-4e39-b487-14f1a0e70325",
+                        "HasChanged": null
+                    }
+                }
+            }
+        ],
+        "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+        },
+        "DisplayName": {
+            "LocalizedLabels": [
+                {
+                    "Label": "ChoicesTes",
+                    "LanguageCode": 1033,
+                    "IsManaged": false,
+                    "MetadataId": "8e12dddc-8523-ed11-b83d-000d3a2920ca",
+                    "HasChanged": null
+                }
+            ],
+            "UserLocalizedLabel": {
+                "Label": "ChoicesTes",
+                "LanguageCode": 1033,
+                "IsManaged": false,
+                "MetadataId": "8e12dddc-8523-ed11-b83d-000d3a2920ca",
+                "HasChanged": null
+            }
+        },
+        "IsCustomizable": {
+            "Value": true,
+            "CanBeChanged": true,
+            "ManagedPropertyLogicalName": "iscustomizable"
+        }
+    }
+]

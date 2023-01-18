@@ -9,6 +9,9 @@ import {
   getForms,
   getFormsBySolution,
   getFormsForEntities,
+  getChoicesBySolution,
+  getChoicesByEnvironment,
+  getLocalChoices,
 } from '../src/queries';
 
 let localStorage: LocalStorage;
@@ -63,12 +66,47 @@ describe('queries tests', () => {
       sinon.stub(nodefetch, 'default').resolves(new nodefetch.Response('{}', { statusText: 'OK' }));
       const result = await getAttributeMeta('new_entity', {} as TokenResponse, 'https://localhost');
       expect(result).toBeTruthy();
-      expect(result.name).not.toBe('FetchError');
       expect(result).toStrictEqual({});
       const cacheString = localStorage.getItem('attributeMetaData_new_entity') as string;
       expect(cacheString).toBeTruthy();
       const cacheObj = JSON.parse(cacheString);
       expect(cacheObj).toStrictEqual({});
+    });
+    test('getChoicesBySolution', async () => {
+      sinon
+        .stub(nodefetch, 'default')
+        .onFirstCall()
+        .resolves(new nodefetch.Response('{"value": []}', { statusText: 'OK' }))
+        .onSecondCall()
+        .resolves(new nodefetch.Response('{"value": []}', { statusText: 'OK' }));
+      const result = await getChoicesBySolution(
+        {} as TokenResponse,
+        'https://localhost',
+        'solution',
+      );
+      expect(result).toBeTruthy();
+      expect(result.name).not.toBe('FetchError');
+      expect(result).toStrictEqual([]);
+    });
+    test('getChoicesByEnvironment', async () => {
+      sinon.stub(nodefetch, 'default').resolves(new nodefetch.Response('{"value": []}', { statusText: 'OK' }));
+      const result = await getChoicesByEnvironment(
+        {} as TokenResponse,
+        'https://localhost',
+      );
+      expect(result).toBeTruthy();
+      expect(result.name).not.toBe('FetchError');
+      expect(result).toStrictEqual([]);
+    });
+    test('getLocalChoices', async () => {
+      sinon.stub(nodefetch, 'default').resolves(new nodefetch.Response('{"value": []}', { statusText: 'OK' }));
+      const result = await getLocalChoices(
+        'contact,account',
+        {} as TokenResponse,
+        'https://localhost',
+      );
+      expect(result).toBeTruthy();
+      expect(result).toStrictEqual([]);
     });
   });
 
