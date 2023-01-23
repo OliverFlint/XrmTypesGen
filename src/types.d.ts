@@ -13,7 +13,6 @@ export interface ProgramOptions extends OptionValues {
   choices: boolean;
   globalChoices: boolean;
   localStorage: boolean;
-  localStorageLocation: string;
   localChoices: boolean;
 }
 

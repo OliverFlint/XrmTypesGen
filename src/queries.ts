@@ -159,7 +159,7 @@ export const getAttributeMeta = async (entity: string, authToken: TokenResponse,
     console.log(`getting attribute metadata for the ${entity} entity`);
     const response = await autoRetryFetch(
       `${url}/api/data/v9.2/EntityDefinitions(LogicalName='${entity}')?` +
-        '$select=LogicalName,SchemaName&$expand=Attributes($select=LogicalName,SchemaName,AttributeType,AttributeTypeName)',
+        '$select=LogicalName,SchemaName&$expand=Attributes($select=LogicalName,SchemaName,AttributeType)',
       {
         headers: initHeader(authToken.accessToken),
         method: 'GET',
@@ -169,7 +169,8 @@ export const getAttributeMeta = async (entity: string, authToken: TokenResponse,
     attributeMetaDataCache.set(entity, json);
     return json as EntityMetadata;
   } catch (err) {
-    console.error(`Fetch Error: ${err}`);
+    console.log(err);
+    console.log(`Fetch Error: ${err}`);
     return err as EntityMetadata;
   }
 };
