@@ -57,7 +57,6 @@ export const render = (
       );
     });
   });
-  console.log(meta);
   registerHelper('getFormControl', (formdata: FormObject.Form, formmeta) => {
     const controls: FormObject.Control[] = [];
 
@@ -96,8 +95,6 @@ export const render = (
       });
     });
     sections.sort((a, b) => a.Name?.localeCompare(b.Name));
-    console.log(formdata.Name);
-    console.log(formdata.Columns);
     return sections;
   });
   registerHelper('cellsCollector', (formdata: FormObject.Section) => {
