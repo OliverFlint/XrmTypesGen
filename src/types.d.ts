@@ -58,7 +58,7 @@ export interface LocalOptionSet {
 export interface AttributeMetadata {
   '@odata.type'?: string;
   AttributeType: string;
-  AttributeTypeName: {
+  AttributeTypeName?: {
     Value: string;
   };
   LogicalName: string;

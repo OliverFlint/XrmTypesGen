@@ -691,6 +691,56 @@ describe('filetype tests', () => {
       });
     });
 
+    describe('MultiSelectOptionSet',()=>{
+      test('ControlForAttributeTypeMultiSelectPicklist_ShouldReturnOptionSetControl', () => {
+        const meta = {
+          Attributes: [
+            {
+              AttributeType: 'Virtual',
+              LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
+              AttributeTypeName: {
+                Value: 'MultiSelectPicklistType'
+              }
+            },
+          ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
+        };
+
+        const result = getAttributeType(meta, 'testfield', undefined, 'control');
+
+        expect(result).toBeTruthy();
+        expect(result).toBe('Xrm.Controls.MultiSelectOptionSetControl');
+      });
+
+      test('AttributeForAttributeTypeMultiSelectPicklist_ShouldReturnOptionSetAttribute', () => {
+        const meta = {
+          Attributes: [
+            {
+              AttributeType: 'Virtual',
+              LogicalName: 'testfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
+              AttributeTypeName: {
+                Value: 'MultiSelectPicklistType'
+              }
+            },
+          ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
+        };
+
+        const result = getAttributeType(meta, 'testfield', undefined, 'attribute');
+
+        expect(result).toBeTruthy();
+        expect(result).toBe('Xrm.Attributes.MultiSelectOptionSetAttribute');
+      });
+    })
+
     describe('defaults', () => {
       test('ControlForAttributeTypeUnknown_ShouldReturnStandardControl', () => {
         const meta = {
@@ -864,6 +914,32 @@ describe('filetype tests', () => {
 
         expect(result).toBeTruthy();
         expect(result).toBe('Xrm.Controls.IframeControl');
+      });
+
+      test('ClassidShouldReturnIframeControl', () => {
+        const meta = {
+          Attributes: [
+            {
+              AttributeType: 'UnknownType',
+              LogicalName: 'unknownfield',
+              MetadataId: '',
+              SchemaName: 'TestField',
+            },
+          ],
+          LogicalName: 'unknown',
+          MetadataId: '',
+          SchemaName: 'Unknown',
+        };
+
+        const result = getAttributeType(
+          meta,
+          'testfield',
+          '06375649-c143-495e-a496-c962e5b4488e',
+          'control',
+        );
+
+        expect(result).toBeTruthy();
+        expect(result).toBe('Xrm.Controls.TimelineWall');
       });
 
       test('ClassidUnknownShouldReturnConrolSufixedWithClassidComment', () => {
