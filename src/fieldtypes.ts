@@ -7,6 +7,7 @@ export const getAttributeType = (
   fieldtype: 'attribute' | 'control' | 'formControl',
 ): string | undefined => {
   if (meta.Attributes == null || meta.Attributes.find === undefined) {
+    console.log(meta);
     throw new Error('Error');
     // return undefined;
   }
@@ -18,7 +19,6 @@ export const getAttributeType = (
         ? `"${attributemeta.SchemaName}"`
         : undefined;
     }
-
     switch (attributemeta.AttributeType) {
       case 'String':
       case 'Memo':
@@ -72,15 +72,6 @@ export const getAttributeType = (
           returnvalue = 'Xrm.Attributes.OptionSetAttribute';
         }
         break;
-      case 'Virtual':
-        if (attributemeta.AttributeTypeName?.Value === 'MultiSelectPicklistType') {
-          if (fieldtype === 'control') {
-            returnvalue = 'Xrm.Controls.MultiSelectOptionSetControl';
-          } else {
-            returnvalue = 'Xrm.Attributes.MultiSelectOptionSetAttribute';
-          }
-          break;
-        }
       default:
         if (fieldtype === 'control') {
           returnvalue = 'Xrm.Controls.StandardControl';
@@ -103,9 +94,6 @@ export const getAttributeType = (
       case '9fdf5f91-88b1-47f4-ad53-c11efc01a01d':
       case '587cdf98-c1d5-4bde-8473-14a0bc7644a7':
         returnvalue = 'Xrm.Controls.IframeControl';
-        break;
-      case '06375649-c143-495e-a496-c962e5b4488e':
-        returnvalue = 'Xrm.Controls.TimelineWall';
         break;
       default:
         returnvalue = 'Xrm.Controls.Control';
