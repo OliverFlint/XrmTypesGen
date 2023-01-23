@@ -21,12 +21,12 @@
     "node": "^12.0.0"
   },
   "scripts": {
-    "test": "node_modules/.bin/jest --coverage --maxWorkers=4",
-    "build": "node_modules/.bin/tsc && npm run template",
-    "template": "node_modules/.bin/copyfiles ./src/**/*.hbs ./dist/ --up 1",
-    "lint": "node_modules/.bin/eslint src/**/*",
-    "format": "node_modules/.bin/prettier src/**/*.ts --write",
-    "format:tests": "node_modules/.bin/prettier tests/**/*.ts --write"
+    "test": "npx jest --coverage --maxWorkers=4",
+    "build": "npx tsc && npm run template",
+    "template": "npx copyfiles ./src/**/*.hbs ./dist/ --up 1",
+    "lint": "npx eslint src/**/*",
+    "format": "npx prettier src/**/*.ts --write",
+    "format:tests": "npx prettier tests/**/*.ts --write"
   },
   "repository": {
     "type": "git",

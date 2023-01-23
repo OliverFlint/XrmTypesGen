@@ -1432,7 +1432,7 @@ declare namespace Xrm.Ext.Forms.Contact.main {
     managerphone: \\"ManagerPhone\\";
     middlename: \\"MiddleName\\";
     mobilephone: \\"MobilePhone\\";
-    notescontrol: Xrm.Controls.TimelineWall;
+    notescontrol: Xrm.Controls.Control;
     originatingleadid: \\"OriginatingLeadId\\";
     ownerid: \\"OwnerId\\";
     parentcustomerid: \\"ParentCustomerId\\";
@@ -2419,9 +2419,9 @@ declare namespace Xrm {
         /**
          * Gets the \`notescontrol\` control.
          *
-         * @returns \`Xrm.Controls.TimelineWall\`.
+         * @returns \`Xrm.Controls.Control\`.
          */
-        getControl(controlName: \\"notescontrol\\"): Xrm.Controls.TimelineWall;
+        getControl(controlName: \\"notescontrol\\"): Xrm.Controls.Control;
         /**
          * Gets the \`WebResource_RecordWall\` control.
          *
@@ -2790,9 +2790,9 @@ declare namespace Xrm {
         /**
          * Gets the \`notescontrol\` control.
          *
-         * @returns \`Xrm.Controls.TimelineWall\`.
+         * @returns \`Xrm.Controls.Control\`.
          */
-        get(controlName: \\"notescontrol\\"): Xrm.Controls.TimelineWall;
+        get(controlName: \\"notescontrol\\"): Xrm.Controls.Control;
         /**
          * Gets the \`WebResource_RecordWall\` control.
          *
@@ -3780,9 +3780,9 @@ declare namespace Xrm {
         /**
          * Gets the \`notescontrol\` control.
          *
-         * @returns \`Xrm.Controls.TimelineWall\`.
+         * @returns \`Xrm.Controls.Control\`.
          */
-        get(controlname: \\"notescontrol\\"): Xrm.Controls.TimelineWall;
+        get(controlname: \\"notescontrol\\"): Xrm.Controls.Control;
       };
       type tab_recordwall_section_1SectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
         /**
