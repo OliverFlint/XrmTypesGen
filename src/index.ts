@@ -18,8 +18,6 @@ import { render } from './renderer';
 import { renderOptionSet } from './renderer-optionSet';
 import { EntityMetadata, Form, LocalOptionSet, OptionSet, ProgramOptions } from './types';
 
-const mylocalStorage: LocalStorage = new LocalStorage('./scratch');
-
 program.version(require('../package.json').version).name('xrmtypesgen');
 
 program
@@ -39,7 +37,8 @@ program
   .option('-ch, --choices', 'Generate Choices format', false)
   .option('-gch, --globalChoices', 'Generate Global Choices', false)
   .option('-ls, --localStorage', 'Do not clear Local Storage', false)
-  .option('_lch, --localChoices', 'Generate Local Choices of Entities', false);
+  .option('-lsl, --localStorageLocation', 'Custom location for local storage files')
+  .option('-lch, --localChoices', 'Generate Local Choices of Entities', false);
 program.addHelpText(
   'afterAll',
   `
@@ -55,6 +54,8 @@ program.parse();
 const options = program.opts() as ProgramOptions;
 
 const Main = async (authToken: TokenResponse) => {
+  const mylocalStorage: LocalStorage = new LocalStorage(options.localStorageLocation || './scratch');
+
   if (!options.localStorage) {
     mylocalStorage.clear();
   }
@@ -91,10 +92,8 @@ const Main = async (authToken: TokenResponse) => {
       ? // eslint-disable-next-line no-await-in-loop
         await getLocalChoices(value, authToken, options.url)
       : undefined;
-    console.log(value);
   }
 
-  console.log(options);
   if (options.choices) {
     let optionsets: OptionSet[];
 

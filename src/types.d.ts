@@ -13,6 +13,7 @@ export interface ProgramOptions extends OptionValues {
   choices: boolean;
   globalChoices: boolean;
   localStorage: boolean;
+  localStorageLocation: string;
   localChoices: boolean;
 }
 
@@ -57,6 +58,9 @@ export interface LocalOptionSet {
 export interface AttributeMetadata {
   '@odata.type'?: string;
   AttributeType: string;
+  AttributeTypeName: {
+    Value: string;
+  };
   LogicalName: string;
   MetadataId: string;
   SchemaName: string;
