@@ -12,7 +12,18 @@ export const render = (
 ): string => {
   const templateBuffer = readFileSync(`${__dirname}/${templateName}.hbs`);
   const template = compile(templateBuffer.toString());
-  const getFieldName = (value: any) => (value.DataFieldName ? value.DataFieldName : value.Id);
+  const getFieldName = (value: FormObject.Control) => {
+    if (value.DataFieldName)
+      return value.DataFieldName;
+    if (value.ClassId && value.ClassId.toLowerCase() !== '06375649-c143-495e-a496-c962e5b4488e') {
+      return value.Id;
+    }
+
+    if (value.Parameters && value.Parameters.$values.some(parameter => parameter.Name === 'UClientUniqueName')) {
+      return value.Parameters.$values.find(parameter => parameter.Name === 'UClientUniqueName')?.Value;
+    }
+    return "Timeline"
+  };
   registerHelper('formtype', (value) => (value === 2 ? 'main' : 'quickcreate'));
   // eslint-disable-next-line no-confusing-arrow
   registerHelper(
@@ -83,7 +94,7 @@ export const render = (
         });
       });
     });
-    controls.sort((a, b) => getFieldName(a).localeCompare(getFieldName(b)));
+    controls.sort((a, b) => getFieldName(a)?.localeCompare(getFieldName(b) || '') || 0);
     return controls;
   });
   registerHelper('sectionCollector', (formdata: FormObject.Tab) => {
@@ -106,7 +117,7 @@ export const render = (
         }
       });
     });
-    cells.sort((a, b) => getFieldName(a.Control).localeCompare(getFieldName(b.Control)));
+    cells.sort((a, b) => getFieldName(a.Control)?.localeCompare(getFieldName(b.Control) || '') || 0);
     return cells;
   });
   const formObj: FormObject.Form = data.formjson ? JSON.parse(data.formjson) : null;

@@ -113,5 +113,12 @@ namespace FormObject {
     DataFieldName: string;
     Id: string;
     ClassId: string;
+    Parameters?: {
+      $values:
+      {
+        Name: string,
+        Value: string,
+      }[]
+    },
   }
 }
