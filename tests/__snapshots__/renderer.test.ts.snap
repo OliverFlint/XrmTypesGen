@@ -1378,6 +1378,39 @@ declare namespace Xrm.Ext.Entities {
 "
 `;
 
+exports[`renderer tests render tests should return valid type declaration for Early-Bound form with Timeline control 1`] = `
+"// This file was generated with XrmTypesGen
+// GitHub: https://github.com/OliverFlint/XrmTypesGen
+
+declare namespace Xrm.Ext.Forms.albxm_MultiSwitchTest.main {
+  /**
+   * Entity/Table Name: \`albxm_MultiSwitchTest\`
+   *
+   * Form Type: \`main\`
+   *
+   * Form Name: \`Information\`
+   */
+  interface Information
+    extends Xrm.EarlyBound.Form<Ext.Entities.albxm_MultiSwitchTest> {
+    albxm_coloredoption: \\"albxm_ColoredOption\\";
+    albxm_name: \\"albxm_Name\\";
+    Timeline: Xrm.Controls.TimelineWall;
+    Timeline_Again: Xrm.Controls.TimelineWall;
+
+    \\".Tabs\\": {
+      \\"\\": {
+        \\"\\":
+          | \\"albxm_coloredoption\\"
+          | \\"albxm_name\\"
+          | \\"Timeline\\"
+          | \\"Timeline_Again\\";
+      };
+    };
+  }
+}
+"
+`;
+
 exports[`renderer tests render tests should return valid type declaration for Early-Bound main form 1`] = `
 "// This file was generated with XrmTypesGen
 // GitHub: https://github.com/OliverFlint/XrmTypesGen
@@ -1432,7 +1465,6 @@ declare namespace Xrm.Ext.Forms.Contact.main {
     managerphone: \\"ManagerPhone\\";
     middlename: \\"MiddleName\\";
     mobilephone: \\"MobilePhone\\";
-    notescontrol: Xrm.Controls.TimelineWall;
     originatingleadid: \\"OriginatingLeadId\\";
     ownerid: \\"OwnerId\\";
     parentcustomerid: \\"ParentCustomerId\\";
@@ -1447,6 +1479,7 @@ declare namespace Xrm.Ext.Forms.Contact.main {
     spousesname: \\"SpousesName\\";
     telephone1: \\"Telephone1\\";
     telephone2: \\"Telephone2\\";
+    Timeline: Xrm.Controls.TimelineWall;
     transactioncurrencyid: \\"TransactionCurrencyId\\";
     WebResource_RecordWall: Xrm.Controls.IframeControl;
 
@@ -1525,7 +1558,7 @@ declare namespace Xrm.Ext.Forms.Contact.main {
       };
       \\"notes and activities\\": {
         activities: \\"contactactivitiesgrid\\";
-        notes: \\"notescontrol\\";
+        notes: \\"Timeline\\";
       };
       tab_recordwall: {
         tab_recordwall_section_1: \\"WebResource_RecordWall\\";
@@ -2417,11 +2450,11 @@ declare namespace Xrm {
           controlName: \\"contactactivitiesgrid\\"
         ): Xrm.Controls.GridControl;
         /**
-         * Gets the \`notescontrol\` control.
+         * Gets the \`Timeline\` control.
          *
          * @returns \`Xrm.Controls.TimelineWall\`.
          */
-        getControl(controlName: \\"notescontrol\\"): Xrm.Controls.TimelineWall;
+        getControl(controlName: \\"Timeline\\"): Xrm.Controls.TimelineWall;
         /**
          * Gets the \`WebResource_RecordWall\` control.
          *
@@ -2788,11 +2821,11 @@ declare namespace Xrm {
          */
         get(controlName: \\"contactactivitiesgrid\\"): Xrm.Controls.GridControl;
         /**
-         * Gets the \`notescontrol\` control.
+         * Gets the \`Timeline\` control.
          *
          * @returns \`Xrm.Controls.TimelineWall\`.
          */
-        get(controlName: \\"notescontrol\\"): Xrm.Controls.TimelineWall;
+        get(controlName: \\"Timeline\\"): Xrm.Controls.TimelineWall;
         /**
          * Gets the \`WebResource_RecordWall\` control.
          *
@@ -3778,11 +3811,11 @@ declare namespace Xrm {
       };
       type notesSectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
         /**
-         * Gets the \`notescontrol\` control.
+         * Gets the \`Timeline\` control.
          *
          * @returns \`Xrm.Controls.TimelineWall\`.
          */
-        get(controlname: \\"notescontrol\\"): Xrm.Controls.TimelineWall;
+        get(controlname: \\"Timeline\\"): Xrm.Controls.TimelineWall;
       };
       type tab_recordwall_section_1SectionControls = Xrm.Collection.ItemCollection<Xrm.Controls.Control> & {
         /**

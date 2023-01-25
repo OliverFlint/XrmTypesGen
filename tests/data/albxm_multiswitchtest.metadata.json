@@ -1,0 +1,313 @@
+{
+    "@odata.context": "https://orgc2e04740.crm4.dynamics.com/api/data/v9.2/$metadata#EntityDefinitions(LogicalName,SchemaName,Attributes(LogicalName,SchemaName,AttributeType,AttributeTypeName))/$entity",
+    "LogicalName": "albxm_multiswitchtest",
+    "SchemaName": "albxm_MultiSwitchTest",
+    "MetadataId": "678d1550-5a2d-ed11-9db1-000d3a263527",
+    "Attributes": [
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.StringAttributeMetadata",
+            "LogicalName": "createdonbehalfbyyominame",
+            "SchemaName": "CreatedOnBehalfByYomiName",
+            "AttributeType": "String",
+            "MetadataId": "8846f66c-e2d9-4400-a4ef-b0751ddb24ed",
+            "AttributeTypeName": {
+                "Value": "StringType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+            "LogicalName": "modifiedonbehalfby",
+            "SchemaName": "ModifiedOnBehalfBy",
+            "AttributeType": "Lookup",
+            "MetadataId": "a4568c6c-939d-457c-9278-9567ceae542f",
+            "AttributeTypeName": {
+                "Value": "LookupType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.StateAttributeMetadata",
+            "LogicalName": "statecode",
+            "SchemaName": "statecode",
+            "AttributeType": "State",
+            "MetadataId": "4c113804-8c96-4dd2-bc7b-5426293ec977",
+            "AttributeTypeName": {
+                "Value": "StateType"
+            }
+        },
+        {
+            "LogicalName": "statecodename",
+            "SchemaName": "statecodeName",
+            "AttributeType": "Virtual",
+            "MetadataId": "1b9736ed-d965-407f-aeb9-19e37674a8bc",
+            "AttributeTypeName": {
+                "Value": "VirtualType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+            "LogicalName": "createdonbehalfby",
+            "SchemaName": "CreatedOnBehalfBy",
+            "AttributeType": "Lookup",
+            "MetadataId": "72436b22-9559-4f79-a8c4-ed1bfc836a20",
+            "AttributeTypeName": {
+                "Value": "LookupType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata",
+            "LogicalName": "albxm_coloredoption",
+            "SchemaName": "albxm_ColoredOption",
+            "AttributeType": "Virtual",
+            "MetadataId": "009f8948-1f5c-ed11-9562-6045bd905203",
+            "AttributeTypeName": {
+                "Value": "MultiSelectPicklistType"
+            }
+        },
+        {
+            "LogicalName": "albxm_multiswitchtestid",
+            "SchemaName": "albxm_MultiSwitchTestId",
+            "AttributeType": "Uniqueidentifier",
+            "MetadataId": "7129f4e9-51df-4d91-a64d-42d2bb9b479d",
+            "AttributeTypeName": {
+                "Value": "UniqueidentifierType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.IntegerAttributeMetadata",
+            "LogicalName": "importsequencenumber",
+            "SchemaName": "ImportSequenceNumber",
+            "AttributeType": "Integer",
+            "MetadataId": "1a8de8b1-17a5-43f7-a066-3226b48b7fdb",
+            "AttributeTypeName": {
+                "Value": "IntegerType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.StringAttributeMetadata",
+            "LogicalName": "organizationidname",
+            "SchemaName": "OrganizationIdName",
+            "AttributeType": "String",
+            "MetadataId": "2adcd8bc-9319-4279-8344-aec3c3346b57",
+            "AttributeTypeName": {
+                "Value": "StringType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.StringAttributeMetadata",
+            "LogicalName": "modifiedbyyominame",
+            "SchemaName": "ModifiedByYomiName",
+            "AttributeType": "String",
+            "MetadataId": "b1b38b27-797d-4b85-b726-85b45bd9814f",
+            "AttributeTypeName": {
+                "Value": "StringType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.IntegerAttributeMetadata",
+            "LogicalName": "utcconversiontimezonecode",
+            "SchemaName": "UTCConversionTimeZoneCode",
+            "AttributeType": "Integer",
+            "MetadataId": "13ce2408-28a7-48eb-acb6-f4550f9e3669",
+            "AttributeTypeName": {
+                "Value": "IntegerType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.StringAttributeMetadata",
+            "LogicalName": "createdbyyominame",
+            "SchemaName": "CreatedByYomiName",
+            "AttributeType": "String",
+            "MetadataId": "7539d0e2-1a19-4e60-a002-eff00b7108f7",
+            "AttributeTypeName": {
+                "Value": "StringType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.StringAttributeMetadata",
+            "LogicalName": "modifiedbyname",
+            "SchemaName": "ModifiedByName",
+            "AttributeType": "String",
+            "MetadataId": "eae142e4-6356-49ec-ae0d-ebc524f84a32",
+            "AttributeTypeName": {
+                "Value": "StringType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.BigIntAttributeMetadata",
+            "LogicalName": "versionnumber",
+            "SchemaName": "VersionNumber",
+            "AttributeType": "BigInt",
+            "MetadataId": "4dfd3f88-0ed9-436a-aca4-6d877c0879ef",
+            "AttributeTypeName": {
+                "Value": "BigIntType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+            "LogicalName": "modifiedby",
+            "SchemaName": "ModifiedBy",
+            "AttributeType": "Lookup",
+            "MetadataId": "80fc4026-b28f-43c1-8880-80a094f6bdcd",
+            "AttributeTypeName": {
+                "Value": "LookupType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+            "LogicalName": "createdby",
+            "SchemaName": "CreatedBy",
+            "AttributeType": "Lookup",
+            "MetadataId": "1a48da15-4dbd-45fe-a715-16686ffbcb38",
+            "AttributeTypeName": {
+                "Value": "LookupType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.IntegerAttributeMetadata",
+            "LogicalName": "timezoneruleversionnumber",
+            "SchemaName": "TimeZoneRuleVersionNumber",
+            "AttributeType": "Integer",
+            "MetadataId": "53407800-ab8a-4a90-a810-15facd80b832",
+            "AttributeTypeName": {
+                "Value": "IntegerType"
+            }
+        },
+        {
+            "LogicalName": "statuscodename",
+            "SchemaName": "statuscodeName",
+            "AttributeType": "Virtual",
+            "MetadataId": "e1db524f-2ec7-4f06-ad05-c4ae23ee5f4c",
+            "AttributeTypeName": {
+                "Value": "VirtualType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata",
+            "LogicalName": "albxm_manyoptions",
+            "SchemaName": "albxm_ManyOptions",
+            "AttributeType": "Virtual",
+            "MetadataId": "bcacb808-1f5c-ed11-9562-6045bd905203",
+            "AttributeTypeName": {
+                "Value": "MultiSelectPicklistType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.DateTimeAttributeMetadata",
+            "LogicalName": "modifiedon",
+            "SchemaName": "ModifiedOn",
+            "AttributeType": "DateTime",
+            "MetadataId": "b7673339-adbe-4b87-9c18-efc5f3f4ab9c",
+            "AttributeTypeName": {
+                "Value": "DateTimeType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.StringAttributeMetadata",
+            "LogicalName": "albxm_name",
+            "SchemaName": "albxm_Name",
+            "AttributeType": "String",
+            "MetadataId": "688d1550-5a2d-ed11-9db1-000d3a263527",
+            "AttributeTypeName": {
+                "Value": "StringType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.StringAttributeMetadata",
+            "LogicalName": "modifiedonbehalfbyyominame",
+            "SchemaName": "ModifiedOnBehalfByYomiName",
+            "AttributeType": "String",
+            "MetadataId": "fb653959-b430-47e3-9f7b-abb5ce9188ef",
+            "AttributeTypeName": {
+                "Value": "StringType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.StatusAttributeMetadata",
+            "LogicalName": "statuscode",
+            "SchemaName": "statuscode",
+            "AttributeType": "Status",
+            "MetadataId": "81e1c5e6-f246-42bc-8605-f63eb0a3d2ec",
+            "AttributeTypeName": {
+                "Value": "StatusType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.StringAttributeMetadata",
+            "LogicalName": "createdbyname",
+            "SchemaName": "CreatedByName",
+            "AttributeType": "String",
+            "MetadataId": "09b5030c-5446-45ea-9a89-96d1ff14cc33",
+            "AttributeTypeName": {
+                "Value": "StringType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.DateTimeAttributeMetadata",
+            "LogicalName": "createdon",
+            "SchemaName": "CreatedOn",
+            "AttributeType": "DateTime",
+            "MetadataId": "3d2d4450-37c1-4c55-8228-bcb274676a05",
+            "AttributeTypeName": {
+                "Value": "DateTimeType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+            "LogicalName": "organizationid",
+            "SchemaName": "OrganizationId",
+            "AttributeType": "Lookup",
+            "MetadataId": "02d7a88f-02ed-41a6-aa42-9a6afc678272",
+            "AttributeTypeName": {
+                "Value": "LookupType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.StringAttributeMetadata",
+            "LogicalName": "createdonbehalfbyname",
+            "SchemaName": "CreatedOnBehalfByName",
+            "AttributeType": "String",
+            "MetadataId": "c0f017f4-3332-4f35-be33-d8f2c9b82a19",
+            "AttributeTypeName": {
+                "Value": "StringType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.StringAttributeMetadata",
+            "LogicalName": "modifiedonbehalfbyname",
+            "SchemaName": "ModifiedOnBehalfByName",
+            "AttributeType": "String",
+            "MetadataId": "22c46095-d9d7-4e55-bc49-de596bb0ec83",
+            "AttributeTypeName": {
+                "Value": "StringType"
+            }
+        },
+        {
+            "LogicalName": "albxm_coloredoptionname",
+            "SchemaName": "albxm_coloredoptionName",
+            "AttributeType": "Virtual",
+            "MetadataId": "6709dd07-cbbd-4e6c-9795-9e7caac6988c",
+            "AttributeTypeName": {
+                "Value": "VirtualType"
+            }
+        },
+        {
+            "@odata.type": "#Microsoft.Dynamics.CRM.DateTimeAttributeMetadata",
+            "LogicalName": "overriddencreatedon",
+            "SchemaName": "OverriddenCreatedOn",
+            "AttributeType": "DateTime",
+            "MetadataId": "21528935-5f51-4051-b26c-b333a3993a57",
+            "AttributeTypeName": {
+                "Value": "DateTimeType"
+            }
+        },
+        {
+            "LogicalName": "albxm_manyoptionsname",
+            "SchemaName": "albxm_manyoptionsName",
+            "AttributeType": "Virtual",
+            "MetadataId": "89e5609c-7073-46d5-8e84-e91fed00b9e1",
+            "AttributeTypeName": {
+                "Value": "VirtualType"
+            }
+        }
+    ]
+}
