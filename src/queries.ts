@@ -22,7 +22,7 @@ export const CallApi = async (authToken: TokenResponse, url: string): Promise<an
     const response = await fetch(`${url}/api/data/v9.1/contacts?$top=1`, {
       headers: initHeader(authToken.accessToken),
       method: 'GET',
-      agent: agent
+      agent,
     });
     const json = await response.json();
     return json;
@@ -41,7 +41,7 @@ export const getForms = async (authToken: TokenResponse, url: string): Promise<a
       {
         headers: initHeader(authToken.accessToken),
         method: 'GET',
-        agent: agent
+        agent,
       },
     );
     const json = await response.json();
@@ -69,7 +69,7 @@ export const getFormsForEntities = async (
       {
         headers: initHeader(authToken.accessToken),
         method: 'GET',
-        agent: agent
+        agent,
       },
     );
     const json = await response.json();
@@ -119,7 +119,7 @@ export const getFormsBySolution = async (
       {
         headers: initHeader(authToken.accessToken),
         method: 'GET',
-        agent: agent
+        agent,
       },
     );
     const json = await response.json();
@@ -157,7 +157,7 @@ export const getAttributeMeta = async (entity: string, authToken: TokenResponse,
       {
         headers: initHeader(authToken.accessToken),
         method: 'GET',
-        agent: agent
+        agent,
       },
     );
     const json = await response.json();
