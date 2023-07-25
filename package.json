@@ -1,6 +1,6 @@
 {
   "name": "xrmtypesgen",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "A TypeScript Declaration Generator for Dynamics 365 Forms",
   "keywords": [
     "TyepScript",
@@ -18,14 +18,14 @@
   "main": "dist/index.js",
   "bin": "dist/index.js",
   "engines": {
-    "node": "^14.21.2"
+    "node": "^16.0.0"
   },
   "scripts": {
-    "test": "node_modules/.bin/jest --coverage --maxWorkers=4",
-    "build": "node_modules/.bin/tsc && npm run template",
-    "template": "node_modules/.bin/copyfiles ./src/**/*.hbs ./dist/ --up 1",
-    "lint": "node_modules/.bin/eslint src/**/*",
-    "format": "node_modules/.bin/prettier src/**/*.ts --write"
+    "test": "npx jest --coverage --maxWorkers=4",
+    "build": "npx tsc && npm run template",
+    "template": "npx copyfiles ./src/**/*.hbs ./dist/ --up 1",
+    "lint": "npx eslint src/**/*",
+    "format": "npx prettier src/**/*.ts --write"
   },
   "repository": {
     "type": "git",
@@ -41,6 +41,7 @@
     "adal-node": "^0.2.2",
     "commander": "^7.1.0",
     "handlebars": "^4.7.7",
+    "https-proxy-agent": "^7.0.1",
     "node-fetch": "^2.6.1",
     "node-localstorage": "^2.1.6",
     "prettier": "^2.2.1"
