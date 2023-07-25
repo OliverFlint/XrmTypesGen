@@ -39,7 +39,6 @@ export function acquireTokenByResourceOwnerPasswordCredentials(
         agent,
     }).then((response) => response.json())
     .then((response) => {
-        console.log(response);
         const token = {
             accessToken: response.access_token,
             refreshToken: response.refresh_token,
