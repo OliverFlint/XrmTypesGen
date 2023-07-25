@@ -1,8 +1,13 @@
 import { TokenResponse } from 'adal-node';
+import { HttpsProxyAgent } from 'https-proxy-agent';
 import fetch from 'node-fetch';
 import { LocalStorage } from 'node-localstorage';
+import { env } from 'process';
 
 const localStorage: LocalStorage = new LocalStorage('./scratch');
+const agent: HttpsProxyAgent<string> | undefined = env.HTTPS_PROXY
+  ? new HttpsProxyAgent(env.HTTPS_PROXY)
+  : undefined;
 
 const initHeader = (accessToken: string): any => ({
   Authorization: `Bearer ${accessToken}`,
@@ -14,9 +19,10 @@ const initHeader = (accessToken: string): any => ({
 
 export const CallApi = async (authToken: TokenResponse, url: string): Promise<any> => {
   try {
-    const response = await fetch(`${url}/api/data/v9.2/contacts?$top=1`, {
+    const response = await fetch(`${url}/api/data/v9.1/contacts?$top=1`, {
       headers: initHeader(authToken.accessToken),
       method: 'GET',
+      agent: agent
     });
     const json = await response.json();
     return json;
@@ -29,12 +35,13 @@ export const CallApi = async (authToken: TokenResponse, url: string): Promise<an
 export const getForms = async (authToken: TokenResponse, url: string): Promise<any> => {
   try {
     const response = await fetch(
-      `${url}/api/data/v9.2/systemforms?` +
+      `${url}/api/data/v9.1/systemforms?` +
         '$select=description,formjson,formid,name,formactivationstate,type,objecttypecode&' +
         '$filter=(Microsoft.Dynamics.CRM.In(PropertyName=%27type%27,PropertyValues=[%272%27,%277%27]))',
       {
         headers: initHeader(authToken.accessToken),
         method: 'GET',
+        agent: agent
       },
     );
     const json = await response.json();
@@ -55,13 +62,14 @@ export const getFormsForEntities = async (
     const entitynames = entities.split(',');
     const entitiesparam = entitynames.map((value) => `"${value}"`).join(',');
     const response = await fetch(
-      `${url}/api/data/v9.2/systemforms?` +
+      `${url}/api/data/v9.1/systemforms?` +
         '$select=description,formjson,formid,name,formactivationstate,type,objecttypecode&' +
         '$filter=(Microsoft.Dynamics.CRM.In(PropertyName=%27type%27,PropertyValues=[%272%27,%277%27])%20' +
         `and%20Microsoft.Dynamics.CRM.In(PropertyName=%27objecttypecodename%27,PropertyValues=[${entitiesparam}]))`,
       {
         headers: initHeader(authToken.accessToken),
         method: 'GET',
+        agent: agent
       },
     );
     const json = await response.json();
@@ -107,10 +115,11 @@ export const getFormsBySolution = async (
     </fetch>`;
   try {
     const response = await fetch(
-      `${url}/api/data/v9.2/systemforms?fetchXml=${encodeURIComponent(fetchXml)}`,
+      `${url}/api/data/v9.1/systemforms?fetchXml=${encodeURIComponent(fetchXml)}`,
       {
         headers: initHeader(authToken.accessToken),
         method: 'GET',
+        agent: agent
       },
     );
     const json = await response.json();
@@ -143,11 +152,12 @@ export const getAttributeMeta = async (entity: string, authToken: TokenResponse,
     }
     console.log(`getting attribute metadata for the ${entity} entity`);
     const response = await fetch(
-      `${url}/api/data/v9.2/EntityDefinitions(LogicalName='${entity}')?` +
+      `${url}/api/data/v9.1/EntityDefinitions(LogicalName='${entity}')?` +
         '$select=LogicalName&$expand=Attributes($select=LogicalName,AttributeType)',
       {
         headers: initHeader(authToken.accessToken),
         method: 'GET',
+        agent: agent
       },
     );
     const json = await response.json();
