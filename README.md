@@ -48,6 +48,13 @@ Client Credential Authentication
 xrmtypesgen --url https://myorg.crm11.dynamics.com/ --tenent https://login.windows.net/myorg.onmicrosoft.com --entities "account,contact,lead" --output types --clientid myclientid --secret mysecret
 ```
 
+Resource Owner Password Credentials Authentication - suitable for OnPrem. ADFS 2016+ preconfiguration required: https://www.youtube.com/watch?v=26OnuDSOZf4
+
+
+```
+xrmtypesgen --url https://myorg.crm11.dynamics.com/ --tenent https://adfs.example.com/adfs --entities "account,contact,lead" --output types --clientid myclientid --secret mysecret --username "user@name" --password password 
+```
+
 #### **Arguments:**
 
 ```
@@ -61,6 +68,7 @@ Options:
   --secret <secret>          OAuth Client Secret
   -t, --tenent <tenent>      Azure Active Directory authority. e.g. https://login.windows.net/myorg.onmicrosoft.com
   -c, --clientid <clientid>  OAuth Client Id (default: "51f81489-12ee-4a9e-aaae-a2591f45987d")
+  -r, --resource <resoruce>  For ROPC flow, when using password and secret, resource must match relying party identifier. Url will be used by default or override with this
   -s, --solution <solution>  Unique D365/Dataverse Solution Name
   -e, --entities <entities>  Comma seperated list of entities
   -o, --output <output>      Output path (default: "types")
@@ -71,6 +79,8 @@ e.g. xrmtypesgen --url https://myorg.crm11.dynamics.com/ --username username@myo
 e.g. xrmtypesgen --url https://myorg.crm11.dynamics.com/ --username username@myorg.onmicrosoft.com --password password123 --tenent https://login.windows.net/myorg.onmicrosoft.com --entities account,contact,lead --output ./types
 
 e.g. xrmtypesgen --url https://myorg.crm11.dynamics.com/ --tenent https://login.windows.net/myorg.onmicrosoft.com --entities "account,contact,lead" --output types --clientid myclientid --secret mysecret
+
+e.g. XrmTypesGen --url https://myorg.crm11.dynamics.com/ --tenent https://adfs.example.com/adfs --entities "account,contact,lead" --output types --clientid myclientid --secret mysecret --username username@example.com --password password123 --resource https://myorg.crm11.dynamics.com/api/data/v9.1/
 ```
 
 ### Using your types
