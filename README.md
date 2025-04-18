@@ -1,5 +1,5 @@
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/oliverflint/xrmtypesgen/Build?logo=github&style=flat-square)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/oliverflint/xrmtypesgen/Tests?label=tests&logo=jest&style=flat-square)
+[![Build](https://github.com/OliverFlint/XrmTypesGen/actions/workflows/build.yml/badge.svg)](https://github.com/OliverFlint/XrmTypesGen/actions/workflows/build.yml)
+[![Tests](https://github.com/OliverFlint/XrmTypesGen/actions/workflows/tests.yml/badge.svg)](https://github.com/OliverFlint/XrmTypesGen/actions/workflows/tests.yml)
 [![npm](https://img.shields.io/npm/v/xrmtypesgen?logo=npm)](https://www.npmjs.com/package/xrmtypesgen)
 [![Coveralls](https://img.shields.io/coveralls/github/OliverFlint/XrmTypesGen?logo=coveralls&style=flat-square)](https://coveralls.io/github/OliverFlint/XrmTypesGen)
 [![GitHub issues](https://img.shields.io/github/issues/OliverFlint/XrmTypesGen?logo=github&style=flat-square)](https://github.com/OliverFlint/XrmTypesGen/issues)
@@ -7,7 +7,6 @@
 [![GitHub stars](https://img.shields.io/github/stars/OliverFlint/XrmTypesGen?logo=github&style=flat-square)](https://github.com/OliverFlint/XrmTypesGen/stargazers)
 [![GitHub license](https://img.shields.io/github/license/OliverFlint/XrmTypesGen?logo=github&style=flat-square)](https://github.com/OliverFlint/XrmTypesGen/blob/main/LICENSE)
 ![GitHub top language](https://img.shields.io/github/languages/top/oliverflint/xrmtypesgen?logo=github&style=flat-square)
-![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/oliverflint/xrmtypesgen?logo=snyk)
 
 # XrmTypesGen
 
